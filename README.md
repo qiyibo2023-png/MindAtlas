@@ -18,13 +18,14 @@ node scripts/test-all.cjs
 node scripts/serve.cjs
 ```
 
-Open http://127.0.0.1:4173/. With npm installed, `npm run build`, `npm test`, and `npm start` are equivalent. The full test command rebuilds first and runs the original 139 checks plus the bilingual suite.
+Open http://127.0.0.1:4173/. With npm installed, `npm run build`, `npm test`, and `npm start` are equivalent. The full test command rebuilds first and runs the original 139 checks plus bilingual and Router/Safety-extraction suites.
 
 ## Structure
 
 - `src/`: authored HTML, CSS, JavaScript and data. Edit here.
 - `src/mood/`, `src/anxiety/`, `src/ocd/`: completed assessment modules.
 - `src/safety/`: shared rules, schema, adapters, runtime, resources and bilingual UI.
+- `src/router/`: independent symptom schema, bilingual extraction, auditable rules, runtime and UI.
 - `src/shared/`: shared controls and assessment utilities.
 - `scripts/`: deterministic build, static server and verification tools.
 - `tests/`: synthetic regression tests, portable hash fixtures and browser harness.
@@ -33,7 +34,7 @@ Open http://127.0.0.1:4173/. With npm installed, `npm run build`, `npm test`, an
 
 Build copies every source file byte-for-byte and removes stale generated files. Deploy only `dist/`, never the project root. Assessment state stays in page memory. Do not commit real answers, exported user summaries, credentials or logs.
 
-Normal entry runs the shared safety check. Clarification, technical failure and urgency levels have distinct bilingual UI. Acute states interrupt ordinary assessment navigation; intrusive thoughts remain distinct from actual desire, intent, plan and preparation. No Symptom Router is implemented.
+Normal entry runs the shared safety check. Clarification, technical failure and urgency levels have distinct bilingual UI. Acute states interrupt ordinary assessment navigation; intrusive thoughts remain distinct from actual desire, intent, plan and preparation. Symptom Router v1 now recommends Mood, Anxiety and OCD assessment pathways after Safety guidance. It supports multiple candidates, clarification and user choice; it does not diagnose. See [Router rules and limits](ROUTER-RULE-CATALOG.md).
 
 See [baseline and version control](VERSION-CONTROL.md) and [safety rule review catalog](SAFETY-RULE-CATALOG.md).
 

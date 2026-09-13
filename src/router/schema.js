@@ -1,0 +1,16 @@
+(function(R){'use strict';
+R.version='symptom-router-v1.0.0';
+R.fields={mood:['depressedMood','anhedonia','lowEnergy','guiltWorthlessness','hopelessness','sleepChange','appetiteChange','concentrationDifficulty','psychomotorChange'],anxiety:['excessiveWorry','difficultToControlWorry','physicalTension','panicLikeEpisodes','panicConcern','situationalAvoidance','socialEvaluationFear','specificFear'],ocd:['intrusiveThoughts','thoughtsUnwanted','egoDystonic','recurrentDoubt','checking','washingCleaning','mentalCompulsions','reassuranceSeeking','neutralization','symmetryExactness','avoidance','needForCertainty'],general:['functionalImpact','sleep','schoolImpact','workImpact','relationshipImpact'],unsupported:['trauma','attention','eating','psychotic']};
+R.empty=()=>Object.fromEntries(Object.entries(R.fields).map(([group,fields])=>[group,Object.fromEntries(fields.map(field=>[field,'unknown']))]).concat([['context',{subject:'unclear',temporality:'unclear',polarity:'uncertain',uncertainty:true}],['course',{duration:'unknown',frequency:'unknown',severity:'unknown'}],['observations',[]]]));
+R.paths=Object.entries(R.fields).flatMap(([group,fields])=>fields.map(field=>group+'.'+field));
+R.get=(p,path)=>path.split('.').reduce((v,k)=>v?.[k],p);
+R.put=(p,path,value)=>{const [group,field]=path.split('.');p[group][field]=value;};
+R.contextValues={subject:['self','other','unclear'],temporality:['current','recent','historical','hypothetical','unclear'],polarity:['affirmed','denied','uncertain']};
+R.validContext=c=>c&&typeof c==='object'&&Object.keys(c).length===4&&typeof c.uncertainty==='boolean'&&Object.entries(R.contextValues).every(([k,v])=>v.includes(c[k]));
+R.validate=p=>!!p&&typeof p==='object'&&Object.keys(p).length===Object.keys(R.fields).length+3&&Object.entries(R.fields).every(([g,fields])=>p[g]&&Object.keys(p[g]).length===fields.length&&fields.every(f=>[true,false,'unknown'].includes(p[g][f])))&&R.validContext(p.context)&&p.course&&Object.keys(p.course).length===3&&['unknown','brief','persistent'].includes(p.course.duration)&&['unknown','repeated'].includes(p.course.frequency)&&['unknown','marked'].includes(p.course.severity)&&Array.isArray(p.observations)&&p.observations.length<=256&&p.observations.every(o=>o&&Object.keys(o).length===3&&R.paths.includes(o.path)&&[true,false,'unknown'].includes(o.value)&&R.validContext(o.context));
+R.domains=new Map();
+R.registerAssessmentDomain=d=>{if(!['mood','anxiety','ocd'].includes(d.id)||R.domains.has(d.id))throw Error('Invalid or duplicate assessment domain');R.domains.set(d.id,Object.freeze({...d}));};
+R.registerAssessmentDomain({id:'mood',view:'screen',label:'router.mood'});
+R.registerAssessmentDomain({id:'anxiety',view:'anxiety',label:'router.anxiety'});
+R.registerAssessmentDomain({id:'ocd',view:'ocd',label:'router.ocd'});
+})(globalThis.SymptomRouter=globalThis.SymptomRouter||{});

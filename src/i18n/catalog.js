@@ -8514,3 +8514,197 @@ I18n.register("terminology",[
     ]
   ]
 ]);
+
+I18n.register("router", [
+  [
+    "heading",
+    [
+      "根据你的描述",
+      "Based on what you described"
+    ]
+  ],
+  [
+    "mood",
+    [
+      "情绪与兴趣评估",
+      "Mood and interest assessment"
+    ]
+  ],
+  [
+    "anxiety",
+    [
+      "担忧、恐惧与惊恐评估",
+      "Worry, fear and panic assessment"
+    ]
+  ],
+  [
+    "ocd",
+    [
+      "强迫观念与行为评估",
+      "Obsessive-compulsive symptoms assessment"
+    ]
+  ],
+  [
+    "notDiagnosis",
+    [
+      "这只是下一步评估方向，不是诊断，也不表示患病概率。",
+      "This suggests what to assess next. It is not a diagnosis or a probability of having a disorder."
+    ]
+  ],
+  [
+    "unsupported",
+    [
+      "另一个评估领域可能与你的困扰有关，但 MindAtlas 暂未提供该评估。可向专业人员说明你的困扰。",
+      "Another assessment area may be relevant but is not yet available in MindAtlas. Consider discussing your concerns with a professional."
+    ]
+  ],
+  [
+    "error",
+    [
+      "暂时无法整理这段描述。请重新输入，或自行选择一个评估。",
+      "We could not process this description. Please enter it again or choose an assessment."
+    ]
+  ],
+  [
+    "clarify",
+    [
+      "目前最困扰你的主要是哪一方面？",
+      "Which area has been bothering you most?"
+    ]
+  ],
+  [
+    "other",
+    [
+      "其他方面",
+      "Something else"
+    ]
+  ],
+  [
+    "unsure",
+    [
+      "还不确定",
+      "Not sure"
+    ]
+  ],
+  [
+    "recommended",
+    [
+      "建议先进行",
+      "Recommended first"
+    ]
+  ],
+  [
+    "start",
+    [
+      "开始建议的评估",
+      "Start recommended assessment"
+    ]
+  ],
+  [
+    "why",
+    [
+      "为什么推荐这个评估？",
+      "Why this assessment?"
+    ]
+  ],
+  [
+    "chooseThis",
+    [
+      "选择这个评估",
+      "Choose this assessment"
+    ]
+  ],
+  [
+    "alternatives",
+    [
+      "选择其他评估",
+      "Choose another assessment"
+    ]
+  ],
+  [
+    "edit",
+    [
+      "返回并重新输入描述",
+      "Return and enter a revised description"
+    ]
+  ],
+  [
+    "privacy",
+    [
+      "原始描述不保存在评估结果中。返回后请重新输入；关闭或刷新页面会清除当前状态。",
+      "Your original description is not stored in the results. Please enter it again when returning; closing or reloading the page clears the current state."
+    ]
+  ],
+  [
+    "limit",
+    [
+      "本地规则可能漏掉复杂表达。你可以选择其他评估，或与专业人员讨论。",
+      "Local rules may miss complex descriptions. You can choose another assessment or discuss your concerns with a professional."
+    ]
+  ],
+  [
+    "noMatch",
+    [
+      "目前没有足够信息推荐具体评估。你可以重新描述，或自行选择评估。",
+      "There is not enough information to recommend a specific assessment. You can describe your concerns again or choose an assessment."
+    ]
+  ],
+  [
+    "userChoice",
+    [
+      "已按你的选择安排下一步；这不会改变症状或安全记录。",
+      "The next step follows your choice; this does not change symptom or safety records."
+    ]
+  ],
+  [
+    "reasonOcdSpecific",
+    [
+      "描述中同时出现反复的想法或怀疑，以及重复行为或心理仪式。",
+      "Your description includes repeated thoughts or doubts together with repetitive behaviors or mental rituals."
+    ]
+  ],
+  [
+    "reasonOcdRitual",
+    [
+      "描述中出现重复检查、清洗或其他仪式性应对。",
+      "Your description includes repeated checking, washing or other ritual-like responses."
+    ]
+  ],
+  [
+    "reasonOcdThought",
+    [
+      "描述中出现不想要的、反复侵入的想法。",
+      "Your description includes unwanted, recurring intrusive thoughts."
+    ]
+  ],
+  [
+    "reasonMood",
+    [
+      "描述中出现多种情绪、兴趣或精力方面的变化。",
+      "Your description includes several changes in mood, interest or energy."
+    ]
+  ],
+  [
+    "reasonMoodCourse",
+    [
+      "描述中出现持续或反复的低落、兴趣变化，或对生活的影响。",
+      "Your description includes persistent or repeated low mood or interest changes, or an impact on daily life."
+    ]
+  ],
+  [
+    "reasonWorry",
+    [
+      "描述中出现广泛担忧，或难以控制的焦虑模式。",
+      "Your description includes broad worry or a pattern of difficult-to-control anxiety."
+    ]
+  ],
+  [
+    "reasonFear",
+    [
+      "描述中出现惊恐、特定恐惧或回避模式。",
+      "Your description includes panic, specific fears or avoidance patterns."
+    ]
+  ]
+]);
+
+I18n.register("router", [["alsoRelevant", ["也可能相关", "Also potentially relevant"]]]);
