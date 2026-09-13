@@ -15,13 +15,14 @@ if(match(/(?:thinking|think) about (?:(?:killing|hurting) myself|suicide\b)|自�
 if(s.suicide.suicidalIdeation===true&&/right now|currently|此刻|现在/.test(t))mark('suicide.currentIdeation');
 if(match(/(?:going to|intend to|will) (?:kill myself|end my life)|打算(?:自杀|结束(?:自己|我)的生命)|准备自杀|今晚.*自杀|要自杀/,new RegExp(notSelf.source+'|'+feared.source)))mark('suicide.intent');
 if(match(/(?:already (?:have|made)|have a|specific) (?:suicide )?plan|已经.*计划|自杀计划/,/no .*plan|no plan|don't have|do not have|没有.*计划|无自杀计划|afraid|terrified|害怕|担心/)&&/myself|suicid|end my life|自杀|结束(?:自己|我)?的?生命/.test(t))mark('suicide.plan');
+if(match(/\bi (?:currently )?plan to (?:kill myself|end my life)\b/,/\bif\b|used to|years ago|not |never |afraid|terrified|假如|如果|曾经|害怕|担心/))mark('suicide.plan');
 if(match(/(?:prepared|preparing|preparation)|已经准备/,/not prepared|no preparation|没有.*准备|afraid|terrified|害怕|担心/)&&/myself|suicid|自杀/.test(t))mark('suicide.preparation');
 if(/already planned how to do it|已经计划好怎么做/.test(t))mark('screen.ambiguousDistress');
 if(/(?:can't|cannot|unable to) (?:stay|keep myself) safe|无法保证.*安全|不能保证.*安全/.test(t))mark('suicide.unableToStaySafe');
 if(/attempted suicide (?:today|yesterday|recently)|昨天.*自杀未遂|近期自杀未遂/.test(t))mark('suicide.recentAttempt');
 if(notSelf.test(t)){mark('suicide.desireToDie',false);if(/no (?:suicidal )?intent|没有自杀意图|不打算自杀/.test(t))mark('suicide.intent',false);}
 if(intrusive&&/suicid|self.harm|myself|自杀|自伤|自己/.test(t)){mark('suicide.intrusiveThought');mark('suicide.thoughtsUnwanted');}
-if(/imagining stabbing|images of (?:stabbing|hurting)|thoughts of (?:hurting|harming|killing)|伤害.*(?:侵入性想法|画面)|伤人.*念头/.test(t)){mark('harmToOthers.violentThoughts');if(intrusive){mark('harmToOthers.thoughtsUnwanted');mark('harmToOthers.distress');}}
+if(/imagining stabbing|images of (?:stabbing|hurting)|thoughts of (?:hurting|harming|killing|stabbing)|伤害.*(?:侵入性想法|画面)|伤人.*念头/.test(t)){mark('harmToOthers.violentThoughts');if(intrusive){mark('harmToOthers.thoughtsUnwanted');mark('harmToOthers.distress');}}
 if(/hide knives|avoid.*kniv|藏.*刀|回避.*刀/.test(t))mark('harmToOthers.avoidance');
 if(match(/(?:want to|intend to|going to|will) (?:kill|stab|hurt) (?:him|her|them|my partner|my baby|someone)|想杀他|要杀他|想伤害他|打算伤害他/,new RegExp(notOther.source+'|'+feared.source))){mark('harmToOthers.actualDesire');mark('harmToOthers.violentThoughts');if(/tonight|now|马上|今晚|现在/.test(t))mark('harmToOthers.imminence');if(/decided how|plan|prepared|准备|计划/.test(t))mark('harmToOthers.plan');}
 if(match(/(?:intend to|going to|will) (?:hurt|kill|stab) (?:him|her|them|someone|my partner|my baby)\b|有伤人意图|打算伤害他|打算杀他/,new RegExp(notOther.source+'|'+feared.source)))mark('harmToOthers.intent');

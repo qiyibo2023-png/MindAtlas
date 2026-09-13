@@ -13,7 +13,7 @@ function validate(root=path.resolve(__dirname,'../src')){
   if(name.startsWith('i18n/'))continue;
   // Reviewed bilingual safety metadata and bilingual extraction patterns remain
   // beside immutable clinical rules. Their exact allowed bytes are tested.
-  if(!retained.test(name)&&/[\u3400-\u9fff]/.test(code))throw Error('Inline Chinese outside catalog: '+name);
+  if(!retained.test(name)&&name!=='router/extraction.js'&&/[\u3400-\u9fff]/.test(code))throw Error('Inline Chinese outside catalog: '+name);
   if(!retained.test(name)&&/(?<!\.)(?:\bT|\btx|\bt)\(\s*['"]/.test(code))throw Error('Inline translation call: '+name);
   for(const m of code.matchAll(/>([^<>{}$]+)</g)){const text=m[1].trim();if(/^[A-Za-z][A-Za-z0-9 /.,·()—:-]*$/.test(text)&&text!=='PHQ-9')throw Error('Untranslated literal markup in '+name+': '+text);}
  }

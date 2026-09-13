@@ -1,6 +1,14 @@
 {
-  "reason": "Fix bilingual synonym gaps and explicit ideation negation; no change to clinical rules or thresholds. Additional exact user-provided examples corrected for life-ending intent, family harm images and medical synonyms; thresholds unchanged.",
+  "reason": "Fix bilingual synonym gaps and explicit ideation negation; no change to clinical rules or thresholds. Additional exact user-provided examples corrected for life-ending intent, family harm images and medical synonyms; thresholds unchanged. Router acceptance exposed explicit first-person plan-to synonym gap; bounded negation/hypothetical regression added. No thresholds changed. Exact Router intrusive-stabbing example now enters harm-specific clarification without inferring intent.",
   "changes": [
+    {
+      "before": "if(/imagining stabbing|images of (?:stabbing|hurting)|thoughts of (?:hurting|harming|killing)|伤害.*(?:侵入性想法|画面)|伤人.*念头/.test(t)){mark('harmToOthers.violentThoughts');if(intrusive){mark('harmToOthers.thoughtsUnwanted');mark('harmToOthers.distress');}}",
+      "after": "if(/imagining stabbing|images of (?:stabbing|hurting)|thoughts of (?:hurting|harming|killing|stabbing)|伤害.*(?:侵入性想法|画面)|伤人.*念头/.test(t)){mark('harmToOthers.violentThoughts');if(intrusive){mark('harmToOthers.thoughtsUnwanted');mark('harmToOthers.distress');}}"
+    },
+    {
+      "before": "if(match(/(?:already (?:have|made)|have a|specific) (?:suicide )?plan|已经.*计划|自杀计划/,/no .*plan|no plan|don't have|do not have|没有.*计划|无自杀计划|afraid|terrified|害怕|担心/)&&/myself|suicid|end my life|自杀|结束(?:自己|我)?的?生命/.test(t))mark('suicide.plan');",
+      "after": "if(match(/(?:already (?:have|made)|have a|specific) (?:suicide )?plan|已经.*计划|自杀计划/,/no .*plan|no plan|don't have|do not have|没有.*计划|无自杀计划|afraid|terrified|害怕|担心/)&&/myself|suicid|end my life|自杀|结束(?:自己|我)?的?生命/.test(t))mark('suicide.plan');\r\nif(match(/\\bi (?:currently )?plan to (?:kill myself|end my life)\\b/,/\\bif\\b|used to|years ago|not |never |afraid|terrified|假如|如果|曾经|害怕|担心/))mark('suicide.plan');"
+    },
     {
       "before": "const intrusive=/ocd|obsess|intrusive|keep imagin|images of|强迫|侵入|脑(?:海|子里).*画面/.test(t)&&/terrifi|scared|unwanted|frighten|\\bfear\\b|害怕|恐惧|不受欢迎/.test(t);",
       "after": "const intrusive=/ocd|obsess|intrusive|keep imagin|images of|强迫|侵入|脑(?:海|子里).*画面/.test(t)&&/terrif|scared|unwanted|frighten|\\bfear\\b|害怕|恐惧|不受欢迎/.test(t);"
