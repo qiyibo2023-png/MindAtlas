@@ -19,3 +19,7 @@ nav button,.brand small,.card p,.card .en,.aside-note,.aside-title,.source small
 .router-page{overflow-wrap:anywhere}.router-actions{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0}.router-page button{white-space:normal;max-width:100%;margin:8px 0}.router-page fieldset{min-width:0;border:1px solid #61796a;border-radius:12px;padding:16px}.router-page legend{font-weight:700}.router-page details{margin:24px 0}
 
 .differential-page{overflow-wrap:anywhere}.differential-page fieldset{min-width:0;border:1px solid #61796a;border-radius:12px;padding:16px;margin-bottom:20px}.differential-choice{display:flex;align-items:center;gap:10px;min-height:48px}.differential-choice input{width:20px;height:20px;flex-shrink:0}.differential-page select{max-width:100%;width:100%;min-height:48px;margin:8px 0 20px}.differential-question{display:block;margin-top:16px}.differential-page textarea{width:100%;max-width:100%;box-sizing:border-box}.differential-page summary{cursor:pointer;padding:12px 0}.differential-page button{white-space:normal;max-width:100%}.differential-entry{margin-top:24px}
+
+.trauma-page{overflow-wrap:anywhere}.trauma-page select{width:100%;max-width:100%;min-height:48px}.trauma-page textarea{width:100%;box-sizing:border-box}.trauma-page .actions{display:flex;flex-wrap:wrap;gap:12px}.trauma-page button{min-height:48px;white-space:normal}.trauma-page summary{padding:14px 0;cursor:pointer}.trauma-page [role=alert]{outline:2px solid #934322}
+
+header{flex-wrap:wrap}header nav{min-width:0;flex-wrap:wrap}header nav button{white-space:normal}

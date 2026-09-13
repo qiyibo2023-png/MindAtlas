@@ -32,7 +32,7 @@ I.captureView=function(doc){
 I.restoreView=function(doc,snapshot){
  for(const item of snapshot.drafts){const e=doc.getElementById(item.id);if(e){e.value=item.value;if(item.invalid)e.setAttribute('aria-invalid',item.invalid);}}
  Array.from(doc.querySelectorAll('details')).forEach((e,i)=>{if(i<snapshot.details.length)e.open=snapshot.details[i];});
- const active=snapshot.focus&&doc.getElementById(snapshot.focus);active?.focus();
+ const active=snapshot.focus?doc.getElementById(snapshot.focus):null;active?.focus();
  if(active&&snapshot.selection&&active.setSelectionRange)try{active.setSelectionRange(...snapshot.selection);}catch{}
 };
 })(globalThis.I18n=globalThis.I18n||{});

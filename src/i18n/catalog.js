@@ -9586,3 +9586,1073 @@ I18n.register("differential", [
     ]
   ]
 ]);
+
+I18n.register("traumaUI",[
+  [
+    "option_yes",
+    [
+      "是",
+      "Yes"
+    ]
+  ],
+  [
+    "option_no",
+    [
+      "否",
+      "No"
+    ]
+  ],
+  [
+    "option_unknown",
+    [
+      "不确定／暂不回答",
+      "Unsure / prefer not to answer"
+    ]
+  ],
+  [
+    "option_0",
+    [
+      "没有",
+      "Not present"
+    ]
+  ],
+  [
+    "option_1",
+    [
+      "偶尔",
+      "Occasionally"
+    ]
+  ],
+  [
+    "option_2",
+    [
+      "经常",
+      "Often"
+    ]
+  ],
+  [
+    "option_3",
+    [
+      "几乎每天",
+      "Almost every day"
+    ]
+  ],
+  [
+    "option_none",
+    [
+      "没有影响",
+      "No impact"
+    ]
+  ],
+  [
+    "option_mild",
+    [
+      "轻度影响",
+      "Mild impact"
+    ]
+  ],
+  [
+    "option_moderate",
+    [
+      "中度影响",
+      "Moderate impact"
+    ]
+  ],
+  [
+    "option_severe",
+    [
+      "严重影响",
+      "Severe impact"
+    ]
+  ],
+  [
+    "option_na",
+    [
+      "不适用",
+      "Not applicable"
+    ]
+  ],
+  [
+    "section_intro",
+    [
+      "开始与选择",
+      "Your choice to begin"
+    ]
+  ],
+  [
+    "q_intro_agree",
+    [
+      "我了解这不是诊断，愿意进行结构化评估",
+      "I understand this is not a diagnosis and choose to take this structured assessment"
+    ]
+  ],
+  [
+    "q_intro_adult",
+    [
+      "你是否已满18岁？此原型仅用于成人自我评估",
+      "Are you 18 or older? This prototype is for adult self-assessment"
+    ]
+  ],
+  [
+    "option_symptoms",
+    [
+      "事件后的反应",
+      "Reactions after an event"
+    ]
+  ],
+  [
+    "option_memories",
+    [
+      "侵入性回忆或再体验",
+      "Intrusive memories or re-experiencing"
+    ]
+  ],
+  [
+    "option_uncertain",
+    [
+      "不确定／先了解",
+      "Unsure / exploring"
+    ]
+  ],
+  [
+    "q_intro_concern",
+    [
+      "你主要想了解什么？无需描述事件",
+      "What would you like to understand? No event description is needed"
+    ]
+  ],
+  [
+    "section_exposure",
+    [
+      "事件与应激背景",
+      "Event and stressor context"
+    ]
+  ],
+  [
+    "q_exposure_threshold",
+    [
+      "事件是否涉及实际或受到威胁的死亡、严重伤害或性暴力？无需提供细节",
+      "Did the event involve actual or threatened death, serious injury, or sexual violence? No details are needed"
+    ]
+  ],
+  [
+    "option_direct",
+    [
+      "亲身经历",
+      "Direct experience"
+    ]
+  ],
+  [
+    "option_witness",
+    [
+      "亲眼目睹",
+      "Witnessed in person"
+    ]
+  ],
+  [
+    "option_close",
+    [
+      "得知亲近者的事件",
+      "Learned about an event affecting someone close"
+    ]
+  ],
+  [
+    "option_occupation",
+    [
+      "工作中反复接触相关细节",
+      "Repeated exposure to details through work"
+    ]
+  ],
+  [
+    "option_media",
+    [
+      "非工作需要的媒体接触",
+      "Media exposure unrelated to work"
+    ]
+  ],
+  [
+    "option_other",
+    [
+      "其他／不清楚",
+      "Other / unclear"
+    ]
+  ],
+  [
+    "q_exposure_mode",
+    [
+      "你以哪种方式接触到该事件？",
+      "How were you exposed to the event?"
+    ]
+  ],
+  [
+    "q_exposure_closeViolent",
+    [
+      "该事件是否涉及亲近家人或朋友遭受严重伤害、性暴力，或暴力／意外造成的死亡或死亡威胁？",
+      "Did the event involve a close family member or friend experiencing serious injury, sexual violence, or violent/accidental death or threatened death?"
+    ]
+  ],
+  [
+    "option_recent",
+    [
+      "一个月内",
+      "Within the past month"
+    ]
+  ],
+  [
+    "option_older",
+    [
+      "一个月以前",
+      "More than a month ago"
+    ]
+  ],
+  [
+    "option_ongoing",
+    [
+      "仍在持续／反复发生",
+      "Ongoing / repeated"
+    ]
+  ],
+  [
+    "q_exposure_timing",
+    [
+      "事件大约发生在什么时候？",
+      "Approximately when did the event occur?"
+    ]
+  ],
+  [
+    "option_accident",
+    [
+      "严重事故",
+      "Serious accident"
+    ]
+  ],
+  [
+    "option_assault",
+    [
+      "身体攻击",
+      "Physical assault"
+    ]
+  ],
+  [
+    "option_sexual",
+    [
+      "性暴力",
+      "Sexual violence"
+    ]
+  ],
+  [
+    "option_war",
+    [
+      "战争／战斗",
+      "War / combat"
+    ]
+  ],
+  [
+    "option_disaster",
+    [
+      "灾害",
+      "Disaster"
+    ]
+  ],
+  [
+    "option_illness",
+    [
+      "危及生命的疾病／伤害事件",
+      "Life-threatening illness / injury event"
+    ]
+  ],
+  [
+    "option_witnessed",
+    [
+      "目睹严重暴力或死亡",
+      "Witnessing serious violence or death"
+    ]
+  ],
+  [
+    "option_closeEvent",
+    [
+      "亲近者的事件",
+      "Event affecting someone close"
+    ]
+  ],
+  [
+    "option_occupational",
+    [
+      "职业接触",
+      "Occupational exposure"
+    ]
+  ],
+  [
+    "option_severeEvent",
+    [
+      "其他严重事件",
+      "Other severe event"
+    ]
+  ],
+  [
+    "option_stressor",
+    [
+      "重大生活应激（如分手、学业或经济压力）",
+      "Major life stressor (such as breakup, study or financial stress)"
+    ]
+  ],
+  [
+    "q_exposure_category",
+    [
+      "可选：事件的大致类别（可跳过）",
+      "Optional: broad event category (you may skip)"
+    ]
+  ],
+  [
+    "section_intrusion",
+    [
+      "侵入性症状／再体验",
+      "Intrusion / re-experiencing"
+    ]
+  ],
+  [
+    "q_intrusion_linked",
+    [
+      "这些体验是否与该事件有关，或在事件后出现／加重？",
+      "Are these experiences related to the event, or did they begin or worsen after it?"
+    ]
+  ],
+  [
+    "q_intrusion_memories",
+    [
+      "不由自主浮现的痛苦回忆：过去一个月（若事件更近则从事件后算起）的频率",
+      "Distressing memories that come to mind unbidden: frequency during the past month, or since the event if more recent"
+    ]
+  ],
+  [
+    "q_intrusion_nightmares",
+    [
+      "与事件相关的噩梦：过去一个月（若事件更近则从事件后算起）的频率",
+      "Nightmares related to the event: frequency during the past month, or since the event if more recent"
+    ]
+  ],
+  [
+    "q_intrusion_reliving",
+    [
+      "仿佛事件正在再次发生：过去一个月（若事件更近则从事件后算起）的频率",
+      "Feeling as though the event is happening again: frequency during the past month, or since the event if more recent"
+    ]
+  ],
+  [
+    "q_intrusion_emotional",
+    [
+      "被提醒时的强烈情绪痛苦：过去一个月（若事件更近则从事件后算起）的频率",
+      "Strong emotional distress at reminders: frequency during the past month, or since the event if more recent"
+    ]
+  ],
+  [
+    "q_intrusion_physical",
+    [
+      "被提醒时的强烈身体反应：过去一个月（若事件更近则从事件后算起）的频率",
+      "Strong physical reactions at reminders: frequency during the past month, or since the event if more recent"
+    ]
+  ],
+  [
+    "section_avoidance",
+    [
+      "回避",
+      "Avoidance"
+    ]
+  ],
+  [
+    "q_avoidance_linked",
+    [
+      "这些体验是否与该事件有关，或在事件后出现／加重？",
+      "Are these experiences related to the event, or did they begin or worsen after it?"
+    ]
+  ],
+  [
+    "q_avoidance_internal",
+    [
+      "回避与事件有关的想法、感受或谈话：过去一个月（若事件更近则从事件后算起）的频率",
+      "Avoiding thoughts, feelings or conversations about the event: frequency during the past month, or since the event if more recent"
+    ]
+  ],
+  [
+    "q_avoidance_external",
+    [
+      "回避相关的人、地点、活动或其他提醒：过去一个月（若事件更近则从事件后算起）的频率",
+      "Avoiding related people, places, activities or other reminders: frequency during the past month, or since the event if more recent"
+    ]
+  ],
+  [
+    "section_negative",
+    [
+      "认知与情绪变化",
+      "Changes in thoughts and mood"
+    ]
+  ],
+  [
+    "q_negative_linked",
+    [
+      "这些体验是否与该事件有关，或在事件后出现／加重？",
+      "Are these experiences related to the event, or did they begin or worsen after it?"
+    ]
+  ],
+  [
+    "q_negative_beliefs",
+    [
+      "事件后对自己、他人或世界持续持消极看法：过去一个月（若事件更近则从事件后算起）的频率",
+      "Persistent negative beliefs about yourself, others or the world after the event: frequency during the past month, or since the event if more recent"
+    ]
+  ],
+  [
+    "q_negative_blame",
+    [
+      "因事件反复过度责怪自己或他人：过去一个月（若事件更近则从事件后算起）的频率",
+      "Repeated excessive blame of yourself or others about the event: frequency during the past month, or since the event if more recent"
+    ]
+  ],
+  [
+    "q_negative_emotion",
+    [
+      "事件相关的内疚、羞耻、恐惧或其他痛苦情绪：过去一个月（若事件更近则从事件后算起）的频率",
+      "Event-related guilt, shame, fear or other painful emotions: frequency during the past month, or since the event if more recent"
+    ]
+  ],
+  [
+    "q_negative_interest",
+    [
+      "事件后兴趣下降：过去一个月（若事件更近则从事件后算起）的频率",
+      "Reduced interest following the event: frequency during the past month, or since the event if more recent"
+    ]
+  ],
+  [
+    "q_negative_detachment",
+    [
+      "事件后感觉与他人疏远：过去一个月（若事件更近则从事件后算起）的频率",
+      "Feeling detached from others following the event: frequency during the past month, or since the event if more recent"
+    ]
+  ],
+  [
+    "q_negative_positive",
+    [
+      "事件后难以感受积极情绪：过去一个月（若事件更近则从事件后算起）的频率",
+      "Difficulty feeling positive emotions following the event: frequency during the past month, or since the event if more recent"
+    ]
+  ],
+  [
+    "q_negative_memory",
+    [
+      "事件的部分内容难以回忆（不需要尝试重现）：过去一个月（若事件更近则从事件后算起）的频率",
+      "Difficulty recalling parts of the event (do not try to reconstruct it): frequency during the past month, or since the event if more recent"
+    ]
+  ],
+  [
+    "section_arousal",
+    [
+      "警觉与反应",
+      "Arousal / reactivity"
+    ]
+  ],
+  [
+    "q_arousal_linked",
+    [
+      "这些体验是否与该事件有关，或在事件后出现／加重？",
+      "Are these experiences related to the event, or did they begin or worsen after it?"
+    ]
+  ],
+  [
+    "q_arousal_alert",
+    [
+      "持续警戒或难以放松：过去一个月（若事件更近则从事件后算起）的频率",
+      "Being on guard or finding it hard to relax: frequency during the past month, or since the event if more recent"
+    ]
+  ],
+  [
+    "q_arousal_startle",
+    [
+      "容易被突然的声音或动作惊吓：过去一个月（若事件更近则从事件后算起）的频率",
+      "Being easily startled by sudden sounds or movements: frequency during the past month, or since the event if more recent"
+    ]
+  ],
+  [
+    "q_arousal_anger",
+    [
+      "易怒或愤怒反应：过去一个月（若事件更近则从事件后算起）的频率",
+      "Irritability or angry reactions: frequency during the past month, or since the event if more recent"
+    ]
+  ],
+  [
+    "q_arousal_sleep",
+    [
+      "睡眠困难：过去一个月（若事件更近则从事件后算起）的频率",
+      "Sleep difficulties: frequency during the past month, or since the event if more recent"
+    ]
+  ],
+  [
+    "q_arousal_focus",
+    [
+      "难以集中注意力：过去一个月（若事件更近则从事件后算起）的频率",
+      "Difficulty concentrating: frequency during the past month, or since the event if more recent"
+    ]
+  ],
+  [
+    "q_arousal_reckless",
+    [
+      "冒险或可能伤害自己的行为：过去一个月（若事件更近则从事件后算起）的频率",
+      "Risk-taking or potentially self-destructive behavior: frequency during the past month, or since the event if more recent"
+    ]
+  ],
+  [
+    "section_course",
+    [
+      "持续时间与痛苦",
+      "Duration and distress"
+    ]
+  ],
+  [
+    "option_under3",
+    [
+      "少于3天",
+      "Less than 3 days"
+    ]
+  ],
+  [
+    "option_3to30",
+    [
+      "3天至1个月",
+      "3 days to 1 month"
+    ]
+  ],
+  [
+    "option_overMonth",
+    [
+      "超过1个月",
+      "More than 1 month"
+    ]
+  ],
+  [
+    "q_course_duration",
+    [
+      "这些症状持续了多久？事件发生多久与症状持续多久可能不同",
+      "How long have these symptoms lasted? This may differ from time since the event"
+    ]
+  ],
+  [
+    "q_course_current",
+    [
+      "这些症状目前或最近一个月仍存在吗？",
+      "Are these symptoms present now or within the past month?"
+    ]
+  ],
+  [
+    "q_course_distress",
+    [
+      "这些体验造成多少痛苦？",
+      "How distressing are these experiences?"
+    ]
+  ],
+  [
+    "section_function",
+    [
+      "功能损害（Functional Impairment）",
+      "Functional impairment"
+    ]
+  ],
+  [
+    "q_function_work",
+    [
+      "工作受到多少影响？",
+      "How much is work affected?"
+    ]
+  ],
+  [
+    "q_function_school",
+    [
+      "学习受到多少影响？",
+      "How much is school affected?"
+    ]
+  ],
+  [
+    "q_function_relationships",
+    [
+      "人际关系受到多少影响？",
+      "How much is relationships affected?"
+    ]
+  ],
+  [
+    "q_function_sleep",
+    [
+      "睡眠受到多少影响？",
+      "How much is sleep affected?"
+    ]
+  ],
+  [
+    "q_function_selfCare",
+    [
+      "自我照顾受到多少影响？",
+      "How much is self-care affected?"
+    ]
+  ],
+  [
+    "q_function_leaving",
+    [
+      "出门受到多少影响？",
+      "How much is leaving home affected?"
+    ]
+  ],
+  [
+    "q_function_focus",
+    [
+      "注意力受到多少影响？",
+      "How much is concentration affected?"
+    ]
+  ],
+  [
+    "q_function_social",
+    [
+      "社交受到多少影响？",
+      "How much is social functioning affected?"
+    ]
+  ],
+  [
+    "q_function_routine",
+    [
+      "日常事务受到多少影响？",
+      "How much is daily routines affected?"
+    ]
+  ],
+  [
+    "q_function_intimacy",
+    [
+      "亲密关系（可不回答）受到多少影响？",
+      "How much is intimacy (you may decline) affected?"
+    ]
+  ],
+  [
+    "section_dissociation",
+    [
+      "解离体验与现实感",
+      "Dissociation and sense of reality"
+    ]
+  ],
+  [
+    "q_dissociation_self",
+    [
+      "是否感到与自己的身体或自我分离，像在旁观自己？",
+      "Do you feel detached from your body or yourself, as though observing yourself?"
+    ]
+  ],
+  [
+    "q_dissociation_world",
+    [
+      "周围世界是否感觉不真实或像梦境？",
+      "Does the world around you feel unreal or dreamlike?"
+    ]
+  ],
+  [
+    "q_dissociation_reality",
+    [
+      "出现这些感觉时，你仍能辨认这是一种感觉，而不是世界真的改变了吗？",
+      "During these feelings, can you recognize them as a feeling rather than the world actually changing?"
+    ]
+  ],
+  [
+    "q_dissociation_fixed",
+    [
+      "是否有难以动摇的异常确信，或在非再体验时出现别人感受不到的声音或影像？",
+      "Do you have fixed unusual convictions, or hear or see things others do not outside re-experiencing episodes?"
+    ]
+  ],
+  [
+    "section_ruleouts",
+    [
+      "身体、药物与物质因素",
+      "Medical, medication and substance considerations"
+    ]
+  ],
+  [
+    "q_medical_contribution",
+    [
+      "身体疾病、头部损伤或神经系统问题是否可能影响这些症状？",
+      "Could a medical condition, head injury or neurological problem contribute to these symptoms?"
+    ]
+  ],
+  [
+    "q_medical_memory",
+    [
+      "记忆困难是否可能与睡眠、情绪、普通遗忘或身体因素有关？",
+      "Could memory difficulties relate to sleep, mood, ordinary forgetting or medical factors?"
+    ]
+  ],
+  [
+    "q_substance_contribution",
+    [
+      "症状是否与饮酒、大麻、兴奋剂、镇静剂、其他物质、停用或药物调整有关？",
+      "Might symptoms relate to alcohol, cannabis, stimulants, sedatives, other substances, withdrawal or medication changes?"
+    ]
+  ],
+  [
+    "section_context",
+    [
+      "与其他症状的区别",
+      "Context alongside other symptoms"
+    ]
+  ],
+  [
+    "q_context_hypothetical",
+    [
+      "侵入性体验是否也包括担心未来可能发生的事情、怀疑，并通过检查或心理仪式中和？",
+      "Do intrusive experiences also include feared hypothetical events or doubt that you neutralize through checking or mental rituals?"
+    ]
+  ],
+  [
+    "q_context_broadWorry",
+    [
+      "是否也存在与事件提醒无关的、多种日常领域的难控担忧？",
+      "Do you also have hard-to-control worries across everyday areas unrelated to event reminders?"
+    ]
+  ],
+  [
+    "q_context_panicReminder",
+    [
+      "惊恐样发作是否主要由事件提醒引发？",
+      "Do panic-like episodes occur mainly with event reminders?"
+    ]
+  ],
+  [
+    "q_context_unexpectedPanic",
+    [
+      "是否也有反复的、没有明确触发因素的突然惊恐发作？",
+      "Do you also have recurrent sudden panic attacks without a clear trigger?"
+    ]
+  ],
+  [
+    "q_context_broadMood",
+    [
+      "低落或兴趣下降是否也广泛存在于与事件提醒无关的情境？",
+      "Does low mood or reduced interest also occur broadly outside event-reminder contexts?"
+    ]
+  ],
+  [
+    "title",
+    [
+      "PTSD / 创伤相关评估",
+      "PTSD / Trauma-Related Assessment"
+    ]
+  ],
+  [
+    "intro",
+    [
+      "无需描述发生了什么。你可以选择暂不回答、暂停或清除答案。请按自己的节奏继续。",
+      "You do not need to describe what happened. You may decline questions, pause or clear answers. Continue at your own pace."
+    ]
+  ],
+  [
+    "custom",
+    [
+      "这是 MindAtlas 自定义结构化评估，不是 PCL-5 或已验证量表，不提供医学诊断。",
+      "This is a custom MindAtlas structured assessment, not the PCL-5 or a validated scale. It does not provide a medical diagnosis."
+    ]
+  ],
+  [
+    "privacy",
+    [
+      "答案仅保存在当前页面内存中，刷新或清除后消失；不收集事件叙述。",
+      "Answers stay only in current page memory and disappear on refresh or clear; no event narrative is collected."
+    ]
+  ],
+  [
+    "next",
+    [
+      "下一步",
+      "Next"
+    ]
+  ],
+  [
+    "back",
+    [
+      "上一步",
+      "Back"
+    ]
+  ],
+  [
+    "pause",
+    [
+      "暂停并返回首页",
+      "Pause and return home"
+    ]
+  ],
+  [
+    "clear",
+    [
+      "清除创伤评估答案",
+      "Clear trauma assessment answers"
+    ]
+  ],
+  [
+    "result",
+    [
+      "查看结构化结果",
+      "View structured results"
+    ]
+  ],
+  [
+    "error",
+    [
+      "请检查未回答的项目；也可以选择暂不回答。",
+      "Please check unanswered items; you can also choose to decline."
+    ]
+  ],
+  [
+    "consent",
+    [
+      "仅在自愿同意的成人自我评估中继续。其他情况请寻求适合年龄的专业支持。",
+      "Continue only for a consenting adult self-assessment. Otherwise seek age-appropriate professional support."
+    ]
+  ],
+  [
+    "why",
+    [
+      "为什么得到这个结果？",
+      "Why this result?"
+    ]
+  ],
+  [
+    "compatible",
+    [
+      "与 PTSD 相符的症状模式，建议专业确认",
+      "PTSD-compatible pattern; professional confirmation is recommended"
+    ]
+  ],
+  [
+    "limited",
+    [
+      "有创伤相关症状，但信息不足或存在其他解释",
+      "Trauma-related symptoms with insufficient information or alternative explanations"
+    ]
+  ],
+  [
+    "early",
+    [
+      "近期事件后的反应；目前不作 PTSD 模式判断",
+      "Recent post-event reactions; a PTSD pattern is not established here"
+    ]
+  ],
+  [
+    "stressor",
+    [
+      "应激背景需要进一步了解，不能自动等同于 PTSD 创伤暴露",
+      "The stressor context needs further understanding and is not automatically PTSD-type exposure"
+    ]
+  ],
+  [
+    "low",
+    [
+      "当前信息不足以支持 PTSD 模式；不代表排除问题",
+      "Current information does not support a PTSD pattern; concerns are not ruled out"
+    ]
+  ],
+  [
+    "support",
+    [
+      "支持信息",
+      "Supporting evidence"
+    ]
+  ],
+  [
+    "oppose",
+    [
+      "较不相符的信息",
+      "Less-consistent evidence"
+    ]
+  ],
+  [
+    "missing",
+    [
+      "缺失或未明确的信息",
+      "Missing or uncertain information"
+    ]
+  ],
+  [
+    "ruleouts",
+    [
+      "尚待核实的因素",
+      "Unresolved contributing factors"
+    ]
+  ],
+  [
+    "summary",
+    [
+      "可选的结构化评估摘要（非诊断报告）",
+      "Optional structured assessment summary (not a diagnostic report)"
+    ]
+  ],
+  [
+    "care",
+    [
+      "你不需要独自处理这些体验。可以与合格专业人员讨论创伤聚焦治疗，例如创伤聚焦 CBT、认知加工治疗、专业支持下的暴露治疗或 EMDR；药物是否适合由临床人员评估。请勿独自进行强烈的创伤重现练习。",
+      "You do not have to manage these experiences alone. Discuss trauma-focused CBT, cognitive processing therapy, professionally supported exposure therapy or EMDR with a qualified professional; medication suitability requires clinical evaluation. Do not undertake intense trauma reliving exercises alone."
+    ]
+  ],
+  [
+    "dissNote",
+    [
+      "解离感不自动等于精神病性症状。现实辨认困难或其他异常体验需要专业核实。记忆困难也有多种可能原因。",
+      "Dissociation does not automatically mean psychosis. Reality-testing difficulties or other unusual experiences need professional clarification. Memory difficulties also have multiple possible explanations."
+    ]
+  ],
+  [
+    "routerReason",
+    [
+      "事件相关的再体验与回避或警觉线索，支持先了解创伤相关症状。",
+      "Event-linked re-experiencing with avoidance or alertness suggests exploring trauma-related symptoms."
+    ]
+  ],
+  [
+    "comparison",
+    [
+      "创伤再体验、事件回避与警觉共同支持创伤方向；其他模式可以同时存在。",
+      "Trauma re-experiencing, event avoidance and alertness support a trauma direction; other patterns can coexist."
+    ]
+  ],
+  [
+    "ocdCompare",
+    [
+      "真实事件再体验与假设性恐惧／中和仪式不同；两者都存在时需分别评估。",
+      "Actual-event re-experiencing differs from hypothetical fears and neutralizing rituals; assess both when both occur."
+    ]
+  ],
+  [
+    "moodCompare",
+    [
+      "事件相关内疚或疏离不自动等同于独立抑郁；广泛低落需要情绪评估。",
+      "Event-linked guilt or detachment does not automatically establish independent depression; broader low mood warrants Mood assessment."
+    ]
+  ],
+  [
+    "anxietyCompare",
+    [
+      "事件提醒引发的警觉和惊恐不同于广泛担忧或反复意外惊恐；它们也可并存。",
+      "Reminder-linked alertness and panic differ from generalized worry or recurrent unexpected panic; they may coexist."
+    ]
+  ],
+  [
+    "sources",
+    [
+      "证据来源与限制",
+      "Evidence sources and limitations"
+    ]
+  ],
+  [
+    "count",
+    [
+      "自定义症状计数（不是量表分数）",
+      "Custom symptom counts (not a scale score)"
+    ]
+  ],
+  [
+    "safety",
+    [
+      "当前安全信息以共用安全检查为准；未知不代表安全。",
+      "Current safety findings come from the shared safety check; unknown does not mean safe."
+    ]
+  ]
+]);
+
+I18n.register("traumaSafety",[
+  [
+    "selfHarm_recentBehavior",
+    [
+      "最近是否伤害过自己？",
+      "Have you recently harmed yourself?"
+    ]
+  ],
+  [
+    "medical_lossOfConsciousness",
+    [
+      "现在或刚才是否出现失去意识？",
+      "Have you lost consciousness now or just recently?"
+    ]
+  ],
+  [
+    "medical_seizure",
+    [
+      "现在或刚才是否出现抽搐或癫痫发作？",
+      "Are you having, or have you just had, a seizure?"
+    ]
+  ],
+  [
+    "medical_severeConfusion",
+    [
+      "现在是否严重意识混乱？",
+      "Are you severely confused right now?"
+    ]
+  ],
+  [
+    "medical_severeHeadInjury",
+    [
+      "现在是否有严重头部损伤或相关急性症状？",
+      "Do you have a severe head injury or acute symptoms related to one now?"
+    ]
+  ],
+  [
+    "substances_overdoseConcern",
+    [
+      "现在是否担心药物或物质过量？",
+      "Is there a concern about overdose right now?"
+    ]
+  ],
+  [
+    "substances_severeWithdrawalConcern",
+    [
+      "现在是否可能出现严重戒断反应？",
+      "Could you be experiencing severe withdrawal right now?"
+    ]
+  ],
+  [
+    "selfCare_unableToRemainSafelyAlone",
+    [
+      "现在是否因解离或其他原因无法安全独处？",
+      "Are you unable to remain safely alone now because of dissociation or another reason?"
+    ]
+  ],
+  [
+    "psychosis_dangerousBehaviorFromBeliefs",
+    [
+      "现在是否因异常信念或感知而出现危险行为？",
+      "Are unusual beliefs or perceptions leading to dangerous behavior now?"
+    ]
+  ]
+]);
+
+I18n.register("traumaResult",[
+  [
+    "psychFlag",
+    [
+      "存在需要单独专业核实的精神病性相关线索；这不是精神病诊断。",
+      "Psychotic-spectrum features need separate professional clarification; this is not a psychosis diagnosis."
+    ]
+  ],
+  [
+    "dissFlag",
+    [
+      "报告了解离样体验，需要结合情境与现实辨认进一步了解。",
+      "Dissociation-like experiences were reported; context and reality testing need further understanding."
+    ]
+  ],
+  [
+    "empty",
+    [
+      "目前未识别到，不代表已排除。",
+      "None identified at present; this does not rule concerns out."
+    ]
+  ],
+  [
+    "severity",
+    [
+      "频率、痛苦与生活影响应分别理解，症状计数不是严重程度分数。",
+      "Frequency, distress and daily impact should be understood separately; symptom counts are not severity scores."
+    ]
+  ]
+]);
+
+I18n.register("traumaNav",[["label",["创伤评估","Trauma assessment"]]]);
+
+I18n.register("traumaAlternative",[["stressor",["重大应激或丧失可能需要了解哀伤、适应相关反应、情绪或焦虑；本模块不诊断哀伤或适应障碍。","Major stress or loss may warrant exploration of grief, adjustment-related reactions, mood or anxiety; this module does not diagnose grief or adjustment disorders."]]]);
