@@ -1,0 +1,150 @@
+[
+  {
+    "path": "anxiety/data.js",
+    "sha256": "0b88e8c4ec087c9baafb009baf8b6a0296020f5d42ac39c5be0f3a0c1ff7547c"
+  },
+  {
+    "path": "anxiety/engine.js",
+    "sha256": "a078c11c766d741ad868fea21fea2c5f26e42bc73d10a0aa7f604a8c62976af6"
+  },
+  {
+    "path": "anxiety/state.js",
+    "sha256": "e3da70a45f74cc36ef7c59098073d08bd246107ae4a3f118dd59a4598a8475c6"
+  },
+  {
+    "path": "anxiety/summary.js",
+    "sha256": "7f53da119c0fdf5d8e14fcca0f7dea622445e5979aa6b9d5a998eb9c61ebbb58"
+  },
+  {
+    "path": "anxiety/ui.js",
+    "sha256": "7256f9b1e10202834e9b79afdeb7f17fe991cbbadf19805e6f0c0d5363569059"
+  },
+  {
+    "path": "app.js",
+    "sha256": "ae64e7d60b7e8dd5a66a62d08819e1c739695172ba8b8e9fc78b2f4b811da8e7"
+  },
+  {
+    "path": "data.js",
+    "sha256": "96cba6713b929f3b070e53c390517b7643aa6d306da7ed4d6f2378b1d078562a"
+  },
+  {
+    "path": "index.html",
+    "sha256": "27b96b62f2d976f05000648264da494c8ef95f378ea580312043478096522ab5"
+  },
+  {
+    "path": "mood/data.js",
+    "sha256": "42b50af279491b0a72daccf4630d8247779363d06ed4040cb201537043f3ece4"
+  },
+  {
+    "path": "mood/engine.js",
+    "sha256": "34a302c822c9b1af35aa9b8e6fc1cbed8126c2911fefa6b9aab87ba7d064a6bd"
+  },
+  {
+    "path": "mood/mood.css",
+    "sha256": "b5f2a0bf1bcd551ffc4ca7f437f6ede77ac9c1aa4dde1f1b981ad8728186b969"
+  },
+  {
+    "path": "mood/safety.js",
+    "sha256": "5eb8eb8715035a51c9284a18c938c7c5c7a232b3d4acf4da453db44e22b6d525"
+  },
+  {
+    "path": "mood/scoring.js",
+    "sha256": "79d117843860afb8f8212701d261ba668cb352c654d92e90777a0878ee7f5e8f"
+  },
+  {
+    "path": "mood/state.js",
+    "sha256": "7ef2eb4e01be382dab9ff074a8f03ea81875603359548c88026388edffbcd00f"
+  },
+  {
+    "path": "mood/summary.js",
+    "sha256": "290246dfe55ced2c51d9b5c5ec56c4e5834aa337d36e2d91143032ac908f6237"
+  },
+  {
+    "path": "mood/ui.js",
+    "sha256": "676331ac8aba1792d595f24b6fc6fe8e16f19980dcfd18e11bfd6af6da732b57"
+  },
+  {
+    "path": "ocd/data.js",
+    "sha256": "b0258ffccffc21a463352966342c86fd8809ba4236e7467edfaff2a9a80acded"
+  },
+  {
+    "path": "ocd/engine.js",
+    "sha256": "c66ed4df8748e827e8f27366bba22a0d4edd224e046cebbdc77ed1dc85589a70"
+  },
+  {
+    "path": "ocd/entry.js",
+    "sha256": "d60ad4380aa0dc0779f1ee498a71834319634ef76468977c3b1d504ac9a78d35"
+  },
+  {
+    "path": "ocd/state.js",
+    "sha256": "c0d6d3ccda9714be323def2e40ef8ce3b8ce09301f10ca28af57629879218a8f"
+  },
+  {
+    "path": "ocd/summary.js",
+    "sha256": "7da12dfeaa504a0246bec2dd20d5772db1eb3ac8a1c8dac46903d46ddcb4e4a7"
+  },
+  {
+    "path": "ocd/ui.js",
+    "sha256": "87b356b77acf7f3b9039475188a56a50ca9f29ca3a4041e44805668200887af4"
+  },
+  {
+    "path": "safety/adapters.js",
+    "sha256": "1b5d9b3725fa6608ae97690079a0f83510dfbdf9a73a7d8fd2987d2eb1a5fb56"
+  },
+  {
+    "path": "safety/engine.js",
+    "sha256": "a4305c4d4a799a859546dd8acd7ece6faa57114813a109209850b4b217086a6d"
+  },
+  {
+    "path": "safety/extraction.js",
+    "sha256": "2a8b382f76062fbaa5dcb9aa371d5cc10c9259797924e4779c78a15b1ba15c3a"
+  },
+  {
+    "path": "safety/resources.js",
+    "sha256": "61dcad06a4123eeaaf6fcde0a21c0b6d1883e3b7643be6364914537c7f316c4a"
+  },
+  {
+    "path": "safety/rules.js",
+    "sha256": "630bcff3793745ce01dd6cf364698a0498164ceb79d55d4870693b7238bc131c"
+  },
+  {
+    "path": "safety/runtime.js",
+    "sha256": "a96f44c04531097abf49927af236832c01dfe6af79bbac8a2f31d299c3b1deff"
+  },
+  {
+    "path": "safety/safety.css",
+    "sha256": "93c36effdfaa32f450871b5898e1d57796f210bbbd7db8e1cafa2271c4bbc756"
+  },
+  {
+    "path": "safety/schema.js",
+    "sha256": "710fa6bca83be300dda3c6abc402d91653dbe33e84ce63b64c50b5eda5dfe7d2"
+  },
+  {
+    "path": "safety/signals.schema.json",
+    "sha256": "f47d77cc949680cdec92de40be649be32c054caa7234f7669cad2873ad6342b3"
+  },
+  {
+    "path": "safety/types.d.ts",
+    "sha256": "aca1a2003cd6e99a3ae9581c0c19ff3abe7357b438be64fe799f0dc9f09668d7"
+  },
+  {
+    "path": "safety/ui.js",
+    "sha256": "4479476163c17ee2c7bf43f1011e1c646fb88aeaac2b0a99f880580553302f4c"
+  },
+  {
+    "path": "shared/core.js",
+    "sha256": "5506961f08e65fc05c70e602ea3140e91c74b648a2adfb5688ef63b88b97b4da"
+  },
+  {
+    "path": "shared/fields.js",
+    "sha256": "17e14354b8b1fc28d3fc898417dd1d42b92a655ed8f6ce3a1b9551cfb4a18fab"
+  },
+  {
+    "path": "shared/safety.js",
+    "sha256": "faf82ec367a619fda318511adca2826de58abca262ae4428d242879c8735f171"
+  },
+  {
+    "path": "style.css",
+    "sha256": "fe48fc188d0d214e91373d89edf0a949c8a70c7689c50721abb031282079a93f"
+  }
+]

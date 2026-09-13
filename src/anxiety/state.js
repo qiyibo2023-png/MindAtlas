@@ -1,0 +1,10 @@
+(function(A){'use strict';
+A.get=Assessment.get;
+A.emptyState=()=>({intro:{},gad7:{},clusters:{},gad:{},panic:{},agora:{},social:{},specific:{},separation:{},function:{},medical:{},substance:{},context:{},safety:{},revision:0,startedAt:new Date().toISOString(),updatedAt:null});
+A.plan=s=>A.sections.filter(sec=>sec.id==='gad7'?s.intro.age==='adult'&&s.intro.respondent==='self':A.branches.some(b=>b[0]===sec.id)?['yes','unknown'].includes(s.clusters[sec.id]):true);
+A.missing=s=>A.plan(s).filter(sec=>!['review','results'].includes(sec.id)).flatMap(sec=>Assessment.missing(sec.questions,s));
+A.setAnswer=function(state,path,value){const q=A.questions.find(q=>q.id===path);if(!q||!Assessment.validAnswer(q,value))throw Error('Invalid answer');const s=Assessment.set(state,path,value);if(path.startsWith('clusters.')&&value==='no'&&A.branches.some(b=>b[0]===path.split('.')[1]))s[path.split('.')[1]]={};if((path==='intro.age'||path==='intro.respondent')&&(s.intro.age!=='adult'||s.intro.respondent!=='self'))s.gad7={};if(path==='intro.age'&&value!=='adult')s.context.useMood='no';return s;};
+A.store={state:A.emptyState(),step:'intro',visited:['intro'],error:[],result:null,returnStep:null};
+A.update=function(path,value){A.store.state=A.setAnswer(A.store.state,path,value);A.store.result=null;const ids=A.plan(A.store.state).map(s=>s.id);A.store.visited=A.store.visited.filter(id=>ids.includes(id));if(!ids.includes(A.store.step))A.store.step='clusters';};
+A.clear=function(){A.store={state:A.emptyState(),step:'intro',visited:['intro'],error:[],result:null,returnStep:null};};
+})(globalThis.Anxiety=globalThis.Anxiety||{});

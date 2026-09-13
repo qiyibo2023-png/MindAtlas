@@ -1,0 +1,5 @@
+# Preserve reviewed runtime bytes and existing line endings on every platform.
+* -text
+* whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+# Existing terminal blank lines are retained for exact runtime baseline parity.
+src/** whitespace=blank-at-eol,-blank-at-eof,space-before-tab,cr-at-eol

@@ -1,0 +1,57 @@
+{
+  "reason": "Fix bilingual synonym gaps and explicit ideation negation; no change to clinical rules or thresholds. Additional exact user-provided examples corrected for life-ending intent, family harm images and medical synonyms; thresholds unchanged.",
+  "changes": [
+    {
+      "before": "const intrusive=/ocd|obsess|intrusive|keep imagin|images of|强迫|侵入|脑(?:海|子里).*画面/.test(t)&&/terrifi|scared|unwanted|frighten|\\bfear\\b|害怕|恐惧|不受欢迎/.test(t);",
+      "after": "const intrusive=/ocd|obsess|intrusive|keep imagin|images of|强迫|侵入|脑(?:海|子里).*画面/.test(t)&&/terrif|scared|unwanted|frighten|\\bfear\\b|害怕|恐惧|不受欢迎/.test(t);"
+    },
+    {
+      "before": "const notSelf=/(?:don't|do not|never|not)\\s+(?:actually\\s+)?(?:want|intend|plan)(?:\\s+to)?\\s+(?:die\\b|(?:kill|hurt) myself\\b|end my life\\b)|不想死|不想自杀|没有自杀意图|不打算自杀/;",
+      "after": "const notSelf=/(?:don't|do not|never|not)\\s+(?:actually\\s+)?(?:want|intend|plan)(?:\\s+to)?\\s+(?:die\\b|(?:kill|hurt) myself\\b|end my life\\b)|不想死|不想自杀|没有自杀意图|不打算自杀|不打算结束(?:自己|我)的生命/;"
+    },
+    {
+      "before": "const intrusive=/ocd|obsess|intrusive|keep imagin|images of|强迫|侵入|脑海.*画面/.test(t)&&/terrifi|scared|unwanted|frighten|\\bfear\\b|害怕|恐惧|不受欢迎/.test(t);",
+      "after": "const intrusive=/ocd|obsess|intrusive|keep imagin|images of|强迫|侵入|脑(?:海|子里).*画面/.test(t)&&/terrifi|scared|unwanted|frighten|\\bfear\\b|害怕|恐惧|不受欢迎/.test(t);"
+    },
+    {
+      "before": "if(match(/(?:going to|intend to|will) (?:kill myself|end my life)|打算自杀|准备自杀|今晚.*自杀|要自杀/,new RegExp(notSelf.source+'|'+feared.source)))mark('suicide.intent');",
+      "after": "if(match(/(?:going to|intend to|will) (?:kill myself|end my life)|打算(?:自杀|结束(?:自己|我)的生命)|准备自杀|今晚.*自杀|要自杀/,new RegExp(notSelf.source+'|'+feared.source)))mark('suicide.intent');"
+    },
+    {
+      "before": "if(match(/(?:already (?:have|made)|have a|specific) (?:suicide )?plan|已经.*计划|自杀计划/,/no .*plan|no plan|don't have|do not have|没有.*计划|无自杀计划|afraid|terrified|害怕|担心/)&&/myself|suicid|自杀|结束生命/.test(t))mark('suicide.plan');",
+      "after": "if(match(/(?:already (?:have|made)|have a|specific) (?:suicide )?plan|已经.*计划|自杀计划/,/no .*plan|no plan|don't have|do not have|没有.*计划|无自杀计划|afraid|terrified|害怕|担心/)&&/myself|suicid|end my life|自杀|结束(?:自己|我)?的?生命/.test(t))mark('suicide.plan');"
+    },
+    {
+      "before": "if(/imagining stabbing|images of stabbing|thoughts of (?:hurting|harming|killing)|伤害.*(?:侵入性想法|画面)|伤人.*念头/.test(t)){mark('harmToOthers.violentThoughts');if(intrusive){mark('harmToOthers.thoughtsUnwanted');mark('harmToOthers.distress');}}",
+      "after": "if(/imagining stabbing|images of (?:stabbing|hurting)|thoughts of (?:hurting|harming|killing)|伤害.*(?:侵入性想法|画面)|伤人.*念头/.test(t)){mark('harmToOthers.violentThoughts');if(intrusive){mark('harmToOthers.thoughtsUnwanted');mark('harmToOthers.distress');}}"
+    },
+    {
+      "before": "const negMedical=/no (?:chest pain|breathing difficulty)|don't have|do not have|没有胸痛|没有呼吸困难/;",
+      "after": "const negMedical=/no (?:chest pain|breathing difficulty)|don't have|do not have|没有胸痛|没有胸口.*(?:剧痛|剧烈疼痛)|没有呼吸困难/;"
+    },
+    {
+      "before": "if(match(/chest.*(?:severe|badly|suddenly)|severe.*chest|严重胸痛|胸口.*(?:剧痛|很痛)/,negMedical))mark('medical.severeChestPain');",
+      "after": "if(match(/chest.*(?:severe|badly|suddenly)|severe.*chest|严重胸痛|胸口.*(?:剧痛|剧烈疼痛|很痛)/,negMedical))mark('medical.severeChestPain');"
+    },
+    {
+      "before": "if(match(/(?:almost )?passed out|lost consciousness|昏过去|失去意识|晕倒/,/never|没有/))mark('medical.lossOfConsciousness');",
+      "after": "if(match(/(?:almost )?passed out|lost consciousness|昏过去|失去意识|晕倒|晕过去/,/never|没有/))mark('medical.lossOfConsciousness');"
+    },
+    {
+      "before": "const notOther=/(?:don't|do not|never)\\s+(?:actually\\s+)?(?:want|intend|plan)\\s+to\\s+(?:hurt|kill|stab) (?:him|her|them|my partner|my baby|someone)\\b|不想伤害(?:他|她|别人|宝宝|伴侣)|没有伤害(?:他|她|别人).*意图|不打算伤害(?:他|她|别人)/;",
+      "after": "const notOther=/(?:don't|do not|never)\\s+(?:actually\\s+)?(?:want|intend|plan)\\s+to\\s+(?:hurt|kill|stab) (?:him|her|them|my partner|my baby|someone|anyone|others)\\b|不想伤害(?:他|她|别人|宝宝|伴侣)|没有伤害(?:他|她|别人).*意图|不打算伤害(?:他|她|别人)/;"
+    },
+    {
+      "before": "const intrusive=/ocd|obsess|intrusive|keep imagin|images of|强迫|侵入|脑海.*画面/.test(t)&&/terrifi|scared|unwanted|frighten|害怕|恐惧|不受欢迎/.test(t);",
+      "after": "const intrusive=/ocd|obsess|intrusive|keep imagin|images of|强迫|侵入|脑海.*画面/.test(t)&&/terrifi|scared|unwanted|frighten|\\bfear\\b|害怕|恐惧|不受欢迎/.test(t);"
+    },
+    {
+      "before": "if(match(/(?:thinking|think) about (?:killing|hurting) myself|自杀想法|想自杀/,notSelf)&&!intrusive)mark('suicide.suicidalIdeation');",
+      "after": "if(match(/(?:thinking|think) about (?:(?:killing|hurting) myself|suicide\\b)|自杀想法|想自杀/,new RegExp(notSelf.source+'|(?:not|never) (?:thinking|think) about (?:suicide|killing myself|hurting myself)|没有自杀想法|不在想自杀'))&&!intrusive)mark('suicide.suicidalIdeation');"
+    },
+    {
+      "before": "if(/imagining stabbing|images of stabbing|thoughts of (?:hurting|killing)|伤害.*画面|伤人.*念头/.test(t)){mark('harmToOthers.violentThoughts');if(intrusive){mark('harmToOthers.thoughtsUnwanted');mark('harmToOthers.distress');}}",
+      "after": "if(/imagining stabbing|images of stabbing|thoughts of (?:hurting|harming|killing)|伤害.*(?:侵入性想法|画面)|伤人.*念头/.test(t)){mark('harmToOthers.violentThoughts');if(intrusive){mark('harmToOthers.thoughtsUnwanted');mark('harmToOthers.distress');}}"
+    }
+  ]
+}

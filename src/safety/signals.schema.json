@@ -1,0 +1,649 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MindAtlas SafetySignals",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "suicide": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "passiveDeathWish": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "suicidalIdeation": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "currentIdeation": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "desireToDie": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "intent": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "plan": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "preparation": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "accessToMeans": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "recentAttempt": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "escalatingRisk": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "unableToStaySafe": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "intrusiveThought": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "thoughtsUnwanted": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        }
+      }
+    },
+    "selfHarm": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "currentUrges": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "recentBehavior": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "medicalInjuryConcern": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "escalatingFrequency": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "suicidalIntentAssociated": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        }
+      }
+    },
+    "harmToOthers": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "violentThoughts": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "thoughtsUnwanted": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "distress": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "avoidance": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "neutralization": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "actualDesire": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "intent": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "targetIdentified": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "plan": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "preparation": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "accessToMeans": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "imminence": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "impairedBehavioralControl": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        }
+      }
+    },
+    "psychosis": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "hallucinations": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "commandHallucinations": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "commandSelfHarm": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "commandOtherHarm": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "persecutoryBeliefs": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "bizarreBeliefs": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "severeParanoia": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "severeDisorganization": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "impairedRealityTesting": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "dangerousBehaviorFromBeliefs": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "inabilityToCareForSelf": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        }
+      }
+    },
+    "mania": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "severelyReducedNeedForSleep": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "markedlyIncreasedEnergy": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "grandiosity": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "extremeImpulsivity": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "dangerousSpending": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "recklessDriving": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "sexualRisk": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "aggression": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "psychoticFeatures": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "impairedJudgment": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "inabilityToControlBehavior": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        }
+      }
+    },
+    "selfCare": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "unableToEat": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "unableToDrink": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "unableToMaintainShelter": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "unableToManageEssentialMedication": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "severeSelfNeglect": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "unableToRemainSafelyAlone": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "severeFunctionalCollapse": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        }
+      }
+    },
+    "medical": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "severeChestPain": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "severeBreathingDifficulty": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "lossOfConsciousness": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "seizure": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "strokeLikeSymptoms": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "severeConfusion": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "severeHeadInjury": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "suspectedPoisoning": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "suspectedOverdose": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "severeAllergicReaction": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "otherImmediateMedicalDanger": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        }
+      }
+    },
+    "substances": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "severeIntoxication": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "overdoseConcern": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "severeWithdrawalConcern": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "impairedConsciousness": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "seizureRisk": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "respiratorySuppression": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "severeAgitation": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        }
+      }
+    },
+    "other": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "immediateDanger": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "harmDesire": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "harmAction": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        }
+      }
+    },
+    "screen": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "positiveUnspecified": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        },
+        "ambiguousDistress": {
+          "enum": [
+            true,
+            false,
+            "unknown"
+          ]
+        }
+      }
+    }
+  }
+}
