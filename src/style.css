@@ -23,3 +23,7 @@ nav button,.brand small,.card p,.card .en,.aside-note,.aside-title,.source small
 .trauma-page{overflow-wrap:anywhere}.trauma-page select{width:100%;max-width:100%;min-height:48px}.trauma-page textarea{width:100%;box-sizing:border-box}.trauma-page .actions{display:flex;flex-wrap:wrap;gap:12px}.trauma-page button{min-height:48px;white-space:normal}.trauma-page summary{padding:14px 0;cursor:pointer}.trauma-page [role=alert]{outline:2px solid #934322}
 
 header{flex-wrap:wrap}header nav{min-width:0;flex-wrap:wrap}header nav button{white-space:normal}
+
+.adhd-page{overflow-wrap:anywhere}.adhd-page select{width:100%;max-width:100%;min-height:48px}.adhd-page textarea{width:100%;box-sizing:border-box}.adhd-page .actions{display:flex;flex-wrap:wrap;gap:12px}.adhd-page button{min-height:48px;white-space:normal}.adhd-page summary{padding:14px 0;cursor:pointer}.adhd-page [role=alert]{outline:2px solid #934322}
+/* Five-domain navigation must grow with wrapped bilingual labels. */
+header{height:auto;min-height:86px;padding-top:12px;padding-bottom:12px}header nav button{height:auto;min-height:48px}

@@ -10656,3 +10656,1075 @@ I18n.register("traumaResult",[
 I18n.register("traumaNav",[["label",["创伤评估","Trauma assessment"]]]);
 
 I18n.register("traumaAlternative",[["stressor",["重大应激或丧失可能需要了解哀伤、适应相关反应、情绪或焦虑；本模块不诊断哀伤或适应障碍。","Major stress or loss may warrant exploration of grief, adjustment-related reactions, mood or anxiety; this module does not diagnose grief or adjustment disorders."]]]);
+
+I18n.register("adhdUI",[
+  [
+    "opt_yes",
+    [
+      "是",
+      "Yes"
+    ]
+  ],
+  [
+    "opt_no",
+    [
+      "否",
+      "No"
+    ]
+  ],
+  [
+    "opt_unknown",
+    [
+      "不确定",
+      "Unsure"
+    ]
+  ],
+  [
+    "opt_remember",
+    [
+      "记不清",
+      "Cannot remember"
+    ]
+  ],
+  [
+    "opt_decline",
+    [
+      "暂不回答",
+      "Prefer not to answer"
+    ]
+  ],
+  [
+    "opt_0",
+    [
+      "从不／很少",
+      "Never / rarely"
+    ]
+  ],
+  [
+    "opt_1",
+    [
+      "有时",
+      "Sometimes"
+    ]
+  ],
+  [
+    "opt_2",
+    [
+      "经常",
+      "Often"
+    ]
+  ],
+  [
+    "opt_3",
+    [
+      "非常频繁",
+      "Very often"
+    ]
+  ],
+  [
+    "opt_none",
+    [
+      "无明显影响",
+      "No noticeable impact"
+    ]
+  ],
+  [
+    "opt_mild",
+    [
+      "轻度影响",
+      "Mild impact"
+    ]
+  ],
+  [
+    "opt_moderate",
+    [
+      "中度影响",
+      "Moderate impact"
+    ]
+  ],
+  [
+    "opt_severe",
+    [
+      "严重影响",
+      "Severe impact"
+    ]
+  ],
+  [
+    "opt_na",
+    [
+      "不适用",
+      "Not applicable"
+    ]
+  ],
+  [
+    "section_intro",
+    [
+      "开始与适用范围",
+      "Beginning and scope"
+    ]
+  ],
+  [
+    "q_intro_agree",
+    [
+      "我了解这不是医学诊断，并自愿继续",
+      "I understand this is not a medical diagnosis and choose to continue"
+    ]
+  ],
+  [
+    "q_intro_adult",
+    [
+      "你是否已满18岁？",
+      "Are you 18 or older?"
+    ]
+  ],
+  [
+    "opt_attention",
+    [
+      "注意力与任务管理",
+      "Attention and managing tasks"
+    ]
+  ],
+  [
+    "opt_activity",
+    [
+      "坐立不安或冲动",
+      "Restlessness or impulsivity"
+    ]
+  ],
+  [
+    "opt_both",
+    [
+      "两方面都有",
+      "Both areas"
+    ]
+  ],
+  [
+    "opt_explore",
+    [
+      "不确定／先了解",
+      "Unsure / exploring"
+    ]
+  ],
+  [
+    "q_intro_concern",
+    [
+      "你最想了解哪一方面？",
+      "What would you most like to understand?"
+    ]
+  ],
+  [
+    "section_inattention",
+    [
+      "当前注意力",
+      "Current inattention"
+    ]
+  ],
+  [
+    "q_inattention_sustain",
+    [
+      "做需要持续投入的事情时，注意力常跑开：过去6个月的频率",
+      "Attention wanders during tasks that need sustained engagement: frequency during the past 6 months"
+    ]
+  ],
+  [
+    "q_inattention_mistakes",
+    [
+      "即使想认真完成，仍容易漏掉细节：过去6个月的频率",
+      "Missing details even when trying to work carefully: frequency during the past 6 months"
+    ]
+  ],
+  [
+    "q_inattention_listen",
+    [
+      "面对面交谈时也容易漏听内容：过去6个月的频率",
+      "Losing track of what someone says in a direct conversation: frequency during the past 6 months"
+    ]
+  ],
+  [
+    "q_inattention_finish",
+    [
+      "开始任务后难以把步骤做完：过去6个月的频率",
+      "Difficulty carrying tasks through after starting: frequency during the past 6 months"
+    ]
+  ],
+  [
+    "q_inattention_organize",
+    [
+      "安排步骤、材料或优先级很费力：过去6个月的频率",
+      "Finding it hard to arrange steps, materials or priorities: frequency during the past 6 months"
+    ]
+  ],
+  [
+    "q_inattention_effort",
+    [
+      "经常拖开需要长时间动脑的任务：过去6个月的频率",
+      "Putting off tasks that need extended mental effort: frequency during the past 6 months"
+    ]
+  ],
+  [
+    "q_inattention_lose",
+    [
+      "经常找不到正在需要的物品：过去6个月的频率",
+      "Frequently being unable to find items you need: frequency during the past 6 months"
+    ]
+  ],
+  [
+    "q_inattention_distract",
+    [
+      "周围小变化或无关想法容易把注意力拉走：过去6个月的频率",
+      "Small changes around you or unrelated thoughts pull attention away: frequency during the past 6 months"
+    ]
+  ],
+  [
+    "q_inattention_forget",
+    [
+      "容易忘记日常约定或待办事项：过去6个月的频率",
+      "Forgetting everyday commitments or planned tasks: frequency during the past 6 months"
+    ]
+  ],
+  [
+    "section_hyper",
+    [
+      "当前多动／冲动",
+      "Current hyperactivity / impulsivity"
+    ]
+  ],
+  [
+    "q_hyper_fidget",
+    [
+      "手脚经常需要动一动：过去6个月的频率",
+      "Frequently needing to move your hands or feet: frequency during the past 6 months"
+    ]
+  ],
+  [
+    "q_hyper_seat",
+    [
+      "在需要坐着的场合很难保持就座：过去6个月的频率",
+      "Finding it hard to stay seated when the situation calls for it: frequency during the past 6 months"
+    ]
+  ],
+  [
+    "q_hyper_restless",
+    [
+      "即使外表安静，内在也常坐立不安：过去6个月的频率",
+      "Feeling restless inside even when outwardly still: frequency during the past 6 months"
+    ]
+  ],
+  [
+    "q_hyper_quiet",
+    [
+      "很难安静地参与休闲活动：过去6个月的频率",
+      "Finding it hard to take part in leisure activities quietly: frequency during the past 6 months"
+    ]
+  ],
+  [
+    "q_hyper_driven",
+    [
+      "常感觉停不下来，需要不断做事：过去6个月的频率",
+      "Feeling a persistent need to keep moving or doing things: frequency during the past 6 months"
+    ]
+  ],
+  [
+    "q_hyper_talk",
+    [
+      "说话常比自己或他人预期的更多：过去6个月的频率",
+      "Talking more than you or others intended: frequency during the past 6 months"
+    ]
+  ],
+  [
+    "q_hyper_interrupt",
+    [
+      "别人还未说完就容易插话或接手：过去6个月的频率",
+      "Interrupting or taking over before others finish: frequency during the past 6 months"
+    ]
+  ],
+  [
+    "q_hyper_wait",
+    [
+      "等待轮到自己时特别困难：过去6个月的频率",
+      "Finding it particularly hard to wait your turn: frequency during the past 6 months"
+    ]
+  ],
+  [
+    "q_hyper_act",
+    [
+      "常在考虑后果之前行动或作决定：过去6个月的频率",
+      "Acting or making decisions before considering consequences: frequency during the past 6 months"
+    ]
+  ],
+  [
+    "section_development",
+    [
+      "早期发展史（Developmental History）",
+      "Developmental history"
+    ]
+  ],
+  [
+    "q_development_school",
+    [
+      "你是否记得：上学时已有注意力困难？",
+      "Do you recall attention difficulties during school years?"
+    ]
+  ],
+  [
+    "q_development_organization",
+    [
+      "你是否记得：早年经常难以整理或找不到东西？",
+      "Do you recall early difficulty organizing or keeping track of things?"
+    ]
+  ],
+  [
+    "q_development_tasks",
+    [
+      "你是否记得：早年常难以完成作业或交代的任务？",
+      "Do you recall early difficulty finishing homework or assigned tasks?"
+    ]
+  ],
+  [
+    "q_development_restless",
+    [
+      "你是否记得：早年有坐立不安或冲动的困扰？",
+      "Do you recall early restlessness or impulsivity concerns?"
+    ]
+  ],
+  [
+    "q_development_feedback",
+    [
+      "你是否记得：家人或老师曾提过这类表现？",
+      "Do you recall family or teachers previously mentioned similar patterns?"
+    ]
+  ],
+  [
+    "q_development_records",
+    [
+      "可选：是否有旧记录或了解你早年情况的人？无需上传材料，也不是必须条件",
+      "Optional: are past records or people familiar with your early life available? No upload is needed, and these are not mandatory"
+    ]
+  ],
+  [
+    "section_onset",
+    [
+      "出现时间与变化",
+      "Onset and change"
+    ]
+  ],
+  [
+    "opt_childhood",
+    [
+      "12岁以前",
+      "Before age 12"
+    ]
+  ],
+  [
+    "opt_adolescent",
+    [
+      "12至17岁",
+      "Ages 12–17"
+    ]
+  ],
+  [
+    "opt_adult",
+    [
+      "成年后",
+      "Adulthood"
+    ]
+  ],
+  [
+    "q_onset_age",
+    [
+      "你能回忆起这类表现最早出现在哪个时期？",
+      "When do you recall these patterns first appearing?"
+    ]
+  ],
+  [
+    "q_onset_sudden",
+    [
+      "当前注意或记忆问题是否突然出现或快速恶化？",
+      "Did the current attention or memory problems appear suddenly or worsen rapidly?"
+    ]
+  ],
+  [
+    "section_settings",
+    [
+      "跨情境表现",
+      "Across settings"
+    ]
+  ],
+  [
+    "q_settings_work",
+    [
+      "这类症状是否出现在工作情境？不适用可选否",
+      "Do these symptoms occur in work? Choose no if not applicable"
+    ]
+  ],
+  [
+    "q_settingImpact_work",
+    [
+      "在工作情境中影响有多大？",
+      "How much impact is there in work?"
+    ]
+  ],
+  [
+    "q_settings_school",
+    [
+      "这类症状是否出现在学校／学习情境？不适用可选否",
+      "Do these symptoms occur in school or education? Choose no if not applicable"
+    ]
+  ],
+  [
+    "q_settingImpact_school",
+    [
+      "在学校／学习情境中影响有多大？",
+      "How much impact is there in school or education?"
+    ]
+  ],
+  [
+    "q_settings_home",
+    [
+      "这类症状是否出现在家庭与日常家务情境？不适用可选否",
+      "Do these symptoms occur in home and household life? Choose no if not applicable"
+    ]
+  ],
+  [
+    "q_settingImpact_home",
+    [
+      "在家庭与日常家务情境中影响有多大？",
+      "How much impact is there in home and household life?"
+    ]
+  ],
+  [
+    "q_settings_social",
+    [
+      "这类症状是否出现在社交／关系互动情境？不适用可选否",
+      "Do these symptoms occur in social or relationship situations? Choose no if not applicable"
+    ]
+  ],
+  [
+    "q_settingImpact_social",
+    [
+      "在社交／关系互动情境中影响有多大？",
+      "How much impact is there in social or relationship situations?"
+    ]
+  ],
+  [
+    "q_settings_narrow",
+    [
+      "问题是否只在一种狭窄任务、压力或环境中出现？",
+      "Do the problems occur only in one narrow task, stressor or environment?"
+    ]
+  ],
+  [
+    "section_function",
+    [
+      "功能损害与补偿负担",
+      "Functional impairment and compensation"
+    ]
+  ],
+  [
+    "q_function_academic",
+    [
+      "学习表现受到多少影响？",
+      "How much is academic performance affected?"
+    ]
+  ],
+  [
+    "q_function_work",
+    [
+      "工作表现受到多少影响？",
+      "How much is work performance affected?"
+    ]
+  ],
+  [
+    "q_function_deadlines",
+    [
+      "按时完成受到多少影响？",
+      "How much is meeting deadlines affected?"
+    ]
+  ],
+  [
+    "q_function_organization",
+    [
+      "组织安排受到多少影响？",
+      "How much is organization affected?"
+    ]
+  ],
+  [
+    "q_function_finances",
+    [
+      "财务管理受到多少影响？",
+      "How much is managing finances affected?"
+    ]
+  ],
+  [
+    "q_function_relationships",
+    [
+      "人际关系受到多少影响？",
+      "How much is relationships affected?"
+    ]
+  ],
+  [
+    "q_function_household",
+    [
+      "家务责任受到多少影响？",
+      "How much is household responsibilities affected?"
+    ]
+  ],
+  [
+    "q_function_driving",
+    [
+      "驾驶／出行安全受到多少影响？",
+      "How much is driving / travel safety affected?"
+    ]
+  ],
+  [
+    "q_function_time",
+    [
+      "时间管理受到多少影响？",
+      "How much is time management affected?"
+    ]
+  ],
+  [
+    "q_function_selfCare",
+    [
+      "自我照顾受到多少影响？",
+      "How much is self-care affected?"
+    ]
+  ],
+  [
+    "q_function_sleepRoutine",
+    [
+      "睡眠作息受到多少影响？",
+      "How much is sleep routines affected?"
+    ]
+  ],
+  [
+    "q_compensation_burden",
+    [
+      "为了应付这些困难，你是否需要耗费大量额外时间，或高度依赖提醒、准备和固定安排？",
+      "Do you spend substantial extra time or rely heavily on reminders, preparation and rigid structure to manage these difficulties?"
+    ]
+  ],
+  [
+    "section_course",
+    [
+      "持续性与病程",
+      "Persistence and course"
+    ]
+  ],
+  [
+    "opt_sixPlus",
+    [
+      "6个月或更久",
+      "6 months or longer"
+    ]
+  ],
+  [
+    "opt_underSix",
+    [
+      "少于6个月",
+      "Less than 6 months"
+    ]
+  ],
+  [
+    "q_course_duration",
+    [
+      "当前这类表现持续了多久？",
+      "How long have these current patterns persisted?"
+    ]
+  ],
+  [
+    "opt_longstanding",
+    [
+      "长期相对持续，随环境有所变化",
+      "Longstanding and relatively persistent, varying with context"
+    ]
+  ],
+  [
+    "opt_episodic",
+    [
+      "只在一些明显不同的时期出现",
+      "Only during distinct episodes"
+    ]
+  ],
+  [
+    "opt_situational",
+    [
+      "只在特定环境或压力下出现",
+      "Only in particular situations or stress"
+    ]
+  ],
+  [
+    "opt_recent",
+    [
+      "近期才出现",
+      "Recently emerged"
+    ]
+  ],
+  [
+    "opt_fluctuating",
+    [
+      "波动明显，尚不清楚规律",
+      "Fluctuating, with no clear pattern yet"
+    ]
+  ],
+  [
+    "q_course_pattern",
+    [
+      "哪一项最接近这些表现的变化方式？",
+      "Which best describes how these patterns change over time?"
+    ]
+  ],
+  [
+    "section_sleep",
+    [
+      "睡眠因素",
+      "Sleep factors"
+    ]
+  ],
+  [
+    "q_sleep_short",
+    [
+      "你是否有经常睡眠不足？",
+      "Do you experience regularly getting insufficient sleep?"
+    ]
+  ],
+  [
+    "q_sleep_insomnia",
+    [
+      "你是否有入睡或维持睡眠困难？",
+      "Do you experience difficulty falling or staying asleep?"
+    ]
+  ],
+  [
+    "q_sleep_irregular",
+    [
+      "你是否有睡眠时间很不规律？",
+      "Do you experience an irregular sleep schedule?"
+    ]
+  ],
+  [
+    "q_sleep_daytime",
+    [
+      "你是否有白天明显嗜睡？",
+      "Do you experience marked daytime sleepiness?"
+    ]
+  ],
+  [
+    "q_sleep_breathing",
+    [
+      "你是否有睡眠时大声打鼾、憋醒或被观察到呼吸暂停？",
+      "Do you experience loud snoring, waking gasping, or observed pauses in breathing?"
+    ]
+  ],
+  [
+    "q_sleep_linked",
+    [
+      "注意力问题是否明显随睡眠不足或睡眠问题加重？",
+      "Do attention problems clearly worsen with insufficient or disrupted sleep?"
+    ]
+  ],
+  [
+    "section_medical",
+    [
+      "身体、药物与物质",
+      "Medical, medication and substance context"
+    ]
+  ],
+  [
+    "q_medical_contribution",
+    [
+      "头部损伤、身体或神经系统疾病、认知下降是否可能影响这些表现？",
+      "Could head injury, medical or neurological illness, or cognitive decline contribute?"
+    ]
+  ],
+  [
+    "q_substance_contribution",
+    [
+      "这些表现是否可能与兴奋剂误用、大麻、酒精、镇静剂、其他药物／物质、停用或药物调整有关？",
+      "Could these patterns relate to stimulant misuse, cannabis, alcohol, sedatives, other drugs or substances, withdrawal, or medication changes?"
+    ]
+  ],
+  [
+    "section_context",
+    [
+      "其他解释与同时存在的症状",
+      "Other explanations and co-occurring symptoms"
+    ]
+  ],
+  [
+    "q_context_onlyMood",
+    [
+      "注意问题是否只在明显低落、兴趣或精力下降的时期出现？",
+      "Do attention problems occur only during periods of marked low mood, reduced interest or low energy?"
+    ]
+  ],
+  [
+    "q_context_onlyAnxiety",
+    [
+      "是否主要因为持续担忧占据注意力而难以专注？",
+      "Is concentration mainly difficult because persistent worry occupies your attention?"
+    ]
+  ],
+  [
+    "q_context_onlyOCD",
+    [
+      "拖延或低效率是否主要来自反复检查、仪式或心理中和？",
+      "Are delays or inefficiency mainly caused by repeated checking, rituals or mental neutralization?"
+    ]
+  ],
+  [
+    "q_context_onlyTrauma",
+    [
+      "注意困难是否在创伤事件后才出现，并与再体验、警觉或睡眠改变有关？",
+      "Did attention difficulties begin only after trauma, alongside reliving, alertness or sleep changes?"
+    ]
+  ],
+  [
+    "q_context_activation",
+    [
+      "是否有与平时明显不同的一段时间，同时出现睡得少却不困、情绪高涨／易怒、活动增加或异常自信／冒险？",
+      "Have there been distinct periods unlike your baseline with less need for sleep, elevated/irritable mood, increased activity or unusual confidence/risk-taking?"
+    ]
+  ],
+  [
+    "title",
+    [
+      "ADHD 评估",
+      "ADHD Assessment"
+    ]
+  ],
+  [
+    "nav",
+    [
+      "ADHD 评估",
+      "ADHD assessment"
+    ]
+  ],
+  [
+    "intro",
+    [
+      "了解注意力、多动与冲动，也需要了解它们何时开始、出现在哪里，以及其他可能原因。可以选择不确定或暂不回答。",
+      "Understanding attention, hyperactivity and impulsivity also requires their history, settings and possible alternatives. You may choose unsure or decline."
+    ]
+  ],
+  [
+    "custom",
+    [
+      "这是面向18岁及以上成人的 MindAtlas 自定义结构化评估，不是 ASRS 或已验证量表，不提供正式诊断。",
+      "This is a custom MindAtlas structured assessment for adults aged 18 or older, not the ASRS or a validated scale. It does not provide a formal diagnosis."
+    ]
+  ],
+  [
+    "scope",
+    [
+      "此评估不适合作为儿童诊断工具。建议接受符合年龄与发展阶段的专业评估。",
+      "This assessment is not designed as a pediatric diagnostic tool. A developmentally appropriate professional assessment is recommended."
+    ]
+  ],
+  [
+    "consent",
+    [
+      "只有自愿同意的成人自我评估才能继续。",
+      "Only a consenting adult self-assessment can continue."
+    ]
+  ],
+  [
+    "privacy",
+    [
+      "答案只留在当前页面内存；不上传、记录或要求个人叙述。刷新或清除会移除本模块答案。",
+      "Answers remain in page memory; no personal narrative, upload or logging is required. Refresh or clear removes this module’s answers."
+    ]
+  ],
+  [
+    "next",
+    [
+      "下一步",
+      "Next"
+    ]
+  ],
+  [
+    "back",
+    [
+      "上一步",
+      "Back"
+    ]
+  ],
+  [
+    "pause",
+    [
+      "暂停并返回首页",
+      "Pause and return home"
+    ]
+  ],
+  [
+    "clear",
+    [
+      "清除 ADHD 答案",
+      "Clear ADHD answers"
+    ]
+  ],
+  [
+    "result",
+    [
+      "查看评估结果",
+      "View assessment results"
+    ]
+  ],
+  [
+    "error",
+    [
+      "请完成本页项目，也可以选择不确定或暂不回答。",
+      "Please answer the items on this page; unsure or prefer not to answer is available."
+    ]
+  ],
+  [
+    "why",
+    [
+      "为什么得到这个结果？",
+      "Why this result?"
+    ]
+  ],
+  [
+    "high",
+    [
+      "与 ADHD 相符的模式支持较多，建议进一步专业评估",
+      "An ADHD-compatible pattern has substantial support; professional assessment is recommended"
+    ]
+  ],
+  [
+    "moderate",
+    [
+      "存在相关表现，但仍有需要核实的信息",
+      "Related features are present, with information still needing clarification"
+    ]
+  ],
+  [
+    "low",
+    [
+      "目前作为主要解释的支持较弱；请进一步了解其他原因",
+      "Support as the main explanation is currently limited; other causes need exploration"
+    ]
+  ],
+  [
+    "insufficient",
+    [
+      "信息不足，尚不能确定相关模式",
+      "Insufficient information to establish a pattern"
+    ]
+  ],
+  [
+    "support",
+    [
+      "支持信息",
+      "Supporting evidence"
+    ]
+  ],
+  [
+    "opposing",
+    [
+      "较不相符的信息",
+      "Less-consistent evidence"
+    ]
+  ],
+  [
+    "missing",
+    [
+      "尚缺少或不确定的信息",
+      "Missing or uncertain information"
+    ]
+  ],
+  [
+    "alternatives",
+    [
+      "应优先核实的其他解释",
+      "Other explanations to examine"
+    ]
+  ],
+  [
+    "counts",
+    [
+      "原创症状计数（不是 ASRS 分数或诊断概率）",
+      "Original symptom counts (not an ASRS score or diagnostic probability)"
+    ]
+  ],
+  [
+    "summary",
+    [
+      "结构化评估摘要（非诊断报告）",
+      "Structured assessment summary (not a diagnostic report)"
+    ]
+  ],
+  [
+    "empty",
+    [
+      "当前没有明确记录；不表示已经排除。",
+      "No clear finding recorded; this does not establish exclusion."
+    ]
+  ],
+  [
+    "corroboration",
+    [
+      "专业评估可能参考学校记录、家人观察或以往评估；无需在此上传，也不意味着这些资料总是必需。",
+      "Professional evaluation may draw on school records, family observations or past assessments. No upload is needed here, and such information is not always mandatory."
+    ]
+  ],
+  [
+    "compensation",
+    [
+      "依赖提醒、过度准备或额外投入可能掩盖困难；较少的可见影响不能自动排除症状。",
+      "Reminders, overpreparation or extra effort can conceal difficulties; limited visible impact does not automatically exclude symptoms."
+    ]
+  ],
+  [
+    "care",
+    [
+      "可以与合格专业人员讨论 ADHD 评估、组织和行为支持、适合的 CBT 方法及学习／工作调整。是否适合药物由临床人员评估；不要未经医疗评估自行获取或使用兴奋剂。",
+      "Discuss ADHD evaluation, organizational and behavioral support, suitable CBT approaches and study/work adjustments with a qualified professional. Medication suitability requires clinical evaluation; do not obtain or use stimulants without medical assessment."
+    ]
+  ],
+  [
+    "safety",
+    [
+      "安全状态由共用安全检查决定；一般冲动性不等于即刻危险。",
+      "Safety is determined by the shared safety check; ordinary impulsivity is not the same as immediate danger."
+    ]
+  ],
+  [
+    "medical",
+    [
+      "突然或快速恶化的注意／认知变化需要考虑医疗评估。",
+      "Sudden or rapidly worsening attention or cognitive changes warrant consideration of medical evaluation."
+    ]
+  ],
+  [
+    "sleep",
+    [
+      "睡眠问题可能影响注意力，需进一步核实；本模块不诊断睡眠障碍。",
+      "Sleep problems may affect attention and need clarification; this module does not diagnose a sleep disorder."
+    ]
+  ],
+  [
+    "moodCompare",
+    [
+      "只在抑郁时期出现的注意困难更需要情绪评估；早于情绪发作的长期困难也可能独立存在。",
+      "Attention difficulty confined to depressive periods warrants Mood assessment; longstanding difficulties predating mood episodes may also exist independently."
+    ]
+  ],
+  [
+    "anxietyCompare",
+    [
+      "担忧占据注意力不同于长期的分心与组织困难，两种模式也可同时存在。",
+      "Worry consuming attention differs from longstanding distractibility and organization problems; both may coexist."
+    ]
+  ],
+  [
+    "ocdCompare",
+    [
+      "反复检查或仪式造成的延误不自动等于 ADHD，需与原有强迫模式一起理解。",
+      "Delays caused by checking or rituals do not automatically mean ADHD and need consideration alongside obsessive-compulsive patterns."
+    ]
+  ],
+  [
+    "traumaCompare",
+    [
+      "创伤后新出现的注意困难需要结合再体验、警觉与睡眠了解。",
+      "New attention difficulties after trauma need consideration alongside reliving, alertness and sleep."
+    ]
+  ],
+  [
+    "bipolarCompare",
+    [
+      "与平时不同的发作性兴奋、睡眠需求减少或冒险，应优先接受情绪／双相谱系专业评估。",
+      "Distinct episodes of activation, reduced sleep need or risk-taking warrant priority Mood/bipolar-spectrum evaluation."
+    ]
+  ],
+  [
+    "substanceCompare",
+    [
+      "药物或物质的时间关系尚待核实，不能直接归为 ADHD。",
+      "Medication or substance timing remains to be clarified and should not be attributed directly to ADHD."
+    ]
+  ],
+  [
+    "routerReason",
+    [
+      "早年起持续的分心、组织或任务完成困难，支持进一步进行 ADHD 相关评估。",
+      "Persistent distractibility, organization or task-completion difficulties dating to earlier life support further ADHD-oriented assessment."
+    ]
+  ],
+  [
+    "patternReason",
+    [
+      "当前症状与发展史、持续性及跨情境影响共同支持 ADHD 相关评估。",
+      "Current symptoms together with developmental history, persistence and cross-setting impact support ADHD-oriented evaluation."
+    ]
+  ],
+  [
+    "partialReason",
+    [
+      "当前注意／多动症状值得了解，但单靠当前症状无法确定 ADHD。",
+      "Current attention/hyperactivity features merit exploration, but current symptoms alone cannot establish ADHD."
+    ]
+  ],
+  [
+    "sources",
+    [
+      "证据与实现限制",
+      "Evidence and implementation limits"
+    ]
+  ]
+]);
+
+I18n.register("adhdSafety",[
+  [
+    "sleep",
+    [
+      "当前是否有明显减少睡眠需求，同时精力异常增加的情况？",
+      "Is your need for sleep markedly reduced while your energy is unusually increased right now?"
+    ]
+  ],
+  [
+    "energy",
+    [
+      "当前是否出现明显不同于平时的精力或活动增加？",
+      "Is your energy or activity markedly above your usual baseline right now?"
+    ]
+  ],
+  [
+    "grandiosity",
+    [
+      "当前是否异常确信自己具有特殊能力或不会受到伤害？",
+      "Do you currently have unusual certainty that you have special abilities or cannot be harmed?"
+    ]
+  ],
+  [
+    "driving",
+    [
+      "当前是否正在或即将进行严重危险的驾驶行为？",
+      "Are you currently engaging in, or about to engage in, severely dangerous driving?"
+    ]
+  ],
+  [
+    "judgment",
+    [
+      "当前是否难以判断危险或控制严重冒险行为？",
+      "Are you currently unable to judge danger or control seriously risky behavior?"
+    ]
+  ],
+  [
+    "control",
+    [
+      "当前是否无法控制自己的行为，可能危及安全？",
+      "Are you currently unable to control your behavior in a way that may endanger safety?"
+    ]
+  ],
+  [
+    "danger",
+    [
+      "现在是否存在需要立即帮助的危险？",
+      "Is there danger requiring immediate help right now?"
+    ]
+  ]
+]);
+
+I18n.register("adhdEvidence",[["sleepClear",["睡眠因素已核实，未报告相关影响","Sleep contribution considered, with no related impact reported"]]]);

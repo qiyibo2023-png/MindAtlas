@@ -1,0 +1,12 @@
+(function(R){'use strict';
+const register=R.registerAssessmentDomain;R.registerAssessmentDomain=d=>{if(d.id!=='adhd')return register(d);if(R.domains.has(d.id))throw Error('Duplicate assessment domain');R.domains.set(d.id,Object.freeze({...d}));};R.registerAssessmentDomain({id:'adhd',view:'adhd',label:'adhdUI.title'});
+R.fields.adhd=['developmental','disorganized','distractible','losing','unfinished','impulsive'];R.paths.push(...R.fields.adhd.map(k=>'adhd.'+k));
+const extract=R.extract;R.extract=raw=>{const p=extract(raw);if(typeof raw!=='string')return p;const text=raw.normalize('NFKC').toLowerCase();
+ const excluded=/\b(?:he|she|they|my friend|my partner|if|hypothetical|never|not|no longer)\b|\u4ed6|\u5979|\u5982\u679c|\u5047\u5982|\u6ca1\u6709|\u4e0d\u518d/.test(text);
+ const recentOnly=/only (?:since|during|after)|since (?:becoming|the trauma)|\u53ea\u5728|\u624d\u5f00\u59cb/.test(text);
+ const patterns={developmental:/since (?:school|childhood|i was (?:a child|young))|lifelong|\u4ece\u5c0f|\u4e0a\u5b66\u65f6\u5c31|\u81ea\u4ece\u4e0a\u5b66/,disorganized:/disorgani[sz]ed|organi[sz]ation problems|\u4e22\u4e09\u843d\u56db|\u96be\u4ee5\u7ec4\u7ec7|\u6742\u4e71/,distractible:/distractib|\u5206\u5fc3/,losing:/lose (?:everything|important|things)|losing things|\u4e22\u4e1c\u897f|\u4e22\u5931/,unfinished:/struggle to finish|unfinished tasks|cannot finish tasks|\u96be\u4ee5\u5b8c\u6210\u4efb\u52a1/,impulsive:/impulsiv|\u51b2\u52a8/};
+ if(!excluded&&/worr(?:y|ied|ying).{0,80}(?:all day|constantly)|\u6574\u5929.{0,20}\u62c5\u5fc3/.test(text)){R.put(p,'anxiety.excessiveWorry',true);p.observations.push({path:'anxiety.excessiveWorry',value:true,context:{subject:'self',temporality:'current',polarity:'affirmed',uncertainty:false}});}
+ for(const [k,re]of Object.entries(patterns))if(re.test(text)&&!excluded&&!recentOnly){R.put(p,'adhd.'+k,true);p.observations.push({path:'adhd.'+k,value:true,context:{subject:'self',temporality:'current',polarity:'affirmed',uncertainty:false}});}return p;};
+R.rules.push({id:'ROUTER_ADHD_DEVELOPMENTAL_001',domain:'adhd',relevance:'high',explanationKey:'adhdUI.routerReason',version:R.version,moduleVersion:ADHD.version,reviewStatus:'unreviewed',when:p=>p.adhd?.developmental===true&&['disorganized','distractible','losing','unfinished','impulsive'].filter(k=>p.adhd[k]===true).length>=2});
+const route=R.route;R.route=(p,choice)=>{const r=route(p,choice);if(r.candidateRoutes.some(c=>c.domain==='adhd'))r.unsupportedSignals=r.unsupportedSignals.filter(k=>k!=='attention');return r;};
+})(globalThis.SymptomRouter);

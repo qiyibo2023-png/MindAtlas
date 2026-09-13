@@ -65,3 +65,7 @@ Work occurs on `feature/cross-disorder-differential-v1` from merged baseline `57
 ## Trauma v1 local checkpoint
 
 The canonical `feature/ptsd-trauma-assessment-v1` branch starts at merged Differential baseline `d4aae5f`. Required local commit: `feat: add PTSD trauma assessment v1`. No push or release tag during this task. The current release verifier uses `runtime-trauma-v1.0.0.json`; historical manifests and backups remain unchanged.
+
+## ADHD checkpoint (supersedes historical module inventory above)
+
+Development branch: `feature/adhd-assessment-v1`; metadata version: `adhd-assessment-v1.0.0`. Local commit only; no push or Git tag during this task. The current release verifier uses `tests/fixtures/runtime-adhd-v1.0.0.json`; prior manifests remain preserved. The canonical source tree alone rebuilds the runtime. All new rules are unreviewed. See `CHECKPOINT-ADHD.md` for the intended file inventory and verification.
