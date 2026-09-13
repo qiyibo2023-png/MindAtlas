@@ -1,0 +1,26 @@
+(function(T){'use strict';
+T.emptyState=()=>({intro:{},exposure:{},intrusion:{},avoidance:{},negative:{},arousal:{},course:{},function:{},dissociation:{},medical:{},substance:{},context:{},revision:0});
+T.store={state:T.emptyState(),step:'intro',error:[],result:null};
+T.visible=(q,s)=>q.id!=='exposure.closeViolent'||s.exposure?.mode==='close';
+T.plan=s=>T.sections.map(sec=>({...sec,questions:sec.questions.filter(q=>T.visible(q,s))}));
+T.setAnswer=(s,p,v)=>{const q=T.questions.find(q=>q.id===p);if(!q||!Assessment.validAnswer(q,v))throw Error('Invalid trauma answer');return Assessment.set(s,p,v);};
+T.update=(p,v)=>{T.store.state=T.setAnswer(T.store.state,p,v);T.store.result=null;};
+T.clear=()=>{T.store={state:T.emptyState(),step:'intro',error:[],result:null};};
+T.tri=v=>v==='yes'?true:v==='no'?false:'unknown';
+T.cluster=(s,k,min)=>{const values=T.clusters[k].map(id=>s[k]?.[id]),count=values.filter(v=>['1','2','3'].includes(v)).length,unknown=values.filter(v=>!['0','1','2','3'].includes(v)).length;return {count,unknown,threshold:min,linked:T.tri(s[k]?.linked),present:s[k]?.linked==='no'?false:s[k]?.linked!=='yes'?'unknown':count>=min?true:count+unknown>=min?'unknown':false};};
+T.assess=function(s){
+ const missing=T.questions.filter(q=>T.visible(q,s)&&!q.optional&&(Assessment.get(s,q.id)==='unknown'||!Assessment.validAnswer(q,Assessment.get(s,q.id)))).map(q=>q.id);
+ const exposure=s.exposure?.category==='stressor'&&s.exposure?.threshold==='yes'?'unknown':s.exposure?.threshold==='no'||s.exposure?.mode==='media'?false:s.exposure?.threshold!=='yes'?'unknown':['direct','witness','occupation'].includes(s.exposure?.mode)?true:s.exposure?.mode==='close'?T.tri(s.exposure?.closeViolent):'unknown';
+ const clusters=Object.fromEntries(Object.entries({intrusion:1,avoidance:1,negative:2,arousal:2}).map(([k,min])=>[k,T.cluster(s,k,min)]));
+ const impacts=T.questions.filter(q=>q.id.startsWith('function.')).map(q=>Assessment.get(s,q.id));const impairment=impacts.some(v=>['moderate','severe'].includes(v))||['moderate','severe'].includes(s.course?.distress)?true:impacts.every(v=>['none','mild','na'].includes(v))&&['none','mild','na'].includes(s.course?.distress)?false:'unknown';
+ const duration=s.course?.duration==='overMonth'?true:['under3','3to30'].includes(s.course?.duration)?false:'unknown';
+ const facts={exposure,...Object.fromEntries(Object.entries(clusters).map(([k,v])=>[k,v.present])),duration,impairment,current:T.tri(s.course?.current)};
+ const ruleouts=['medical.contribution','substance.contribution'].filter(k=>Assessment.get(s,k)!=='no');
+ if(['1','2','3'].includes(s.negative?.memory)&&s.medical?.memory!=='no')ruleouts.push('medical.memory');if(s.dissociation?.fixed==='yes')ruleouts.push('dissociation.fixed');if((s.dissociation?.self==='yes'||s.dissociation?.world==='yes')&&s.dissociation?.reality!=='yes')ruleouts.push('dissociation.reality');
+ if(exposure==='unknown'&&!missing.includes('exposure.threshold'))missing.push('exposure.threshold');
+ const support=Object.keys(facts).filter(k=>facts[k]===true),opposing=Object.keys(facts).filter(k=>facts[k]===false);const any=Object.values(clusters).some(v=>v.count>0);const compatible=Object.values(facts).every(v=>v===true)&&s.intro?.adult==='yes'&&s.intro?.agree==='yes';
+ const direction=compatible&&!ruleouts.length?'compatible':exposure===false?'stressor':any&&duration===false?'early':any?'limited':'low';
+ return {version:T.version,revision:s.revision,reviewStatus:'unreviewed',instrument:'custom_structured_not_validated',score:null,clusters,facts,support,opposing,missing,ruleouts,direction,consistency:direction==='compatible'?'strong':any?'limited':'insufficient',dissociation:s.dissociation?.self==='yes'||s.dissociation?.world==='yes',psychoticFlag:s.dissociation?.fixed==='yes'||s.dissociation?.reality==='no',context:{...s.context},safety:GlobalSafety.current().urgency};
+};
+T.ruleCatalog=[{id:'TRAUMA_CLUSTER_PATTERN_001',version:T.version,reviewStatus:'unreviewed',criteria:{intrusion:1,avoidance:1,negative:2,arousal:2,duration:'overMonth',exposure:true,impairment:true,current:true},instrument:'custom_not_validated'}];
+})(globalThis.Trauma);

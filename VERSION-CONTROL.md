@@ -61,3 +61,7 @@ The historical sections above describe baseline preparation. Router v1 is develo
 ## Differential v1 local milestone
 
 Work occurs on `feature/cross-disorder-differential-v1` from merged baseline `5731384`. The required commit message is `feat: add cross-disorder differential layer v1`. This checkpoint requires local commit only: no push, no release tag. `runtime-differential-v1.0.0.json` verifies current source/build parity; historical Router, bilingual and migration manifests remain unchanged. See CHECKPOINT-DIFFERENTIAL.md for the acceptance gate.
+
+## Trauma v1 local checkpoint
+
+The canonical `feature/ptsd-trauma-assessment-v1` branch starts at merged Differential baseline `d4aae5f`. Required local commit: `feat: add PTSD trauma assessment v1`. No push or release tag during this task. The current release verifier uses `runtime-trauma-v1.0.0.json`; historical manifests and backups remain unchanged.

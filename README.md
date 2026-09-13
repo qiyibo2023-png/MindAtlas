@@ -43,3 +43,7 @@ For the optional synthetic browser harness, run `node scripts/preview-safety-ux.
 ## Differential v1
 
 The optional cross-disorder comparison is available after current assessment results. See [checkpoint](CHECKPOINT-DIFFERENTIAL.md) and [auditable rule contract](DIFFERENTIAL-RULE-CATALOG.md). The complete suite now contains 269 checks, including 42 Differential checks. Authored code is in `src/differential/`; no additional disorder modules or Adaptive Assessment engine are included.
+
+## PTSD / Trauma v1
+
+The fourth assessment domain is available through navigation and the shared Router. It uses original structured questions, not a PCL-5 score. See [Trauma checkpoint](CHECKPOINT-TRAUMA.md) and [clinical implementation catalog](TRAUMA-IMPLEMENTATION-CATALOG.md). Full regression suite: 310 checks; new Trauma suite: 41 checks.
