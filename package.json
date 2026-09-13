@@ -2,7 +2,7 @@
   "name": "mindatlas-assessment",
   "version": "1.0.0",
   "private": true,
-  "description": "Canonical bilingual MindAtlas Mood, Anxiety, OCD and Global Safety Engine prototype",
+  "description": "Canonical bilingual MindAtlas Mood, Anxiety, OCD, Trauma and ADHD assessment prototype with shared Safety, Router and Differential",
   "scripts": {
     "build": "node scripts/build.cjs && node scripts/validate-static.cjs",
     "test": "node scripts/test-all.cjs",

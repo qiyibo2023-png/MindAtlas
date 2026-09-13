@@ -47,3 +47,7 @@ The optional cross-disorder comparison is available after current assessment res
 ## PTSD / Trauma v1
 
 The fourth assessment domain is available through navigation and the shared Router. It uses original structured questions, not a PCL-5 score. See [Trauma checkpoint](CHECKPOINT-TRAUMA.md) and [clinical implementation catalog](TRAUMA-IMPLEMENTATION-CATALOG.md). Full regression suite: 310 checks; new Trauma suite: 41 checks.
+
+## ADHD local development milestone
+
+The current source includes ADHD as the fifth adult assessment domain. See `ADHD-IMPLEMENTATION-CATALOG.md` and `CHECKPOINT-ADHD.md` for custom-assessment boundaries, review status, integrations and verification. Source remains `src/`; `dist/` is generated. Run `node scripts/test-all.cjs` for every regression and translation validation. The browser-only synthetic harness is `node scripts/preview-adhd.cjs` on port 4178 and is excluded from production runtime. No ASRS instrument is implemented.
