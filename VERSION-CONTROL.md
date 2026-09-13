@@ -57,3 +57,7 @@ The earlier source-migration baseline instructions are historical. See
 The historical sections above describe baseline preparation. Router v1 is developed on `feature/symptom-router-v1`, based on verified bilingual commit `1198cbcc30c4d9ff91738644ff8e6dc117c779cb`. Official origin is unchanged. The milestone commit is `feat: add explainable symptom router v1`; the version tag is `symptom-router-v1.0.0`. Fetch and reject unexpected divergence before normal push. Create the tag only after a successful branch push; never move existing tags, force-push or auto-merge to stable. The final synchronization result is recorded in the external acceptance report.
 
 `verify-baseline.cjs` now validates the Router release manifest; the original bilingual and migration manifests remain unchanged. Runtime modifications are limited to Router, its i18n and UI integration, and the documented Safety extraction defect correction.
+
+## Differential v1 local milestone
+
+Work occurs on `feature/cross-disorder-differential-v1` from merged baseline `5731384`. The required commit message is `feat: add cross-disorder differential layer v1`. This checkpoint requires local commit only: no push, no release tag. `runtime-differential-v1.0.0.json` verifies current source/build parity; historical Router, bilingual and migration manifests remain unchanged. See CHECKPOINT-DIFFERENTIAL.md for the acceptance gate.

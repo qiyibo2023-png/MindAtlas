@@ -8708,3 +8708,881 @@ I18n.register("router", [
 ]);
 
 I18n.register("router", [["alsoRelevant", ["也可能相关", "Also potentially relevant"]]]);
+
+I18n.register("differential", [
+  [
+    "intrusive",
+    [
+      "反复侵入的想法、画面或冲动",
+      "Recurring intrusive thoughts, images or urges"
+    ]
+  ],
+  [
+    "ego",
+    [
+      "想法被体验为不想要的",
+      "Thoughts experienced as unwanted"
+    ]
+  ],
+  [
+    "rituals",
+    [
+      "重复行为或心理仪式",
+      "Repetitive behaviors or mental rituals"
+    ]
+  ],
+  [
+    "relief",
+    [
+      "仪式后短暂缓解",
+      "Temporary relief after rituals"
+    ]
+  ],
+  [
+    "response",
+    [
+      "为回应想法而进行仪式",
+      "Rituals performed in response to thoughts"
+    ]
+  ],
+  [
+    "ocdImpact",
+    [
+      "强迫相关痛苦或功能影响",
+      "Obsessive-compulsive distress or functional impact"
+    ]
+  ],
+  [
+    "timeKnown",
+    [
+      "每日耗时信息",
+      "Daily time-burden information"
+    ]
+  ],
+  [
+    "low",
+    [
+      "低落心境",
+      "Low mood"
+    ]
+  ],
+  [
+    "interest",
+    [
+      "兴趣或愉悦下降",
+      "Loss of interest or pleasure"
+    ]
+  ],
+  [
+    "energy",
+    [
+      "精力下降",
+      "Low energy"
+    ]
+  ],
+  [
+    "worth",
+    [
+      "自责或无价值感",
+      "Guilt or worthlessness"
+    ]
+  ],
+  [
+    "sleep",
+    [
+      "睡眠变化",
+      "Sleep changes"
+    ]
+  ],
+  [
+    "moodDuration",
+    [
+      "情绪症状持续时间",
+      "Duration of mood symptoms"
+    ]
+  ],
+  [
+    "together",
+    [
+      "情绪症状是否同期出现",
+      "Whether mood symptoms occurred together"
+    ]
+  ],
+  [
+    "moodImpact",
+    [
+      "情绪相关功能影响",
+      "Mood-related functional impact"
+    ]
+  ],
+  [
+    "chronic",
+    [
+      "长期低落病程",
+      "Persistent low-mood course"
+    ]
+  ],
+  [
+    "activation",
+    [
+      "既往异常高涨与活跃表现",
+      "History of unusual mood elevation and activation"
+    ]
+  ],
+  [
+    "bipolarKnown",
+    [
+      "高涨或躁狂史是否已充分了解",
+      "Whether elevated-mood or mania history is sufficiently known"
+    ]
+  ],
+  [
+    "contextMood",
+    [
+      "强迫评估中报告的抑郁相关困扰",
+      "Depressive concerns reported in the OCD assessment"
+    ]
+  ],
+  [
+    "rumination",
+    [
+      "以过往失败或自我批评为主的反复思考",
+      "Repetitive thinking centered on past failures or self-criticism"
+    ]
+  ],
+  [
+    "broad",
+    [
+      "多个日常领域的担忧",
+      "Worry across several everyday domains"
+    ]
+  ],
+  [
+    "excessive",
+    [
+      "与情境不相称的担忧",
+      "Worry excessive for the circumstances"
+    ]
+  ],
+  [
+    "control",
+    [
+      "难以控制担忧",
+      "Difficulty controlling worry"
+    ]
+  ],
+  [
+    "mostDays",
+    [
+      "多数日子出现担忧",
+      "Worry on most days"
+    ]
+  ],
+  [
+    "tension",
+    [
+      "身体紧绷",
+      "Physical tension"
+    ]
+  ],
+  [
+    "anxietyDuration",
+    [
+      "广泛担忧的持续时间",
+      "Duration of generalized worry"
+    ]
+  ],
+  [
+    "anxietyImpact",
+    [
+      "广泛担忧的功能影响",
+      "Functional impact of generalized worry"
+    ]
+  ],
+  [
+    "panic",
+    [
+      "突然、反复且可能意外的惊恐表现",
+      "Abrupt, recurrent and potentially unexpected panic presentations"
+    ]
+  ],
+  [
+    "panicDuration",
+    [
+      "惊恐后的持续担忧或行为变化",
+      "Persistent concern or behavioral change after panic"
+    ]
+  ],
+  [
+    "panicImpact",
+    [
+      "惊恐相关功能影响",
+      "Panic-related functional impact"
+    ]
+  ],
+  [
+    "social",
+    [
+      "社交评价恐惧模式",
+      "Social-evaluation fear pattern"
+    ]
+  ],
+  [
+    "specific",
+    [
+      "特定恐惧模式",
+      "Specific-fear pattern"
+    ]
+  ],
+  [
+    "agora",
+    [
+      "广场恐惧相关模式",
+      "Agoraphobic pattern"
+    ]
+  ],
+  [
+    "separation",
+    [
+      "分离焦虑相关模式",
+      "Separation-anxiety pattern"
+    ]
+  ],
+  [
+    "onlyObsessions",
+    [
+      "焦虑是否主要局限于强迫触发情境",
+      "Whether anxiety is mainly limited to obsessional triggers"
+    ]
+  ],
+  [
+    "medical",
+    [
+      "尚需核实的身体健康因素",
+      "Medical contributors needing verification"
+    ]
+  ],
+  [
+    "substance",
+    [
+      "尚需核实的药物或物质因素",
+      "Medication or substance contributors needing verification"
+    ]
+  ],
+  [
+    "stressor",
+    [
+      "压力事件相关解释",
+      "Stressor-related explanations"
+    ]
+  ],
+  [
+    "moodScreen",
+    [
+      "抑郁筛查量表线索",
+      "Depression screener context"
+    ]
+  ],
+  [
+    "anxietyScreen",
+    [
+      "焦虑筛查量表线索",
+      "Anxiety screener context"
+    ]
+  ],
+  [
+    "trauma",
+    [
+      "创伤重现相关线索",
+      "Trauma re-experiencing concerns"
+    ]
+  ],
+  [
+    "attention",
+    [
+      "注意或神经发育相关线索",
+      "Attention or neurodevelopmental concerns"
+    ]
+  ],
+  [
+    "eating",
+    [
+      "进食相关线索",
+      "Eating-related concerns"
+    ]
+  ],
+  [
+    "psychotic",
+    [
+      "精神病性症状相关线索",
+      "Possible psychotic-symptom concerns"
+    ]
+  ],
+  [
+    "otherCategory",
+    [
+      "其他尚未覆盖的诊断类别线索",
+      "Concerns in another unsupported diagnostic category"
+    ]
+  ],
+  [
+    "ocd",
+    [
+      "强迫症相容模式",
+      "Obsessive-compulsive pattern"
+    ]
+  ],
+  [
+    "mood",
+    [
+      "抑郁症状模式",
+      "Depressive symptom pattern"
+    ]
+  ],
+  [
+    "gad",
+    [
+      "广泛性焦虑相容模式",
+      "Generalized-anxiety pattern"
+    ]
+  ],
+  [
+    "bipolar",
+    [
+      "双相谱系专业评估方向",
+      "Bipolar-spectrum evaluation"
+    ]
+  ],
+  [
+    "persistent",
+    [
+      "持续性抑郁症状模式",
+      "Persistent depressive symptom pattern"
+    ]
+  ],
+  [
+    "panicDirection",
+    [
+      "惊恐样症状评估方向",
+      "Panic-like symptom evaluation"
+    ]
+  ],
+  [
+    "ocdCycle",
+    [
+      "侵入性想法与为回应它而进行的仪式同时出现，支持进一步评估强迫模式。",
+      "Intrusive thoughts occur together with rituals performed in response, supporting assessment of an obsessive-compulsive pattern."
+    ]
+  ],
+  [
+    "ocdSpecific",
+    [
+      "不想要的想法、仪式和短暂缓解形成了有区分意义的组合。",
+      "Unwanted thoughts, rituals and temporary relief form a discriminating combination."
+    ]
+  ],
+  [
+    "gadBroad",
+    [
+      "跨多个日常领域、难以控制且经常出现的担忧，支持广泛性焦虑方向。",
+      "Frequent, hard-to-control worry across everyday domains supports a generalized-anxiety direction."
+    ]
+  ],
+  [
+    "gadNoRitual",
+    [
+      "存在广泛担忧，而未报告仪式化应对；这一组合更支持担忧模式。",
+      "Broad worry is reported without ritualized responses; this combination favors a worry pattern."
+    ]
+  ],
+  [
+    "linkedAnxiety",
+    [
+      "焦虑围绕强迫触发情境，或未报告广泛日常担忧；单凭这类焦虑不能建立广泛性焦虑解释。",
+      "Anxiety is linked to obsessional triggers, or broad everyday worry was not reported; that anxiety alone does not establish a generalized-anxiety explanation."
+    ]
+  ],
+  [
+    "moodCore",
+    [
+      "低落心境与兴趣下降同时出现，支持情绪方向。",
+      "Low mood and loss of interest occur together, supporting a mood direction."
+    ]
+  ],
+  [
+    "moodCluster",
+    [
+      "低落、兴趣下降与精力变化形成相互支持的情绪模式。",
+      "Low mood, loss of interest and reduced energy form a converging mood pattern."
+    ]
+  ],
+  [
+    "ruminationPattern",
+    [
+      "以失败或自我批评为主的思考伴随低落，且未报告仪式，更符合抑郁性反刍方向。",
+      "Failure-focused or self-critical thinking accompanies low mood without reported rituals, favoring a depressive-rumination direction."
+    ]
+  ],
+  [
+    "activationHistory",
+    [
+      "既往异常高涨与活跃表现需要双相谱系评估，降低对单纯单相抑郁解释的支持。",
+      "Past mood elevation and activation warrant bipolar-spectrum evaluation and reduce support for a purely unipolar interpretation."
+    ]
+  ],
+  [
+    "chronicPattern",
+    [
+      "长期低落病程与功能影响支持持续性情绪模式的进一步评估。",
+      "Persistent low mood with functional impact supports further assessment of a chronic mood pattern."
+    ]
+  ],
+  [
+    "panicPattern",
+    [
+      "已有结构化答案支持惊恐样表现；身体健康与病程仍需核实。",
+      "Structured answers support a panic-like presentation; medical context and course still require verification."
+    ]
+  ],
+  [
+    "existingAnxiety",
+    [
+      "现有焦虑模块的结构化表现组合支持这一评估方向。",
+      "The structured pattern in the existing Anxiety module supports this assessment direction."
+    ]
+  ],
+  [
+    "partialPattern",
+    [
+      "已有部分相关线索，但不足以形成完整解释。",
+      "Some relevant features are present, but they do not establish a complete explanation."
+    ]
+  ],
+  [
+    "screenerContext",
+    [
+      "量表仅提供症状负担线索，不决定跨类别排序。",
+      "The screener provides symptom-burden context and does not determine cross-domain ordering."
+    ]
+  ],
+  [
+    "negativeEvidence",
+    [
+      "未报告或尚不满足的相关特征",
+      "Relevant features not reported or not meeting the assessed criterion"
+    ]
+  ],
+  [
+    "ocdMoodCoexist",
+    [
+      "强迫相关困扰与抑郁症状可能同时存在；当前信息不能确定因果关系。",
+      "Obsessive-compulsive distress and depressive symptoms may coexist; these data do not establish causality."
+    ]
+  ],
+  [
+    "ocdGadCoexist",
+    [
+      "强迫模式与独立的广泛担忧模式均有支持，不必强行选一个。",
+      "Both an obsessive-compulsive pattern and an independent broad-worry pattern are supported; one need not exclude the other."
+    ]
+  ],
+  [
+    "moodAnxietyCoexist",
+    [
+      "情绪症状与广泛担忧模式均有支持，不代表已经确诊共病。",
+      "Mood symptoms and generalized worry are both supported; this is not a diagnosis of comorbidity."
+    ]
+  ],
+  [
+    "harmBoundary",
+    [
+      "安全记录区分了不想要的伤人念头与实际意图；比较结果不能替代安全判断。",
+      "Safety records distinguish unwanted harm thoughts from actual intent; this comparison cannot replace safety assessment."
+    ]
+  ],
+  [
+    "selfBoundary",
+    [
+      "安全记录区分了害怕的自伤念头与求死愿望或意图；仍需依据安全问题判断。",
+      "Safety records distinguish feared self-harm thoughts from desire to die or intent; safety questions remain authoritative."
+    ]
+  ],
+  [
+    "invalid",
+    [
+      "证据暂时无法读取，请返回原评估核实答案。",
+      "Evidence could not be read. Please return to the original assessment to verify answers."
+    ]
+  ],
+  [
+    "noSupportedPattern",
+    [
+      "当前结果不足以支持比较方向；可与专业人员进一步核实，不能据此排除问题",
+      "Current results do not support a comparative direction; professional clarification may help, and concerns are not ruled out"
+    ]
+  ],
+  [
+    "noAssessment",
+    [
+      "需要先生成当前评估结果",
+      "Generate current assessment results first"
+    ]
+  ],
+  [
+    "safetyQuestions",
+    [
+      "尚未澄清的安全信息",
+      "Unresolved safety information"
+    ]
+  ],
+  [
+    "entryTitle",
+    [
+      "比较已完成的评估证据",
+      "Compare completed assessment evidence"
+    ]
+  ],
+  [
+    "entryHelp",
+    [
+      "可选择本页面中已生成结果的评估，查看支持、较不相符和仍未知的信息。",
+      "Choose assessments with generated results in this page to review support, less-consistent evidence and remaining unknowns."
+    ]
+  ],
+  [
+    "open",
+    [
+      "查看跨类别比较",
+      "View cross-disorder comparison"
+    ]
+  ],
+  [
+    "heading",
+    [
+      "跨类别评估证据摘要",
+      "Cross-disorder assessment evidence summary"
+    ]
+  ],
+  [
+    "disclaimer",
+    [
+      "这是对当前证据的比较，不是正式诊断，也不能替代临床专业判断。",
+      "This compares the available evidence. It is not a formal diagnosis and does not replace clinical judgment."
+    ]
+  ],
+  [
+    "primary",
+    [
+      "目前支持较多的方向",
+      "Most supported directions so far"
+    ]
+  ],
+  [
+    "secondary",
+    [
+      "其他有支持的方向",
+      "Other supported directions"
+    ]
+  ],
+  [
+    "supporting",
+    [
+      "支持证据",
+      "Supporting evidence"
+    ]
+  ],
+  [
+    "opposing",
+    [
+      "较不相符的证据",
+      "Less-consistent evidence"
+    ]
+  ],
+  [
+    "discriminating",
+    [
+      "有区分意义的特征",
+      "Discriminating features"
+    ]
+  ],
+  [
+    "missing",
+    [
+      "还缺少哪些信息？",
+      "What information is missing?"
+    ]
+  ],
+  [
+    "ruleouts",
+    [
+      "尚待核实的排除因素",
+      "Unresolved rule-outs"
+    ]
+  ],
+  [
+    "cooccurring",
+    [
+      "可能同时存在的模式",
+      "Possible co-occurring patterns"
+    ]
+  ],
+  [
+    "contradictions",
+    [
+      "需要核实的答案冲突",
+      "Conflicting answers to review"
+    ]
+  ],
+  [
+    "conflictPolicy",
+    [
+      "较明确的结构化答案优先用于比较，但相反的记录仍被保留。请回到原评估核实；不要把冲突当作已解决。",
+      "More explicit structured answers take precedence, but contrary records remain visible. Review the original assessments; the conflict is not treated as resolved."
+    ]
+  ],
+  [
+    "unsupported",
+    [
+      "其他类别可能需要评估",
+      "Another category may require assessment"
+    ]
+  ],
+  [
+    "unsupportedHelp",
+    [
+      "这些领域尚未提供完整评估；当前信息不能据此作出诊断，也不会被强行归入已有类别。",
+      "Full assessments for these areas are not available. These concerns do not establish a diagnosis and are not forced into the available categories."
+    ]
+  ],
+  [
+    "safetyState",
+    [
+      "当前安全状态",
+      "Current safety state"
+    ]
+  ],
+  [
+    "safetyNone",
+    [
+      "未触发当前安全规则",
+      "No current safety rule triggered"
+    ]
+  ],
+  [
+    "safetyAttention",
+    [
+      "需要留意或澄清",
+      "Attention or clarification needed"
+    ]
+  ],
+  [
+    "safetyElevated",
+    [
+      "建议及时获得支持",
+      "Prompt support recommended"
+    ]
+  ],
+  [
+    "safetyAcute",
+    [
+      "需要即时支持",
+      "Immediate support needed"
+    ]
+  ],
+  [
+    "safetyFirst",
+    [
+      "请先查看安全支持信息；当前不展示跨类别比较。",
+      "Please review safety support first; the cross-disorder comparison is not displayed now."
+    ]
+  ],
+  [
+    "sufficient",
+    [
+      "已有足够信息进行有限比较，仍需专业确认。",
+      "There is enough information for a limited comparison; professional confirmation is still needed."
+    ]
+  ],
+  [
+    "insufficient",
+    [
+      "还需要更多信息。下面只显示目前可支持的方向和不确定之处。",
+      "More information is needed. Below are only the directions currently supported and the remaining uncertainties."
+    ]
+  ],
+  [
+    "conflicted",
+    [
+      "部分证据相互冲突，需要先核实相关答案。",
+      "Some evidence conflicts; the relevant answers need review."
+    ]
+  ],
+  [
+    "insufficientLabel",
+    [
+      "信息不足",
+      "Insufficient information"
+    ]
+  ],
+  [
+    "weak",
+    [
+      "支持较弱",
+      "Weakly supported"
+    ]
+  ],
+  [
+    "supported",
+    [
+      "有支持",
+      "Supported"
+    ]
+  ],
+  [
+    "strong",
+    [
+      "支持较强",
+      "Strongly supported"
+    ]
+  ],
+  [
+    "noneIdentified",
+    [
+      "当前记录中未识别到；不代表已排除。",
+      "None identified in current records; this does not mean ruled out."
+    ]
+  ],
+  [
+    "selection",
+    [
+      "选择用于比较的证据来源",
+      "Choose evidence sources for comparison"
+    ]
+  ],
+  [
+    "selectionHelp",
+    [
+      "只使用当前版本已生成的评估结果。未完成或编辑后的旧结果不会纳入；所有安全信息始终独立生效。",
+      "Only current generated results are included. Incomplete or edited-outdated results are excluded; all safety information remains independently active."
+    ]
+  ],
+  [
+    "routerSource",
+    [
+      "原描述的结构化线索（较低优先级）",
+      "Structured hints from the original description (lower priority)"
+    ]
+  ],
+  [
+    "notReady",
+    [
+      "尚无当前结果",
+      "No current results"
+    ]
+  ],
+  [
+    "why",
+    [
+      "为什么这样比较？",
+      "Why this comparison?"
+    ]
+  ],
+  [
+    "details",
+    [
+      "展开较不相符、区分特征与未知信息",
+      "Expand less-consistent evidence, discriminators and unknowns"
+    ]
+  ],
+  [
+    "clarification",
+    [
+      "可选：补充两点区别",
+      "Optional: clarify two distinctions"
+    ]
+  ],
+  [
+    "clarificationHelp",
+    [
+      "只补充当前比较需要的区别，不会修改原评估答案。不确定时可保留未知。",
+      "These clarify distinctions for this comparison without changing original answers. Keep unknown when unsure."
+    ]
+  ],
+  [
+    "ruminationQuestion",
+    [
+      "反复思考是否主要围绕过往失败、错误或自我批评，并与低落心情一致？",
+      "Does repetitive thinking mainly concern past failures, mistakes or self-criticism, in keeping with low mood?"
+    ]
+  ],
+  [
+    "scopeQuestion",
+    [
+      "焦虑是否主要局限于强迫念头或仪式的触发情境，而非多个日常生活领域？",
+      "Is anxiety mainly limited to triggers for obsessions or rituals, rather than several everyday life domains?"
+    ]
+  ],
+  [
+    "unknown",
+    [
+      "不确定／暂不回答",
+      "Unsure / prefer not to answer"
+    ]
+  ],
+  [
+    "yes",
+    [
+      "是",
+      "Yes"
+    ]
+  ],
+  [
+    "no",
+    [
+      "否",
+      "No"
+    ]
+  ],
+  [
+    "nextHeading",
+    [
+      "下一步可以做什么？",
+      "What can I do next?"
+    ]
+  ],
+  [
+    "next",
+    [
+      "回到原评估补充未知或矛盾的答案，并与合格专业人员讨论病程、功能影响及身体或药物因素。",
+      "Return to the original assessments to clarify unknown or conflicting answers, and discuss course, functioning and medical or medication contributors with a qualified professional."
+    ]
+  ],
+  [
+    "limit",
+    [
+      "这套规则尚未经独立临床验证；未报告某项因素不等于排除了该因素。原始描述不会保存在此摘要中。",
+      "These rules have not been independently clinically validated. Not reporting a factor does not rule it out. Original free text is not stored in this summary."
+    ]
+  ],
+  [
+    "summary",
+    [
+      "可选的结构化比较摘要",
+      "Optional structured comparison summary"
+    ]
+  ],
+  [
+    "return",
+    [
+      "返回评估入口",
+      "Return to assessment entry"
+    ]
+  ],
+  [
+    "clear",
+    [
+      "清除比较与补充答案",
+      "Clear comparison and clarification answers"
+    ]
+  ]
+]);
