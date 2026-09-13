@@ -13091,3 +13091,1581 @@ I18n.register("eatingUI",[
 ]);
 
 I18n.register("eatingEvidence",[["coherent",["相关回答之间暂未发现矛盾","No contradiction identified between related answers"]]]);
+
+I18n.register("psychosisUI",[
+  [
+    "title",
+    [
+      "精神病性相关体验／严重精神健康评估",
+      "Psychosis-related Experiences / Severe Mental Health Assessment"
+    ]
+  ],
+  [
+    "intro",
+    [
+      "有些体验可能令人困惑。我们会先了解发生情境及其影响，不要求你描述声音或信念的具体内容。",
+      "Some experiences can be confusing. We explore their context and impact without asking for the content of voices or beliefs."
+    ]
+  ],
+  [
+    "custom",
+    [
+      "这是面向18岁及以上成人的原创结构化评估，不是已验证量表，也不诊断精神分裂症或其他精神病性障碍。单个异常体验并不等于疾病或危险性。",
+      "This original structured assessment is for adults aged 18 or older. It is not a validated scale and does not diagnose schizophrenia or another psychotic disorder. An unusual experience alone does not establish illness or dangerousness."
+    ]
+  ],
+  [
+    "clear",
+    [
+      "清除本评估答案",
+      "Clear these assessment answers"
+    ]
+  ],
+  [
+    "privacy",
+    [
+      "答案仅保留在当前页面内存中；不记录体验叙述，不要求宗教或族裔信息。刷新会清除答案。",
+      "Answers stay in page memory. No experience narratives, religion or ethnicity are requested. Refreshing clears answers."
+    ]
+  ],
+  [
+    "high",
+    [
+      "这些特征值得及时接受专业精神健康与医疗评估",
+      "These features warrant timely professional mental-health and medical assessment"
+    ]
+  ],
+  [
+    "moderate",
+    [
+      "报告了一些值得讨论的体验，仍需澄清情境",
+      "Some reported experiences merit discussion; their context needs clarification"
+    ]
+  ],
+  [
+    "low",
+    [
+      "现有情境更支持其他解释，仍可寻求帮助",
+      "The available context favors other explanations; support remains available"
+    ]
+  ],
+  [
+    "insufficient",
+    [
+      "信息不足，暂不能明确解释",
+      "There is not enough information to clarify an explanation"
+    ]
+  ],
+  [
+    "psychosis",
+    [
+      "当前评估方向（非诊断）",
+      "Current assessment direction (not a diagnosis)"
+    ]
+  ],
+  [
+    "care",
+    [
+      "若体验是新出现、加重、频繁或影响生活，请及时与精神健康专业人员或初级医疗人员讨论。可询问当地早期干预服务，并按你的意愿邀请可信任的人支持。药物相关问题请与处方人员讨论，不要自行突然停药或调整用药。",
+      "For new, worsening, frequent or impairing experiences, seek timely mental-health or primary-care assessment. Ask about local early-intervention services and involve a trusted supporter if you wish. Discuss medication concerns with your prescriber; do not abruptly stop or change medication yourself."
+    ]
+  ],
+  [
+    "medicalWarning",
+    [
+      "新发变化或身体／意识症状需要医疗评估。不要等到确定诊断才求助；当前严重混乱或即刻危险应先使用紧急帮助。",
+      "New changes or physical/consciousness symptoms need medical assessment. Do not wait for a diagnosis to seek help; use urgent help for current severe confusion or immediate danger."
+    ]
+  ],
+  [
+    "review",
+    [
+      "所有新解释规则均未经过独立临床评审。测试通过不等于临床验证。",
+      "All new interpretation rules await independent clinical review. Passing tests is not clinical validation."
+    ]
+  ],
+  [
+    "patternReason",
+    [
+      "复发、清醒时的体验、现实检验及功能变化需要结合情境进行专业评估。",
+      "Recurring awake experiences, reality testing and functional changes need professional assessment in context."
+    ]
+  ],
+  [
+    "partialReason",
+    [
+      "体验值得了解，但单个体验或非特异性症状不足以明确精神病性解释。",
+      "The experience merits exploration, but an isolated experience or nonspecific symptoms do not establish a psychosis interpretation."
+    ]
+  ],
+  [
+    "mixedReason",
+    [
+      "回答之间存在需要进一步澄清的差异；不会强制给出结论。",
+      "Some answers need reconciliation; no conclusion is forced."
+    ]
+  ],
+  [
+    "moodCompare",
+    [
+      "与严重低落情绪同步的体验保留情绪相关解释，不在此确诊精神病性抑郁。",
+      "Experiences tied to severe depression retain a Mood-related explanation; psychotic depression is not diagnosed here."
+    ]
+  ],
+  [
+    "bipolarCompare",
+    [
+      "少睡不困、兴奋与精力增高同期的体验需要保留双相／躁狂相关评估。",
+      "Experiences occurring with reduced need for sleep, elevated mood and increased energy retain bipolar/mania assessment."
+    ]
+  ],
+  [
+    "ocdCompare",
+    [
+      "强迫性恐惧与仪式／中和循环仍支持 OCD，即使确信程度很高。",
+      "Obsessional fear with rituals or neutralization retains OCD as a possibility, even with strong conviction."
+    ]
+  ],
+  [
+    "traumaCompare",
+    [
+      "与实际创伤重现及触发因素相关的体验保留创伤解释。",
+      "Experiences linked to reliving an actual trauma and its triggers retain a Trauma explanation."
+    ]
+  ],
+  [
+    "dissociationCompare",
+    [
+      "解离或不真实感并不等同于丧失现实检验能力，尤其当你能识别这是一种感受。",
+      "Dissociation or unreality is not the same as loss of reality testing, especially when recognized as a feeling."
+    ]
+  ],
+  [
+    "anxietyCompare",
+    [
+      "焦虑性威胁解读及保留怀疑需要与固定信念区分。",
+      "Anxiety-related threat interpretation with preserved doubt needs to be distinguished from fixed beliefs."
+    ]
+  ],
+  [
+    "adhdCompare",
+    [
+      "长期执行功能或沟通差异不等于新发思维紊乱或功能下降。",
+      "Longstanding executive or communication differences are not equivalent to new disorganization or functional decline."
+    ]
+  ],
+  [
+    "sleepCompare",
+    [
+      "仅在入睡或醒来时的体验，以及严重缺睡，需要单独解释。",
+      "Sleep-transition experiences and severe sleep deprivation need separate consideration."
+    ]
+  ],
+  [
+    "cultureCompare",
+    [
+      "共同文化／社区背景不能因为不熟悉而被视为病理。未回答背景问题保留为未知。",
+      "Shared cultural/community context must not be pathologized because it is unfamiliar. Unanswered context remains unknown."
+    ]
+  ],
+  [
+    "griefCompare",
+    [
+      "丧亲相关感知体验需要结合哀伤背景理解，不能单独确定精神病性障碍。",
+      "Bereavement-related experiences need grief context and do not by themselves establish a psychotic disorder."
+    ]
+  ],
+  [
+    "medicalCompare",
+    [
+      "身体、神经或意识变化仍需医疗评估，不能默认由精神疾病解释。",
+      "Physical, neurological or consciousness changes require medical assessment rather than assumed psychiatric attribution."
+    ]
+  ],
+  [
+    "substanceCompare",
+    [
+      "物质、戒断或药物时间关系尚需专业核实，不在此确定原因。",
+      "Substance, withdrawal or medication timing needs professional review; causation is not established here."
+    ]
+  ],
+  [
+    "routerReason",
+    [
+      "持续感知体验结合强确信信念或功能下降，支持进一步了解这些体验。",
+      "Recurring perceptual experiences with strongly held beliefs or functional decline support further assessment."
+    ]
+  ],
+  [
+    "coherent",
+    [
+      "相关回答尚未发现矛盾",
+      "No contradiction identified between related answers"
+    ]
+  ],
+  [
+    "qualified",
+    [
+      "结合情境后仍有需评估的核心体验",
+      "Core experiences remain relevant after contextual clarification"
+    ]
+  ],
+  [
+    "impact",
+    [
+      "困扰、功能影响或新发下降",
+      "Distress, functional impact or new decline"
+    ]
+  ],
+  [
+    "independent",
+    [
+      "未报告主要情境替代解释",
+      "No predominant contextual alternative reported"
+    ]
+  ],
+  [
+    "opt_yn_yes",
+    [
+      "是",
+      "Yes"
+    ]
+  ],
+  [
+    "opt_yn_no",
+    [
+      "否",
+      "No"
+    ]
+  ],
+  [
+    "opt_yn_unknown",
+    [
+      "不确定／暂不回答",
+      "Unsure / prefer not to answer"
+    ]
+  ],
+  [
+    "opt_time_current",
+    [
+      "现在／近期仍有",
+      "Current / still occurring recently"
+    ]
+  ],
+  [
+    "opt_time_history",
+    [
+      "只有过去曾有",
+      "Historical only"
+    ]
+  ],
+  [
+    "opt_time_unknown",
+    [
+      "不确定／暂不回答",
+      "Unsure / prefer not to answer"
+    ]
+  ],
+  [
+    "opt_freq_isolated",
+    [
+      "单次／偶发",
+      "Isolated / occasional"
+    ]
+  ],
+  [
+    "opt_freq_recurrent",
+    [
+      "反复出现",
+      "Recurring"
+    ]
+  ],
+  [
+    "opt_freq_unknown",
+    [
+      "不确定／暂不回答",
+      "Unsure / prefer not to answer"
+    ]
+  ],
+  [
+    "opt_conviction_doubt",
+    [
+      "有明显怀疑",
+      "Considerable doubt"
+    ]
+  ],
+  [
+    "opt_conviction_uncertain",
+    [
+      "有些不确定",
+      "Some uncertainty"
+    ]
+  ],
+  [
+    "opt_conviction_strong",
+    [
+      "相当确信",
+      "Strongly convinced"
+    ]
+  ],
+  [
+    "opt_conviction_complete",
+    [
+      "完全确信",
+      "Completely convinced"
+    ]
+  ],
+  [
+    "opt_conviction_fluctuating",
+    [
+      "时有变化",
+      "Fluctuating"
+    ]
+  ],
+  [
+    "opt_conviction_unknown",
+    [
+      "不确定／暂不回答",
+      "Unsure / prefer not to answer"
+    ]
+  ],
+  [
+    "opt_insight_open",
+    [
+      "能够考虑其他解释",
+      "Can consider other explanations"
+    ]
+  ],
+  [
+    "opt_insight_some",
+    [
+      "有时能考虑其他解释",
+      "Sometimes can consider alternatives"
+    ]
+  ],
+  [
+    "opt_insight_limited",
+    [
+      "很难考虑其他解释",
+      "Very difficult to consider alternatives"
+    ]
+  ],
+  [
+    "opt_insight_none",
+    [
+      "完全无法考虑其他解释",
+      "Unable to consider alternatives"
+    ]
+  ],
+  [
+    "opt_insight_unknown",
+    [
+      "不确定／暂不回答",
+      "Unsure / prefer not to answer"
+    ]
+  ],
+  [
+    "opt_impact_none",
+    [
+      "无明显影响",
+      "No noticeable impact"
+    ]
+  ],
+  [
+    "opt_impact_mild",
+    [
+      "轻度",
+      "Mild"
+    ]
+  ],
+  [
+    "opt_impact_moderate",
+    [
+      "中度",
+      "Moderate"
+    ]
+  ],
+  [
+    "opt_impact_severe",
+    [
+      "严重",
+      "Severe"
+    ]
+  ],
+  [
+    "opt_impact_unknown",
+    [
+      "不确定／暂不回答",
+      "Unsure / prefer not to answer"
+    ]
+  ],
+  [
+    "opt_auditory_name",
+    [
+      "模糊声音／自己的名字",
+      "Indistinct sound / own name"
+    ]
+  ],
+  [
+    "opt_auditory_internal",
+    [
+      "像自己的思想或内在声音",
+      "Thought-like / internal voice"
+    ]
+  ],
+  [
+    "opt_auditory_external",
+    [
+      "清晰、像来自外界的声音",
+      "Clear, externally located voice"
+    ]
+  ],
+  [
+    "opt_auditory_commentary",
+    [
+      "评论或对话样声音",
+      "Commentary / conversational voices"
+    ]
+  ],
+  [
+    "opt_auditory_command",
+    [
+      "带有指令的声音",
+      "Command-like voice"
+    ]
+  ],
+  [
+    "opt_auditory_unknown",
+    [
+      "不确定／暂不回答",
+      "Unsure / prefer not to answer"
+    ]
+  ],
+  [
+    "opt_onset_sudden",
+    [
+      "突然出现",
+      "Sudden"
+    ]
+  ],
+  [
+    "opt_onset_gradual",
+    [
+      "逐渐出现",
+      "Gradual"
+    ]
+  ],
+  [
+    "opt_onset_stable",
+    [
+      "长期稳定存在",
+      "Longstanding and stable"
+    ]
+  ],
+  [
+    "opt_onset_unknown",
+    [
+      "不确定／暂不回答",
+      "Unsure / prefer not to answer"
+    ]
+  ],
+  [
+    "opt_course_persistent",
+    [
+      "持续存在",
+      "Persistent"
+    ]
+  ],
+  [
+    "opt_course_episodic",
+    [
+      "时有时无",
+      "Episodic"
+    ]
+  ],
+  [
+    "opt_course_unknown",
+    [
+      "不确定／暂不回答",
+      "Unsure / prefer not to answer"
+    ]
+  ],
+  [
+    "opt_duration_days",
+    [
+      "几天内",
+      "Days"
+    ]
+  ],
+  [
+    "opt_duration_weeks",
+    [
+      "数周",
+      "Weeks"
+    ]
+  ],
+  [
+    "opt_duration_months",
+    [
+      "数月或更久",
+      "Months or longer"
+    ]
+  ],
+  [
+    "opt_duration_unknown",
+    [
+      "不确定／暂不回答",
+      "Unsure / prefer not to answer"
+    ]
+  ],
+  [
+    "section_intro",
+    [
+      "开始与适用范围",
+      "Entry and scope"
+    ]
+  ],
+  [
+    "q_intro_agree",
+    [
+      "我了解这不是诊断，并自愿继续",
+      "I understand this is not a diagnosis and wish to continue"
+    ]
+  ],
+  [
+    "q_intro_adult",
+    [
+      "你是否已满18岁？",
+      "Are you aged 18 or older?"
+    ]
+  ],
+  [
+    "section_perception",
+    [
+      "感知体验概况",
+      "Perceptual experiences"
+    ]
+  ],
+  [
+    "q_perception_audio",
+    [
+      "你是否曾有听到别人似乎听不到的声音的体验？",
+      "Have you experienced hearing sounds others do not appear to hear?"
+    ]
+  ],
+  [
+    "q_perception_visual",
+    [
+      "你是否曾有看到别人似乎看不到的事物的体验？",
+      "Have you experienced seeing things others do not appear to see?"
+    ]
+  ],
+  [
+    "q_perception_tactile",
+    [
+      "你是否曾有异常触觉的体验？",
+      "Have you experienced unusual touch sensations?"
+    ]
+  ],
+  [
+    "q_perception_smell",
+    [
+      "你是否曾有异常气味或味觉的体验？",
+      "Have you experienced unusual smells or tastes?"
+    ]
+  ],
+  [
+    "q_perception_presence",
+    [
+      "你是否曾有感觉某种在场感的体验？",
+      "Have you experienced a sense of presence?"
+    ]
+  ],
+  [
+    "q_perception_distortion",
+    [
+      "你是否曾有感知出现变化或扭曲的体验？",
+      "Have you experienced perceptual changes or distortions?"
+    ]
+  ],
+  [
+    "section_audio",
+    [
+      "听到别人似乎听不到的声音：发生情境",
+      "hearing sounds others do not appear to hear: context"
+    ]
+  ],
+  [
+    "q_audio_type",
+    [
+      "这种声音更接近哪种体验？",
+      "Which best describes the sound?"
+    ]
+  ],
+  [
+    "q_audio_time",
+    [
+      "这种体验是当前还是仅过去发生？",
+      "Is this current or historical only?"
+    ]
+  ],
+  [
+    "q_audio_frequency",
+    [
+      "这种体验出现多频繁？",
+      "How often does it occur?"
+    ]
+  ],
+  [
+    "q_audio_awake",
+    [
+      "是否在完全清醒、并非入睡或刚醒时发生？",
+      "Does it occur while fully awake, outside falling asleep or waking?"
+    ]
+  ],
+  [
+    "q_audio_conviction",
+    [
+      "你对这种感知反映外界事实有多确信？",
+      "How certain are you that this perception reflects an external event?"
+    ]
+  ],
+  [
+    "q_audio_insight",
+    [
+      "能否考虑其他可能的解释？",
+      "Can you consider alternative explanations?"
+    ]
+  ],
+  [
+    "q_audio_distress",
+    [
+      "这种体验带来多大困扰？",
+      "How distressing is this experience?"
+    ]
+  ],
+  [
+    "q_audio_impact",
+    [
+      "这种体验对生活有多大影响？",
+      "How much does it affect daily life?"
+    ]
+  ],
+  [
+    "q_audio_sleep",
+    [
+      "是否只在入睡、刚醒或梦样状态中发生？",
+      "Does it occur only during sleep transitions or dream-like states?"
+    ]
+  ],
+  [
+    "q_audio_trauma",
+    [
+      "是否只在重现创伤事件时发生？",
+      "Does it occur only while reliving a traumatic event?"
+    ]
+  ],
+  [
+    "q_audio_substance",
+    [
+      "是否与物质影响或药物变化时间有关？",
+      "Is it linked in time to substance effects or medication changes?"
+    ]
+  ],
+  [
+    "section_visual",
+    [
+      "看到别人似乎看不到的事物：发生情境",
+      "seeing things others do not appear to see: context"
+    ]
+  ],
+  [
+    "q_visual_time",
+    [
+      "这种体验是当前还是仅过去发生？",
+      "Is this current or historical only?"
+    ]
+  ],
+  [
+    "q_visual_frequency",
+    [
+      "这种体验出现多频繁？",
+      "How often does it occur?"
+    ]
+  ],
+  [
+    "q_visual_awake",
+    [
+      "是否在完全清醒、并非入睡或刚醒时发生？",
+      "Does it occur while fully awake, outside falling asleep or waking?"
+    ]
+  ],
+  [
+    "q_visual_conviction",
+    [
+      "你对这种感知反映外界事实有多确信？",
+      "How certain are you that this perception reflects an external event?"
+    ]
+  ],
+  [
+    "q_visual_insight",
+    [
+      "能否考虑其他可能的解释？",
+      "Can you consider alternative explanations?"
+    ]
+  ],
+  [
+    "q_visual_distress",
+    [
+      "这种体验带来多大困扰？",
+      "How distressing is this experience?"
+    ]
+  ],
+  [
+    "q_visual_impact",
+    [
+      "这种体验对生活有多大影响？",
+      "How much does it affect daily life?"
+    ]
+  ],
+  [
+    "q_visual_sleep",
+    [
+      "是否只在入睡、刚醒或梦样状态中发生？",
+      "Does it occur only during sleep transitions or dream-like states?"
+    ]
+  ],
+  [
+    "q_visual_trauma",
+    [
+      "是否只在重现创伤事件时发生？",
+      "Does it occur only while reliving a traumatic event?"
+    ]
+  ],
+  [
+    "q_visual_substance",
+    [
+      "是否与物质影响或药物变化时间有关？",
+      "Is it linked in time to substance effects or medication changes?"
+    ]
+  ],
+  [
+    "section_tactile",
+    [
+      "异常触觉：发生情境",
+      "unusual touch sensations: context"
+    ]
+  ],
+  [
+    "q_tactile_time",
+    [
+      "这种体验是当前还是仅过去发生？",
+      "Is this current or historical only?"
+    ]
+  ],
+  [
+    "q_tactile_frequency",
+    [
+      "这种体验出现多频繁？",
+      "How often does it occur?"
+    ]
+  ],
+  [
+    "q_tactile_awake",
+    [
+      "是否在完全清醒、并非入睡或刚醒时发生？",
+      "Does it occur while fully awake, outside falling asleep or waking?"
+    ]
+  ],
+  [
+    "q_tactile_conviction",
+    [
+      "你对这种感知反映外界事实有多确信？",
+      "How certain are you that this perception reflects an external event?"
+    ]
+  ],
+  [
+    "q_tactile_insight",
+    [
+      "能否考虑其他可能的解释？",
+      "Can you consider alternative explanations?"
+    ]
+  ],
+  [
+    "q_tactile_distress",
+    [
+      "这种体验带来多大困扰？",
+      "How distressing is this experience?"
+    ]
+  ],
+  [
+    "q_tactile_impact",
+    [
+      "这种体验对生活有多大影响？",
+      "How much does it affect daily life?"
+    ]
+  ],
+  [
+    "q_tactile_sleep",
+    [
+      "是否只在入睡、刚醒或梦样状态中发生？",
+      "Does it occur only during sleep transitions or dream-like states?"
+    ]
+  ],
+  [
+    "q_tactile_trauma",
+    [
+      "是否只在重现创伤事件时发生？",
+      "Does it occur only while reliving a traumatic event?"
+    ]
+  ],
+  [
+    "q_tactile_substance",
+    [
+      "是否与物质影响或药物变化时间有关？",
+      "Is it linked in time to substance effects or medication changes?"
+    ]
+  ],
+  [
+    "section_smell",
+    [
+      "异常气味或味觉：发生情境",
+      "unusual smells or tastes: context"
+    ]
+  ],
+  [
+    "q_smell_time",
+    [
+      "这种体验是当前还是仅过去发生？",
+      "Is this current or historical only?"
+    ]
+  ],
+  [
+    "q_smell_frequency",
+    [
+      "这种体验出现多频繁？",
+      "How often does it occur?"
+    ]
+  ],
+  [
+    "q_smell_awake",
+    [
+      "是否在完全清醒、并非入睡或刚醒时发生？",
+      "Does it occur while fully awake, outside falling asleep or waking?"
+    ]
+  ],
+  [
+    "q_smell_conviction",
+    [
+      "你对这种感知反映外界事实有多确信？",
+      "How certain are you that this perception reflects an external event?"
+    ]
+  ],
+  [
+    "q_smell_insight",
+    [
+      "能否考虑其他可能的解释？",
+      "Can you consider alternative explanations?"
+    ]
+  ],
+  [
+    "q_smell_distress",
+    [
+      "这种体验带来多大困扰？",
+      "How distressing is this experience?"
+    ]
+  ],
+  [
+    "q_smell_impact",
+    [
+      "这种体验对生活有多大影响？",
+      "How much does it affect daily life?"
+    ]
+  ],
+  [
+    "q_smell_sleep",
+    [
+      "是否只在入睡、刚醒或梦样状态中发生？",
+      "Does it occur only during sleep transitions or dream-like states?"
+    ]
+  ],
+  [
+    "q_smell_trauma",
+    [
+      "是否只在重现创伤事件时发生？",
+      "Does it occur only while reliving a traumatic event?"
+    ]
+  ],
+  [
+    "q_smell_substance",
+    [
+      "是否与物质影响或药物变化时间有关？",
+      "Is it linked in time to substance effects or medication changes?"
+    ]
+  ],
+  [
+    "section_presence",
+    [
+      "感觉某种在场感：发生情境",
+      "a sense of presence: context"
+    ]
+  ],
+  [
+    "q_presence_time",
+    [
+      "这种体验是当前还是仅过去发生？",
+      "Is this current or historical only?"
+    ]
+  ],
+  [
+    "q_presence_frequency",
+    [
+      "这种体验出现多频繁？",
+      "How often does it occur?"
+    ]
+  ],
+  [
+    "q_presence_awake",
+    [
+      "是否在完全清醒、并非入睡或刚醒时发生？",
+      "Does it occur while fully awake, outside falling asleep or waking?"
+    ]
+  ],
+  [
+    "q_presence_conviction",
+    [
+      "你对这种感知反映外界事实有多确信？",
+      "How certain are you that this perception reflects an external event?"
+    ]
+  ],
+  [
+    "q_presence_insight",
+    [
+      "能否考虑其他可能的解释？",
+      "Can you consider alternative explanations?"
+    ]
+  ],
+  [
+    "q_presence_distress",
+    [
+      "这种体验带来多大困扰？",
+      "How distressing is this experience?"
+    ]
+  ],
+  [
+    "q_presence_impact",
+    [
+      "这种体验对生活有多大影响？",
+      "How much does it affect daily life?"
+    ]
+  ],
+  [
+    "q_presence_sleep",
+    [
+      "是否只在入睡、刚醒或梦样状态中发生？",
+      "Does it occur only during sleep transitions or dream-like states?"
+    ]
+  ],
+  [
+    "q_presence_trauma",
+    [
+      "是否只在重现创伤事件时发生？",
+      "Does it occur only while reliving a traumatic event?"
+    ]
+  ],
+  [
+    "q_presence_substance",
+    [
+      "是否与物质影响或药物变化时间有关？",
+      "Is it linked in time to substance effects or medication changes?"
+    ]
+  ],
+  [
+    "section_distortion",
+    [
+      "感知出现变化或扭曲：发生情境",
+      "perceptual changes or distortions: context"
+    ]
+  ],
+  [
+    "q_distortion_time",
+    [
+      "这种体验是当前还是仅过去发生？",
+      "Is this current or historical only?"
+    ]
+  ],
+  [
+    "q_distortion_frequency",
+    [
+      "这种体验出现多频繁？",
+      "How often does it occur?"
+    ]
+  ],
+  [
+    "q_distortion_awake",
+    [
+      "是否在完全清醒、并非入睡或刚醒时发生？",
+      "Does it occur while fully awake, outside falling asleep or waking?"
+    ]
+  ],
+  [
+    "q_distortion_conviction",
+    [
+      "你对这种感知反映外界事实有多确信？",
+      "How certain are you that this perception reflects an external event?"
+    ]
+  ],
+  [
+    "q_distortion_insight",
+    [
+      "能否考虑其他可能的解释？",
+      "Can you consider alternative explanations?"
+    ]
+  ],
+  [
+    "q_distortion_distress",
+    [
+      "这种体验带来多大困扰？",
+      "How distressing is this experience?"
+    ]
+  ],
+  [
+    "q_distortion_impact",
+    [
+      "这种体验对生活有多大影响？",
+      "How much does it affect daily life?"
+    ]
+  ],
+  [
+    "q_distortion_sleep",
+    [
+      "是否只在入睡、刚醒或梦样状态中发生？",
+      "Does it occur only during sleep transitions or dream-like states?"
+    ]
+  ],
+  [
+    "q_distortion_trauma",
+    [
+      "是否只在重现创伤事件时发生？",
+      "Does it occur only while reliving a traumatic event?"
+    ]
+  ],
+  [
+    "q_distortion_substance",
+    [
+      "是否与物质影响或药物变化时间有关？",
+      "Is it linked in time to substance effects or medication changes?"
+    ]
+  ],
+  [
+    "section_belief",
+    [
+      "信念、怀疑与关系体验",
+      "Beliefs, suspicion and reference"
+    ]
+  ],
+  [
+    "q_belief_targeted",
+    [
+      "是否感觉他人针对你或有意伤害你？这里不判断这个担忧是否属实。",
+      "Do you feel targeted or that others intend harm? This tool does not judge whether the concern is true."
+    ]
+  ],
+  [
+    "q_belief_reference",
+    [
+      "是否感觉媒体或陌生人的行为含有专门给你的信息？",
+      "Do media or strangers’ actions seem to contain messages specifically for you?"
+    ]
+  ],
+  [
+    "q_belief_grandiose",
+    [
+      "是否有他人难以理解的特殊身份或能力感？",
+      "Do you experience a special identity or ability that others find difficult to understand?"
+    ]
+  ],
+  [
+    "q_belief_control",
+    [
+      "是否感觉思想被别人读取、放入或控制？",
+      "Do you feel thoughts are being read, inserted or controlled by others?"
+    ]
+  ],
+  [
+    "q_belief_other",
+    [
+      "是否还有非常固定、他人难以理解的信念？无需描述内容。",
+      "Are there other fixed beliefs others find hard to understand? No content is required."
+    ]
+  ],
+  [
+    "q_belief_current",
+    [
+      "这些体验当前是否仍有？",
+      "Are these experiences current?"
+    ]
+  ],
+  [
+    "q_belief_conviction",
+    [
+      "你对这些信念有多确信？",
+      "How convinced are you of these beliefs?"
+    ]
+  ],
+  [
+    "q_belief_insight",
+    [
+      "能否考虑其他可能的解释？",
+      "Can you consider other explanations?"
+    ]
+  ],
+  [
+    "section_organization",
+    [
+      "思想、沟通与行为组织",
+      "Thought, communication and behavior"
+    ]
+  ],
+  [
+    "q_organization_thought",
+    [
+      "是否新出现明显难以维持连贯思路的情况？",
+      "Has marked difficulty maintaining coherent thought newly appeared?"
+    ]
+  ],
+  [
+    "q_organization_speech",
+    [
+      "是否有人指出你的表达新近变得很难跟随，而非语言差异或打字错误？",
+      "Have others noticed new difficulty following your speech, beyond language differences or typing errors?"
+    ]
+  ],
+  [
+    "q_organization_behavior",
+    [
+      "是否新出现明显难以安排基本活动的情况？",
+      "Has marked difficulty organizing basic activity newly appeared?"
+    ]
+  ],
+  [
+    "q_organization_baseline",
+    [
+      "这些情况是否主要是长期稳定的注意、语言或沟通差异？",
+      "Are these mainly longstanding stable attention, language or communication differences?"
+    ]
+  ],
+  [
+    "section_negative",
+    [
+      "动力、表达与社交变化",
+      "Motivation, expression and social change"
+    ]
+  ],
+  [
+    "q_negative_motivation",
+    [
+      "主动开始活动是否减少？",
+      "Has initiation of activity reduced?"
+    ]
+  ],
+  [
+    "q_negative_expression",
+    [
+      "情感表达是否减少？",
+      "Has emotional expression reduced?"
+    ]
+  ],
+  [
+    "q_negative_speech",
+    [
+      "自发说话是否减少？",
+      "Has spontaneous speech reduced?"
+    ]
+  ],
+  [
+    "q_negative_social",
+    [
+      "社交参与是否减少？",
+      "Has social engagement reduced?"
+    ]
+  ],
+  [
+    "q_negative_pleasure",
+    [
+      "感到愉快的能力是否下降？",
+      "Has your ability to experience pleasure reduced?"
+    ]
+  ],
+  [
+    "section_function",
+    [
+      "与以往相比的功能变化",
+      "Function compared with your baseline"
+    ]
+  ],
+  [
+    "q_function_decline",
+    [
+      "与自己的以往相比，是否出现明显功能下降？",
+      "Has functioning clearly declined from your own previous baseline?"
+    ]
+  ],
+  [
+    "q_function_work",
+    [
+      "这些体验对工作影响多大？",
+      "How much do these experiences affect work?"
+    ]
+  ],
+  [
+    "q_function_school",
+    [
+      "这些体验对学习影响多大？",
+      "How much do these experiences affect education?"
+    ]
+  ],
+  [
+    "q_function_relationships",
+    [
+      "这些体验对关系影响多大？",
+      "How much do these experiences affect relationships?"
+    ]
+  ],
+  [
+    "q_function_selfCare",
+    [
+      "这些体验对自我照护影响多大？",
+      "How much do these experiences affect self-care?"
+    ]
+  ],
+  [
+    "q_function_living",
+    [
+      "这些体验对独立生活影响多大？",
+      "How much do these experiences affect independent living?"
+    ]
+  ],
+  [
+    "q_function_communication",
+    [
+      "这些体验对沟通影响多大？",
+      "How much do these experiences affect communication?"
+    ]
+  ],
+  [
+    "q_function_social",
+    [
+      "这些体验对社交影响多大？",
+      "How much do these experiences affect social life?"
+    ]
+  ],
+  [
+    "q_function_organization",
+    [
+      "这些体验对日常组织影响多大？",
+      "How much do these experiences affect daily organization?"
+    ]
+  ],
+  [
+    "section_course",
+    [
+      "出现时间与病程",
+      "Onset and course"
+    ]
+  ],
+  [
+    "q_course_onset",
+    [
+      "这些变化如何开始？",
+      "How did the changes begin?"
+    ]
+  ],
+  [
+    "q_course_time",
+    [
+      "目前是否仍有这些体验？",
+      "Are these experiences current?"
+    ]
+  ],
+  [
+    "q_course_pattern",
+    [
+      "病程更接近哪种情况？",
+      "Which best describes the course?"
+    ]
+  ],
+  [
+    "q_course_duration",
+    [
+      "持续了多久？此处不据此确定具体疾病。",
+      "How long has this lasted? This does not determine a specific disorder."
+    ]
+  ],
+  [
+    "q_course_worsening",
+    [
+      "近期是否明显加重？",
+      "Has it worsened noticeably recently?"
+    ]
+  ],
+  [
+    "section_mood",
+    [
+      "情绪关系",
+      "Mood relationship"
+    ]
+  ],
+  [
+    "q_mood_depression",
+    [
+      "是否同时有明显低落、绝望、内疚或精力下降？",
+      "Is there also marked low mood, hopelessness, guilt or low energy?"
+    ]
+  ],
+  [
+    "q_mood_onlyDepression",
+    [
+      "这些体验是否只在严重低落期发生？",
+      "Do these experiences occur only during severe depressive periods?"
+    ]
+  ],
+  [
+    "q_mood_activation",
+    [
+      "是否同时出现兴奋或易怒、精力增加及明显少睡不困？",
+      "Do elevated or irritable mood, increased energy and markedly reduced need for sleep occur together?"
+    ]
+  ],
+  [
+    "q_mood_onlyActivation",
+    [
+      "这些体验是否只在上述兴奋期出现？",
+      "Do these experiences occur only during those activated periods?"
+    ]
+  ],
+  [
+    "section_trauma",
+    [
+      "创伤与解离背景",
+      "Trauma and dissociation"
+    ]
+  ],
+  [
+    "q_trauma_reliving",
+    [
+      "是否是在重现实际发生的创伤事件？",
+      "Are you reliving an actual traumatic event?"
+    ]
+  ],
+  [
+    "q_trauma_only",
+    [
+      "感知变化是否只与创伤提醒有关？",
+      "Are perceptual changes confined to trauma reminders?"
+    ]
+  ],
+  [
+    "q_trauma_dissociation",
+    [
+      "是否感觉与自己或周围分离、不真实，但知道这可能是一种感受？",
+      "Do you feel detached or unreal while recognizing this may be a feeling?"
+    ]
+  ],
+  [
+    "section_ocd",
+    [
+      "侵入性念头与强迫循环",
+      "Intrusive thoughts and compulsive cycles"
+    ]
+  ],
+  [
+    "q_ocd_intrusive",
+    [
+      "是否是反复出现、令你害怕或不想要的念头？",
+      "Are these repeated, feared or unwanted thoughts?"
+    ]
+  ],
+  [
+    "q_ocd_rituals",
+    [
+      "是否通过检查、中和、寻求保证或其他仪式减轻不安？",
+      "Do checking, neutralizing, reassurance or other rituals reduce distress?"
+    ]
+  ],
+  [
+    "q_ocd_linked",
+    [
+      "这些担忧是否主要属于上述念头和仪式循环？",
+      "Are the concerns mainly part of that thought-and-ritual cycle?"
+    ]
+  ],
+  [
+    "section_sleep",
+    [
+      "睡眠背景",
+      "Sleep context"
+    ]
+  ],
+  [
+    "q_sleep_transitions",
+    [
+      "体验是否仅在入睡或刚醒时发生？",
+      "Do experiences occur only while falling asleep or waking?"
+    ]
+  ],
+  [
+    "q_sleep_deprivation",
+    [
+      "近期是否严重缺乏睡眠？",
+      "Have you recently been severely sleep deprived?"
+    ]
+  ],
+  [
+    "q_context_anxiety",
+    [
+      "是否主要是焦虑时的威胁解读，而且仍能考虑其他解释？",
+      "Is this mainly threat interpretation during anxiety, with alternatives still possible?"
+    ]
+  ],
+  [
+    "q_context_adhd",
+    [
+      "动力或组织问题是否主要是长期执行功能困难？",
+      "Are motivation or organization difficulties mainly longstanding executive-function problems?"
+    ]
+  ],
+  [
+    "section_substance",
+    [
+      "物质与药物关系",
+      "Substance and medication context"
+    ]
+  ],
+  [
+    "q_substance_use",
+    [
+      "是否与大麻、兴奋剂、致幻剂、酒精、镇静剂或其他物质影响同期出现？",
+      "Do experiences coincide with cannabis, stimulants, hallucinogens, alcohol, sedatives or other substance effects?"
+    ]
+  ],
+  [
+    "q_substance_withdrawal",
+    [
+      "是否与减少或停止物质使用同期出现？",
+      "Do experiences coincide with reducing or stopping substance use?"
+    ]
+  ],
+  [
+    "q_substance_medication",
+    [
+      "是否与开始、调整或停止处方药同期出现？",
+      "Do experiences coincide with starting, changing or stopping prescribed medication?"
+    ]
+  ],
+  [
+    "section_medical",
+    [
+      "身体与神经背景",
+      "Medical and neurological context"
+    ]
+  ],
+  [
+    "q_medical_illness",
+    [
+      "是否有近期发热或急性身体疾病？",
+      "Is there recent fever or acute physical illness?"
+    ]
+  ],
+  [
+    "q_medical_neurology",
+    [
+      "是否有偏头痛、神经系统问题或头部受伤背景？",
+      "Is there migraine, neurological illness or head injury context?"
+    ]
+  ],
+  [
+    "q_medical_change",
+    [
+      "是否有突然明显认知变化？",
+      "Has there been a sudden marked cognitive change?"
+    ]
+  ],
+  [
+    "section_culture",
+    [
+      "文化与生活背景（可选择不回答）",
+      "Cultural and life context (optional responses)"
+    ]
+  ],
+  [
+    "q_culture_shared",
+    [
+      "这种体验或信念是否在你的社区文化中被共同理解或接受？无需说明宗教或族裔。",
+      "Is the experience or belief shared or understood within your community? No religion or ethnicity is needed."
+    ]
+  ],
+  [
+    "q_culture_grief",
+    [
+      "体验是否主要出现在丧亲哀伤背景中？",
+      "Does the experience occur mainly in bereavement or grief?"
+    ]
+  ]
+]);
+
+I18n.register("psychosisSafety",[
+  [
+    "commandSelf",
+    [
+      "你现在是否听到要求你自杀或伤害自己的指令性声音？无需描述内容。",
+      "Are you currently hearing a voice directing suicide or self-harm? No content is needed."
+    ]
+  ],
+  [
+    "commandOther",
+    [
+      "你现在是否听到要求伤害他人的指令性声音？这并不代表你想实施。",
+      "Are you currently hearing a voice directing harm to others? This does not mean you want to act."
+    ]
+  ],
+  [
+    "resist",
+    [
+      "你现在是否实际难以控制自己去伤害他人，而不仅是害怕一个不想实施的念头？",
+      "Are you currently having actual difficulty controlling actions that could hurt others, beyond fear of an unwanted thought?"
+    ]
+  ],
+  [
+    "eat",
+    [
+      "你现在是否无法维持基本进食？",
+      "Are you currently unable to maintain basic food intake?"
+    ]
+  ],
+  [
+    "drink",
+    [
+      "你现在是否无法维持基本饮水？",
+      "Are you currently unable to maintain basic fluid intake?"
+    ]
+  ],
+  [
+    "lost",
+    [
+      "你现在是否迷失方向、无法安全找到住所或维持基本安全？",
+      "Are you currently disoriented and unable to safely find shelter or maintain basic safety?"
+    ]
+  ],
+  [
+    "fluctuating",
+    [
+      "你现在是否新发明显意识混乱、注意波动或严重定向障碍？",
+      "Do you currently have new marked confusion, fluctuating attention or severe disorientation?"
+    ]
+  ]
+]);
+
+I18n.register("psychosisExtra",[["safety",["先确认当前安全状况","First clarify current safety"]],["safetyHelp",["安全与评估方向分别判断。若出现即刻危险，请使用紧急帮助。","Safety is assessed separately from the assessment direction. Use urgent help for immediate danger."]]]);
+
+I18n.register("psychosisEntry",[["nav",["感知与信念评估","Perception & belief assessment"]],["concern",["你最希望了解哪方面？不需要描述具体内容。","What would you most like to understand? No description of the content is needed."]],["perception",["感知体验","Perceptual experiences"]],["belief",["信念或怀疑","Beliefs or suspicion"]],["organization",["思路、表达或组织活动","Thought, communication or organizing activity"]],["function",["动力或生活功能变化","Changes in motivation or daily function"]],["other",["其他／不确定／暂不回答","Other / unsure / prefer not to answer"]]]);
