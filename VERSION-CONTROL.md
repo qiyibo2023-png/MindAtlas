@@ -69,3 +69,7 @@ The canonical `feature/ptsd-trauma-assessment-v1` branch starts at merged Differ
 ## ADHD checkpoint (supersedes historical module inventory above)
 
 Development branch: `feature/adhd-assessment-v1`; metadata version: `adhd-assessment-v1.0.0`. Local commit only; no push or Git tag during this task. The current release verifier uses `tests/fixtures/runtime-adhd-v1.0.0.json`; prior manifests remain preserved. The canonical source tree alone rebuilds the runtime. All new rules are unreviewed. See `CHECKPOINT-ADHD.md` for the intended file inventory and verification.
+
+## Eating local milestone
+
+Branch: `feature/eating-disorders-assessment-v1`, based on merged ADHD main commit `e44a63b86003d0a5e89f0353b7ff1813ed6f8222`. Local commit only: `feat: add eating disorders assessment v1`. Internal version `eating-disorders-assessment-v1.0.0`; no tag or push during this task. Current source/dist verification uses `tests/fixtures/runtime-eating-v1.0.0.json`. Historical manifests and backups remain intact. See `CHECKPOINT-EATING.md` for validation and file inventory.
