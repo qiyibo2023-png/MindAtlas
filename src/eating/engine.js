@@ -1,0 +1,42 @@
+(function(A){'use strict';
+A.tri=v=>v==='yes'?true:v==='no'?false:'unknown';
+A.any=vs=>vs.some(v=>v===true)?true:vs.length&&vs.every(v=>v===false)?false:'unknown';
+A.all=vs=>vs.some(v=>v===false)?false:vs.length&&vs.every(v=>v===true)?true:'unknown';
+A.not=v=>v==='unknown'?'unknown':!v;
+A.emptyState=()=>Object.fromEntries([...new Set(A.questions.map(q=>q.id.split('.')[0]))].map(k=>[k,{}]).concat([['revision',0]]));
+A.clear=()=>{A.store={state:A.emptyState(),step:'intro',error:[],result:null};};
+A.plan=()=>A.sections;
+A.setAnswer=(s,p,v)=>{const q=A.questions.find(q=>q.id===p);if(!q||!Assessment.validAnswer(q,v))throw Error('Invalid eating answer');return Assessment.set(s,p,v);};
+A.update=(p,v)=>{A.store.state=A.setAnswer(A.store.state,p,v);A.store.result=null;};
+A.factLabels={coherent:'eatingEvidence.coherent',restriction:'eatingUI.q_restriction_persistent',weightMotive:'eatingUI.weightMotive',fear:'eatingUI.q_shape_fear',overvalue:'eatingUI.q_shape_overvalue',binge:'eatingUI.bingeFact',loss:'eatingUI.q_binge_loss',bingeRecurrent:'eatingUI.bingeCourse',compensation:'eatingUI.section_compensation',compRecurrent:'eatingUI.compCourse',noComp:'eatingUI.noComp',distress:'eatingUI.q_binge_distress',drivers:'eatingUI.section_arfid',notWeight:'eatingUI.notWeight',nutrition:'eatingUI.nutrition',impact:'eatingUI.impact',persistent:'eatingUI.persistent',independent:'eatingUI.outsideContext',medical:'eatingUI.medicalCompare',substance:'eatingUI.substanceCompare',mood:'eatingUI.moodCompare',anxiety:'eatingUI.anxietyCompare',ocd:'eatingUI.ocdCompare',trauma:'eatingUI.traumaCompare',adhd:'eatingUI.adhdCompare',bdd:'eatingUI.bddCompare'};
+A.requirements={restrictive:['restriction','weightMotive','fear','overvalue','impact','persistent','independent'],bulimia:['binge','bingeRecurrent','compRecurrent','overvalue','persistent','independent'],bed:['binge','bingeRecurrent','distress','noComp','persistent','independent'],arfid:['restriction','drivers','notWeight','nutrition','persistent','independent']};
+for(const req of Object.values(A.requirements))req.push('coherent');
+A.assess=function(s){
+ const yn=p=>A.tri(Assessment.get(s,p)),group=p=>A.any(A.questions.filter(q=>q.id.startsWith(p+'.')).map(q=>yn(q.id)));
+ const frequency=p=>['repeated','weekly'].includes(Assessment.get(s,p))?true:['none','once'].includes(Assessment.get(s,p))?false:'unknown';
+ const impact=A.any(A.questions.filter(q=>q.id.startsWith('function.')).map(q=>{const v=Assessment.get(s,q.id);return ['moderate','severe'].includes(v)?true:['none','mild','na'].includes(v)?false:'unknown';}));
+ const restriction=A.all([yn('restriction.persistent'),frequency('course.restriction')]),weightMotive=yn('shape.motive');
+ const amount=Assessment.get(s,'binge.amount'),large=amount==='large'?true:amount==='ordinary'?false:'unknown';
+ const compensation=group('compensation'),compRecurrent=A.all([compensation,frequency('course.comp')]);
+ const duration=['months','long'].includes(s.course?.duration)?true:s.course?.duration==='recent'?false:'unknown';
+ const persistent=A.all([duration,['persistent','episodic'].includes(s.course?.pattern)?true:s.course?.pattern==='temporary'?false:'unknown']);
+ const medical=A.any([yn('medical.gi'),yn('medical.contribution')]),substance=group('substance');
+ const context=Object.fromEntries(['mood','anxiety','ocd','trauma','adhd'].map(k=>[k,yn('context.'+k)]));
+ // Anxiety may coexist with consequence-fear avoidance. Exclusive causal explanations
+ // constrain independent eating-pattern inference without deleting the eating features.
+ const independent=A.not(A.any([context.mood,context.ocd,context.trauma,context.adhd,yn('context.access')]));
+ const facts={restriction,weightMotive,fear:yn('shape.fear'),overvalue:yn('shape.overvalue'),binge:A.all([large,yn('binge.loss')]),loss:yn('binge.loss'),bingeRecurrent:frequency('course.binge'),compensation,compRecurrent,noComp:A.not(compRecurrent),distress:yn('binge.distress'),drivers:A.any(['sensory','interest','choking','vomiting','adverse'].map(k=>yn('arfid.'+k))),notWeight:A.not(weightMotive),nutrition:A.any([yn('restriction.inadequate'),yn('arfid.nutrition'),yn('arfid.supplements'),yn('arfid.social'),impact]),impact,persistent,independent,medical,substance,...context,bdd:yn('shape.otherDefect')};
+ const missing=A.questions.filter(q=>!Assessment.validAnswer(q,Assessment.get(s,q.id))||Assessment.get(s,q.id)==='unknown').map(q=>q.id);
+ const conflicts=[];if(weightMotive===true&&facts.drivers===true)conflicts.push('mixedReason');
+ if(compensation===true&&s.course?.comp==='none'||compensation===false&&frequency('course.comp')===true)conflicts.push('compCourse');
+ if(yn('binge.loss')===true&&s.course?.binge==='none'||yn('binge.loss')===false&&frequency('course.binge')===true)conflicts.push('bingeCourse');
+ if(yn('restriction.persistent')===true&&['none','once'].includes(s.course?.restriction))conflicts.push('section_restriction');
+ const ruleouts=['medical','substance'].filter(k=>facts[k]!==false),scope=s.intro?.adult!=='yes'||s.intro?.agree!=='yes';
+ facts.coherent=conflicts.length?'unknown':true;
+ const patterns=Object.entries(A.requirements).map(([id,req])=>{const support=req.filter(k=>facts[k]===true),opposing=req.filter(k=>facts[k]===false),unknown=req.filter(k=>facts[k]==='unknown');const anchor=id==='restrictive'?A.all([restriction,weightMotive]):id==='arfid'?A.all([restriction,facts.drivers,facts.notWeight]):facts.binge;let level=anchor===true?opposing.length?1:unknown.length?2:3:anchor===false?1:0;if(ruleouts.length&&level===3)level=2;if(conflicts.length&&level>2)level=2;if(scope)level=0;return {id,level,consistency:['insufficient','low','moderate','high'][level],support,opposing,missing:unknown};});
+ const warning=group('physical')===true||yn('restriction.inadequate')===true||yn('arfid.nutrition')===true||compensation===true||medical===true||Object.values(s.medicalNow||{}).some(v=>v==='yes');
+ return {version:A.version,revision:s.revision,reviewStatus:'unreviewed',instrument:'original_structured_not_validated',score:null,scope,facts,patterns,missing,conflicts,ruleouts,medicalWarning:warning,alternatives:Object.keys(context).filter(k=>context[k]===true).concat(facts.bdd===true?['bdd']:[]),restrictionWithBingePurge:restriction===true&&(facts.binge===true||compensation===true)};
+};
+A.ruleCatalog=Object.entries(A.requirements).map(([id,requirements])=>({id:'EATING_'+id.toUpperCase()+'_001',requirements,version:A.version,reviewStatus:'unreviewed',instrument:'original_not_validated'}));
+A.clear();
+})(globalThis.Eating);

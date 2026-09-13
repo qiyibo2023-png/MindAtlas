@@ -11728,3 +11728,1366 @@ I18n.register("adhdSafety",[
 ]);
 
 I18n.register("adhdEvidence",[["sleepClear",["睡眠因素已核实，未报告相关影响","Sleep contribution considered, with no related impact reported"]]]);
+
+I18n.register("eatingUI",[
+  [
+    "title",
+    [
+      "进食障碍评估",
+      "Eating Disorders Assessment"
+    ]
+  ],
+  [
+    "intro",
+    [
+      "了解进食变化的原因、影响和身体状况。无需描述具体操作或提供体重。",
+      "Explore eating changes, their context, impact and physical concerns. No procedural details or body weight are requested."
+    ]
+  ],
+  [
+    "custom",
+    [
+      "这是面向18岁及以上成人的原创结构化评估，不是已验证筛查量表或正式诊断。身体大小不能确定或排除进食障碍。",
+      "This original structured assessment is for adults aged 18 or older. It is not a validated screener or a formal diagnosis. Body size cannot establish or exclude an eating disorder."
+    ]
+  ],
+  [
+    "privacy",
+    [
+      "答案仅在当前页面内存中，不上传、不保存个人叙述。刷新会清除答案。",
+      "Answers stay in this page’s memory. No personal narrative is requested, uploaded or stored. Refreshing clears answers."
+    ]
+  ],
+  [
+    "scope",
+    [
+      "本评估面向成人。儿童和青少年需要符合发展阶段的专业评估；紧急帮助仍可使用。",
+      "This assessment is for adults. Children and adolescents need developmentally appropriate professional evaluation; urgent help remains available."
+    ]
+  ],
+  [
+    "consent",
+    [
+      "请确认你自愿继续，也可以暂停。",
+      "Please confirm you wish to continue, or pause here."
+    ]
+  ],
+  [
+    "error",
+    [
+      "请回答本页问题，也可以选择不确定或暂不回答。",
+      "Please answer the questions on this page; you may choose unsure or prefer not to answer."
+    ]
+  ],
+  [
+    "next",
+    [
+      "下一步",
+      "Next"
+    ]
+  ],
+  [
+    "back",
+    [
+      "上一步",
+      "Back"
+    ]
+  ],
+  [
+    "result",
+    [
+      "查看评估结果",
+      "View assessment results"
+    ]
+  ],
+  [
+    "pause",
+    [
+      "暂停并返回首页",
+      "Pause and return home"
+    ]
+  ],
+  [
+    "clear",
+    [
+      "清除进食评估答案",
+      "Clear eating assessment answers"
+    ]
+  ],
+  [
+    "why",
+    [
+      "为什么得到这个结果？",
+      "Why this result?"
+    ]
+  ],
+  [
+    "support",
+    [
+      "支持性信息",
+      "Supporting evidence"
+    ]
+  ],
+  [
+    "opposing",
+    [
+      "较不相符的信息",
+      "Less consistent evidence"
+    ]
+  ],
+  [
+    "missing",
+    [
+      "仍需了解的信息",
+      "Information still needed"
+    ]
+  ],
+  [
+    "alternatives",
+    [
+      "其他解释与尚未排除的因素",
+      "Alternative explanations and unresolved factors"
+    ]
+  ],
+  [
+    "conflicts",
+    [
+      "混合或矛盾的信息",
+      "Mixed or conflicting evidence"
+    ]
+  ],
+  [
+    "summary",
+    [
+      "可选：查看评估摘要（非诊断报告）",
+      "Optional: view assessment summary (not a diagnostic report)"
+    ]
+  ],
+  [
+    "none",
+    [
+      "尚未记录相关信息；这不代表已排除问题。",
+      "No relevant information recorded; this does not establish exclusion."
+    ]
+  ],
+  [
+    "high",
+    [
+      "相符程度较高，建议进一步专业评估",
+      "High consistency; professional assessment is recommended"
+    ]
+  ],
+  [
+    "moderate",
+    [
+      "存在部分相符信息，仍需进一步了解",
+      "Moderate consistency; further assessment is needed"
+    ]
+  ],
+  [
+    "low",
+    [
+      "目前支持较少；不代表没有照护需求",
+      "Low consistency so far; care needs may still exist"
+    ]
+  ],
+  [
+    "insufficient",
+    [
+      "信息不足，暂不能明确模式",
+      "Insufficient information to clarify a pattern"
+    ]
+  ],
+  [
+    "restrictive",
+    [
+      "限制性进食模式（AN-like，非确诊）",
+      "Restrictive eating pattern (AN-like, not a diagnosis)"
+    ]
+  ],
+  [
+    "bulimia",
+    [
+      "暴食／补偿行为模式（BN-like，非确诊）",
+      "Binge / compensatory pattern (BN-like, not a diagnosis)"
+    ]
+  ],
+  [
+    "bed",
+    [
+      "暴食伴失控模式（BED-like，非确诊）",
+      "Binge / loss-of-control pattern (BED-like, not a diagnosis)"
+    ]
+  ],
+  [
+    "arfid",
+    [
+      "回避性／限制性摄入模式（ARFID-like，非确诊）",
+      "Avoidant / restrictive intake pattern (ARFID-like, not a diagnosis)"
+    ]
+  ],
+  [
+    "care",
+    [
+      "建议与合格专业人员讨论进食与身体状况，包括初级医疗、进食障碍专科、具相关经验的营养师及心理治疗人员。这里不提供热量目标、减重方案或用药调整。你不必证明自己“足够严重”才值得获得支持。",
+      "Consider discussing eating and physical health with qualified professionals: primary care, specialist eating-disorder services, an appropriately experienced dietitian and a therapist. This tool provides no calorie targets, weight-loss plans or medication changes. You do not need to prove you are “ill enough” to deserve support."
+    ]
+  ],
+  [
+    "medicalWarning",
+    [
+      "请尽快安排医疗评估。身体症状需要独立检查，即使进食模式尚不明确；若出现当前急症，请立即使用紧急帮助。",
+      "Please arrange prompt medical assessment. Physical symptoms need evaluation independently of eating-pattern consistency. For current emergency symptoms, use urgent help immediately."
+    ]
+  ],
+  [
+    "safety",
+    [
+      "安全状态由共用安全引擎决定，独立于进食模式相符程度。",
+      "Safety is determined by the shared Safety Engine, independently of eating-pattern consistency."
+    ]
+  ],
+  [
+    "sources",
+    [
+      "证据与临床评审说明",
+      "Evidence and clinical review information"
+    ]
+  ],
+  [
+    "review",
+    [
+      "原创规则尚未经过独立临床评审；测试通过不等于临床有效性得到验证。",
+      "Original rules await independent clinical review; passing tests does not establish clinical validity."
+    ]
+  ],
+  [
+    "patternReason",
+    [
+      "进食行为、动机、持续性和影响共同支持这一评估方向；不构成正式诊断。",
+      "Eating behavior, motivation, persistence and consequences together support this assessment direction; they do not establish a diagnosis."
+    ]
+  ],
+  [
+    "partialReason",
+    [
+      "部分相关行为值得进一步了解，尚不足以明确模式。",
+      "Some relevant behaviors warrant exploration but do not yet establish a pattern."
+    ]
+  ],
+  [
+    "mixedReason",
+    [
+      "限制、暴食或不同回避动机可能并存，需要专业澄清，不强制归为单一类别。",
+      "Restriction, binge behaviors or different avoidance motives may coexist and need professional clarification; no single category is forced."
+    ]
+  ],
+  [
+    "moodCompare",
+    [
+      "食欲变化与低落情绪／兴趣下降同步时，情绪因素仍需评估；不能仅凭食欲下降推断进食障碍。",
+      "When appetite change tracks low mood or loss of interest, Mood remains relevant; appetite loss alone does not imply an eating disorder."
+    ]
+  ],
+  [
+    "anxietyCompare",
+    [
+      "窒息、呕吐或其他进食后果的恐惧需要保留焦虑评估；恐惧驱动的回避并不自动等同 ARFID。",
+      "Fear of choking, vomiting or other consequences retains an Anxiety assessment direction; fear-driven avoidance is not automatically ARFID."
+    ]
+  ],
+  [
+    "ocdCompare",
+    [
+      "污染强迫观念及清洗／检查仪式可能解释进食回避。需要区分这种动机与体重体型动机，也可能同时存在。",
+      "Contamination obsessions and washing/checking rituals may explain food avoidance. Distinguish this from weight/shape motivation; both can coexist."
+    ]
+  ],
+  [
+    "traumaCompare",
+    [
+      "创伤提醒与高警觉相关的进食变化仍需创伤评估，不自动归为原发进食障碍。",
+      "Eating changes linked to trauma reminders or hyperarousal retain Trauma assessment rather than automatically implying a primary eating disorder."
+    ]
+  ],
+  [
+    "adhdCompare",
+    [
+      "忘记进食或安排困难可涉及执行功能；单凭不规律进食不能确定 ADHD 或进食障碍。",
+      "Forgetting meals or planning difficulties may involve executive functioning; irregular meals alone establish neither ADHD nor an eating disorder."
+    ]
+  ],
+  [
+    "bddCompare",
+    [
+      "非主要围绕体重／体型的外貌缺陷担忧需进一步评估 BDD 相关方向；此处不确诊。",
+      "Appearance-defect concerns not primarily about weight/shape flag a BDD-related assessment direction; no BDD diagnosis is made here."
+    ]
+  ],
+  [
+    "medicalCompare",
+    [
+      "疼痛、恶心、吞咽或其他身体问题尚需医疗评估，不能默认由进食障碍解释。",
+      "Pain, nausea, swallowing problems or other physical causes require medical assessment and cannot be assumed to result from an eating disorder."
+    ]
+  ],
+  [
+    "substanceCompare",
+    [
+      "药物变化或物质影响仍需专业核实；请勿根据此结果自行调整药物。",
+      "Medication changes or substance effects need professional review; do not change medication based on this result."
+    ]
+  ],
+  [
+    "routerReason",
+    [
+      "限制与体重恐惧、失控与补偿行为，或回避与摄入影响的组合支持先了解进食相关问题。",
+      "Restriction with weight-gain fear, loss of control with compensation, or avoidance with intake consequences supports exploring eating concerns first."
+    ]
+  ],
+  [
+    "outsideContext",
+    [
+      "进食变化并非只在其他症状或外因出现时发生",
+      "Eating changes are not confined to another symptom pattern or external cause"
+    ]
+  ],
+  [
+    "persistent",
+    [
+      "持续的进食相关模式",
+      "Persistent eating-related pattern"
+    ]
+  ],
+  [
+    "noComp",
+    [
+      "没有规律性补偿行为",
+      "No regular compensatory behavior reported"
+    ]
+  ],
+  [
+    "nutrition",
+    [
+      "摄入不足或营养／功能影响",
+      "Inadequate intake or nutritional / functional consequences"
+    ]
+  ],
+  [
+    "bingeFact",
+    [
+      "较大量进食并伴有失控感",
+      "Larger eating episodes with loss of control"
+    ]
+  ],
+  [
+    "weightMotive",
+    [
+      "限制进食主要由体重／体型担忧驱动",
+      "Restriction primarily motivated by weight / shape concerns"
+    ]
+  ],
+  [
+    "notWeight",
+    [
+      "回避并非主要由体重／体型驱动",
+      "Avoidance not primarily motivated by weight / shape"
+    ]
+  ],
+  [
+    "bingeCourse",
+    [
+      "暴食反复出现",
+      "Recurrent binge episodes"
+    ]
+  ],
+  [
+    "compCourse",
+    [
+      "补偿行为反复出现",
+      "Recurrent compensatory behavior"
+    ]
+  ],
+  [
+    "impact",
+    [
+      "进食相关功能损害",
+      "Eating-related functional impairment"
+    ]
+  ],
+  [
+    "opt_yn_yes",
+    [
+      "是",
+      "Yes"
+    ]
+  ],
+  [
+    "opt_yn_no",
+    [
+      "否",
+      "No"
+    ]
+  ],
+  [
+    "opt_yn_unknown",
+    [
+      "不确定／暂不回答",
+      "Unsure / prefer not to answer"
+    ]
+  ],
+  [
+    "opt_impact_none",
+    [
+      "无明显影响",
+      "No noticeable impact"
+    ]
+  ],
+  [
+    "opt_impact_mild",
+    [
+      "轻度",
+      "Mild"
+    ]
+  ],
+  [
+    "opt_impact_moderate",
+    [
+      "中度",
+      "Moderate"
+    ]
+  ],
+  [
+    "opt_impact_severe",
+    [
+      "严重",
+      "Severe"
+    ]
+  ],
+  [
+    "opt_impact_na",
+    [
+      "不适用",
+      "Not applicable"
+    ]
+  ],
+  [
+    "opt_impact_unknown",
+    [
+      "不确定／暂不回答",
+      "Unsure / prefer not to answer"
+    ]
+  ],
+  [
+    "opt_freq_none",
+    [
+      "没有",
+      "None"
+    ]
+  ],
+  [
+    "opt_freq_once",
+    [
+      "单次／偶发",
+      "Once / isolated"
+    ]
+  ],
+  [
+    "opt_freq_repeated",
+    [
+      "反复，但少于每周",
+      "Repeated, less than weekly"
+    ]
+  ],
+  [
+    "opt_freq_weekly",
+    [
+      "大约每周或更频繁",
+      "About weekly or more"
+    ]
+  ],
+  [
+    "opt_freq_unknown",
+    [
+      "不确定／暂不回答",
+      "Unsure / prefer not to answer"
+    ]
+  ],
+  [
+    "opt_duration_recent",
+    [
+      "少于一个月",
+      "Less than one month"
+    ]
+  ],
+  [
+    "opt_duration_months",
+    [
+      "一个月至不足三个月",
+      "One to under three months"
+    ]
+  ],
+  [
+    "opt_duration_long",
+    [
+      "三个月或更久",
+      "Three months or longer"
+    ]
+  ],
+  [
+    "opt_duration_unknown",
+    [
+      "不确定／暂不回答",
+      "Unsure / prefer not to answer"
+    ]
+  ],
+  [
+    "opt_course_persistent",
+    [
+      "持续存在",
+      "Persistent"
+    ]
+  ],
+  [
+    "opt_course_episodic",
+    [
+      "时有时无／反复发作",
+      "Episodic / recurring"
+    ]
+  ],
+  [
+    "opt_course_temporary",
+    [
+      "暂时／特定情境",
+      "Temporary / situational"
+    ]
+  ],
+  [
+    "opt_course_unknown",
+    [
+      "不确定／暂不回答",
+      "Unsure / prefer not to answer"
+    ]
+  ],
+  [
+    "opt_amount_large",
+    [
+      "相较相似情境通常明显较多",
+      "Clearly more than usual in a similar situation"
+    ]
+  ],
+  [
+    "opt_amount_subjective",
+    [
+      "感觉太多，但无法确定是否明显较多",
+      "Feels excessive, but unsure whether clearly larger"
+    ]
+  ],
+  [
+    "opt_amount_ordinary",
+    [
+      "并非明显较多",
+      "Not clearly larger"
+    ]
+  ],
+  [
+    "opt_amount_unknown",
+    [
+      "不确定／暂不回答",
+      "Unsure / prefer not to answer"
+    ]
+  ],
+  [
+    "opt_concern_restrict",
+    [
+      "限制／回避进食",
+      "Restriction / avoidance"
+    ]
+  ],
+  [
+    "opt_concern_binge",
+    [
+      "暴食／失控",
+      "Binge eating / loss of control"
+    ]
+  ],
+  [
+    "opt_concern_comp",
+    [
+      "补偿行为",
+      "Compensatory behaviors"
+    ]
+  ],
+  [
+    "opt_concern_other",
+    [
+      "其他／不确定",
+      "Other / unsure"
+    ]
+  ],
+  [
+    "section_intro",
+    [
+      "开始与适用范围",
+      "Entry and scope"
+    ]
+  ],
+  [
+    "q_intro_agree",
+    [
+      "我了解这不是诊断，并自愿继续",
+      "I understand this is not a diagnosis and wish to continue"
+    ]
+  ],
+  [
+    "q_intro_adult",
+    [
+      "你是否已满18岁？",
+      "Are you aged 18 or older?"
+    ]
+  ],
+  [
+    "q_intro_concern",
+    [
+      "你最想了解什么？",
+      "What would you like to explore?"
+    ]
+  ],
+  [
+    "section_medicalCheck",
+    [
+      "先确认当前身体安全",
+      "Check current physical safety first"
+    ]
+  ],
+  [
+    "q_medicalNow_fainting",
+    [
+      "你现在或近期是否有尚未接受医疗评估的晕厥／反复接近晕厥？",
+      "Have you fainted or repeatedly nearly fainted recently, without medical assessment?"
+    ]
+  ],
+  [
+    "q_medicalNow_weakness",
+    [
+      "你现在是否虚弱到难以站立或维持基本活动？",
+      "Are you currently so weak that standing or basic activity is difficult?"
+    ]
+  ],
+  [
+    "q_medicalNow_dehydration",
+    [
+      "你现在是否严重脱水，或持续呕吐以致无法留住液体？",
+      "Are you currently severely dehydrated or persistently vomiting so you cannot keep fluids down?"
+    ]
+  ],
+  [
+    "q_medicalNow_chest",
+    [
+      "你现在是否有严重胸痛或令人担忧的急性心脏症状？",
+      "Do you currently have severe chest pain or concerning acute cardiac symptoms?"
+    ]
+  ],
+  [
+    "q_medicalNow_breathing",
+    [
+      "你现在是否严重呼吸困难？",
+      "Are you currently having severe difficulty breathing?"
+    ]
+  ],
+  [
+    "q_medicalNow_confusion",
+    [
+      "你现在是否意识不清、严重混乱或发生抽搐？",
+      "Are you currently experiencing altered consciousness, severe confusion or a seizure?"
+    ]
+  ],
+  [
+    "q_medicalNow_bleeding",
+    [
+      "你现在是否有大量出血或呕血？",
+      "Are you currently having major bleeding or vomiting blood?"
+    ]
+  ],
+  [
+    "q_medicalNow_unableEat",
+    [
+      "你现在是否无法维持基本进食，而不只是食欲较低？",
+      "Are you currently unable to maintain basic food intake, rather than just having a lower appetite?"
+    ]
+  ],
+  [
+    "q_medicalNow_unableDrink",
+    [
+      "你现在是否无法维持基本饮水？",
+      "Are you currently unable to maintain basic fluid intake?"
+    ]
+  ],
+  [
+    "section_overview",
+    [
+      "进食变化概况",
+      "Eating pattern overview"
+    ]
+  ],
+  [
+    "q_overview_restrict",
+    [
+      "目前是否常常限制食物摄入或跳过餐食？",
+      "Do you currently often limit food intake or skip meals?"
+    ]
+  ],
+  [
+    "q_overview_loss",
+    [
+      "目前是否有进食失控的经历？",
+      "Do you currently experience loss of control while eating?"
+    ]
+  ],
+  [
+    "q_overview_comp",
+    [
+      "目前是否为了抵消进食而采取补偿行为？无需描述具体做法。",
+      "Do you currently use behaviors to compensate for eating? No procedural details are needed."
+    ]
+  ],
+  [
+    "q_overview_avoid",
+    [
+      "目前是否回避某些食物或对进食缺乏兴趣？",
+      "Do you currently avoid foods or have little interest in eating?"
+    ]
+  ],
+  [
+    "q_overview_irregular",
+    [
+      "进食时间是否因忘记或安排困难而不规律？",
+      "Are meals irregular because of forgetting or planning difficulties?"
+    ]
+  ],
+  [
+    "section_restriction",
+    [
+      "限制与摄入",
+      "Restriction and intake"
+    ]
+  ],
+  [
+    "q_restriction_persistent",
+    [
+      "限制食物摄入是否反复或持续存在？",
+      "Is restriction of food intake repeated or persistent?"
+    ]
+  ],
+  [
+    "q_restriction_intentional",
+    [
+      "你是否有意减少进食，而不只是没有胃口？",
+      "Do you intentionally reduce eating, rather than simply having little appetite?"
+    ]
+  ],
+  [
+    "q_restriction_inadequate",
+    [
+      "你是否担心摄入不足以满足身体基本需要？",
+      "Are you concerned that intake is insufficient for basic physical needs?"
+    ]
+  ],
+  [
+    "q_restriction_rules",
+    [
+      "进食是否受难以灵活调整的规则控制？",
+      "Is eating controlled by rules that are difficult to change flexibly?"
+    ]
+  ],
+  [
+    "q_restriction_prevent",
+    [
+      "你是否采取行为来防止体重增加？无需描述细节。",
+      "Do you use behaviors aimed at preventing weight gain? No details are needed."
+    ]
+  ],
+  [
+    "section_shape",
+    [
+      "体重、体型与身体意象",
+      "Weight, shape and body image"
+    ]
+  ],
+  [
+    "q_shape_fear",
+    [
+      "你是否强烈害怕体重增加？",
+      "Do you have a strong fear of gaining weight?"
+    ]
+  ],
+  [
+    "q_shape_preoccupation",
+    [
+      "体重或体型是否占据很多注意力？",
+      "Do weight or shape concerns occupy much of your attention?"
+    ]
+  ],
+  [
+    "q_shape_overvalue",
+    [
+      "你对自己的评价是否很大程度取决于体重或体型？",
+      "Does your sense of self-worth depend heavily on weight or shape?"
+    ]
+  ],
+  [
+    "q_shape_distortion",
+    [
+      "你是否持续感到自己的体型不可接受，即使他人表达不同看法？",
+      "Do you persistently feel your body shape is unacceptable, even when others see it differently?"
+    ]
+  ],
+  [
+    "q_shape_checking",
+    [
+      "你是否反复称重、照镜子或检查身体？",
+      "Do you repeatedly weigh yourself, use mirrors or check your body?"
+    ]
+  ],
+  [
+    "q_shape_avoidance",
+    [
+      "你是否因体型担忧回避镜子、照片或与他人比较？",
+      "Do shape concerns lead to avoiding mirrors/photos or comparing yourself with others?"
+    ]
+  ],
+  [
+    "q_shape_distress",
+    [
+      "进食后是否因体重或体型担忧明显痛苦？",
+      "Do weight or shape concerns cause marked distress after eating?"
+    ]
+  ],
+  [
+    "q_shape_motive",
+    [
+      "体重或体型担忧是否是你限制／回避进食的主要原因？",
+      "Are weight or shape concerns the main reason you restrict or avoid eating?"
+    ]
+  ],
+  [
+    "q_shape_otherDefect",
+    [
+      "你是否主要担忧与体重／体型无关的某个外貌缺陷？",
+      "Is your main appearance concern a perceived defect unrelated to weight or shape?"
+    ]
+  ],
+  [
+    "section_binge",
+    [
+      "暴食与失控感",
+      "Binge eating and loss of control"
+    ]
+  ],
+  [
+    "q_binge_amount",
+    [
+      "这些进食经历中的量，与相似情境相比如何？无需提供食物清单或热量。",
+      "How does the amount compare with a similar situation? No food list or calorie details are needed."
+    ]
+  ],
+  [
+    "q_binge_loss",
+    [
+      "在这些经历中，你是否感到无法停止或控制吃什么／吃多少？",
+      "During these episodes, do you feel unable to stop or control what or how much you eat?"
+    ]
+  ],
+  [
+    "q_binge_rapid",
+    [
+      "是否吃得明显比平时快？",
+      "Do you eat noticeably faster than usual?"
+    ]
+  ],
+  [
+    "q_binge_full",
+    [
+      "是否吃到身体不舒服的饱胀程度？",
+      "Do you eat beyond comfortable fullness?"
+    ]
+  ],
+  [
+    "q_binge_notHungry",
+    [
+      "是否在身体并不饿时仍大量进食？",
+      "Do you eat a large amount when not physically hungry?"
+    ]
+  ],
+  [
+    "q_binge_alone",
+    [
+      "是否因尴尬而独自进食？",
+      "Do you eat alone because of embarrassment?"
+    ]
+  ],
+  [
+    "q_binge_distress",
+    [
+      "这些经历是否带来明显的痛苦、羞耻或内疚？",
+      "Do these episodes cause marked distress, shame or guilt?"
+    ]
+  ],
+  [
+    "section_compensation",
+    [
+      "补偿行为",
+      "Compensatory behaviors"
+    ]
+  ],
+  [
+    "q_compensation_vomiting",
+    [
+      "目前是否有自我诱导呕吐？无需描述具体方式。",
+      "Do you currently use self-induced vomiting? No procedural details are needed."
+    ]
+  ],
+  [
+    "q_compensation_laxatives",
+    [
+      "目前是否有滥用泻药？无需描述具体方式。",
+      "Do you currently use misuse of laxatives? No procedural details are needed."
+    ]
+  ],
+  [
+    "q_compensation_diuretics",
+    [
+      "目前是否有滥用利尿剂？无需描述具体方式。",
+      "Do you currently use misuse of diuretics? No procedural details are needed."
+    ]
+  ],
+  [
+    "q_compensation_medication",
+    [
+      "目前是否有滥用其他药物？无需描述具体方式。",
+      "Do you currently use misuse of other medication? No procedural details are needed."
+    ]
+  ],
+  [
+    "q_compensation_fasting",
+    [
+      "目前是否有为了补偿进食而禁食？无需描述具体方式。",
+      "Do you currently use fasting to compensate for eating? No procedural details are needed."
+    ]
+  ],
+  [
+    "q_compensation_exercise",
+    [
+      "目前是否有为了补偿进食而运动？无需描述具体方式。",
+      "Do you currently use exercise to compensate for eating? No procedural details are needed."
+    ]
+  ],
+  [
+    "q_compensation_other",
+    [
+      "目前是否有其他抵消进食的行为？无需描述具体方式。",
+      "Do you currently use other behaviors to compensate for eating? No procedural details are needed."
+    ]
+  ],
+  [
+    "section_exercise",
+    [
+      "运动的灵活性与影响",
+      "Exercise flexibility and impact"
+    ]
+  ],
+  [
+    "q_exercise_guilt",
+    [
+      "运动是否主要由进食后的内疚驱动？",
+      "Is exercise mainly driven by guilt after eating?"
+    ]
+  ],
+  [
+    "q_exercise_rigid",
+    [
+      "你是否难以灵活地休息或调整运动安排？",
+      "Is it difficult to rest or adjust exercise flexibly?"
+    ]
+  ],
+  [
+    "q_exercise_injury",
+    [
+      "你是否在受伤或生病时仍感到必须运动？",
+      "Do you feel compelled to exercise despite injury or illness?"
+    ]
+  ],
+  [
+    "q_exercise_impact",
+    [
+      "运动是否干扰日常生活或身体恢复？",
+      "Does exercise interfere with daily life or physical recovery?"
+    ]
+  ],
+  [
+    "section_arfid",
+    [
+      "回避与摄入不足的原因",
+      "Reasons for avoidance and low intake"
+    ]
+  ],
+  [
+    "q_arfid_sensory",
+    [
+      "食物的质地、气味、味道、温度或外观是否使你回避进食？",
+      "Do texture, smell, taste, temperature or appearance of food lead you to avoid eating?"
+    ]
+  ],
+  [
+    "q_arfid_interest",
+    [
+      "你是否持续对进食缺乏兴趣或很少感觉饿？",
+      "Do you persistently have little interest in eating or rarely feel hungry?"
+    ]
+  ],
+  [
+    "q_arfid_choking",
+    [
+      "你是否因害怕噎住而回避食物？",
+      "Do you avoid food because of fear of choking?"
+    ]
+  ],
+  [
+    "q_arfid_vomiting",
+    [
+      "你是否因害怕呕吐而回避食物？",
+      "Do you avoid food because of fear of vomiting?"
+    ]
+  ],
+  [
+    "q_arfid_adverse",
+    [
+      "你是否因害怕过敏或其他不良后果而回避食物？身体原因仍需医疗评估。",
+      "Do you avoid food for fear of allergy or another adverse consequence? Physical causes still need medical assessment."
+    ]
+  ],
+  [
+    "q_arfid_nutrition",
+    [
+      "是否已有专业人员指出营养问题，或你担心明显摄入不足？",
+      "Has a professional identified nutritional concerns, or are you worried about clearly inadequate intake?"
+    ]
+  ],
+  [
+    "q_arfid_supplements",
+    [
+      "你是否依赖营养补充或专业安排的喂养来满足基本摄入？",
+      "Do you depend on supplements or professionally arranged feeding for basic intake?"
+    ]
+  ],
+  [
+    "q_arfid_social",
+    [
+      "回避食物是否明显妨碍与他人一起进食？",
+      "Does food avoidance substantially interfere with eating with others?"
+    ]
+  ],
+  [
+    "section_course",
+    [
+      "频率与病程",
+      "Frequency and course"
+    ]
+  ],
+  [
+    "q_course_restriction",
+    [
+      "限制／回避进食出现多频繁？",
+      "How often does restriction or avoidance occur?"
+    ]
+  ],
+  [
+    "q_course_binge",
+    [
+      "伴失控感的进食经历出现多频繁？",
+      "How often do eating episodes with loss of control occur?"
+    ]
+  ],
+  [
+    "q_course_comp",
+    [
+      "补偿行为出现多频繁？",
+      "How often do compensatory behaviors occur?"
+    ]
+  ],
+  [
+    "q_course_duration",
+    [
+      "这种进食模式持续多久了？",
+      "How long has this eating pattern been present?"
+    ]
+  ],
+  [
+    "q_course_pattern",
+    [
+      "这种变化的病程更接近哪种情况？",
+      "Which best describes the course?"
+    ]
+  ],
+  [
+    "q_course_worsening",
+    [
+      "近期是否明显加重？",
+      "Has it worsened noticeably recently?"
+    ]
+  ],
+  [
+    "section_function",
+    [
+      "日常影响（功能损害）",
+      "Daily impact (functional impairment)"
+    ]
+  ],
+  [
+    "q_function_work",
+    [
+      "进食相关问题对工作有多大影响？",
+      "How much do eating concerns affect work?"
+    ]
+  ],
+  [
+    "q_function_school",
+    [
+      "进食相关问题对学习有多大影响？",
+      "How much do eating concerns affect education?"
+    ]
+  ],
+  [
+    "q_function_relationships",
+    [
+      "进食相关问题对关系有多大影响？",
+      "How much do eating concerns affect relationships?"
+    ]
+  ],
+  [
+    "q_function_socialEating",
+    [
+      "进食相关问题对与他人进食有多大影响？",
+      "How much do eating concerns affect eating with others?"
+    ]
+  ],
+  [
+    "q_function_finances",
+    [
+      "进食相关问题对财务有多大影响？",
+      "How much do eating concerns affect finances?"
+    ]
+  ],
+  [
+    "q_function_concentration",
+    [
+      "进食相关问题对专注有多大影响？",
+      "How much do eating concerns affect concentration?"
+    ]
+  ],
+  [
+    "q_function_physical",
+    [
+      "进食相关问题对身体活动能力有多大影响？",
+      "How much do eating concerns affect physical functioning?"
+    ]
+  ],
+  [
+    "q_function_exercise",
+    [
+      "进食相关问题对运动与休息安排有多大影响？",
+      "How much do eating concerns affect exercise and rest?"
+    ]
+  ],
+  [
+    "q_function_social",
+    [
+      "进食相关问题对社交活动有多大影响？",
+      "How much do eating concerns affect social activities?"
+    ]
+  ],
+  [
+    "q_function_sleep",
+    [
+      "进食相关问题对睡眠有多大影响？",
+      "How much do eating concerns affect sleep?"
+    ]
+  ],
+  [
+    "q_function_routine",
+    [
+      "进食相关问题对日常安排有多大影响？",
+      "How much do eating concerns affect daily routines?"
+    ]
+  ],
+  [
+    "q_function_selfCare",
+    [
+      "进食相关问题对基本自我照护有多大影响？",
+      "How much do eating concerns affect basic self-care?"
+    ]
+  ],
+  [
+    "section_physical",
+    [
+      "身体影响（不等于诊断）",
+      "Physical consequences (not diagnostic proof)"
+    ]
+  ],
+  [
+    "q_physical_dizziness",
+    [
+      "近期是否有头晕？当前严重症状请使用紧急帮助。",
+      "Have you recently had dizziness? Use urgent help for current severe symptoms."
+    ]
+  ],
+  [
+    "q_physical_weakness",
+    [
+      "近期是否有虚弱或严重疲劳？当前严重症状请使用紧急帮助。",
+      "Have you recently had weakness or substantial fatigue? Use urgent help for current severe symptoms."
+    ]
+  ],
+  [
+    "q_physical_dehydration",
+    [
+      "近期是否有脱水迹象？当前严重症状请使用紧急帮助。",
+      "Have you recently had signs of dehydration? Use urgent help for current severe symptoms."
+    ]
+  ],
+  [
+    "q_physical_palpitations",
+    [
+      "近期是否有心悸？当前严重症状请使用紧急帮助。",
+      "Have you recently had palpitations? Use urgent help for current severe symptoms."
+    ]
+  ],
+  [
+    "q_physical_vomiting",
+    [
+      "近期是否有反复呕吐？当前严重症状请使用紧急帮助。",
+      "Have you recently had repeated vomiting? Use urgent help for current severe symptoms."
+    ]
+  ],
+  [
+    "q_physical_constipation",
+    [
+      "近期是否有严重便秘？当前严重症状请使用紧急帮助。",
+      "Have you recently had severe constipation? Use urgent help for current severe symptoms."
+    ]
+  ],
+  [
+    "q_physical_reproductive",
+    [
+      "近期是否有月经或生殖相关变化（如适用）？当前严重症状请使用紧急帮助。",
+      "Have you recently had menstrual or reproductive changes, if applicable? Use urgent help for current severe symptoms."
+    ]
+  ],
+  [
+    "q_physical_dental",
+    [
+      "近期是否有呕吐相关牙齿问题？当前严重症状请使用紧急帮助。",
+      "Have you recently had dental concerns related to vomiting? Use urgent help for current severe symptoms."
+    ]
+  ],
+  [
+    "q_physical_cold",
+    [
+      "近期是否有怕冷？当前严重症状请使用紧急帮助。",
+      "Have you recently had cold intolerance? Use urgent help for current severe symptoms."
+    ]
+  ],
+  [
+    "q_physical_decline",
+    [
+      "近期是否有身体功能明显下降？当前严重症状请使用紧急帮助。",
+      "Have you recently had substantial decline in physical functioning? Use urgent help for current severe symptoms."
+    ]
+  ],
+  [
+    "section_causes",
+    [
+      "身体、药物与外部因素",
+      "Physical, medication and external factors"
+    ]
+  ],
+  [
+    "q_medical_gi",
+    [
+      "疼痛、恶心、胃肠或吞咽困难是否可能导致少吃？",
+      "Could pain, nausea, gastrointestinal or swallowing difficulties be causing reduced intake?"
+    ]
+  ],
+  [
+    "q_medical_contribution",
+    [
+      "其他疾病是否可能影响食欲或摄入？",
+      "Could another medical condition be affecting appetite or intake?"
+    ]
+  ],
+  [
+    "q_substance_medication",
+    [
+      "食欲变化是否与处方药开始或调整时间有关，包括兴奋剂？",
+      "Does appetite change coincide with starting or changing prescribed medication, including stimulants?"
+    ]
+  ],
+  [
+    "q_substance_contribution",
+    [
+      "酒精、大麻、其他物质或戒断是否可能影响进食？",
+      "Could alcohol, cannabis, other substances or withdrawal affect eating?"
+    ]
+  ],
+  [
+    "q_context_access",
+    [
+      "食物获取困难、经济因素或文化习惯是否可能解释摄入变化？",
+      "Could food access, finances or cultural practices explain intake changes?"
+    ]
+  ],
+  [
+    "section_context",
+    [
+      "其他解释与同时存在的模式",
+      "Other explanations and co-occurring patterns"
+    ]
+  ],
+  [
+    "q_context_mood",
+    [
+      "进食变化是否只在明显情绪低落、兴趣下降时发生？",
+      "Do eating changes occur only during low mood or loss of interest?"
+    ]
+  ],
+  [
+    "q_context_anxiety",
+    [
+      "进食回避是否与明显的窒息、呕吐恐惧或其他焦虑有关？",
+      "Is food avoidance linked to significant choking/vomiting fear or other anxiety?"
+    ]
+  ],
+  [
+    "q_context_ocd",
+    [
+      "污染强迫观念及清洗／检查仪式是否解释你的食物回避？",
+      "Do contamination obsessions and washing/checking rituals explain food avoidance?"
+    ]
+  ],
+  [
+    "q_context_trauma",
+    [
+      "进食变化是否只在创伤提醒或高警觉时出现？",
+      "Do eating changes occur only with trauma reminders or hyperarousal?"
+    ]
+  ],
+  [
+    "q_context_adhd",
+    [
+      "不规律进食是否主要因为忘记、组织或任务安排困难？",
+      "Are irregular meals mainly due to forgetting, organization or planning difficulties?"
+    ]
+  ]
+]);
+
+I18n.register("eatingEvidence",[["coherent",["相关回答之间暂未发现矛盾","No contradiction identified between related answers"]]]);
