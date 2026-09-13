@@ -39,3 +39,7 @@ Normal entry runs the shared safety check. Clarification, technical failure and 
 See [baseline and version control](VERSION-CONTROL.md) and [safety rule review catalog](SAFETY-RULE-CATALOG.md).
 
 For the optional synthetic browser harness, run `node scripts/preview-safety-ux.cjs` after building and open http://127.0.0.1:4174/. This is a development tool, not a public page.
+
+## Differential v1
+
+The optional cross-disorder comparison is available after current assessment results. See [checkpoint](CHECKPOINT-DIFFERENTIAL.md) and [auditable rule contract](DIFFERENTIAL-RULE-CATALOG.md). The complete suite now contains 269 checks, including 42 Differential checks. Authored code is in `src/differential/`; no additional disorder modules or Adaptive Assessment engine are included.
