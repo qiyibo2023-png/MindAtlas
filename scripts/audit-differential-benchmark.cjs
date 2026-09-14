@@ -1,0 +1,13 @@
+const fs=require('node:fs'),assert=require('node:assert/strict'),crypto=require('node:crypto');
+const cases=require(process.cwd()+'/benchmarks/differential-v1/cases.cjs'),{DifferentialV2:V,GlobalSafety:G}=require(process.cwd()+'/tests/differential-v2-harness.cjs')();
+const files=fs.readdirSync('src/differential-v2').filter(f=>f.endsWith('.js')).map(f=>'src/differential-v2/'+f),runtime=files.map(f=>fs.readFileSync(f,'utf8')).join('\n');
+assert(!/(?:require|import).*benchmarks|(?:require|import).*fixtures|tests\//.test(runtime),'Runtime fixture import');
+assert(!cases.some(c=>runtime.includes(c.pairId)),'Benchmark ID appears in runtime');
+assert(!fs.readFileSync('src/index.html','utf8').includes('benchmarks/'),'Benchmark deployed');
+const english=cases.filter(c=>c.language==='en');
+assert.equal(new Set(english.map(c=>JSON.stringify([c.structuredEvidence,c.safety||{}]))).size,english.length,'Duplicate English scenario evidence');
+const signature=r=>JSON.stringify({status:r.differentialStatus,primary:r.primaryDirections,candidates:r.candidateDirections.map(c=>[c.id,c.level,c.role]),missing:r.missingEvidence,ruleouts:r.unresolvedRuleOuts,discriminators:r.unresolvedDiscriminators.map(d=>[d.id,d.conceptNeeded,d.priority]),safety:r.safetyState});
+for(const row of english){const s=G.empty();for(const p of G.paths)G.put(s,p,false);for(const [p,v]of Object.entries(row.safety||{}))G.put(s,p,v);const nodes=row.structuredEvidence.map((n,i)=>V.node(n.concept,n.value,{...n,id:n.id||'original:'+i,source:n.source||(V.domainIds.includes(n.concept.split('.')[0])?n.concept.split('.')[0]:'clarification')}));assert.equal(signature(V.evaluate(nodes,s)),signature(V.evaluate(nodes.map((n,i)=>({...n,id:'renamed:'+i})),s)),'Evidence ID affected clinical behavior');}
+for(const tag of ['hard','missing','conflict','mixed','safety','medical','sleep'])assert(cases.some(c=>c.tags.includes(tag)),'Missing coverage '+tag);
+const report={version:'differential-benchmark-audit-v1.0.0',passed:true,independentScenarios:english.length,evidenceIdInvariance:english.length,caseFileSha256:crypto.createHash('sha256').update(fs.readFileSync('benchmarks/differential-v1/cases.cjs')).digest('hex'),runtimeFiles:files,findings:[],limitations:['This detects fixture imports, exact case IDs, duplicate structured scenarios and ID-sensitive outputs. It cannot prove absence of all conceptual overfitting.','Most cases are combinatorial structured patterns; natural-language and cultural diversity are limited. No prospective clinical validation.']};
+fs.mkdirSync('work',{recursive:true});fs.writeFileSync('work/differential-benchmark-quality-audit.json',JSON.stringify(report,null,2));console.log(JSON.stringify(report,null,2));

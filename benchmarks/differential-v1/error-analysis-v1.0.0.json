@@ -1,0 +1,35 @@
+{
+  "version": "differential-benchmark-error-analysis-v1.0.0",
+  "engineVersion": "cross-disorder-differential-v2.0.0",
+  "caseCount": 264,
+  "currentMismatches": [],
+  "framework": {
+    "runner": "scripts/differential-benchmark.cjs",
+    "fields": [
+      "id",
+      "tags",
+      "failures",
+      "expected",
+      "actual",
+      "relevantEvidenceNodes",
+      "candidates",
+      "contradictions",
+      "missingEvidence",
+      "unresolvedDiscriminators",
+      "matchedRules",
+      "classification"
+    ],
+    "classifications": [
+      "implementation_bug",
+      "benchmark_label_problem",
+      "clinically_acceptable_alternative",
+      "unresolved_pending_review"
+    ],
+    "procedure": "Preserve original fixture and structured result; inspect provenance, rules and missing context; document clinician review before altering labels. See REPORT.md for first-run issues."
+  },
+  "limitations": [
+    "Zero fixture mismatches does not demonstrate clinical validation.",
+    "Synthetic labels require independent review; deterministic and combinatorial coverage is limited.",
+    "Natural-language, cultural and prospective patient evaluation remain outstanding."
+  ]
+}

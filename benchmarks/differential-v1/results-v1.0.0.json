@@ -1,0 +1,135 @@
+{
+  "benchmarkVersion": "mindatlas-differential-benchmark-v1.0.0",
+  "engineVersion": "cross-disorder-differential-v2.0.0",
+  "reviewStatus": "unreviewed",
+  "caseCount": 264,
+  "independentScenarioCount": 132,
+  "metrics": {
+    "primaryAgreement": {
+      "passed": 264,
+      "total": 264
+    },
+    "acceptableDirectionCoverage": {
+      "passed": 264,
+      "total": 264
+    },
+    "cooccurrenceRetention": {
+      "passed": 114,
+      "total": 114
+    },
+    "safetyPriority": {
+      "passed": 264,
+      "total": 264
+    },
+    "contradictionDetection": {
+      "passed": 28,
+      "total": 28
+    },
+    "missingCriticalEvidence": {
+      "passed": 12,
+      "total": 12
+    },
+    "ruleoutRetention": {
+      "passed": 20,
+      "total": 20
+    },
+    "unresolvedDiscriminators": {
+      "passed": 4,
+      "total": 4
+    },
+    "statusAgreement": {
+      "passed": 264,
+      "total": 264
+    },
+    "unsupportedRetention": {
+      "passed": 18,
+      "total": 18
+    }
+  },
+  "bilingualParity": {
+    "passed": 132,
+    "total": 132
+  },
+  "falseSingleWinner": {
+    "count": 0,
+    "eligible": 114
+  },
+  "interactionSummary": {
+    "mood → mood": 50,
+    "anxiety → anxiety": 46,
+    "ocd → ocd": 50,
+    "trauma → trauma": 48,
+    "adhd → adhd": 48,
+    "eating → eating": 52,
+    "psychosis → psychosis": 48,
+    "mood → anxiety": 12,
+    "anxiety → mood": 12,
+    "mood → ocd": 12,
+    "anxiety → ocd": 12,
+    "ocd → mood": 12,
+    "ocd → anxiety": 12,
+    "mood → trauma": 12,
+    "anxiety → trauma": 12,
+    "trauma → mood": 12,
+    "trauma → anxiety": 12,
+    "mood → adhd": 12,
+    "anxiety → adhd": 12,
+    "adhd → mood": 12,
+    "adhd → anxiety": 12,
+    "mood → eating": 12,
+    "anxiety → eating": 12,
+    "eating → mood": 12,
+    "eating → anxiety": 12,
+    "mood → psychosis": 12,
+    "anxiety → psychosis": 12,
+    "psychosis → mood": 14,
+    "psychosis → anxiety": 12,
+    "ocd → trauma": 12,
+    "trauma → ocd": 12,
+    "ocd → adhd": 12,
+    "adhd → ocd": 12,
+    "ocd → eating": 12,
+    "eating → ocd": 12,
+    "ocd → psychosis": 12,
+    "psychosis → ocd": 12,
+    "trauma → adhd": 14,
+    "adhd → trauma": 14,
+    "trauma → eating": 12,
+    "eating → trauma": 12,
+    "trauma → psychosis": 12,
+    "psychosis → trauma": 12,
+    "adhd → eating": 12,
+    "eating → adhd": 12,
+    "adhd → psychosis": 12,
+    "psychosis → adhd": 12,
+    "eating → psychosis": 12,
+    "psychosis → eating": 12
+  },
+  "errors": [],
+  "limitations": [
+    "Synthetic structured scenarios, not clinical validation.",
+    "Bilingual pairs share stable facts and are not independent patients.",
+    "Combinatorial cases test multilabel retention; the interaction table is not a single-diagnosis confusion matrix.",
+    "Failed cases require documented review; labels are not adjusted automatically."
+  ],
+  "categoryDistribution": {
+    "languages": {
+      "en": 132,
+      "zh-CN": 132
+    },
+    "bilingualPairs": 132,
+    "pureDomain": 14,
+    "pairwise": 42,
+    "multiDomain": 70,
+    "contradiction": 28,
+    "missingEvidence": 14,
+    "unknownEvidence": 14,
+    "safety": 6,
+    "medical": 18,
+    "medication": 2,
+    "substance": 2,
+    "sleep": 4,
+    "hardBoundary": 30
+  },
+  "categoryDefinition": "Counts are localized cases; tags overlap. Contradiction includes resolved precedence disagreements. Bilingual pairs are not independent patients."
+}
