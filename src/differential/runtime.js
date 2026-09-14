@@ -18,5 +18,5 @@ D.clarify=function(key,value){if(!Object.hasOwn(D.store.clarifications,key)||![t
 D.clear=function(){D.store.enabled=false;D.store.clarifications={rumination:'unknown',onlyObsessions:'unknown'};D.store.clarificationRevision=0;D.store.result=null;D.store.fingerprint=null;};
 // An optional, explicitly opened comparison extends existing summaries without altering
 // module results, scores, answer stores or original exports before opt-in.
-for(const [name,module]of Object.entries(D.modules())){const original=module.summary;module.summary=function(...args){const base=original.apply(this,args);return D.store.enabled&&D.store.selected[name]?base+'\n\n'+D.summary(D.current(),args[2]??0):base;};}
+for(const [name,module]of Object.entries(D.modules())){const original=module.summary;module.summary=function(...args){const base=original.apply(this,args);return D.store.enabled&&D.store.selected[name]?base+'\n\n'+(D.summaryForCurrent?D.summaryForCurrent(args[2]??0):D.summary(D.current(),args[2]??0)):base;};}
 })(globalThis.Differential);

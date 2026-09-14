@@ -1,6 +1,7 @@
 # MindAtlas / 心理健康双语评估
 
-Canonical source for the completed Mood, Anxiety and OCD modules, shared Global Safety Engine and Chinese/English UX hardening.
+Canonical source for seven assessment domains, the shared Global Safety Engine,
+Router v2.0.1 and bilingual assessment comparison.
 
 The platform now uses a centralized, strict bilingual catalog. Language changes
 presentation only. See [the i18n contract, audit and clinical limits](I18N.md).
@@ -63,3 +64,11 @@ The seventh adult assessment domain is implemented in `src/psychosis/`, using th
 ## Symptom Router v2
 
 Live free-text entry now uses the unified seven-domain Router v2 and bounded bilingual clarification flow, after shared Safety. See [architecture](ROUTER-V2-ARCHITECTURE.md), [local checkpoint](CHECKPOINT-ROUTER-V2.md) and [synthetic benchmark](benchmarks/router-v1/REPORT.md). Run `node scripts/test-all.cjs` and `node scripts/router-benchmark.cjs`. The v1 API remains for backward compatibility; clinical review is still required.
+
+## Cross-Disorder Differential v2 development
+
+The live comparison now uses the seven-domain evidence graph in
+`src/differential-v2/`. See [architecture and clinical limits](DIFFERENTIAL-V2-ARCHITECTURE.md),
+[verification results](DIFFERENTIAL-V2-VALIDATION.md),
+and [the separate synthetic benchmark](benchmarks/differential-v1/REPORT.md).
+No Adaptive Assessment engine is included. See DIFFERENTIAL-V2-FINAL-REPORT.md for the verified local milestone and remaining clinical review requirements.

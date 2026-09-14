@@ -1,0 +1,22 @@
+{
+  "version": "differential-benchmark-audit-v1.0.0",
+  "passed": true,
+  "independentScenarios": 132,
+  "evidenceIdInvariance": 132,
+  "caseFileSha256": "3565b080848004935ee90c3f6be1fb6f06e336939a43396a3988d4dd60e61fe8",
+  "runtimeFiles": [
+    "src/differential-v2/adapters.js",
+    "src/differential-v2/contracts.js",
+    "src/differential-v2/engine.js",
+    "src/differential-v2/graph.js",
+    "src/differential-v2/registry.js",
+    "src/differential-v2/runtime.js",
+    "src/differential-v2/schema.js",
+    "src/differential-v2/ui.js"
+  ],
+  "findings": [],
+  "limitations": [
+    "This detects fixture imports, exact case IDs, duplicate structured scenarios and ID-sensitive outputs. It cannot prove absence of all conceptual overfitting.",
+    "Most cases are combinatorial structured patterns; natural-language and cultural diversity are limited. No prospective clinical validation."
+  ]
+}
