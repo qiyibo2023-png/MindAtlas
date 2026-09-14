@@ -1,5 +1,62 @@
 (function(V){'use strict';
 V.questions=[
+{
+  "id": "moodOcd",
+  "domainsCompared": [
+    "mood",
+    "ocd"
+  ],
+  "requiredEvidence": {},
+  "informationValue": 50,
+  "stopWhenKnown": [
+    "mood.moodCongruentRumination",
+    "ocd.intrusionCompulsionLink"
+  ],
+  "refinement": false,
+  "questionKey": "rv201.question",
+  "stopConditions": [
+    "safety",
+    "unknown",
+    "prefer",
+    "user_stop",
+    "question_limit",
+    "discriminated"
+  ],
+  "version": "symptom-router-v2.0.1",
+  "reviewStatus": "unreviewed",
+  "options": [
+    {
+      "value": "mood",
+      "labelKey": "rv201.mood",
+      "effects": {
+        "mood.moodCongruentRumination": true
+      }
+    },
+    {
+      "value": "ocd",
+      "labelKey": "rv201.ocd",
+      "effects": {
+        "ocd.intrusionCompulsionLink": true
+      }
+    },
+    {
+      "value": "both",
+      "labelKey": "rv201.both",
+      "effects": {
+        "mood.moodCongruentRumination": true,
+        "ocd.intrusionCompulsionLink": true
+      }
+    },
+    {
+      "value": "unknown",
+      "labelKey": "rv2.unknown"
+    },
+    {
+      "value": "prefer",
+      "labelKey": "rv2.prefer"
+    }
+  ]
+},
   {
     "id": "moodAnxiety",
     "domainsCompared": [

@@ -12,7 +12,7 @@ Run `node scripts/router-benchmark.cjs` after rebuilding. No benchmark-derived d
 | top2 | 88 / 88 |
 | safetyOverride | 14 / 14 |
 | unsupported | 226 / 226 |
-| clarification | 224 / 226 |
+| clarification | 226 / 226 |
 | status | 226 / 226 |
 | bilingualParity | 113 / 113 |
 | falsePositive | 0 / 92 |
@@ -82,10 +82,7 @@ Rows are single expected primary domains; columns are actual primary domains. Nu
 
 ## Error analysis
 
-- mixed-mood-ocd-zh: expected clarification; actual ambiguous, candidates mood/ocd, no further question. The engine retains multiple legitimate directions. Candidate rules are not changed solely to satisfy this expectation.
-- mixed-mood-ocd-en: expected clarification; actual ambiguous, candidates mood/ocd, no further question. The engine retains multiple legitimate directions. Candidate rules are not changed solely to satisfy this expectation.
-
-Full expected/actual structures, failed checks and rule-family hypotheses are in `results.json`.
+Router v2.0.1: no benchmark discrepancies. The two prior Mood+OCD cases now select `moodOcd`. Benchmark inputs and labels are unchanged. Clarification agreement improves from 224/226 to 226/226; every other metric and the confusion matrix are unchanged. This is clarification coverage, not evidence of clinical validation. See `../../CHECKPOINT-ROUTER-V2.0.1.md`.
 
 ## Limitations
 

@@ -85,3 +85,7 @@ The v1 catalog above describes retained compatibility APIs. Live entry uses v2. 
 Clarifications: `moodAnxiety`, `ocdGad`, `ocdTrauma`, `ocdPsychosis`, `adhdMood`, `adhdAnxiety`, `adhdTrauma`, `adhdBipolar`, `eatingMood`, `eatingOcd`, `eatingAnxiety`, `anArfid`, `bnBed`, `psychosisTrauma`, `psychosisDissociation`, `psychosisMood`, `sleepPsychosis`, `attentionContext`. Each has explicit required evidence, domain comparisons, information value, translated options and stopping conditions in `src/router-v2/questions.js`.
 
 Extraction coverage corrections use the existing medical.severeConfusion, medical.severeBreathingDifficulty and harmToOthers.intent signal IDs. They do not alter Safety thresholds. See `ROUTER-V2-ARCHITECTURE.md` for context, provenance and limitations.
+
+## v2.0.1 clarification coverage
+
+`moodOcd` (unreviewed) compares mood-congruent rumination with unwanted, ego-dystonic intrusions accompanied by compulsive responses. Five options: Mood, OCD, both, unknown, prefer not to answer. Priority 50; requires both candidate domains; at most one use within the unchanged three-question budget. Positive relationship facts add explanation/discrimination to existing candidates only. Existing Mood/OCD routing rules, ranks and candidate sorting are unchanged.

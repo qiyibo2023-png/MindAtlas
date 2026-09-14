@@ -14,7 +14,7 @@ export interface SymptomEvidence {
   };
 }
 export interface ClinicalSymptomProfileV2 {
-  schemaVersion: 'symptom-router-v2.0.0';
+  schemaVersion: 'symptom-router-v2.0.1';
   facts: Record<string, ClinicalValue>;
   evidence: SymptomEvidence[];
   course: { duration: 'unknown' | 'brief' | 'persistent'; frequency: 'unknown' | 'repeated'; severity: 'unknown' | 'marked' };
@@ -27,7 +27,7 @@ export interface RoutingSessionV2 {
   preference?: AssessmentDomain;
 }
 export interface RoutingResultV2 {
-  routerVersion: 'symptom-router-v2.0.0';
+  routerVersion: 'symptom-router-v2.0.1';
   primaryRoute: AssessmentDomain | null;
   secondaryRoutes: AssessmentDomain[];
   candidateRoutes: Array<{domain: AssessmentDomain; relevance: 'high' | 'moderate' | 'tentative'; supportingEvidence: Array<{concept: string; evidenceIds: string[]}>; opposingEvidence: Array<{concept: string; evidenceIds: string[]}>; discriminatingEvidence: Array<{concept: string; evidenceIds: string[]}>; explanationKeys: string[]}>;

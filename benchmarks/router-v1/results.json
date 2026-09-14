@@ -1,6 +1,6 @@
 {
   "version": "router-benchmark-v1.0.0",
-  "routerVersion": "symptom-router-v2.0.0",
+  "routerVersion": "symptom-router-v2.0.1",
   "clinicalReview": "unreviewed",
   "synthetic": true,
   "size": 226,
@@ -72,9 +72,9 @@
       "rate": 1
     },
     "clarification": {
-      "passed": 224,
+      "passed": 226,
       "total": 226,
-      "rate": 0.9911504424778761
+      "rate": 1
     },
     "status": {
       "passed": 226,
@@ -162,68 +162,5 @@
       "none": 0
     }
   },
-  "errors": [
-    {
-      "id": "mixed-mood-ocd-zh",
-      "tags": [
-        "mixed",
-        "mood",
-        "ocd"
-      ],
-      "expected": {
-        "routes": [],
-        "status": "ambiguous",
-        "safety": "attention",
-        "clarification": true,
-        "unsupported": []
-      },
-      "actual": {
-        "primaryRoute": null,
-        "candidates": [
-          "mood",
-          "ocd"
-        ],
-        "routingStatus": "ambiguous",
-        "safety": "attention",
-        "unsupported": [],
-        "clarification": false,
-        "question": null
-      },
-      "failedChecks": [
-        "clarification"
-      ],
-      "likelyCategory": "pattern or discriminator coverage"
-    },
-    {
-      "id": "mixed-mood-ocd-en",
-      "tags": [
-        "mixed",
-        "mood",
-        "ocd"
-      ],
-      "expected": {
-        "routes": [],
-        "status": "ambiguous",
-        "safety": "attention",
-        "clarification": true,
-        "unsupported": []
-      },
-      "actual": {
-        "primaryRoute": null,
-        "candidates": [
-          "mood",
-          "ocd"
-        ],
-        "routingStatus": "ambiguous",
-        "safety": "attention",
-        "unsupported": [],
-        "clarification": false,
-        "question": null
-      },
-      "failedChecks": [
-        "clarification"
-      ],
-      "likelyCategory": "pattern or discriminator coverage"
-    }
-  ]
+  "errors": []
 }

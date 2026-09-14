@@ -1,6 +1,6 @@
 # Symptom Router v2
 
-Development version: `symptom-router-v2.0.0`. All added routing, clarification and extraction rules are **unreviewed**. Engineering verification is not clinical validation.
+Development version: `symptom-router-v2.0.1`. All added routing, clarification and extraction rules are **unreviewed**. Engineering verification is not clinical validation.
 
 ## Runtime and compatibility
 
@@ -26,7 +26,7 @@ This is bounded local phrase processing. It cannot reliably understand every idi
 
 ## Clarifications
 
-Eighteen registered questions cover Mood–Anxiety, OCD–GAD, OCD–PTSD, OCD–Psychosis, ADHD–Mood/Anxiety/PTSD/Bipolar, Eating–Mood/OCD/Anxiety, AN–ARFID context, BN–BED compensation, Psychosis–PTSD/Dissociation/Mood, sleep–Psychosis and attention onset/context.
+Nineteen registered questions cover Mood–OCD, Mood–Anxiety, OCD–GAD, OCD–PTSD, OCD–Psychosis, ADHD–Mood/Anxiety/PTSD/Bipolar, Eating–Mood/OCD/Anxiety, AN–ARFID context, BN–BED compensation, Psychosis–PTSD/Dissociation/Mood, sleep–Psychosis and attention onset/context.
 
 Selection uses eligible candidate domains, required evidence, unknown discriminators and deterministic ordinal information value. One question is shown at a time. Answers update the same concept IDs and rerun routing. Maximum three questions; stop on uncertainty, prefer-not-to-answer, user stop, sufficient discrimination, multiple legitimate directions, unsupported domain, insufficient information or Safety interruption. This is a small fixed clarification mechanism, not Adaptive Assessment. Selecting an alternative assessment never fabricates clinical evidence.
 
@@ -43,3 +43,5 @@ No new disorder assessment, Differential v2, tracking, account, care navigation 
 ## Verification and benchmark
 
 Run `node scripts/test-all.cjs`, then `node scripts/router-benchmark.cjs`. The latter writes a reproducible report to ignored `work/`. The checked-in benchmark report records the exact checkpoint output; it is not an automatically updated production asset. See `benchmarks/router-v1/REPORT.md` and `CHECKPOINT-ROUTER-V2.md`.
+
+The v2.0.1 Mood–OCD clarification records either or both `mood.moodCongruentRumination` and `ocd.intrusionCompulsionLink`. It adds attributed discriminating evidence and bilingual explanations to already-supported candidates. It does not alter routing ranks, fabricate negative facts, remove the other domain, or force a unique primary. Unknown/prefer answers record no clinical evidence.

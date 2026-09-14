@@ -31,5 +31,7 @@ rule('V2_PSYCHOSIS_PERCEPTION',1,['psychosis.perception'],[],'rv2.reasonPsychosi
 rule('V2_PSYCHOSIS_PATTERN',3,['psychosis.perception','psychosis.awake'],['psychosis.recurrent','psychosis.decline'],'rv2.reasonPsychosis'),
 rule('V2_PSYCHOSIS_BELIEF',3,['psychosis.belief','psychosis.conviction'],[],'rv2.reasonPsychosis'),
 rule('V2_PSYCHOSIS_ORGANIZATION',2,['psychosis.disorganization','psychosis.decline'],[],'rv2.reasonPsychosis')],['psychosis.sleep','psychosis.culture','psychosis.traumaContext','psychosis.substanceContext']);
+// Clarified relationships add explanatory discrimination only; original routing ranks are unchanged.
+V.clarificationDiscriminators={mood:{path:'mood.moodCongruentRumination',explanationKey:'rv201.reasonMood'},ocd:{path:'ocd.intrusionCompulsionLink',explanationKey:'rv201.reasonOcd'}};
 V.unsupported={autism:11,substance:15,sleep:14,somatic:13,personality:16,cognitive:17,grief:8,bdd:6,hoarding:6};
 })(globalThis.RouterV2);
