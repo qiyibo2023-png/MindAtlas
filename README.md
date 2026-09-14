@@ -59,3 +59,7 @@ Eating Disorders is the sixth supported adult assessment domain. See `EATING-IMP
 ## Psychosis / Severe Mental Health extension
 
 The seventh adult assessment domain is implemented in `src/psychosis/`, using the same Safety, Router, Differential and bilingual infrastructure. See [the implementation and clinical-review catalog](PSYCHOSIS-IMPLEMENTATION-CATALOG.md). All new rules are unreviewed. This local implementation milestone is not clinical validation or a public release.
+
+## Symptom Router v2
+
+Live free-text entry now uses the unified seven-domain Router v2 and bounded bilingual clarification flow, after shared Safety. See [architecture](ROUTER-V2-ARCHITECTURE.md), [local checkpoint](CHECKPOINT-ROUTER-V2.md) and [synthetic benchmark](benchmarks/router-v1/REPORT.md). Run `node scripts/test-all.cjs` and `node scripts/router-benchmark.cjs`. The v1 API remains for backward compatibility; clinical review is still required.

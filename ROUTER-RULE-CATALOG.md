@@ -51,3 +51,37 @@ No raw text, excerpts, browser storage, analytics, console logging or remote req
 ## Reproduction
 
 Run `node scripts/test-all.cjs` for build, catalog validation and all module/Safety/i18n/Router tests. Run `node scripts/verify-baseline.cjs` for the current Router release manifest. Older bilingual and source-migration manifests remain historical artifacts and are not rewritten to conceal changes.
+
+## Symptom Router v2 unified registry
+
+The v1 catalog above describes retained compatibility APIs. Live entry uses v2. All entries below are unreviewed; qualitative ranks order evidence, never probabilities.
+
+| Rule | Domain | Required all | Required any | Rank | Explanation |
+| --- | --- | --- | --- | --- | --- |
+| V2_MOOD_CORE | mood | — | mood.depressedMood, mood.anhedonia | 1 | router.reasonMood |
+| V2_MOOD_ASSOCIATED | mood | mood.depressedMood | mood.lowEnergy, mood.hopelessness, general.functionalImpact | 2 | router.reasonMood |
+| V2_MOOD_COMBINATION | mood | mood.depressedMood, mood.anhedonia | — | 3 | router.reasonMood |
+| V2_MOOD_EPISODIC | mood | mood.episodicElevation, mood.reducedNeedForSleep | — | 3 | rv2.reasonEpisode |
+| V2_ANXIETY_WORRY | anxiety | anxiety.excessiveWorry | — | 2 | router.reasonWorry |
+| V2_ANXIETY_PATTERN | anxiety | anxiety.excessiveWorry | anxiety.difficultToControlWorry, anxiety.physicalTension | 3 | router.reasonWorry |
+| V2_ANXIETY_FEAR | anxiety | — | anxiety.panicLikeEpisodes, anxiety.socialEvaluationFear, anxiety.specificFear | 2 | router.reasonFear |
+| V2_OCD_UNWANTED | ocd | ocd.intrusiveThoughts | ocd.thoughtsUnwanted, ocd.egoDystonic | 2 | router.reasonOcdThought |
+| V2_OCD_RITUAL | ocd | — | ocd.checking, ocd.washingCleaning, ocd.mentalCompulsions, ocd.neutralization | 2 | router.reasonOcdRitual |
+| V2_OCD_PATTERN | ocd | ocd.intrusiveThoughts, ocd.thoughtsUnwanted | ocd.checking, ocd.mentalCompulsions, ocd.neutralization, ocd.washingCleaning | 3 | router.reasonOcdSpecific |
+| V2_TRAUMA_PATTERN | trauma | trauma.exposure, trauma.reliving | — | 3 | rv2.reasonTrauma |
+| V2_TRAUMA_REMINDERS | trauma | trauma.exposure | trauma.avoidance, trauma.alertness, trauma.nightmares | 2 | rv2.reasonTrauma |
+| V2_ADHD_DEVELOPMENT | adhd | adhd.developmental | adhd.disorganized, adhd.distractible, adhd.unfinished, adhd.impulsive | 3 | rv2.reasonAdhd |
+| V2_ADHD_CLARIFIED | adhd | adhd.developmental, adhd.crossSetting, general.attention | — | 2 | rv2.reasonAdhd |
+| V2_ADHD_CONTEXT | adhd | — | adhd.disorganized, adhd.distractible, adhd.unfinished, general.attention | 1 | rv2.reasonAttention |
+| V2_EATING_WEIGHT | eating | eating.restriction, eating.weightFear | — | 3 | rv2.reasonEating |
+| V2_EATING_BINGE | eating | eating.binge, eating.loss | — | 3 | rv2.reasonEating |
+| V2_EATING_AVOIDANCE | eating | eating.avoidance, eating.intakeImpact | eating.sensory, eating.consequenceFear, eating.lowInterest | 3 | rv2.reasonEating |
+| V2_EATING_CONTEXT | eating | — | eating.restriction, eating.avoidance, eating.binge | 1 | rv2.reasonEating |
+| V2_PSYCHOSIS_PERCEPTION | psychosis | psychosis.perception | — | 1 | rv2.reasonPsychosis |
+| V2_PSYCHOSIS_PATTERN | psychosis | psychosis.perception, psychosis.awake | psychosis.recurrent, psychosis.decline | 3 | rv2.reasonPsychosis |
+| V2_PSYCHOSIS_BELIEF | psychosis | psychosis.belief, psychosis.conviction | — | 3 | rv2.reasonPsychosis |
+| V2_PSYCHOSIS_ORGANIZATION | psychosis | psychosis.disorganization, psychosis.decline | — | 2 | rv2.reasonPsychosis |
+
+Clarifications: `moodAnxiety`, `ocdGad`, `ocdTrauma`, `ocdPsychosis`, `adhdMood`, `adhdAnxiety`, `adhdTrauma`, `adhdBipolar`, `eatingMood`, `eatingOcd`, `eatingAnxiety`, `anArfid`, `bnBed`, `psychosisTrauma`, `psychosisDissociation`, `psychosisMood`, `sleepPsychosis`, `attentionContext`. Each has explicit required evidence, domain comparisons, information value, translated options and stopping conditions in `src/router-v2/questions.js`.
+
+Extraction coverage corrections use the existing medical.severeConfusion, medical.severeBreathingDifficulty and harmToOthers.intent signal IDs. They do not alter Safety thresholds. See `ROUTER-V2-ARCHITECTURE.md` for context, provenance and limitations.
