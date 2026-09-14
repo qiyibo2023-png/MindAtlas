@@ -55,3 +55,7 @@ The current source includes ADHD as the fifth adult assessment domain. See `ADHD
 ## Eating Disorders v1
 
 Eating Disorders is the sixth supported adult assessment domain. See `EATING-IMPLEMENTATION-CATALOG.md` for four original qualitative patterns, medical-first shared Safety integration, Router/Differential behavior and unreviewed clinical status. `CHECKPOINT-EATING.md` records validation and intended files. The synthetic browser harness is `node scripts/preview-eating.cjs` on port 4179; it is not deployed. No body weight or validated screening score is collected.
+
+## Psychosis / Severe Mental Health extension
+
+The seventh adult assessment domain is implemented in `src/psychosis/`, using the same Safety, Router, Differential and bilingual infrastructure. See [the implementation and clinical-review catalog](PSYCHOSIS-IMPLEMENTATION-CATALOG.md). All new rules are unreviewed. This local implementation milestone is not clinical validation or a public release.
