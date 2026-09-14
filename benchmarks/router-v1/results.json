@@ -1,0 +1,166 @@
+{
+  "version": "router-benchmark-v1.0.0",
+  "routerVersion": "symptom-router-v2.0.1",
+  "clinicalReview": "unreviewed",
+  "synthetic": true,
+  "size": 226,
+  "categoryCounts": {
+    "mood": 34,
+    "pure": 14,
+    "impairment": 14,
+    "navigation": 14,
+    "negation-unrelated": 14,
+    "uncertainty-general": 14,
+    "other-unrelated": 14,
+    "anxiety": 26,
+    "ocd": 30,
+    "trauma": 28,
+    "adhd": 26,
+    "eating": 26,
+    "psychosis": 30,
+    "other": 14,
+    "historical": 14,
+    "hypothetical": 14,
+    "quoted": 14,
+    "clinician-question": 14,
+    "negation": 14,
+    "vague": 14,
+    "unsupported": 18,
+    "autism": 2,
+    "substance": 2,
+    "sleep": 4,
+    "somatic": 2,
+    "personality": 2,
+    "cognitive": 2,
+    "grief": 2,
+    "bdd": 2,
+    "hoarding": 2,
+    "safety": 14,
+    "suicide": 2,
+    "medical": 2,
+    "violence": 2,
+    "overdose": 2,
+    "command": 2,
+    "confusion": 2,
+    "breathing": 2,
+    "mixed": 12,
+    "culture": 2,
+    "idiom": 2,
+    "technical": 2,
+    "medical-mimic": 2,
+    "mixed-language": 4
+  },
+  "metrics": {
+    "primary": {
+      "passed": 226,
+      "total": 226,
+      "rate": 1
+    },
+    "top2": {
+      "passed": 88,
+      "total": 88,
+      "rate": 1
+    },
+    "safetyOverride": {
+      "passed": 14,
+      "total": 14,
+      "rate": 1
+    },
+    "unsupported": {
+      "passed": 226,
+      "total": 226,
+      "rate": 1
+    },
+    "clarification": {
+      "passed": 226,
+      "total": 226,
+      "rate": 1
+    },
+    "status": {
+      "passed": 226,
+      "total": 226,
+      "rate": 1
+    },
+    "bilingualParity": {
+      "passed": 113,
+      "total": 113
+    },
+    "falsePositive": {
+      "count": 0,
+      "total": 92
+    }
+  },
+  "confusion": {
+    "mood": {
+      "mood": 14,
+      "anxiety": 0,
+      "ocd": 0,
+      "trauma": 0,
+      "adhd": 0,
+      "eating": 0,
+      "psychosis": 0,
+      "none": 0
+    },
+    "anxiety": {
+      "mood": 0,
+      "anxiety": 12,
+      "ocd": 0,
+      "trauma": 0,
+      "adhd": 0,
+      "eating": 0,
+      "psychosis": 0,
+      "none": 0
+    },
+    "ocd": {
+      "mood": 0,
+      "anxiety": 0,
+      "ocd": 14,
+      "trauma": 0,
+      "adhd": 0,
+      "eating": 0,
+      "psychosis": 0,
+      "none": 0
+    },
+    "trauma": {
+      "mood": 0,
+      "anxiety": 0,
+      "ocd": 0,
+      "trauma": 12,
+      "adhd": 0,
+      "eating": 0,
+      "psychosis": 0,
+      "none": 0
+    },
+    "adhd": {
+      "mood": 0,
+      "anxiety": 0,
+      "ocd": 0,
+      "trauma": 0,
+      "adhd": 12,
+      "eating": 0,
+      "psychosis": 0,
+      "none": 0
+    },
+    "eating": {
+      "mood": 0,
+      "anxiety": 0,
+      "ocd": 0,
+      "trauma": 0,
+      "adhd": 0,
+      "eating": 12,
+      "psychosis": 0,
+      "none": 0
+    },
+    "psychosis": {
+      "mood": 0,
+      "anxiety": 0,
+      "ocd": 0,
+      "trauma": 0,
+      "adhd": 0,
+      "eating": 0,
+      "psychosis": 12,
+      "none": 0
+    }
+  },
+  "errors": []
+}

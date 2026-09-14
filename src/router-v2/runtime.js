@@ -1,0 +1,7 @@
+(function(V,R,G){'use strict';
+R.submit=function(raw){R.clear();const safety=G.submitText(raw);if(safety.requiresInterruption||safety.assessmentStatus==='unable_to_assess')return 'safety';try{const profile=V.extract(raw);R.store.v2={profile,session:V.session()};R.store.profile=V.toLegacy(profile);}catch{R.store.v2={profile:null,session:V.session()};R.store.profile=null;}R.store.pending=true;return R.gate().show?'safety':R.resume();};
+R.resume=function(){if(!R.store.v2)return V.legacy.resume();if(R.gate().show)return 'safety';R.store.result=V.evaluate(R.store.v2.profile,R.store.v2.session,G.current());return 'router';};
+V.respond=function(id,value){if(R.gate().show||!R.store.v2)return false;const current=V.evaluate(R.store.v2.profile,R.store.v2.session,G.current());if(current.clarification?.id!==id)return false;try{R.store.v2=V.answer(R.store.v2.profile,R.store.v2.session,id,value);R.store.profile=V.toLegacy(R.store.v2.profile);R.resume();return true;}catch{return false;}};
+V.stop=function(){if(!R.store.v2||R.gate().show)return false;R.store.v2.session.stopped=true;R.resume();return true;};
+R.choose=function(choice){if(!R.store.v2)return V.legacy.choose(choice);if(R.gate().show||!R.domains.has(choice))return false;R.store.preference=choice;R.store.v2.session.preference=choice;R.store.v2.session.stopped=true;R.resume();return true;};
+})(globalThis.RouterV2,globalThis.SymptomRouter,globalThis.GlobalSafety);
