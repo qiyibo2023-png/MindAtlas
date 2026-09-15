@@ -1,0 +1,10 @@
+(function(C){'use strict';
+C.description=c=>I18n.t(c.explanationKey,lang,c.assessmentDomain?{domain:I18n.t(C.domainKeys[c.assessmentDomain],lang)}:{});
+C.badge=c=>`<span class="capability-badge">${esc(I18n.t(C.badgeKeys[c.capabilityType],lang))}</span>`;
+C.cta=c=>C.route(c)?`<button type="button" class="secondary capability-cta" data-view="${C.route(c)}" aria-label="${esc(I18n.t(c.topicId==='bipolar'?'capability.exploreMood':'capability.start',lang)+' — '+I18n.t(C.domainKeys[c.assessmentDomain],lang))}">${esc(I18n.t(c.topicId==='bipolar'?'capability.exploreMood':'capability.start',lang))}</button>`:'';
+C.info=c=>`${C.badge(c)}<p class="capability-description">${esc(C.description(c))}</p>${C.cta(c)}${c.capabilityType==='MEDICAL_OR_SAFETY_NAVIGATION'?`<button type="button" class="secondary" data-view="urgent">${I18n.t('capability.safetyCTA',lang)}</button>`:''}`;
+C.overview=()=>`<section class="capability-overview" aria-labelledby="capability-heading"><h2 id="capability-heading">${I18n.t('capability.title',lang)}</h2><p>${I18n.t('capability.explanation',lang)}</p><div class="capability-domains">${C.assessments().map(c=>`<button class="secondary" data-view="${C.route(c)}">${I18n.t(C.domainKeys[c.assessmentDomain],lang)}</button>`).join('')}</div></section>`;
+C.router=()=>`<section class="capability-router"><h2>${I18n.t('capability.uncertain',lang)}</h2><p>${I18n.t('capability.routerHelp',lang)}</p><button class="primary" data-capability-describe>${I18n.t('capability.routerCTA',lang)}</button></section>`;
+C.page=()=>`${C.overview()}${C.router()}${GlobalSafety.entryHTML()}`;
+C.bind=root=>{if(!root?.querySelectorAll)return;root.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>{if(root.id==='detail'){detailTopic=null;root.close();}navigate(b.dataset.view);});root.querySelectorAll('[data-capability-describe]').forEach(b=>b.onclick=()=>{document.getElementById('global-description')?.focus();document.getElementById('global-entry-heading')?.scrollIntoView({block:'center'});});};
+})(TopicCapabilities);
