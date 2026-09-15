@@ -15654,8 +15654,8 @@ I18n.register("privacy",[
   [
     "future",
     [
-      "个人档案和长期追踪尚未启用。未来的存储、追踪、医生分享、研究和分析需要分别定义用途及同意；一次同意不会授权所有用途。",
-      "Personal profiles and longitudinal tracking are not enabled. Future storage, tracking, clinician sharing, research and analytics need separate purposes and consent; one consent does not authorize every use."
+      "个人档案仅限当前页面内存；持久化档案和长期追踪尚未启用。未来的存储、追踪、医生分享、研究和分析需要分别定义用途及同意；一次同意不会授权所有用途。",
+      "Profiles use current-page memory only; persistent profiles and longitudinal tracking are not enabled. Future storage, tracking, clinician sharing, research and analytics need separate purposes and consent; one consent does not authorize every use."
     ]
   ],
   [
@@ -16069,3 +16069,531 @@ I18n.register("entry",[
   ]
 ]);
 I18n.register("entry",[["edit",["修改我的描述","Edit my description"]],["privacy",["原始文字不会保存。已提取的信息和回答仅保留在当前页面会话中；刷新或清除会话即可重置。","Original text is not saved. Extracted information and answers remain only in this page session; reload or clear the session to reset them."]]]);
+
+I18n.register("profile",[
+  [
+    "title",
+    [
+      "个人档案",
+      "Personal Profile"
+    ]
+  ],
+  [
+    "lifetime",
+    [
+      "仅在本次页面运行期间保留。刷新或关闭页面后，档案内容会消失；没有账户或永久存储。",
+      "Kept only while this page is running. Refreshing or closing the page clears your Profile; there is no account or permanent storage."
+    ]
+  ],
+  [
+    "boundary",
+    [
+      "这是一份由你控制的非诊断记录，不会自动保存、分享或分析。",
+      "This is a non-diagnostic record you control. Nothing is automatically saved, shared or analyzed."
+    ]
+  ],
+  [
+    "consent",
+    [
+      "档案专用同意",
+      "Profile consent"
+    ]
+  ],
+  [
+    "consentDetails",
+    [
+      "同意后可在本次页面中保存所选内容，并复用明确确认的儿童期注意力、活动或冲动控制背景以减少重复提问。撤回会阻止后续写入和复用；已有项目仍可查看、删除或导出，直到清除或刷新。",
+      "Consent permits saving selected information in this page and reusing explicitly confirmed childhood attention, activity or impulse-control context to reduce repetition. Withdrawal blocks further writes and reuse. Existing items remain available to view, delete or export until cleared or refreshed."
+    ]
+  ],
+  [
+    "grant",
+    [
+      "同意档案用途",
+      "Allow Profile use"
+    ]
+  ],
+  [
+    "deny",
+    [
+      "不同意",
+      "Decline"
+    ]
+  ],
+  [
+    "withdraw",
+    [
+      "撤回同意",
+      "Withdraw consent"
+    ]
+  ],
+  [
+    "add",
+    [
+      "添加或编辑背景",
+      "Add or edit context"
+    ]
+  ],
+  [
+    "field",
+    [
+      "信息类别",
+      "Information category"
+    ]
+  ],
+  [
+    "value",
+    [
+      "你的选择",
+      "Your choice"
+    ]
+  ],
+  [
+    "time",
+    [
+      "信息时间范围",
+      "Time context"
+    ]
+  ],
+  [
+    "fixedHistory",
+    [
+      "儿童期注意力、过去的惊恐和评估记录固定为历史信息，不会成为当前症状。",
+      "Childhood attention, past panic and assessment records are always historical; they do not become current symptoms."
+    ]
+  ],
+  [
+    "preview",
+    [
+      "预览拟保存内容",
+      "Preview proposed item"
+    ]
+  ],
+  [
+    "minimized",
+    [
+      "仅保存这里显示的结构化内容及来源、时间范围和版本信息，不保存原始描述、逐题回答或安全记录。保存评估记录不代表确诊。",
+      "Only the structured content shown here and its source, time context and version are kept. Original descriptions, questionnaires and Safety records are excluded. Saving an assessment record does not confirm a diagnosis."
+    ]
+  ],
+  [
+    "save",
+    [
+      "确认保存",
+      "Confirm save"
+    ]
+  ],
+  [
+    "notNow",
+    [
+      "暂不保存",
+      "Not now"
+    ]
+  ],
+  [
+    "saveTo",
+    [
+      "保存到个人档案",
+      "Save to Profile"
+    ]
+  ],
+  [
+    "optional",
+    [
+      "保存是可选的，需要先预览并单独同意。",
+      "Saving is optional and requires a preview and separate consent."
+    ]
+  ],
+  [
+    "saved",
+    [
+      "已保留在本次页面的内存中。刷新后会清空。",
+      "Kept in this page’s memory. Refreshing clears it."
+    ]
+  ],
+  [
+    "denied",
+    [
+      "尚未保存。请确认档案同意及所选内容有效。",
+      "Not saved. Check Profile consent and the selected content."
+    ]
+  ],
+  [
+    "items",
+    [
+      "已选保留的项目",
+      "Items you chose to keep"
+    ]
+  ],
+  [
+    "sequence",
+    [
+      "本次运行内的保存序号",
+      "Save sequence in this runtime"
+    ]
+  ],
+  [
+    "selectExport",
+    [
+      "选择此项目用于导出",
+      "Select this item for export"
+    ]
+  ],
+  [
+    "edit",
+    [
+      "编辑",
+      "Edit"
+    ]
+  ],
+  [
+    "delete",
+    [
+      "删除此项目",
+      "Delete item"
+    ]
+  ],
+  [
+    "empty",
+    [
+      "MindAtlas 不会自动保存评估信息。只有你选择保留后，档案才会有内容；本原型只在当前页面运行期间保留。",
+      "MindAtlas does not automatically save assessment information. Your Profile is empty until you choose what to keep. This prototype retains it only while the current page is running."
+    ]
+  ],
+  [
+    "clear",
+    [
+      "清空个人档案",
+      "Clear Profile"
+    ]
+  ],
+  [
+    "clearConfirm",
+    [
+      "清空全部档案项目？当前评估不会因此清除。",
+      "Clear all Profile items? Your current assessment will remain."
+    ]
+  ],
+  [
+    "confirm",
+    [
+      "确认清空",
+      "Confirm clear"
+    ]
+  ],
+  [
+    "cancel",
+    [
+      "取消",
+      "Cancel"
+    ]
+  ],
+  [
+    "export",
+    [
+      "导出所选项目",
+      "Export selected items"
+    ]
+  ],
+  [
+    "exportWarning",
+    [
+      "此导出文件可能包含敏感健康信息，请谨慎保存或分享。",
+      "This export may contain sensitive health information. Store or share it carefully."
+    ]
+  ],
+  [
+    "exportPreview",
+    [
+      "预览导出内容",
+      "Preview export"
+    ]
+  ],
+  [
+    "download",
+    [
+      "下载所选内容",
+      "Download selected content"
+    ]
+  ],
+  [
+    "clearDifference",
+    [
+      "清除当前会话会重置评估并撤销档案授权，但保留这些档案项目。清空个人档案只删除档案内容。刷新页面会清空两者。已下载文件不受影响。",
+      "Clear current session resets assessments and revokes Profile authorization, but retains these Profile items. Clear Profile deletes only Profile content. Refreshing clears both. Downloaded files are unaffected."
+    ]
+  ],
+  [
+    "language",
+    [
+      "偏好语言",
+      "Preferred language"
+    ]
+  ],
+  [
+    "goal",
+    [
+      "我的目标",
+      "My goal"
+    ]
+  ],
+  [
+    "lifeStage",
+    [
+      "生活阶段",
+      "Life stage"
+    ]
+  ],
+  [
+    "childhoodAttention",
+    [
+      "12 岁前已有注意力、活动或冲动控制方面的困难",
+      "Attention, activity or impulse-control difficulties before age 12"
+    ]
+  ],
+  [
+    "pastPanic",
+    [
+      "过去曾有惊恐发作",
+      "Panic attacks in the past"
+    ]
+  ],
+  [
+    "impact",
+    [
+      "功能影响",
+      "Functional impact"
+    ]
+  ],
+  [
+    "professionalSupport",
+    [
+      "是否有专业支持",
+      "Professional support"
+    ]
+  ],
+  [
+    "assessment",
+    [
+      "评估历史记录",
+      "Assessment history"
+    ]
+  ],
+  [
+    "review",
+    [
+      "结构化评估记录，非正式诊断；具体解释请查看本次评估结果。",
+      "Structured assessment record, not a diagnosis; see the current assessment result for its explanation."
+    ]
+  ],
+  [
+    "zh",
+    [
+      "简体中文",
+      "Simplified Chinese"
+    ]
+  ],
+  [
+    "en",
+    [
+      "英语",
+      "English"
+    ]
+  ],
+  [
+    "understand",
+    [
+      "理解自己的体验",
+      "Understand my experiences"
+    ]
+  ],
+  [
+    "support",
+    [
+      "为寻求专业支持做准备",
+      "Prepare for professional support"
+    ]
+  ],
+  [
+    "coping",
+    [
+      "了解应对方法",
+      "Learn about coping"
+    ]
+  ],
+  [
+    "student",
+    [
+      "在读",
+      "Student"
+    ]
+  ],
+  [
+    "working",
+    [
+      "工作阶段",
+      "Working"
+    ]
+  ],
+  [
+    "retired",
+    [
+      "退休阶段",
+      "Retired"
+    ]
+  ],
+  [
+    "other",
+    [
+      "其他阶段",
+      "Another stage"
+    ]
+  ],
+  [
+    "unknown",
+    [
+      "不确定／暂不回答",
+      "Not sure / prefer not to answer"
+    ]
+  ],
+  [
+    "yes",
+    [
+      "是",
+      "Yes"
+    ]
+  ],
+  [
+    "no",
+    [
+      "否",
+      "No"
+    ]
+  ],
+  [
+    "none",
+    [
+      "没有",
+      "None"
+    ]
+  ],
+  [
+    "some",
+    [
+      "有一些",
+      "Some"
+    ]
+  ],
+  [
+    "substantial",
+    [
+      "明显",
+      "Substantial"
+    ]
+  ],
+  [
+    "current",
+    [
+      "当前",
+      "Current"
+    ]
+  ],
+  [
+    "historical",
+    [
+      "历史信息",
+      "Historical"
+    ]
+  ],
+  [
+    "resultSource",
+    [
+      "结构化评估结果，不是用户确认的诊断",
+      "Structured assessment result, not a user-confirmed diagnosis"
+    ]
+  ],
+  [
+    "confirmedSource",
+    [
+      "用户明确确认的信息",
+      "Explicitly user-confirmed information"
+    ]
+  ],
+  [
+    "notAsked",
+    [
+      "尚未授权",
+      "Not yet authorized"
+    ]
+  ],
+  [
+    "granted",
+    [
+      "已授权",
+      "Granted"
+    ]
+  ],
+  [
+    "consentDenied",
+    [
+      "未授权",
+      "Denied"
+    ]
+  ],
+  [
+    "withdrawn",
+    [
+      "已撤回",
+      "Withdrawn"
+    ]
+  ],
+  [
+    "mood",
+    [
+      "情绪",
+      "Mood"
+    ]
+  ],
+  [
+    "anxiety",
+    [
+      "焦虑",
+      "Anxiety"
+    ]
+  ],
+  [
+    "ocd",
+    [
+      "强迫症相关",
+      "OCD-related"
+    ]
+  ],
+  [
+    "trauma",
+    [
+      "创伤相关",
+      "Trauma-related"
+    ]
+  ],
+  [
+    "adhd",
+    [
+      "注意力相关",
+      "Attention-related"
+    ]
+  ],
+  [
+    "eating",
+    [
+      "进食相关",
+      "Eating-related"
+    ]
+  ],
+  [
+    "psychosis",
+    [
+      "精神病性体验相关",
+      "Psychosis-related"
+    ]
+  ]
+]);
