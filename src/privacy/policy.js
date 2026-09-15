@@ -17,7 +17,7 @@ const rows=[
  ['assessmentAnswers','HIGHLY_SENSITIVE_HEALTH',['Mood.store.state','Anxiety.store.state','OCD.store.state','Trauma.store.state','ADHD.store.state','Eating.store.state','Psychosis.store.state'],'structured answers','current_assessment','seven module stores','session',true,true],
  ['traumaEvidence','HIGHLY_SENSITIVE_HEALTH',['trauma.exposure','trauma.intrusion'],'structured trauma assessment','current_assessment','Trauma store and derived evidence','session',true,true],
  ['psychosisEvidence','HIGHLY_SENSITIVE_HEALTH',['psychosis.perception','psychosis.insight'],'structured psychosis assessment','current_assessment','Psychosis store and derived evidence','session',true,true],
- ['routerEvidence','HIGHLY_SENSITIVE_HEALTH',['SymptomRouter.store.profile','SymptomRouter.store.v2'],'local extraction and clarification','current_assessment','SymptomRouter store','session',true,true],
+ ['routerEvidence','HIGHLY_SENSITIVE_HEALTH',['SymptomRouter.store.profile','SymptomRouter.store.v2','EntryFlow.store'],'local extraction and clarification','current_assessment','SymptomRouter store','session',true,true],
  ['differentialEvidence','HIGHLY_SENSITIVE_HEALTH',['Differential.store','DifferentialV2.store'],'assessment and Router adapters','current_assessment','comparison stores and cached fingerprints','session',true,true],
  ['adaptiveEvidence','HIGHLY_SENSITIVE_HEALTH',['Adaptive.store.session','Adaptive.store.retainedEvidence'],'clarification answers','current_assessment','Adaptive store','session',true,true],
  ['assessmentResults','HIGHLY_SENSITIVE_HEALTH',['module.store.result'],'local assessment engines','current_assessment','module result caches','session',true,true],

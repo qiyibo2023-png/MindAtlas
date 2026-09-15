@@ -15708,3 +15708,364 @@ I18n.register("privacy",[
     ]
   ]
 ]);
+
+I18n.register("entry",[
+  [
+    "heading",
+    [
+      "寻找合适的评估",
+      "Finding the right assessment"
+    ]
+  ],
+  [
+    "broad",
+    [
+      "最近哪类体验最接近你的主要困扰？",
+      "Which experience is closest to your main concern recently?"
+    ]
+  ],
+  [
+    "familyMood",
+    [
+      "情绪低落或失去兴趣",
+      "Low mood or loss of interest"
+    ]
+  ],
+  [
+    "familyAnxiety",
+    [
+      "担忧、焦虑或恐惧",
+      "Worry, anxiety or fear"
+    ]
+  ],
+  [
+    "familyOcd",
+    [
+      "不想要的重复想法或重复行为",
+      "Unwanted repeated thoughts or repeated behaviors"
+    ]
+  ],
+  [
+    "familyTrauma",
+    [
+      "与创伤有关的回忆、回避或警觉",
+      "Trauma-related memories, avoidance or vigilance"
+    ]
+  ],
+  [
+    "familyAdhd",
+    [
+      "长期注意力、组织或冲动方面的困难",
+      "Longstanding attention, organization or impulse difficulties"
+    ]
+  ],
+  [
+    "familyEating",
+    [
+      "进食、体重、身体形象或回避食物方面的困扰",
+      "Eating, weight, body-image or food-avoidance concerns"
+    ]
+  ],
+  [
+    "familyPsychosis",
+    [
+      "不寻常的感知或信念体验",
+      "Unusual perceptual or belief experiences"
+    ]
+  ],
+  [
+    "mood",
+    [
+      "目前哪些体验符合你的情况？",
+      "Which experiences fit your situation currently?"
+    ]
+  ],
+  [
+    "low",
+    [
+      "主要是情绪低落",
+      "Mainly low mood"
+    ]
+  ],
+  [
+    "interest",
+    [
+      "主要是对原本喜欢的事失去兴趣",
+      "Mainly losing interest in things I used to enjoy"
+    ]
+  ],
+  [
+    "lowInterest",
+    [
+      "情绪低落，同时失去兴趣",
+      "Both low mood and loss of interest"
+    ]
+  ],
+  [
+    "anxiety",
+    [
+      "主要的困难更接近哪一种？",
+      "Which is closest to the main difficulty?"
+    ]
+  ],
+  [
+    "worry",
+    [
+      "过多担心多个日常生活领域",
+      "Excessive worry across many everyday areas"
+    ]
+  ],
+  [
+    "panic",
+    [
+      "突然出现强烈恐惧的发作",
+      "Sudden intense episodes of fear"
+    ]
+  ],
+  [
+    "social",
+    [
+      "害怕被他人评价或审视",
+      "Fear of being judged or scrutinized"
+    ]
+  ],
+  [
+    "specific",
+    [
+      "害怕特定情境或事物",
+      "Fear of a particular situation or object"
+    ]
+  ],
+  [
+    "ocd",
+    [
+      "这些重复体验主要是什么？",
+      "What are these repetitive experiences mainly like?"
+    ]
+  ],
+  [
+    "thought",
+    [
+      "反复出现我不想要的想法",
+      "Repeated thoughts that I do not want"
+    ]
+  ],
+  [
+    "checking",
+    [
+      "觉得必须反复检查",
+      "Feeling compelled to check repeatedly"
+    ]
+  ],
+  [
+    "mental",
+    [
+      "觉得必须在心里反复做某件事",
+      "Feeling compelled to repeat mental actions"
+    ]
+  ],
+  [
+    "trauma",
+    [
+      "无需描述事件细节，哪项符合你的经历？",
+      "Without describing event details, which fits your experience?"
+    ]
+  ],
+  [
+    "reliving",
+    [
+      "经历过创伤事件，现在反复感觉正在重新经历它",
+      "I experienced a traumatic event and now repeatedly feel I am reliving it"
+    ]
+  ],
+  [
+    "avoidance",
+    [
+      "经历过创伤事件，现在回避与它有关的提醒",
+      "I experienced a traumatic event and now avoid reminders of it"
+    ]
+  ],
+  [
+    "eventOnly",
+    [
+      "经历过创伤事件，但以上当前症状不符合",
+      "I experienced a traumatic event, but those current symptoms do not fit"
+    ]
+  ],
+  [
+    "adhd",
+    [
+      "注意力或组织困难的时间模式是什么？",
+      "What is the timing of the attention or organization difficulties?"
+    ]
+  ],
+  [
+    "longstanding",
+    [
+      "组织困难从童年开始就存在",
+      "Organization difficulties have been present since childhood"
+    ]
+  ],
+  [
+    "recent",
+    [
+      "注意力困难是最近才出现的",
+      "Attention difficulties started recently"
+    ]
+  ],
+  [
+    "eating",
+    [
+      "目前哪类进食体验更符合？",
+      "Which current eating experience fits best?"
+    ]
+  ],
+  [
+    "restriction",
+    [
+      "因害怕体重增加而限制进食",
+      "Restricting eating because I fear weight gain"
+    ]
+  ],
+  [
+    "binge",
+    [
+      "大量进食，并感觉失去控制",
+      "Eating large amounts while feeling a loss of control"
+    ]
+  ],
+  [
+    "foodAvoidance",
+    [
+      "回避食物，但以上情况不符合",
+      "Avoiding food, but the other descriptions do not fit"
+    ]
+  ],
+  [
+    "psychosis",
+    [
+      "哪项最接近这种体验？这不是诊断。",
+      "Which is closest to the experience? This is not a diagnosis."
+    ]
+  ],
+  [
+    "awake",
+    [
+      "清醒时反复听到或看到他人没有感知到的事物",
+      "Repeatedly hearing or seeing things others do not perceive while fully awake"
+    ]
+  ],
+  [
+    "sleep",
+    [
+      "这类感知体验只在入睡或醒来时出现",
+      "These perceptual experiences occur only while falling asleep or waking"
+    ]
+  ],
+  [
+    "belief",
+    [
+      "对一个不寻常的信念非常确信，很难考虑其他解释",
+      "Being very convinced of an unusual belief and finding other explanations difficult to consider"
+    ]
+  ],
+  [
+    "started",
+    [
+      "这些信息足够开始。我们还需要了解一点信息，才能更好地推荐下一步。",
+      "That is enough to get started. We need a little more information to suggest the most useful next step."
+    ]
+  ],
+  [
+    "progress",
+    [
+      "最多 {max} 个简短问题中的第 {current} 个",
+      "Question {current} of up to {max} quick questions"
+    ]
+  ],
+  [
+    "direct",
+    [
+      "我想自己选择评估",
+      "Choose an assessment myself"
+    ]
+  ],
+  [
+    "knowledge",
+    [
+      "先浏览相关知识",
+      "Explore information instead"
+    ]
+  ],
+  [
+    "stop",
+    [
+      "暂时停止",
+      "Stop for now"
+    ]
+  ],
+  [
+    "professional",
+    [
+      "了解专业评估与支持",
+      "Explore professional assessment and support"
+    ]
+  ],
+  [
+    "noSingle",
+    [
+      "目前还不能可靠地推荐单一评估。你可以自行选择，或先了解相关信息。",
+      "We still do not have enough information to confidently recommend one assessment. You can choose one or explore information first."
+    ]
+  ],
+  [
+    "multiple",
+    [
+      "多个方向仍可能相关，可以选择其中一个开始。",
+      "Several directions may remain relevant. You can choose one to start."
+    ]
+  ],
+  [
+    "stopped",
+    [
+      "已暂停。当前会话的信息仍保留；你也可以在隐私页面清除。",
+      "Paused. Current-session evidence is retained; you can also clear it on the privacy page."
+    ]
+  ],
+  [
+    "back",
+    [
+      "返回上一问题",
+      "Back to the previous question"
+    ]
+  ],
+  [
+    "editHelp",
+    [
+      "原始文字不会被长期保留。重新输入会替换之前提取的症状信息并重新检查安全；已明确回答的安全问题会保留，新的安全信息仍优先处理。",
+      "The original text is not retained. Re-entering replaces previously extracted symptom information and checks safety again. Explicit safety answers are retained, and new safety information still takes priority."
+    ]
+  ],
+  [
+    "add",
+    [
+      "补充新的信息",
+      "Add new information"
+    ]
+  ],
+  [
+    "addHelp",
+    [
+      "可以补充变化，无需描述创伤或伤害的具体细节。",
+      "You can add changes without describing graphic trauma or harm details."
+    ]
+  ],
+  [
+    "update",
+    [
+      "更新下一步建议",
+      "Update next-step suggestions"
+    ]
+  ]
+]);
+I18n.register("entry",[["edit",["修改我的描述","Edit my description"]],["privacy",["原始文字不会保存。已提取的信息和回答仅保留在当前页面会话中；刷新或清除会话即可重置。","Original text is not saved. Extracted information and answers remain only in this page session; reload or clear the session to reset them."]]]);

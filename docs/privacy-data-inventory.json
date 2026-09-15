@@ -162,7 +162,8 @@
       "dataClass": "HIGHLY_SENSITIVE_HEALTH",
       "fields": [
         "SymptomRouter.store.profile",
-        "SymptomRouter.store.v2"
+        "SymptomRouter.store.v2",
+        "EntryFlow.store"
       ],
       "source": "local extraction and clarification",
       "purpose": "current_assessment",
