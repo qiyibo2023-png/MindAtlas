@@ -1,0 +1,10 @@
+(function(P){'use strict';
+P.warning=()=>`<p id="privacy-export-warning" class="notice">${I18n.t('privacy.exportWarning',lang)}</p>`;
+P.page=()=>`<section class="page" aria-labelledby="privacy-heading"><h1 id="privacy-heading">${I18n.t('privacy.title',lang)}</h1><p>${I18n.t('privacy.current',lang)}</p><h2>${I18n.t('privacy.sessionTitle',lang)}</h2><p>${I18n.t('privacy.session',lang)}</p><p>${I18n.t('privacy.raw',lang)}</p><h2>${I18n.t('privacy.exportTitle',lang)}</h2>${P.warning()}<p>${I18n.t('privacy.exportScope',lang)}</p><h2>${I18n.t('privacy.futureTitle',lang)}</h2><p>${I18n.t('privacy.future',lang)}</p><h2>${I18n.t('privacy.limitsTitle',lang)}</h2><p>${I18n.t('privacy.limits',lang)}</p><details><summary>${I18n.t('privacy.clearTitle',lang)}</summary><p>${I18n.t('privacy.clearScope',lang)}</p><button class="secondary" data-privacy-clear>${I18n.t('privacy.clearButton',lang)}</button></details><p role="status">${P.deletionState.status==='cleared'?I18n.t('privacy.cleared',lang):P.deletionState.status==='failed'?I18n.t('privacy.clearFailed',lang):''}</p></section>`;
+P.bind=function(){
+const buttons=document.querySelectorAll('[data-mood="export"],[data-mood="print"],[data-anxiety="export"],[data-anxiety="print"]');
+const warning=document.getElementById('privacy-export-warning');
+if(buttons.length&&warning)buttons[0].parentElement?.insertAdjacentElement('beforebegin',warning);
+buttons.forEach(b=>{const original=b.onclick,action=b.dataset.mood||b.dataset.anxiety;b.onclick=e=>{if(P.allowCurrentExport(action))original?.call(b,e);};});
++document.querySelectorAll('[data-privacy-clear]').forEach(b=>b.onclick=()=>{const result=P.deleteData({scope:'current_session',purpose:'user_requested_deletion',subject:'current_browser_session',storageTarget:'memory'});if(result.deleted){document.querySelectorAll('textarea,input').forEach(e=>{e.value='';});const dialog=document.getElementById('detail');if(dialog){dialog.innerHTML='';dialog.close();}detailTopic=null;query='';category=0;}navigate('privacy');document.getElementById('privacy-heading')?.focus();});};
+})(PrivacyGovernance);

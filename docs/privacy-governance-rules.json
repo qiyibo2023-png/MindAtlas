@@ -1,0 +1,134 @@
+[
+  {
+    "id": "PG_CLASSIFY",
+    "purpose": "defined_purpose",
+    "dataClass": "ALL",
+    "action": "classify",
+    "defaultDecision": "conservative_unknown",
+    "exceptions": "none",
+    "implementation": "src/privacy/policy.js",
+    "version": "privacy-data-governance-v1.0.0",
+    "reviewStatus": "engineering_review_only"
+  },
+  {
+    "id": "PG_PERSIST",
+    "purpose": "defined_purpose",
+    "dataClass": "ALL",
+    "action": "persist",
+    "defaultDecision": "deny",
+    "exceptions": "registered_static_public_operational_assets_only",
+    "implementation": "src/privacy/policy.js",
+    "version": "privacy-data-governance-v1.0.0",
+    "reviewStatus": "engineering_review_only"
+  },
+  {
+    "id": "PG_CONSENT",
+    "purpose": "separate_future_purposes",
+    "dataClass": "SENSITIVE",
+    "action": "authorize",
+    "defaultDecision": "not_asked",
+    "exceptions": "explicit_per_purpose_grant_does_not_enable_storage",
+    "implementation": "src/privacy/policy.js",
+    "version": "privacy-data-governance-v1.0.0",
+    "reviewStatus": "engineering_review_only"
+  },
+  {
+    "id": "PG_RETENTION",
+    "purpose": "defined_purpose",
+    "dataClass": "ALL",
+    "action": "retain",
+    "defaultDecision": "session_or_ephemeral",
+    "exceptions": "public_static_assets_and_user_exports",
+    "implementation": "src/privacy/policy.js",
+    "version": "privacy-data-governance-v1.0.0",
+    "reviewStatus": "engineering_review_only"
+  },
+  {
+    "id": "PG_DELETE",
+    "purpose": "user_requested_deletion",
+    "dataClass": "ALL",
+    "action": "delete",
+    "defaultDecision": "current_memory_only",
+    "exceptions": "external_files_and_nonexistent_backends_excluded",
+    "implementation": "src/privacy/runtime.js",
+    "version": "privacy-data-governance-v1.0.0",
+    "reviewStatus": "engineering_review_only"
+  },
+  {
+    "id": "PG_EXPORT",
+    "purpose": "user_requested_export",
+    "dataClass": "HIGHLY_SENSITIVE_HEALTH",
+    "action": "export",
+    "defaultDecision": "deny",
+    "exceptions": "explicit_current_summary_with_warning_and_preview",
+    "implementation": "src/privacy/policy.js",
+    "version": "privacy-data-governance-v1.0.0",
+    "reviewStatus": "engineering_review_only"
+  },
+  {
+    "id": "PG_LOG",
+    "purpose": "technical_operation",
+    "dataClass": "OPERATIONAL",
+    "action": "log",
+    "defaultDecision": "omit",
+    "exceptions": "enumerated_metadata_only_no_sink",
+    "implementation": "src/privacy/policy.js",
+    "version": "privacy-data-governance-v1.0.0",
+    "reviewStatus": "engineering_review_only"
+  },
+  {
+    "id": "PG_ANALYTICS",
+    "purpose": "optional_analytics",
+    "dataClass": "ALL",
+    "action": "analyze",
+    "defaultDecision": "deny",
+    "exceptions": "none",
+    "implementation": "src/privacy/policy.js",
+    "version": "privacy-data-governance-v1.0.0",
+    "reviewStatus": "engineering_review_only"
+  },
+  {
+    "id": "PG_URL",
+    "purpose": "navigation",
+    "dataClass": "ALL",
+    "action": "url",
+    "defaultDecision": "deny",
+    "exceptions": "fixed_route_ids_only",
+    "implementation": "src/privacy/policy.js",
+    "version": "privacy-data-governance-v1.0.0",
+    "reviewStatus": "engineering_review_only"
+  },
+  {
+    "id": "PG_FUTURE",
+    "purpose": "future_profile_or_longitudinal",
+    "dataClass": "HIGHLY_SENSITIVE_HEALTH",
+    "action": "persist",
+    "defaultDecision": "deny",
+    "exceptions": "no_capability_enabled",
+    "implementation": "src/privacy/contracts.js",
+    "version": "privacy-data-governance-v1.0.0",
+    "reviewStatus": "engineering_review_only"
+  },
+  {
+    "id": "PG_AI",
+    "purpose": "current_assessment",
+    "dataClass": "HIGHLY_SENSITIVE_HEALTH",
+    "action": "context",
+    "defaultDecision": "deny",
+    "exceptions": "no_ai_capability_enabled",
+    "implementation": "src/privacy/contracts.js",
+    "version": "privacy-data-governance-v1.0.0",
+    "reviewStatus": "engineering_review_only"
+  },
+  {
+    "id": "PG_SAFETY",
+    "purpose": "safety_processing",
+    "dataClass": "SAFETY_CRITICAL",
+    "action": "process",
+    "defaultDecision": "memory_allowed",
+    "exceptions": "no_persistence_exception",
+    "implementation": "src/privacy/runtime.js",
+    "version": "privacy-data-governance-v1.0.0",
+    "reviewStatus": "engineering_review_only"
+  }
+]

@@ -1,0 +1,331 @@
+{
+  "version": "privacy-data-governance-v1.0.0",
+  "categories": [
+    {
+      "id": "education",
+      "dataClass": "PUBLIC",
+      "fields": [
+        "topics",
+        "sources"
+      ],
+      "source": "static editorial content",
+      "purpose": "education",
+      "location": "src/data.js and i18n catalog",
+      "retentionMode": "static",
+      "persisted": true,
+      "exportable": true,
+      "deletable": false,
+      "analyticsEligible": false,
+      "loggingEligible": false
+    },
+    {
+      "id": "capabilities",
+      "dataClass": "PUBLIC",
+      "fields": [
+        "TopicCapabilities.topics"
+      ],
+      "source": "product registry",
+      "purpose": "technical_operation",
+      "location": "src/capabilities/registry.js",
+      "retentionMode": "static",
+      "persisted": true,
+      "exportable": true,
+      "deletable": false,
+      "analyticsEligible": false,
+      "loggingEligible": false
+    },
+    {
+      "id": "uiLabels",
+      "dataClass": "PUBLIC",
+      "fields": [
+        "I18n catalog"
+      ],
+      "source": "static catalog",
+      "purpose": "technical_operation",
+      "location": "src/i18n/catalog.js",
+      "retentionMode": "static",
+      "persisted": true,
+      "exportable": true,
+      "deletable": false,
+      "analyticsEligible": false,
+      "loggingEligible": false
+    },
+    {
+      "id": "appVersion",
+      "dataClass": "OPERATIONAL",
+      "fields": [
+        "engine.version"
+      ],
+      "source": "static release metadata",
+      "purpose": "technical_operation",
+      "location": "engine constants",
+      "retentionMode": "static",
+      "persisted": true,
+      "exportable": true,
+      "deletable": false,
+      "analyticsEligible": false,
+      "loggingEligible": true
+    },
+    {
+      "id": "preferences",
+      "dataClass": "SENSITIVE",
+      "fields": [
+        "lang",
+        "region",
+        "category"
+      ],
+      "source": "user choices",
+      "purpose": "current_session",
+      "location": "application and module stores",
+      "retentionMode": "session",
+      "persisted": false,
+      "exportable": false,
+      "deletable": true,
+      "analyticsEligible": false,
+      "loggingEligible": false
+    },
+    {
+      "id": "rawText",
+      "dataClass": "HIGHLY_SENSITIVE_HEALTH",
+      "fields": [
+        "global-description",
+        "adaptive safety textarea"
+      ],
+      "source": "user input",
+      "purpose": "current_assessment",
+      "location": "DOM draft and temporary extraction arguments",
+      "retentionMode": "ephemeral",
+      "persisted": false,
+      "exportable": false,
+      "deletable": true,
+      "analyticsEligible": false,
+      "loggingEligible": false
+    },
+    {
+      "id": "assessmentAnswers",
+      "dataClass": "HIGHLY_SENSITIVE_HEALTH",
+      "fields": [
+        "Mood.store.state",
+        "Anxiety.store.state",
+        "OCD.store.state",
+        "Trauma.store.state",
+        "ADHD.store.state",
+        "Eating.store.state",
+        "Psychosis.store.state"
+      ],
+      "source": "structured answers",
+      "purpose": "current_assessment",
+      "location": "seven module stores",
+      "retentionMode": "session",
+      "persisted": false,
+      "exportable": true,
+      "deletable": true,
+      "analyticsEligible": false,
+      "loggingEligible": false
+    },
+    {
+      "id": "traumaEvidence",
+      "dataClass": "HIGHLY_SENSITIVE_HEALTH",
+      "fields": [
+        "trauma.exposure",
+        "trauma.intrusion"
+      ],
+      "source": "structured trauma assessment",
+      "purpose": "current_assessment",
+      "location": "Trauma store and derived evidence",
+      "retentionMode": "session",
+      "persisted": false,
+      "exportable": true,
+      "deletable": true,
+      "analyticsEligible": false,
+      "loggingEligible": false
+    },
+    {
+      "id": "psychosisEvidence",
+      "dataClass": "HIGHLY_SENSITIVE_HEALTH",
+      "fields": [
+        "psychosis.perception",
+        "psychosis.insight"
+      ],
+      "source": "structured psychosis assessment",
+      "purpose": "current_assessment",
+      "location": "Psychosis store and derived evidence",
+      "retentionMode": "session",
+      "persisted": false,
+      "exportable": true,
+      "deletable": true,
+      "analyticsEligible": false,
+      "loggingEligible": false
+    },
+    {
+      "id": "routerEvidence",
+      "dataClass": "HIGHLY_SENSITIVE_HEALTH",
+      "fields": [
+        "SymptomRouter.store.profile",
+        "SymptomRouter.store.v2"
+      ],
+      "source": "local extraction and clarification",
+      "purpose": "current_assessment",
+      "location": "SymptomRouter store",
+      "retentionMode": "session",
+      "persisted": false,
+      "exportable": true,
+      "deletable": true,
+      "analyticsEligible": false,
+      "loggingEligible": false
+    },
+    {
+      "id": "differentialEvidence",
+      "dataClass": "HIGHLY_SENSITIVE_HEALTH",
+      "fields": [
+        "Differential.store",
+        "DifferentialV2.store"
+      ],
+      "source": "assessment and Router adapters",
+      "purpose": "current_assessment",
+      "location": "comparison stores and cached fingerprints",
+      "retentionMode": "session",
+      "persisted": false,
+      "exportable": true,
+      "deletable": true,
+      "analyticsEligible": false,
+      "loggingEligible": false
+    },
+    {
+      "id": "adaptiveEvidence",
+      "dataClass": "HIGHLY_SENSITIVE_HEALTH",
+      "fields": [
+        "Adaptive.store.session",
+        "Adaptive.store.retainedEvidence"
+      ],
+      "source": "clarification answers",
+      "purpose": "current_assessment",
+      "location": "Adaptive store",
+      "retentionMode": "session",
+      "persisted": false,
+      "exportable": true,
+      "deletable": true,
+      "analyticsEligible": false,
+      "loggingEligible": false
+    },
+    {
+      "id": "assessmentResults",
+      "dataClass": "HIGHLY_SENSITIVE_HEALTH",
+      "fields": [
+        "module.store.result"
+      ],
+      "source": "local assessment engines",
+      "purpose": "current_assessment",
+      "location": "module result caches",
+      "retentionMode": "session",
+      "persisted": false,
+      "exportable": true,
+      "deletable": true,
+      "analyticsEligible": false,
+      "loggingEligible": false
+    },
+    {
+      "id": "clinicianSummary",
+      "dataClass": "HIGHLY_SENSITIVE_HEALTH",
+      "fields": [
+        "summary-text",
+        "a-summary-text",
+        "module.summary"
+      ],
+      "source": "structured current-session evidence",
+      "purpose": "user_requested_export",
+      "location": "generated strings and readonly DOM textareas",
+      "retentionMode": "session",
+      "persisted": false,
+      "exportable": true,
+      "deletable": true,
+      "analyticsEligible": false,
+      "loggingEligible": false
+    },
+    {
+      "id": "safetySignals",
+      "dataClass": "SAFETY_CRITICAL",
+      "fields": [
+        "GlobalSafety.store.signals",
+        "suicide.intent",
+        "medical.lossOfConsciousness"
+      ],
+      "source": "local Safety extraction and structured adapters",
+      "purpose": "safety_processing",
+      "location": "Safety store and module answers",
+      "retentionMode": "session",
+      "persisted": false,
+      "exportable": true,
+      "deletable": true,
+      "analyticsEligible": false,
+      "loggingEligible": false
+    },
+    {
+      "id": "safetyAudit",
+      "dataClass": "SAFETY_CRITICAL",
+      "fields": [
+        "GlobalSafety.store.audit",
+        "lastAudit"
+      ],
+      "source": "Safety evaluation",
+      "purpose": "safety_processing",
+      "location": "bounded memory audit and fingerprint",
+      "retentionMode": "session",
+      "persisted": false,
+      "exportable": false,
+      "deletable": true,
+      "analyticsEligible": false,
+      "loggingEligible": false
+    },
+    {
+      "id": "consentChoices",
+      "dataClass": "SENSITIVE",
+      "fields": [
+        "PrivacyGovernance.consentState"
+      ],
+      "source": "future-purpose consent contract",
+      "purpose": "consent_management",
+      "location": "governance memory; no collection UI enabled",
+      "retentionMode": "session",
+      "persisted": false,
+      "exportable": false,
+      "deletable": true,
+      "analyticsEligible": false,
+      "loggingEligible": false
+    },
+    {
+      "id": "deletionStatus",
+      "dataClass": "OPERATIONAL",
+      "fields": [
+        "PrivacyGovernance.deletionState"
+      ],
+      "source": "user-requested clear action",
+      "purpose": "technical_operation",
+      "location": "governance memory; status only",
+      "retentionMode": "session",
+      "persisted": false,
+      "exportable": false,
+      "deletable": true,
+      "analyticsEligible": false,
+      "loggingEligible": false
+    },
+    {
+      "id": "userExport",
+      "dataClass": "HIGHLY_SENSITIVE_HEALTH",
+      "fields": [
+        "downloaded summary",
+        "printout",
+        "clipboard copy"
+      ],
+      "source": "explicit user export",
+      "purpose": "user_requested_export",
+      "location": "user-managed file, print or clipboard outside application",
+      "retentionMode": "user_controlled",
+      "persisted": true,
+      "exportable": true,
+      "deletable": false,
+      "analyticsEligible": false,
+      "loggingEligible": false
+    }
+  ]
+}
