@@ -1,0 +1,93 @@
+{
+  "version": "mindatlas-adaptive-benchmark-v1.0.0",
+  "engineVersion": "adaptive-assessment-v1.0.0",
+  "reviewStatus": "unreviewed",
+  "localizedTrajectories": 366,
+  "independentTrajectories": 183,
+  "metrics": {
+    "nextQuestionAgreement": {
+      "passed": 314,
+      "total": 314
+    },
+    "top2Coverage": {
+      "passed": 296,
+      "total": 296
+    },
+    "duplicateAvoidance": {
+      "passed": 550,
+      "total": 550
+    },
+    "stopDecisionAgreement": {
+      "passed": 314,
+      "total": 314
+    },
+    "evidenceUpdateCorrectness": {
+      "passed": 234,
+      "total": 234
+    },
+    "safetyInterruption": {
+      "passed": 38,
+      "total": 38
+    },
+    "knownEvidenceAvoidance": {
+      "passed": 52,
+      "total": 52
+    },
+    "unsupportedStop": {
+      "passed": 12,
+      "total": 12
+    },
+    "multiTurnSelection": {
+      "passed": 10,
+      "total": 10
+    },
+    "bilingualParity": {
+      "passed": 183,
+      "total": 183
+    }
+  },
+  "averageQuestionsPresented": 1.5027322404371584,
+  "averageAnsweredQuestions": 0.639344262295082,
+  "unnecessaryQuestionRate": {
+    "count": 0,
+    "total": 550
+  },
+  "categoryCounts": {
+    "adhd_trauma": 28,
+    "answer": 122,
+    "discriminator": 122,
+    "safety": 38,
+    "budget": 26,
+    "user": 26,
+    "known": 52,
+    "contradiction": 26,
+    "medical": 26,
+    "ruleout": 52,
+    "substance": 26,
+    "ocd_gad": 26,
+    "trauma_ocd": 26,
+    "mood_adhd": 26,
+    "adhd_anxiety": 26,
+    "adhd_activation": 26,
+    "restriction_motive": 26,
+    "compensation": 24,
+    "psychosis_sleep": 28,
+    "psychosis_trauma": 26,
+    "reality_testing": 24,
+    "mood_anxiety": 24,
+    "mood_ocd": 26,
+    "saturation": 2,
+    "multiple": 4,
+    "insufficient": 2,
+    "unsupported": 12,
+    "multi-turn": 6,
+    "emergence": 12
+  },
+  "errors": 0,
+  "limitations": [
+    "Synthetic structured trajectories, not clinical validation.",
+    "Bilingual pairs share facts; not independent patients.",
+    "Most paths exercise one answer or a stopping transition; dedicated tests cover longer loops.",
+    "Labels and deterministic question priorities require independent clinical review."
+  ]
+}

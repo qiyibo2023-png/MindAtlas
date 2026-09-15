@@ -1,0 +1,2 @@
+const create=require(process.cwd()+'/tests/differential-v2-harness.cjs');
+module.exports=()=>{const c=create(),{Adaptive:A,DifferentialV2:V,GlobalSafety:G}=c;const safe=()=>{const s=G.empty();for(const p of G.paths)G.put(s,p,false);return s;};const session=(facts,options={})=>{const nodes=Object.entries(facts).map(([k,v])=>V.node(k,v,{source:k.startsWith('unsupported.')?'clarification':k.split('.')[0]}));const s=A.newSession(nodes,safe(),options);A.refresh(s);return s;};return Object.assign(c,{safe,session});};

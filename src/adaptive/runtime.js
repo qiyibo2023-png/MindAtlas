@@ -1,0 +1,13 @@
+(function(A,V,D,G){'use strict';
+A.store={session:null,error:false,draft:null,retainedEvidence:[],epoch:0};
+const collect=V.collect;
+A.start=function(){const input=collect();A.store.retainedEvidence.push(...(A.store.session?.evidence||[]));A.store.epoch++;A.store.session=A.newSession(input.invalid?null:[...input.evidence,...A.store.retainedEvidence],input.safety.signals,{sequence:A.store.epoch,routerDirections:(globalThis.SymptomRouter?.store.result?.candidateRoutes||[]).map(r=>r.domain)});A.store.error=false;A.store.draft=null;A.store.sourceFingerprint=JSON.stringify(input.evidence);D.store.enabled=true;A.current();return 'adaptive';};
+A.current=function(){if(!A.store.session)return null;const input=collect(),s=A.store.session;const fingerprint=JSON.stringify(input.evidence);if(fingerprint!==A.store.sourceFingerprint){s.baseEvidence=[...input.evidence,...A.store.retainedEvidence];A.store.sourceFingerprint=fingerprint;}s.invalid=input.invalid;return A.refresh(s,input.safety.signals,{safetyFailed:input.safety.assessmentStatus==='unable_to_assess'});};
+V.collect=function(){const input=collect();if(A.store.session)input.evidence.push(...[...A.store.retainedEvidence,...A.store.session.evidence].filter(n=>D.store.selected[n.domain]));return input;};
+A.gate=function(){const gate=G.guard('screen');if(A.store.session)A.current();return gate;};
+A.clear=function(){A.store={session:null,error:false,draft:null,retainedEvidence:[],epoch:0};V.store.fingerprint=null;};
+const clear=D.clear;D.clear=function(){clear();A.clear();};
+const reset=G.reset;G.reset=function(){reset();A.clear();};
+A.submit=function(id,value){const r=A.current();if(!r||A.gate().show)return false;const ok=A.answer(A.store.session,id,value,G.current().signals);A.store.error=!ok;if(ok)A.store.draft=null;V.store.fingerprint=null;return ok;};
+A.safetyText=function(raw){const parsed=G.validateExtraction(G.extract(raw)),merged=G.merge([G.store.signals,parsed.signals]);G.store.signals=merged.signals;G.store.failed ||= !parsed.valid||merged.invalid;G.store.ack=null;if(A.store.session)A.refresh(A.store.session,G.current().signals);};
+})(globalThis.Adaptive,globalThis.DifferentialV2,globalThis.Differential,globalThis.GlobalSafety);
