@@ -284,9 +284,9 @@
       "fields": [
         "PrivacyGovernance.consentState"
       ],
-      "source": "future-purpose consent contract",
+      "source": "purpose-specific consent contract",
       "purpose": "consent_management",
-      "location": "governance memory; no collection UI enabled",
+      "location": "governance memory; Profile consent UI enabled",
       "retentionMode": "session",
       "persisted": false,
       "exportable": false,
@@ -306,6 +306,22 @@
       "retentionMode": "session",
       "persisted": false,
       "exportable": false,
+      "deletable": true,
+      "analyticsEligible": false,
+      "loggingEligible": false
+    },
+    {
+      "id": "profileItems",
+      "dataClass": "HIGHLY_SENSITIVE_HEALTH",
+      "fields": [
+        "PersonalProfile.store"
+      ],
+      "source": "explicit user-selected structured items",
+      "purpose": "user_controlled_profile",
+      "location": "governed independent runtime memory",
+      "retentionMode": "runtime",
+      "persisted": false,
+      "exportable": true,
       "deletable": true,
       "analyticsEligible": false,
       "loggingEligible": false

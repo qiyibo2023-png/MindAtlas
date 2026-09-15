@@ -24,8 +24,9 @@ const rows=[
  ['clinicianSummary','HIGHLY_SENSITIVE_HEALTH',['summary-text','a-summary-text','module.summary'],'structured current-session evidence','user_requested_export','generated strings and readonly DOM textareas','session',true,true],
  ['safetySignals','SAFETY_CRITICAL',['GlobalSafety.store.signals','suicide.intent','medical.lossOfConsciousness'],'local Safety extraction and structured adapters','safety_processing','Safety store and module answers','session',true,true],
  ['safetyAudit','SAFETY_CRITICAL',['GlobalSafety.store.audit','lastAudit'],'Safety evaluation','safety_processing','bounded memory audit and fingerprint','session',true,false],
- ['consentChoices','SENSITIVE',['PrivacyGovernance.consentState'],'future-purpose consent contract','consent_management','governance memory; no collection UI enabled','session',true,false],
+ ['consentChoices','SENSITIVE',['PrivacyGovernance.consentState'],'purpose-specific consent contract','consent_management','governance memory; Profile consent UI enabled','session',true,false],
  ['deletionStatus','OPERATIONAL',['PrivacyGovernance.deletionState'],'user-requested clear action','technical_operation','governance memory; status only','session',true,false],
+ ['profileItems','HIGHLY_SENSITIVE_HEALTH',['PersonalProfile.store'],'explicit user-selected structured items','user_controlled_profile','governed independent runtime memory','runtime',true,true],
  ['userExport','HIGHLY_SENSITIVE_HEALTH',['downloaded summary','printout','clipboard copy'],'explicit user export','user_requested_export','user-managed file, print or clipboard outside application','user_controlled',false,true]
 ];
 P.inventory=freeze(rows.map(([id,dataClass,fields,source,purpose,location,retentionMode,deletable,exportable])=>({id,dataClass,fields,source,purpose,location,retentionMode,persisted:['static','user_controlled'].includes(retentionMode),exportable,deletable,analyticsEligible:false,loggingEligible:id==='appVersion'})));
@@ -48,3 +49,4 @@ const components=['privacy','application'];
 const codes=['INVALID_REQUEST','POLICY_DENIED','UNAVAILABLE'];
 P.safeLog=function(event,metadata={}){try{if(!events.includes(event))return null;const out={event};if(components.includes(metadata.component))out.component=metadata.component;if(codes.includes(metadata.errorCode))out.errorCode=metadata.errorCode;if(metadata.engineVersion===P.version)out.engineVersion=P.version;return Object.freeze(out);}catch{return null;}};
 })(globalThis.PrivacyGovernance={});
+
