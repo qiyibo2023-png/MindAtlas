@@ -14725,3 +14725,678 @@ I18n.register('dv2',[
 ]);
 I18n.register('dv2',[['context',['病程与生活功能背景','Course and functioning context']]]);
 I18n.register('dv2',[['concentration',['注意或集中精力困难','Attention or concentration difficulties']],['traumaMemory',['闯入体验是否与真实创伤记忆有关','Whether the intrusive experience relates to an actual trauma memory']]]);
+
+I18n.register("adaptive",[
+  [
+    "title",
+    [
+      "自适应补充评估",
+      "Adaptive clarification"
+    ]
+  ],
+  [
+    "intro",
+    [
+      "我们根据已有信息选择有用的补充问题，最多提问 {budget} 次。你可以随时停止。",
+      "We use existing information to choose useful follow-up questions, up to {budget}. You can stop at any time."
+    ]
+  ],
+  [
+    "limit",
+    [
+      "这不是正式诊断。停止提问不代表已排除所有可能情况。",
+      "This is not a formal diagnosis. Stopping does not mean every possible condition has been ruled out."
+    ]
+  ],
+  [
+    "entry",
+    [
+      "选择有用的补充问题",
+      "Explore useful follow-up questions"
+    ]
+  ],
+  [
+    "why",
+    [
+      "为什么问这个问题？",
+      "Why this question?"
+    ]
+  ],
+  [
+    "progress",
+    [
+      "第 {number} 题，最多 {budget} 题",
+      "Question {number} of up to {budget}"
+    ]
+  ],
+  [
+    "yes",
+    [
+      "是",
+      "Yes"
+    ]
+  ],
+  [
+    "no",
+    [
+      "否",
+      "No"
+    ]
+  ],
+  [
+    "unknown",
+    [
+      "不确定",
+      "Not sure"
+    ]
+  ],
+  [
+    "prefer",
+    [
+      "不愿回答",
+      "Prefer not to answer"
+    ]
+  ],
+  [
+    "both",
+    [
+      "两种都有",
+      "Both"
+    ]
+  ],
+  [
+    "mixed",
+    [
+      "情况混合，难以区分",
+      "Mixed; difficult to separate"
+    ]
+  ],
+  [
+    "before",
+    [
+      "在事件之前就存在",
+      "Already present before the event"
+    ]
+  ],
+  [
+    "after",
+    [
+      "主要在事件之后出现",
+      "Appeared mainly after the event"
+    ]
+  ],
+  [
+    "memory",
+    [
+      "主要是真实事件的记忆或再体验",
+      "Mainly memories or re-experiencing of an actual event"
+    ]
+  ],
+  [
+    "possibility",
+    [
+      "主要是未发生的、违背意愿的可怕想法或可能性",
+      "Mainly unwanted, feared thoughts or possibilities that did not happen"
+    ]
+  ],
+  [
+    "beforeMood",
+    [
+      "情绪低落前很久就存在",
+      "Present long before the low mood"
+    ]
+  ],
+  [
+    "duringMood",
+    [
+      "主要在情绪低落期间出现",
+      "Appeared mainly during the low mood"
+    ]
+  ],
+  [
+    "general",
+    [
+      "长期存在于多种情境",
+      "Longstanding across situations"
+    ]
+  ],
+  [
+    "worry",
+    [
+      "主要是被担忧或威胁占据注意力",
+      "Mainly attention captured by worry or threat"
+    ]
+  ],
+  [
+    "episodes",
+    [
+      "明显分段的变化，伴随睡眠需求减少和情绪／精力改变",
+      "Distinct episodes with reduced need for sleep and mood/energy change"
+    ]
+  ],
+  [
+    "longstanding",
+    [
+      "长期相对持续，没有这种分段变化",
+      "Relatively longstanding without that episodic change"
+    ]
+  ],
+  [
+    "weight",
+    [
+      "主要是体重增加恐惧或体型顾虑",
+      "Mainly fear of weight gain or weight/shape concerns"
+    ]
+  ],
+  [
+    "otherMotive",
+    [
+      "主要是感官不适、兴趣低或害怕不良后果",
+      "Mainly sensory discomfort, low interest or fear of adverse consequences"
+    ]
+  ],
+  [
+    "awake",
+    [
+      "清醒时也会发生",
+      "Also occurs while fully awake"
+    ]
+  ],
+  [
+    "sleepOnly",
+    [
+      "仅在入睡或刚醒时发生",
+      "Only when falling asleep or waking"
+    ]
+  ],
+  [
+    "unrelated",
+    [
+      "并非主要与真实创伤记忆相关",
+      "Not mainly related to an actual trauma memory"
+    ]
+  ],
+  [
+    "rumination",
+    [
+      "主要是与低落一致的自责或反复回想",
+      "Mainly self-critical repetitive thinking consistent with low mood"
+    ]
+  ],
+  [
+    "intrusiveRitual",
+    [
+      "违背意愿的侵入想法，并驱使反复检查、抵消或寻求保证",
+      "Unwanted intrusive thoughts driving checking, neutralizing or reassurance"
+    ]
+  ],
+  [
+    "next",
+    [
+      "提交回答",
+      "Submit answer"
+    ]
+  ],
+  [
+    "stop",
+    [
+      "先停在这里",
+      "Stop for now"
+    ]
+  ],
+  [
+    "finish",
+    [
+      "补充评估已停止",
+      "Adaptive clarification has stopped"
+    ]
+  ],
+  [
+    "answered",
+    [
+      "已回答的问题",
+      "Questions answered"
+    ]
+  ],
+  [
+    "uncertainty",
+    [
+      "仍需了解的信息",
+      "Information still to clarify"
+    ]
+  ],
+  [
+    "nextStep",
+    [
+      "可以查看当前比较结果，并与合适的专业人员讨论尚不明确的信息。",
+      "Review the current comparison and discuss remaining uncertainty with an appropriate professional."
+    ]
+  ],
+  [
+    "compare",
+    [
+      "查看当前比较",
+      "View current comparison"
+    ]
+  ],
+  [
+    "restart",
+    [
+      "重新开始补充评估",
+      "Start a new clarification sequence"
+    ]
+  ],
+  [
+    "error",
+    [
+      "请选择一个选项，或选择不确定／不愿回答。",
+      "Choose an option, including not sure or prefer not to answer."
+    ]
+  ],
+  [
+    "safetyText",
+    [
+      "有新的紧急安全或身体状况需要说明吗？（可选，无需具体方法或事件细节）",
+      "Any new urgent safety or physical concern? (Optional; no methods or event details needed)"
+    ]
+  ],
+  [
+    "safetySubmit",
+    [
+      "检查新的安全状况",
+      "Check the new safety concern"
+    ]
+  ],
+  [
+    "safetyHelp",
+    [
+      "这段说明仅用于安全检查，不保存原文。若需要立即帮助，请使用紧急帮助入口。",
+      "This description is used only for a safety check; the original text is not stored. For immediate help, use the urgent-help option."
+    ]
+  ],
+  [
+    "review",
+    [
+      "这些原创补充问题及选择规则尚待临床审查。",
+      "These original follow-up questions and selection rules require clinical review."
+    ]
+  ],
+  [
+    "scope",
+    [
+      "本题相关方向：{domains}",
+      "This question concerns: {domains}"
+    ]
+  ],
+  [
+    "stop_sufficient",
+    [
+      "已有信息足以结束这一轮补充比较。",
+      "Available information is sufficient to end this clarification round."
+    ]
+  ],
+  [
+    "stop_multiple_supported",
+    [
+      "多个方向仍有独立支持，无需强行选出唯一方向。",
+      "Multiple directions remain independently supported; there is no need to force one winner."
+    ]
+  ],
+  [
+    "stop_insufficient",
+    [
+      "仍有不确定性，目前没有合适的补充问题。",
+      "Uncertainty remains and no suitable follow-up question is currently available."
+    ]
+  ],
+  [
+    "stop_user",
+    [
+      "你选择了暂时停止，已有信息仍保留在本页。",
+      "You chose to stop; existing information remains in this page."
+    ]
+  ],
+  [
+    "stop_budget",
+    [
+      "已达到本轮问题上限，尚未明确的信息会保留。",
+      "This round has reached its question limit; unresolved information is retained."
+    ]
+  ],
+  [
+    "stop_safety",
+    [
+      "请先处理安全状况，再考虑其他评估。",
+      "Address the safety concern before considering further assessment."
+    ]
+  ],
+  [
+    "stop_unsupported",
+    [
+      "当前线索涉及尚不支持的评估领域，建议专业评估。",
+      "Current evidence concerns an unsupported assessment area; professional assessment is recommended."
+    ]
+  ],
+  [
+    "q_adhd_trauma",
+    [
+      "这些注意和组织困难，在创伤事件之前是否已经存在？无需描述事件。",
+      "Were these attention and organization difficulties present before the traumatic event? No event details are needed."
+    ]
+  ],
+  [
+    "why_adhd_trauma",
+    [
+      "出现时间有助于理解长期注意困难与创伤之后变化的关系。",
+      "Timing helps distinguish longstanding attention difficulties from changes after trauma."
+    ]
+  ],
+  [
+    "q_ocd_gad",
+    [
+      "这些想法带来困扰时，你是否被驱使重复行为或心理活动，以抵消想法或缓解不安？",
+      "When these thoughts are distressing, do you feel driven to repeat behaviors or mental acts to neutralize them or reduce discomfort?"
+    ]
+  ],
+  [
+    "why_ocd_gad",
+    [
+      "想法与反复行为的联系，有助于区分强迫循环和广泛担忧。",
+      "The link between thoughts and repeated acts helps distinguish an obsessive-compulsive cycle from broad worry."
+    ]
+  ],
+  [
+    "q_trauma_ocd",
+    [
+      "这些侵入体验更接近真实事件的记忆／再体验，还是未发生、违背意愿的可怕可能性？无需事件细节。",
+      "Are these intrusive experiences closer to memories/re-experiencing of an actual event, or unwanted feared possibilities that did not happen? No event details are needed."
+    ]
+  ],
+  [
+    "why_trauma_ocd",
+    [
+      "记忆与假设性恐惧可能需要不同的评估，两者也可能同时存在。",
+      "Memories and hypothetical fears may need different assessment; both can coexist."
+    ]
+  ],
+  [
+    "q_mood_adhd",
+    [
+      "注意和组织困难在本次情绪低落前很久就存在，还是主要在这段低落期间开始？",
+      "Did attention and organization difficulties exist long before this low mood, or begin mainly during it?"
+    ]
+  ],
+  [
+    "why_mood_adhd",
+    [
+      "这能帮助理解注意困难是否主要随情绪时段变化。",
+      "This helps clarify whether attention difficulties mainly track the mood episode."
+    ]
+  ],
+  [
+    "q_adhd_anxiety",
+    [
+      "注意困难通常长期跨情境存在，还是主要因为担忧或威胁占据注意力？",
+      "Are attention difficulties longstanding across situations, or mainly because worry or threat captures your attention?"
+    ]
+  ],
+  [
+    "why_adhd_anxiety",
+    [
+      "了解注意被什么影响，比重复询问一般严重程度更有帮助。",
+      "Understanding what affects attention is more useful here than repeating a general severity question."
+    ]
+  ],
+  [
+    "q_adhd_activation",
+    [
+      "活动增多或冲动是长期相对持续，还是出现在伴随睡眠需求减少和明显情绪／精力改变的时段？",
+      "Is increased activity or impulsivity longstanding, or does it occur in distinct periods with reduced need for sleep and marked mood/energy change?"
+    ]
+  ],
+  [
+    "why_adhd_activation",
+    [
+      "长期表现与明显分段的变化需要区分，同时保留并存可能。",
+      "Longstanding patterns and distinct episodes need differentiation, while allowing coexistence."
+    ]
+  ],
+  [
+    "q_restriction_motive",
+    [
+      "限制进食主要与体重／体型顾虑有关，还是感官不适、兴趣低或害怕进食后果？",
+      "Is food restriction mainly related to weight/shape concerns, or sensory discomfort, low interest or fear of eating-related consequences?"
+    ]
+  ],
+  [
+    "why_restriction_motive",
+    [
+      "限制进食的动机有助于选择相关评估，并不等于确诊。",
+      "The motivation for restriction helps guide assessment; it does not establish a diagnosis."
+    ]
+  ],
+  [
+    "q_compensation",
+    [
+      "失控进食之后，是否经常出现旨在抵消进食影响的补偿行为？无需描述方式。",
+      "Are loss-of-control eating episodes regularly followed by behaviors intended to compensate for eating? You do not need to describe how."
+    ]
+  ],
+  [
+    "why_compensation",
+    [
+      "是否经常补偿，是区分相关进食模式的重要信息。",
+      "Regular compensation is important information for distinguishing eating-related patterns."
+    ]
+  ],
+  [
+    "q_psychosis_sleep",
+    [
+      "这些不寻常的感知体验在完全清醒时也发生，还是只在入睡／刚醒时发生？",
+      "Do these unusual perceptual experiences also occur while fully awake, or only when falling asleep or waking?"
+    ]
+  ],
+  [
+    "why_psychosis_sleep",
+    [
+      "睡眠过渡期体验与清醒时体验需要不同的理解。",
+      "Sleep-transition experiences need to be understood differently from waking experiences."
+    ]
+  ],
+  [
+    "q_psychosis_trauma",
+    [
+      "这些体验主要是在重现真实创伤事件，还是并非主要与该记忆有关？",
+      "Are these experiences mainly re-experiencing an actual traumatic event, or not mainly related to that memory?"
+    ]
+  ],
+  [
+    "why_psychosis_trauma",
+    [
+      "与真实事件记忆的关系有助于避免把再体验直接当作精神病性症状。",
+      "The relationship to actual memories helps avoid treating re-experiencing automatically as a psychotic symptom."
+    ]
+  ],
+  [
+    "q_reality_testing",
+    [
+      "对于相关体验或信念，你能否考虑也许存在其他解释，而不只是你最初感受到的解释？",
+      "For the related experience or belief, can you consider that there may be explanations other than the one you first felt?"
+    ]
+  ],
+  [
+    "why_reality_testing",
+    [
+      "对其他解释的开放程度能提供背景；单个回答不能判断是否存在精神病性障碍。",
+      "Openness to other explanations provides context; one answer cannot determine whether a psychotic disorder is present."
+    ]
+  ],
+  [
+    "q_mood_anxiety",
+    [
+      "除担忧外，你是否也持续对大多数平时的活动失去兴趣或愉悦？",
+      "Alongside worry, have you also persistently lost interest or pleasure in most usual activities?"
+    ]
+  ],
+  [
+    "why_mood_anxiety",
+    [
+      "低落与担忧可以并存，本题不会强迫只保留一种方向。",
+      "Low mood and worry can coexist; this question does not force one direction."
+    ]
+  ],
+  [
+    "q_mood_ocd",
+    [
+      "反复想法更接近随低落出现的自责反刍，还是违背意愿且驱使检查、抵消或寻求保证的侵入想法？",
+      "Are repetitive thoughts closer to self-critical rumination during low mood, or unwanted intrusions that drive checking, neutralization or reassurance?"
+    ]
+  ],
+  [
+    "why_mood_ocd",
+    [
+      "区分想法的性质和应对行为，有助于理解情绪与强迫模式；两者都可保留。",
+      "The nature of thoughts and responses helps clarify mood and OCD patterns; both can be retained."
+    ]
+  ],
+  [
+    "q_childhood_onset",
+    [
+      "你是否能回忆起这些注意或组织困难在 12 岁前就已出现？不确定也可以。",
+      "Can you recall these attention or organization difficulties being present before age 12? It is okay to be unsure."
+    ]
+  ],
+  [
+    "why_childhood_onset",
+    [
+      "发展史是理解注意困难的重要背景，记不清不代表没有。",
+      "Developmental history is important context; not remembering does not mean it was absent."
+    ]
+  ],
+  [
+    "q_cross_setting",
+    [
+      "这些困难是否出现在两种或更多生活情境，而非仅限一种任务或环境？",
+      "Do these difficulties occur in two or more life settings rather than only one task or environment?"
+    ]
+  ],
+  [
+    "why_cross_setting",
+    [
+      "跨情境信息有助于理解注意困难的范围。",
+      "Information across settings helps clarify the scope of attention difficulties."
+    ]
+  ],
+  [
+    "q_mood_together",
+    [
+      "所述低落及相关症状是否在同一个连续时段内共同出现？",
+      "Did the low mood and related symptoms occur together in the same continuous period?"
+    ]
+  ],
+  [
+    "why_mood_together",
+    [
+      "共同出现的时段有助于解释情绪症状的组合。",
+      "Their overlap in time helps interpret the mood pattern."
+    ]
+  ],
+  [
+    "q_mood_duration",
+    [
+      "当前这段低落或兴趣下降是否已持续至少两周？",
+      "Has this period of low mood or loss of interest lasted at least two weeks?"
+    ]
+  ],
+  [
+    "why_mood_duration",
+    [
+      "持续时间是尚未明确的背景，不是单独的诊断依据。",
+      "Duration is missing context, not a diagnosis on its own."
+    ]
+  ],
+  [
+    "q_ocd_impact",
+    [
+      "这些想法或反复行为是否明显影响日常生活，或造成明显痛苦？",
+      "Do these thoughts or repeated acts significantly affect everyday life or cause substantial distress?"
+    ]
+  ],
+  [
+    "why_ocd_impact",
+    [
+      "生活影响有助于理解症状是否需要进一步支持。",
+      "Everyday impact helps clarify the need for further support."
+    ]
+  ],
+  [
+    "q_medical",
+    [
+      "就上方相关症状，你或专业人员是否认为身体疾病可能有所影响？无需提供病历。",
+      "For the symptoms named above, do you or a professional think a physical condition may contribute? No medical records are needed."
+    ]
+  ],
+  [
+    "why_medical",
+    [
+      "身体因素尚待了解，不能默认症状只有心理原因。",
+      "Physical contributors remain unresolved; symptoms should not automatically be attributed only to mental health."
+    ]
+  ],
+  [
+    "q_substance",
+    [
+      "相关症状是否在物质使用或停用／戒断前后开始或明显变化？无需说明用量或细节。",
+      "Did the related symptoms begin or noticeably change around substance use or stopping/withdrawal? No amounts or details are needed."
+    ]
+  ],
+  [
+    "why_substance",
+    [
+      "时间关系有助于保留其他解释；严重戒断应优先处理安全问题。",
+      "Timing helps retain alternative explanations; severe withdrawal requires safety support first."
+    ]
+  ],
+  [
+    "q_medication",
+    [
+      "相关症状是否在开始药物或调整药物后出现或改变？请勿根据此评估自行停药。",
+      "Did the related symptoms begin or change after starting or changing medication? Do not stop medication based on this assessment."
+    ]
+  ],
+  [
+    "why_medication",
+    [
+      "药物相关时间背景值得与处方专业人员讨论。",
+      "Medication-related timing may be worth discussing with the prescribing professional."
+    ]
+  ],
+  [
+    "q_sleep",
+    [
+      "你是否认为睡眠不足或睡眠问题可能明显影响上方相关症状？",
+      "Do you think insufficient sleep or sleep problems may substantially affect the related symptoms named above?"
+    ]
+  ],
+  [
+    "why_sleep",
+    [
+      "睡眠影响是一个需要保留的解释因素。",
+      "Sleep contribution is an explanation that needs to remain under consideration."
+    ]
+  ],
+  [
+    "q_conflict",
+    [
+      "关于“{concept}”，哪项更符合你当前的情况？",
+      "For “{concept}”, which answer better reflects your current experience?"
+    ]
+  ],
+  [
+    "why_conflict",
+    [
+      "不同时间提供的信息可能不同。我们想澄清当前情况，而不是要求你证明先前的回答。",
+      "Information given at different times can differ. We want to clarify the current experience, not ask you to defend an earlier answer."
+    ]
+  ]
+]);

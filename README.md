@@ -71,4 +71,14 @@ The live comparison now uses the seven-domain evidence graph in
 `src/differential-v2/`. See [architecture and clinical limits](DIFFERENTIAL-V2-ARCHITECTURE.md),
 [verification results](DIFFERENTIAL-V2-VALIDATION.md),
 and [the separate synthetic benchmark](benchmarks/differential-v1/REPORT.md).
-No Adaptive Assessment engine is included. See DIFFERENTIAL-V2-FINAL-REPORT.md for the verified local milestone and remaining clinical review requirements.
+The Differential v2 milestone introduced the structured handoff contract used by Adaptive below. See DIFFERENTIAL-V2-FINAL-REPORT.md for its verification and clinical review requirements.
+
+## Adaptive Assessment v1
+
+The Differential comparison page now offers **Explore useful follow-up questions /
+选择有用的补充问题**. It selects bounded bilingual clarifications from existing
+uncertainty, reruns shared Differential after structured answers, and checks Safety
+every turn. See [architecture](ADAPTIVE-V1-ARCHITECTURE.md),
+[validation and local checkpoint report](ADAPTIVE-V1-FINAL-REPORT.md), and
+[synthetic benchmark](benchmarks/adaptive-v1/REPORT.md). This is not a diagnosis;
+all new clinical questions and selection policies require review.

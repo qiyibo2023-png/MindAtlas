@@ -1,0 +1,19 @@
+{
+  "version": "adaptive-benchmark-audit-v1.0.0",
+  "passed": true,
+  "independentTrajectories": 183,
+  "evidenceIdInvariance": 183,
+  "caseFileSha256": "eef50109bde880a40e70c4b953310556db9595a1b932e3c97bcc5445d5cd7eb3",
+  "runtimeFiles": [
+    "src/adaptive/engine.js",
+    "src/adaptive/registry.js",
+    "src/adaptive/runtime.js",
+    "src/adaptive/schema.js",
+    "src/adaptive/ui.js"
+  ],
+  "findings": [],
+  "limitations": [
+    "No fixture imports, exact case IDs, duplicate trajectories or evidence-ID-sensitive selection found; this does not exclude conceptual overfitting.",
+    "Synthetic authored expected questions are not independently clinically validated; limited natural-language/cultural diversity."
+  ]
+}

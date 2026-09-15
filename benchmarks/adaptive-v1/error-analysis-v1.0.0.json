@@ -1,0 +1,49 @@
+{
+  "version": "adaptive-error-analysis-v1.0.0",
+  "engineVersion": "adaptive-assessment-v1.0.0",
+  "mismatches": [],
+  "framework": {
+    "runner": "scripts/adaptive-benchmark.cjs",
+    "fields": [
+      "id",
+      "initialCandidateDirections",
+      "unresolvedDiscriminators",
+      "expectedQuestions",
+      "actualQuestion",
+      "knownEvidence",
+      "stopState",
+      "expectedStop",
+      "rule",
+      "failures",
+      "classification"
+    ],
+    "classifications": [
+      "implementation_issue",
+      "benchmark_label_issue",
+      "clinically_plausible_alternative",
+      "unresolved_ambiguity"
+    ],
+    "policy": "Preserve expected labels, inspect provenance and selection eligibility, document reasoning and clinical review; never change labels automatically."
+  },
+  "developmentFindings": [
+    {
+      "type": "implementation_issue",
+      "issue": "Unsubmitted radio selection cleared during language switching.",
+      "fix": "Keep a structured draft in page memory; unit and browser checks now cover it."
+    },
+    {
+      "type": "implementation_issue",
+      "issue": "Peripheral concentration clarification could extend a sequence with independently strong Mood and Trauma patterns.",
+      "fix": "Do not pursue peripheral domains when multiple strong domains already explain the active comparison; retain uncertainty."
+    },
+    {
+      "type": "implementation_issue",
+      "issue": "An explicit new sequence originally discarded prior Adaptive evidence.",
+      "fix": "Retain structured evidence across new sequences with unique sequence provenance; reset only through explicit clear."
+    }
+  ],
+  "limits": [
+    "Zero benchmark mismatches does not establish clinical validity.",
+    "Synthetic labels and deterministic priorities remain unreviewed."
+  ]
+}

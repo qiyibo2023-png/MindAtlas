@@ -1,0 +1,30 @@
+const assert=require('node:assert/strict'),fs=require('fs'),{Adaptive:A,DifferentialV2:V,GlobalSafety:G,I18n,session,safe}=require(process.cwd()+'/tests/adaptive-harness.cjs')(),{scenarios}=require(process.cwd()+'/tests/adaptive-fixtures.cjs'),{bases}=require(process.cwd()+'/benchmarks/differential-v1/cases.cjs');
+let count=0;const test=(n,f)=>{f();console.log('PASS Adaptive '+n);count++;};
+for(const[id,facts,answer,updates]of scenarios){
+ test('select '+id,()=>assert.equal(session(facts).result.nextQuestion?.id,id));
+ test('answer graph '+id,()=>{const s=session(facts),before=s.differential;assert(A.answer(s,id,answer));assert.notEqual(s.differential,before);for(const[k,v]of Object.entries(updates))assert.equal(s.differential.evidenceGraph.facts[k],v);assert.notEqual(s.result.nextQuestion?.id,id);assert.equal(s.answers.length,1);});
+ test('unknown is not evidence '+id,()=>{const s=session(facts);A.answer(s,id,'unknown');assert.equal(s.evidence.length,0);assert.notEqual(s.result.nextQuestion?.id,id);});
+ test('decline is not repeated '+id,()=>{const s=session(facts);A.answer(s,id,'prefer');assert.equal(s.evidence.length,0);assert(!s.result.nextQuestion?.targets.some(k=>s.answers[0].targets.includes(k)));});
+ test('known primary target skipped '+id,()=>{const q=A.registry.find(q=>q.id===id),s=session({...facts,[q.conceptTarget]:true});assert.notEqual(s.result.nextQuestion?.id,id);});
+ test('bilingual copy and unchanged structured state '+id,()=>{const s=session(facts),before=JSON.stringify(s);for(const l of [0,1,0,1]){assert(A.questionText(s.result.nextQuestion,l));assert(I18n.t(s.result.whyThisQuestion,l));for(const o of s.result.nextQuestion.answerOptions)assert(I18n.t(o.labelKey,l));}assert.equal(JSON.stringify(s),before);});
+}
+test('default budget six',()=>assert.equal(session({}).budget,6));
+test('invalid budget bounded',()=>assert.equal(session({},{budget:100}).budget,6));
+test('saturation stop',()=>assert.equal(session(bases.mood).result.adaptiveStatus,'stop_sufficient'));
+test('independently supported stop',()=>assert.equal(session({...bases.mood,...bases.trauma}).result.adaptiveStatus,'stop_multiple_supported'));
+test('empty insufficient stop',()=>assert.equal(session({}).result.adaptiveStatus,'stop_insufficient'));
+test('unsupported stop',()=>assert.equal(session({'unsupported.autism':true}).result.adaptiveStatus,'stop_unsupported'));
+test('user stop',()=>{const s=session(scenarios[0][1]);assert.equal(A.stop(s).adaptiveStatus,'stop_user');assert(!A.answer(s,'adhd_trauma','before'));});
+test('budget stop retains uncertainty',()=>{const s=session(scenarios[0][1],{budget:1});A.answer(s,'adhd_trauma','unknown');assert.equal(s.result.adaptiveStatus,'stop_budget');assert(s.differential.missingEvidence.length);});
+test('known false is skipped',()=>{const s=session({'adhd.current':true,'adhd.onset':false});assert.notEqual(s.result.nextQuestion?.id,'childhood_onset');});
+test('duplicate/stale submission rejected',()=>{const s=session(scenarios[0][1]);A.answer(s,'adhd_trauma','before');const before=JSON.stringify(s.evidence);assert(!A.answer(s,'adhd_trauma','before'));assert.equal(JSON.stringify(s.evidence),before);});
+test('invalid answer not stored',()=>{const s=session(scenarios[0][1]);assert(!A.answer(s,'adhd_trauma','arbitrary raw text'));assert.equal(s.answers.length,0);});
+test('contradiction clarification',()=>{const s=session({'ocd.intrusive':true});s.baseEvidence.push(V.node('ocd.intrusive',false,{id:'conflicting:ocd'}));A.refresh(s);assert.equal(s.result.nextQuestion.id,'clarify_ocd.intrusive');assert(A.answer(s,s.result.nextQuestion.id,'yes'));assert(s.differential.contradictions.some(c=>c.resolved));assert.equal(s.differential.evidenceGraph.facts['ocd.intrusive'],true);});
+test('invalid contract fails closed',()=>assert.equal(A.select({engineVersion:'wrong'},session({})).adaptiveStatus,'stop_insufficient'));
+test('Safety clarification precedes ordinary question',()=>{const s=A.newSession([],G.empty());assert.equal(A.refresh(s).adaptiveStatus,'stop_safety');});
+for(const path of ['suicide.intent','medical.severeChestPain','psychosis.commandSelfHarm','harmToOthers.intent','medical.lossOfConsciousness'])test('Safety before answer '+path,()=>{const s=session(scenarios[8][1]),signals=safe();G.put(signals,path,true);const r=A.refresh(s,signals);assert.equal(r.adaptiveStatus,'stop_safety');assert.equal(r.nextQuestion,null);assert(!A.answer(s,'psychosis_sleep','awake',signals));assert.equal(s.answers.length,0);});
+test('safety text emergence immediate stop and no raw storage',()=>{const s=session(scenarios[8][1]),raw='The voice tells me to kill myself and I intend to do it.';A.acceptSafetyText(s,raw);assert.equal(s.result.adaptiveStatus,'stop_safety');assert(!JSON.stringify(s).includes(raw));});
+test('intrusive thought without intent not acute',()=>{const s=session(scenarios[1][1]);G.put(s.signals,'harmToOthers.violentThoughts',true);G.put(s.signals,'harmToOthers.thoughtsUnwanted',true);const r=A.refresh(s);assert.notEqual(r.safetyState.urgency,'acute');});
+test('all registry rules unreviewed and known concepts',()=>{for(const q of A.registry){assert.equal(q.reviewStatus,'unreviewed');assert.equal(q.version,A.version);for(const k of q.targets)assert(Object.hasOwn(V.concepts,k));for(const o of q.answerOptions)for(const[k,v]of Object.entries(o.evidenceUpdates)){assert(Object.hasOwn(V.concepts,k));assert.equal(typeof v,'boolean');}}});
+test('registry no repeated ids',()=>assert.equal(new Set(A.registry.map(q=>q.id)).size,A.registry.length));
+console.log('Adaptive unit checks: '+count);
