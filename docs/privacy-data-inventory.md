@@ -23,3 +23,5 @@ Snapshot of src/privacy/policy.js. No actual user records are included. Exportab
 | consentChoices / PrivacyGovernance.consentState | SENSITIVE | future-purpose consent contract / consent_management | governance memory; no collection UI enabled / session | false | false | true | false | false |
 | deletionStatus / PrivacyGovernance.deletionState | OPERATIONAL | user-requested clear action / technical_operation | governance memory; status only / session | false | false | true | false | false |
 | userExport / downloaded summary, printout, clipboard copy | HIGHLY_SENSITIVE_HEALTH | explicit user export / user_requested_export | user-managed file, print or clipboard outside application / user_controlled | true | true | false | false | false |
+
+Entry-flow state is included in routerEvidence: in-memory structured answers, bounded back history, state, and Safety evaluation metadata. Privacy clear-session also resets EntryFlow.store. No original narrative is retained.

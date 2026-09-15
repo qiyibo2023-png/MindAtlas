@@ -1,0 +1,19 @@
+{
+  "version": "assessment-entry-flow-v1.0.0",
+  "synthetic": true,
+  "clinicalValidation": false,
+  "scenarioPairs": 29,
+  "localizedScenarios": 58,
+  "metrics": {
+    "involuntaryRestartCount": 0,
+    "deadEndCount": 0,
+    "duplicateQuestionCount": 0,
+    "unnecessaryRepeatedSafetyUICount": 0,
+    "routeCompletionCount": 20,
+    "clarificationBudgetExhaustionCount": 2,
+    "bilingualParity": {
+      "passed": 29,
+      "total": 29
+    }
+  }
+}

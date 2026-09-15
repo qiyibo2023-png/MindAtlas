@@ -1,5 +1,5 @@
 (function(P){'use strict';
-const names=['Mood','Anxiety','OCD','Trauma','ADHD','Eating','Psychosis','GlobalSafety','SymptomRouter','Differential','DifferentialV2','Adaptive'];
+const names=['Mood','Anxiety','OCD','Trauma','ADHD','Eating','Psychosis','GlobalSafety','SymptomRouter','Differential','DifferentialV2','Adaptive','EntryFlow'];
 const clone=x=>JSON.parse(JSON.stringify(x));
 const defaults=Object.fromEntries(names.map(name=>[name,clone(globalThis[name].store)]));
 P.deletionState={status:'not_requested'};

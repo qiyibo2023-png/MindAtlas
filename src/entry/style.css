@@ -1,0 +1,9 @@
+.entry-flow {max-width:850px;margin-inline:auto;overflow-wrap:anywhere}
+.entry-options,.entry-escapes {display:grid;gap:12px;margin-block:16px}
+.entry-options button,.entry-escapes button,.entry-flow button {min-height:48px;white-space:normal;text-align:start}
+.entry-flow fieldset {min-width:0;border:1px solid #9daea4;border-radius:12px;padding:16px}
+.entry-flow legend {font-weight:650;padding:6px;max-width:100%}
+.entry-progress {font-weight:650;color:#285644}
+.entry-flow textarea {width:100%;box-sizing:border-box;min-height:96px}
+.entry-flow :focus-visible {outline:3px solid #215e89;outline-offset:3px}
+@media(min-width:700px){.entry-escapes{grid-template-columns:1fr 1fr}}
