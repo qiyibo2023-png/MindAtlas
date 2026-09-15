@@ -1,5 +1,5 @@
 // Stable bilingual entry lists: duplicate keys cannot be lost by object-literal overwrite.
-I18n.register("common",[
+I18n.register("common", [
   [
     "anhedonia",
     [
@@ -12,13 +12,6 @@ I18n.register("common",[
     [
       "心知 · 焦虑",
       "MINDATLAS · ANXIETY"
-    ]
-  ],
-  [
-    "anxietyPaths",
-    [
-      "焦虑 · 多种表现",
-      "ANXIETY · MULTIPLE PATHWAYS"
     ]
   ],
   [
@@ -54,13 +47,6 @@ I18n.register("common",[
     [
       "公开依据与局限",
       "TRANSPARENT BY DESIGN"
-    ]
-  ],
-  [
-    "firstStep",
-    [
-      "从这里开始",
-      "YOUR FIRST STEP"
     ]
   ],
   [
@@ -248,7 +234,7 @@ I18n.register("explanations",[
     ]
   ]
 ]);
-I18n.register("platform",[
+I18n.register("platform", [
   [
     "m_0008c58c9888",
     [
@@ -950,13 +936,6 @@ I18n.register("platform",[
     ]
   ],
   [
-    "m_198c76656a44",
-    [
-      "开始焦虑评估",
-      "Start Anxiety assessment"
-    ]
-  ],
-  [
     "m_19a7a16cae70",
     [
       "预约具备强迫症诊疗经验的合格心理健康专业人员，带上这份评估摘要；这份结果不是诊断。",
@@ -1220,13 +1199,6 @@ I18n.register("platform",[
     [
       "两周至不足一月",
       "Two weeks to under one month"
-    ]
-  ],
-  [
-    "m_21d4dd899415",
-    [
-      "情绪评估",
-      "Mood assessment"
     ]
   ],
   [
@@ -3085,13 +3057,6 @@ I18n.register("platform",[
     ]
   ],
   [
-    "m_5d3ef0211d76",
-    [
-      "最近的你，还好吗？",
-      "How have you been feeling?"
-    ]
-  ],
-  [
     "m_5d8108644d9a",
     [
       "超过两个月",
@@ -3502,13 +3467,6 @@ I18n.register("platform",[
     [
       "独自出门",
       "Outside home alone"
-    ]
-  ],
-  [
-    "m_6885fee9f53c",
-    [
-      "成人情绪评估 · PHQ-9 + 结构化访谈",
-      "Adult mood assessment · PHQ-9 + structured questions"
     ]
   ],
   [
@@ -4342,13 +4300,6 @@ I18n.register("platform",[
     [
       "清除焦虑答案",
       "Clear Anxiety answers"
-    ]
-  ],
-  [
-    "m_84deb6d7fde5",
-    [
-      "整理抑郁症状、病程与影响，了解需要专业评估的方向。",
-      "Explore depressive symptoms, course and impact, and directions for professional assessment."
     ]
   ],
   [
@@ -5248,13 +5199,6 @@ I18n.register("platform",[
     ]
   ],
   [
-    "m_9ef008c83fe7",
-    [
-      "焦虑评估",
-      "Anxiety assessment"
-    ]
-  ],
-  [
     "m_9ef19f57d5ab",
     [
       "长期而言，是否多数日的大部分时间感到低落？",
@@ -5378,13 +5322,6 @@ I18n.register("platform",[
     [
       "特定恐惧症",
       "Specific Phobia"
-    ]
-  ],
-  [
-    "m_a30926b9841b",
-    [
-      "开始情绪评估",
-      "Start mood assessment"
     ]
   ],
   [
@@ -6788,13 +6725,6 @@ I18n.register("platform",[
     ]
   ],
   [
-    "m_d0c081e0a992",
-    [
-      "担忧、惊恐，还是特定的恐惧？",
-      "Worry, panic or a particular fear?"
-    ]
-  ],
-  [
     "m_d0f4fc5d71e3",
     [
       "未建立主要方向；查看安全信息和待澄清问题。",
@@ -7002,13 +6932,6 @@ I18n.register("platform",[
     [
       "事件月／症状时序／紧密关联／影响／后果结束六个月以上",
       "Event month / symptom timing / close link / impact / consequences ended over six months"
-    ]
-  ],
-  [
-    "m_d8013d19771a",
-    [
-      "分别了解焦虑表现、持续时间与生活影响，多个分支可同时评估。",
-      "Explore anxiety presentations, duration and life impact across multiple branches."
     ]
   ],
   [
@@ -7247,13 +7170,6 @@ I18n.register("platform",[
     [
       "是否从较早年龄起在不同场合长期注意困难／冲动？",
       "Have attention / impulsivity difficulties persisted across settings from an earlier age?"
-    ]
-  ],
-  [
-    "m_debe22babe8c",
-    [
-      "强迫症评估",
-      "OCD assessment"
     ]
   ],
   [
@@ -10653,11 +10569,11 @@ I18n.register("traumaResult",[
   ]
 ]);
 
-I18n.register("traumaNav",[["label",["创伤评估","Trauma assessment"]]]);
+I18n.register("traumaNav", []);
 
 I18n.register("traumaAlternative",[["stressor",["重大应激或丧失可能需要了解哀伤、适应相关反应、情绪或焦虑；本模块不诊断哀伤或适应障碍。","Major stress or loss may warrant exploration of grief, adjustment-related reactions, mood or anxiety; this module does not diagnose grief or adjustment disorders."]]]);
 
-I18n.register("adhdUI",[
+I18n.register("adhdUI", [
   [
     "opt_yes",
     [
@@ -11391,13 +11307,6 @@ I18n.register("adhdUI",[
     [
       "ADHD 评估",
       "ADHD Assessment"
-    ]
-  ],
-  [
-    "nav",
-    [
-      "ADHD 评估",
-      "ADHD assessment"
     ]
   ],
   [
@@ -14668,7 +14577,50 @@ I18n.register("psychosisSafety",[
 
 I18n.register("psychosisExtra",[["safety",["先确认当前安全状况","First clarify current safety"]],["safetyHelp",["安全与评估方向分别判断。若出现即刻危险，请使用紧急帮助。","Safety is assessed separately from the assessment direction. Use urgent help for immediate danger."]]]);
 
-I18n.register("psychosisEntry",[["nav",["感知与信念评估","Perception & belief assessment"]],["concern",["你最希望了解哪方面？不需要描述具体内容。","What would you most like to understand? No description of the content is needed."]],["perception",["感知体验","Perceptual experiences"]],["belief",["信念或怀疑","Beliefs or suspicion"]],["organization",["思路、表达或组织活动","Thought, communication or organizing activity"]],["function",["动力或生活功能变化","Changes in motivation or daily function"]],["other",["其他／不确定／暂不回答","Other / unsure / prefer not to answer"]]]);
+I18n.register("psychosisEntry", [
+  [
+    "concern",
+    [
+      "你最希望了解哪方面？不需要描述具体内容。",
+      "What would you most like to understand? No description of the content is needed."
+    ]
+  ],
+  [
+    "perception",
+    [
+      "感知体验",
+      "Perceptual experiences"
+    ]
+  ],
+  [
+    "belief",
+    [
+      "信念或怀疑",
+      "Beliefs or suspicion"
+    ]
+  ],
+  [
+    "organization",
+    [
+      "思路、表达或组织活动",
+      "Thought, communication or organizing activity"
+    ]
+  ],
+  [
+    "function",
+    [
+      "动力或生活功能变化",
+      "Changes in motivation or daily function"
+    ]
+  ],
+  [
+    "other",
+    [
+      "其他／不确定／暂不回答",
+      "Other / unsure / prefer not to answer"
+    ]
+  ]
+]);
 
 I18n.register("rv2",[["unknown",["不确定","Not sure"]],["prefer",["暂不回答","Prefer not to answer"]],["moodAnxiety",["这些困难主要随什么出现？","What mainly accompanies these difficulties?"]],["moodAnxiety_mood",["主要随情绪低落或失去兴趣","Mainly low mood or loss of interest"]],["moodAnxiety_worry",["主要随持续担忧","Mainly ongoing worry"]],["moodAnxiety_both",["两种情况都有","Both"]],["ocdGad",["这些想法之后，你是否觉得必须反复做某件事来消除担心？","After these thoughts, do you feel compelled to repeat something to neutralize the worry?"]],["ocdGad_yes",["是","Yes"]],["ocdGad_no",["否，主要是现实生活中的担忧","No, mainly worries about everyday life"]],["ocdTrauma",["侵入的体验更像哪一种？","What are the intrusive experiences more like?"]],["ocdTrauma_memory",["再次经历实际发生的创伤","Reliving an actual traumatic event"]],["ocdTrauma_feared",["不想发生、也不想实施的可能情景","An unwanted feared possibility, not something I want to do"]],["ocdTrauma_both",["两者都有","Both"]],["ocdPsychosis",["你更接近以下哪种体验？","Which is closer to your experience?"]],["ocdPsychosis_doubt",["我害怕这种可能，但知道想法可能不符合现实","I fear the possibility but recognize the thought may not reflect reality"]],["ocdPsychosis_certain",["我确信它真实发生，很难考虑其他解释","I am convinced it is happening and find other explanations difficult to consider"]],["adhdMood",["注意力和组织困难在情绪低落出现之前、童年时就已存在吗？","Were attention and organization difficulties present in childhood, before low mood?"]],["adhdMood_yes",["是","Yes"]],["adhdMood_no",["否，后来才出现","No, they started later"]],["adhdAnxiety",["注意力和组织困难在持续担忧出现之前、童年时就已存在吗？","Were attention and organization difficulties present in childhood, before ongoing worry?"]],["adhdAnxiety_yes",["是","Yes"]],["adhdAnxiety_no",["否，后来才出现","No, they started later"]],["adhdTrauma",["注意力和组织困难在创伤相关症状出现之前、童年时就已存在吗？","Were attention and organization difficulties present in childhood, before trauma-related symptoms?"]],["adhdTrauma_yes",["是","Yes"]],["adhdTrauma_no",["否，后来才出现","No, they started later"]],["adhdBipolar",["精力或活动增加是长期特点，还是与平时不同的阶段？","Is increased energy or activity longstanding, or does it occur in distinct periods different from usual?"]],["adhdBipolar_episode",["不同于平时的阶段，并且睡得很少也不累","Distinct periods with little sleep and no tiredness"]],["adhdBipolar_stable",["长期持续，没有这种阶段变化","Longstanding, without these distinct periods"]],["eatingMood",["进食变化主要与哪一项有关？","What mainly relates to the eating changes?"]],["eatingMood_mood",["情绪低落时食欲下降","Reduced appetite during low mood"]],["eatingMood_weight",["害怕体重增加或刻意控制体重","Fear of weight gain or deliberate weight control"]],["eatingMood_other",["其他进食困难","Other eating difficulties"]],["eatingOcd",["回避食物是否主要为了应对反复出现的污染担忧和仪式行为？","Is food avoidance mainly driven by recurring contamination fears and rituals?"]],["eatingOcd_yes",["是","Yes"]],["eatingOcd_no",["否","No"]],["eatingAnxiety",["恐惧主要针对进食本身，还是也广泛涉及其他生活领域？","Is fear mainly about eating itself, or also about many other areas of life?"]],["eatingAnxiety_food",["主要是吞咽、噎住或进食后不适","Mainly swallowing, choking or adverse effects of eating"]],["eatingAnxiety_broad",["也广泛担心其他生活领域","Also broad worries across other areas of life"]],["eatingAnxiety_both",["两者都有","Both"]],["anArfid",["限制进食主要与害怕体重增加有关吗？","Is restricting food mainly related to fear of weight gain?"]],["anArfid_yes",["是","Yes"]],["anArfid_no",["否，更涉及感官、食欲或害怕不适","No, more about sensory issues, interest in food or feared consequences"]],["bnBed",["失控进食后，是否反复采取措施来抵消进食或控制体重？无需描述方式。","After loss-of-control eating, do you repeatedly try to compensate or control weight? No description of methods is needed."]],["bnBed_yes",["是","Yes"]],["bnBed_no",["否","No"]],["psychosisTrauma",["感知体验是否只在重新经历创伤时出现？","Do the perceptual experiences occur only while reliving trauma?"]],["psychosisTrauma_yes",["是，只在重现创伤时","Yes, only while reliving trauma"]],["psychosisTrauma_no",["否，也会独立出现","No, they also occur independently"]],["psychosisDissociation",["体验更像不真实感，还是难以分辨体验与外界现实？","Is this more a feeling of unreality, or difficulty distinguishing the experience from external reality?"]],["psychosisDissociation_unreal",["感觉不真实，但知道这是一种感受","A feeling of unreality, while recognizing it as a feeling"]],["psychosisDissociation_reality",["难以分辨外界现实","Difficulty distinguishing external reality"]],["psychosisMood",["感知或信念变化是否仅在明显的情绪变化阶段出现？","Do the perceptual or belief changes occur only during marked mood episodes?"]],["psychosisMood_yes",["是","Yes"]],["psychosisMood_no",["否，也在其他时候出现","No, also at other times"]],["sleepPsychosis",["这些体验是否只在刚入睡或刚醒来时出现？","Do these experiences occur only when falling asleep or waking up?"]],["sleepPsychosis_yes",["是，只在这些时候","Yes, only at those times"]],["sleepPsychosis_no",["否，完全清醒时也出现","No, they also occur while fully awake"]],["attentionContext",["这些困难在童年就存在，并且影响不止一种环境吗？","Were these difficulties present in childhood and across more than one setting?"]],["attentionContext_yes",["是","Yes"]],["attentionContext_no",["否","No"]],["reasonEpisode",["精力与睡眠需求的阶段性变化值得进行情绪评估。","Distinct changes in energy and sleep need support exploring mood."]],["reasonTrauma",["创伤背景与重新经历或提醒相关症状支持进一步评估。","Trauma context with re-experiencing or reminder-related symptoms supports further assessment."]],["reasonAdhd",["童年起的注意或组织困难值得进一步了解其持续性及环境。","Attention or organization difficulties since childhood warrant exploring persistence and settings."]],["reasonAttention",["注意困难有多种原因；需要先了解出现时间和背景。","Attention difficulties have many causes; onset and context need clarification."]],["reasonEating",["进食模式、失控感或回避原因值得进一步评估。","Eating patterns, loss of control or reasons for avoidance warrant assessment."]],["reasonPsychosis",["感知或信念体验值得了解其现实判断、背景及生活影响。","Perceptual or belief experiences warrant exploring reality testing, context and daily impact."]],["clarify",["先了解一个关键问题","One helpful question first"]],["stop",["先查看目前的方向","View the current directions"]],["sufficient",["建议下一步评估","Suggested next assessment"]],["ambiguous",["多个方向都可能相关","More than one direction may be relevant"]],["insufficient",["目前信息不足以推荐一个方向","More information is needed to recommend a direction"]],["unsupported",["目前还没有对应的结构化评估","A matching structured assessment is not available yet"]],["medical",["突然出现的认知变化需要及时由医疗专业人员评估。","Sudden cognitive changes need prompt assessment by a medical professional."]],["context",["这些线索用于选择评估方向，不代表已确诊。","These clues guide assessment selection; they do not establish a diagnosis."]],["knowledge",["查看相关知识","Explore related information"]],["opposing",["部分背景提示也需要考虑其他解释。","Some context suggests that other explanations also need consideration."]]]);
 
@@ -15397,6 +15349,240 @@ I18n.register("adaptive",[
     [
       "不同时间提供的信息可能不同。我们想澄清当前情况，而不是要求你证明先前的回答。",
       "Information given at different times can differ. We want to clarify the current experience, not ask you to defend an earlier answer."
+    ]
+  ]
+]);
+
+I18n.register("capability", [
+  [
+    "nav",
+    [
+      "评估",
+      "Assessments"
+    ]
+  ],
+  [
+    "title",
+    [
+      "可用的结构化评估",
+      "Available structured assessments"
+    ]
+  ],
+  [
+    "explanation",
+    [
+      "MindAtlas 提供 18 个主题的教育信息，目前有七个结构化评估领域。没有结构化评估的主题同样重要，也可能需要专业评估。评估结果不是正式诊断。",
+      "MindAtlas provides educational information on 18 topics, with seven structured assessment domains currently available. Topics without a structured assessment are equally important and may need professional evaluation. Assessment results are not a formal diagnosis."
+    ]
+  ],
+  [
+    "uncertain",
+    [
+      "不确定从哪里开始？",
+      "Not sure where to start?"
+    ]
+  ],
+  [
+    "routerHelp",
+    [
+      "描述你的经历，MindAtlas 会先检查紧急安全或医疗问题，再建议相关评估路径。",
+      "Describe your experience. MindAtlas checks urgent safety or medical concerns first, then suggests relevant assessment pathways."
+    ]
+  ],
+  [
+    "routerCTA",
+    [
+      "描述我的症状",
+      "Describe my symptoms"
+    ]
+  ],
+  [
+    "full",
+    [
+      "可进行结构化评估",
+      "Structured assessment available"
+    ]
+  ],
+  [
+    "pathway",
+    [
+      "可进入相关评估路径",
+      "Assessment pathway available"
+    ]
+  ],
+  [
+    "knowledge",
+    [
+      "知识与教育信息",
+      "Educational information"
+    ]
+  ],
+  [
+    "navigation",
+    [
+      "信息与专业求助导航",
+      "Information & navigation"
+    ]
+  ],
+  [
+    "medical",
+    [
+      "医疗评估与安全指引",
+      "Medical guidance / safety"
+    ]
+  ],
+  [
+    "start",
+    [
+      "开始评估",
+      "Start assessment"
+    ]
+  ],
+  [
+    "exploreMood",
+    [
+      "在情绪评估中进一步了解",
+      "Explore within Mood assessment"
+    ]
+  ],
+  [
+    "read",
+    [
+      "阅读主题知识",
+      "Read topic information"
+    ]
+  ],
+  [
+    "mood",
+    [
+      "情绪评估",
+      "Mood Assessment"
+    ]
+  ],
+  [
+    "anxiety",
+    [
+      "焦虑评估",
+      "Anxiety Assessment"
+    ]
+  ],
+  [
+    "ocd",
+    [
+      "强迫症评估",
+      "OCD Assessment"
+    ]
+  ],
+  [
+    "trauma",
+    [
+      "创伤 / PTSD 评估",
+      "Trauma / PTSD Assessment"
+    ]
+  ],
+  [
+    "adhd",
+    [
+      "ADHD 评估",
+      "ADHD Assessment"
+    ]
+  ],
+  [
+    "eating",
+    [
+      "进食障碍评估",
+      "Eating Disorders Assessment"
+    ]
+  ],
+  [
+    "psychosis",
+    [
+      "精神病性体验 / 严重心理健康问题评估",
+      "Psychosis / Severe Mental Health Assessment"
+    ]
+  ],
+  [
+    "fullHelp",
+    [
+      "可进入{domain}。这是结构化评估，不是正式诊断。",
+      "Available within {domain}. This is a structured assessment, not a formal diagnosis."
+    ]
+  ],
+  [
+    "anxietyHelp",
+    [
+      "在共享的焦虑评估路径中了解这些症状，并非独立的诊断测试。",
+      "Explore these symptoms within the shared Anxiety Assessment pathway, rather than a separate diagnostic test."
+    ]
+  ],
+  [
+    "bipolarHelp",
+    [
+      "情绪评估包含双相 / 躁狂相关的鉴别信息和安全处理，目前没有独立、全面的双相障碍评估。",
+      "Mood assessment includes bipolar / mania differential information and safety handling. A standalone comprehensive Bipolar assessment is not available."
+    ]
+  ],
+  [
+    "ocdRelatedHelp",
+    [
+      "提供教育信息及强迫相关的鉴别背景，目前没有身体变形或囤积的专门完整评估。",
+      "Educational information and OCD-related differential context are available. Dedicated full assessments for body dysmorphia or hoarding are not available."
+    ]
+  ],
+  [
+    "adjustmentHelp",
+    [
+      "提供教育信息和专业评估方向。目前没有适应障碍或哀伤的完整评估。",
+      "Educational information and professional evaluation directions are available. Full Adjustment or Grief assessments are not available."
+    ]
+  ],
+  [
+    "autismHelp",
+    [
+      "提供教育信息，没有自闭症评估。症状导航可能识别这是当前完整评估范围之外的方向。",
+      "Educational information is available; an Autism assessment is not. Symptom navigation may recognize this as outside the current full assessment set."
+    ]
+  ],
+  [
+    "somaticHelp",
+    [
+      "提供教育信息及医疗评估背景，没有躯体症状障碍测试。",
+      "Educational information and medical evaluation context are available, without a Somatic Symptom Disorder test."
+    ]
+  ],
+  [
+    "sleepHelp",
+    [
+      "睡眠可作为鉴别和医疗背景信息，目前没有专门的睡眠障碍评估。",
+      "Sleep may inform differential and medical context. A dedicated Sleep Disorder assessment is not available."
+    ]
+  ],
+  [
+    "substanceHelp",
+    [
+      "提供教育和鉴别背景；中毒、过量或戒断问题使用共享安全路径。目前没有完整的物质使用障碍评估。",
+      "Educational and differential context is available; intoxication, overdose or withdrawal concerns use shared safety pathways. A full Substance Use Disorder assessment is not available."
+    ]
+  ],
+  [
+    "personalityHelp",
+    [
+      "提供教育信息及专业评估导航，没有人格障碍自我诊断工具。",
+      "Educational information and professional evaluation guidance are available, without a personality-disorder self-diagnosis tool."
+    ]
+  ],
+  [
+    "cognitiveHelp",
+    [
+      "认知变化需要医疗评估背景；急性意识混乱可能需要紧急医疗帮助。这不是普通的精神科自测。",
+      "Cognitive changes need medical evaluation context; acute confusion may need urgent medical help. This is not an ordinary psychiatric self-test."
+    ]
+  ],
+  [
+    "safetyCTA",
+    [
+      "查看紧急帮助",
+      "View urgent help"
     ]
   ]
 ]);
