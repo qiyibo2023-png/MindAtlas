@@ -84,3 +84,5 @@ every turn. See [architecture](ADAPTIVE-V1-ARCHITECTURE.md),
 all new clinical questions and selection policies require review.
 
 Assessment availability and the 18-topic / seven-domain capability map are documented in [ASSESSMENT-AVAILABILITY-V1.md](ASSESSMENT-AVAILABILITY-V1.md). The product registry is in src/capabilities/; it is not clinical evidence.
+
+Privacy and data governance: see [architecture and audit](PRIVACY-DATA-GOVERNANCE-V1.md). Current health processing remains in memory; personal persistence and future sharing capabilities are disabled.

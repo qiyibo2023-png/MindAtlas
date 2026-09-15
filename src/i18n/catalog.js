@@ -15586,3 +15586,125 @@ I18n.register("capability", [
     ]
   ]
 ]);
+
+I18n.register("privacy",[
+  [
+    "title",
+    [
+      "隐私与数据",
+      "Privacy & Data"
+    ]
+  ],
+  [
+    "current",
+    [
+      "本页说明产品当前的数据处理方式，不是法律建议。本原型在当前页面中处理评估信息，没有个人账户、云端档案或健康数据分析服务。",
+      "This page explains current product data practices; it is not legal advice. This prototype processes assessment information in the current page. It has no personal accounts, cloud profiles or health-data analytics service."
+    ]
+  ],
+  [
+    "sessionTitle",
+    [
+      "当前会话",
+      "Current session"
+    ]
+  ],
+  [
+    "session",
+    [
+      "评估回答、结构化症状线索、结果和安全信号在页面内存中处理。刷新页面或清除当前会话会重置这些应用状态。",
+      "Assessment answers, structured symptom evidence, results and safety signals are processed in page memory. Reloading or clearing the current session resets these application states."
+    ]
+  ],
+  [
+    "raw",
+    [
+      "输入中的原文暂时留在文本框中；提交后用于本地提取结构化线索，不建立长期原文记录。语言切换会保留尚未提交的草稿。",
+      "While you type, original text remains temporarily in the text box. Submission extracts structured evidence locally, without creating a long-term narrative record. Language switching preserves an unsubmitted draft."
+    ]
+  ],
+  [
+    "exportTitle",
+    [
+      "摘要与导出",
+      "Summaries & export"
+    ]
+  ],
+  [
+    "exportWarning",
+    [
+      "摘要、下载文件或打印内容可能包含敏感健康信息和安全信息，请谨慎保存或分享。已下载、复制或打印的内容不受本页面清除操作控制。",
+      "Summaries, downloads or printouts may contain sensitive health and safety information. Store or share them carefully. Downloaded, copied or printed content is outside this page’s clearing controls."
+    ]
+  ],
+  [
+    "exportScope",
+    [
+      "情绪和焦虑评估支持主动下载和打印摘要；其他摘要可在页面查看或手动复制。摘要可能包含已启用的跨领域比较。请先查看内容，本页面不会自动发送给医生。",
+      "Mood and Anxiety assessments support user-initiated summary downloads and printing; other summaries can be viewed or copied manually. A summary may include an enabled cross-domain comparison. Review its contents first; this page does not automatically send it to a clinician."
+    ]
+  ],
+  [
+    "futureTitle",
+    [
+      "未来的存储与同意",
+      "Future storage & consent"
+    ]
+  ],
+  [
+    "future",
+    [
+      "个人档案和长期追踪尚未启用。未来的存储、追踪、医生分享、研究和分析需要分别定义用途及同意；一次同意不会授权所有用途。",
+      "Personal profiles and longitudinal tracking are not enabled. Future storage, tracking, clinician sharing, research and analytics need separate purposes and consent; one consent does not authorize every use."
+    ]
+  ],
+  [
+    "limitsTitle",
+    [
+      "范围与限制",
+      "Scope & limitations"
+    ]
+  ],
+  [
+    "limits",
+    [
+      "本页面没有将回答发送到服务器的代码，也不把回答放入浏览器存储或网址。浏览器、设备扩展、截图、剪贴板、下载文件及外部链接网站仍由各自环境管理；清除不是设备级安全擦除或不存在的账户删除。",
+      "This page has no code that sends answers to a server or puts them in browser storage or URLs. The browser, device extensions, screenshots, clipboard, downloaded files and external websites remain controlled by their own environments. Clearing is not secure device erasure or deletion of an account that does not exist."
+    ]
+  ],
+  [
+    "clearTitle",
+    [
+      "清除当前会话数据",
+      "Clear current session data"
+    ]
+  ],
+  [
+    "clearScope",
+    [
+      "将重置七个评估模块、安全、症状导航、鉴别、后续提问及相关缓存。语言保留，地区选择重置；不会删除已有下载文件。",
+      "This resets all seven assessment modules, Safety, symptom routing, differential and adaptive questions, and related caches. Language is preserved; region choices reset. Existing downloaded files are not deleted."
+    ]
+  ],
+  [
+    "clearButton",
+    [
+      "清除当前会话",
+      "Clear current session"
+    ]
+  ],
+  [
+    "cleared",
+    [
+      "当前会话的应用状态已清除。",
+      "Current-session application state has been cleared."
+    ]
+  ],
+  [
+    "clearFailed",
+    [
+      "未能完整清除。请刷新页面以重置当前会话。",
+      "Clearing could not be completed. Reload the page to reset this session."
+    ]
+  ]
+]);
