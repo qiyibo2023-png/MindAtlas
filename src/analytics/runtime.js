@@ -1,10 +1,12 @@
 (function(A){'use strict';
 const EVENTS=new Set(['session_start','navigation','router_start','router_complete','assessment_start','assessment_complete','result_view','next_step_click','safety_interruption']);
-const META=new Set(['assessment','destination','route','clarifications','source','language','view']);
+const domains=['mood','screen','anxiety','ocd','trauma','adhd','eating','psychosis'];
+const views=[...domains,'home','library','assessments','care','evidence','router','safety','urgent','privacy','profile','differential','adaptive'];
+const allowed={assessment:domains,route:domains,destination:views,source:views,view:views,language:['en','zh','zh-CN']};
 A.buffer=[];A.enabled=true;
-A.sanitize=function(row){if(!row||!EVENTS.has(row.event))return null;const clean={event:row.event,at:row.at||new Date().toISOString()};for(const k of META)if(row[k]!==undefined&&['string','number','boolean'].includes(typeof row[k]))clean[k]=row[k];return clean;};
+A.sanitize=function(row){if(!row||!EVENTS.has(row.event))return null;const clean={event:row.event,at:new Date().toISOString()};for(const [key,values]of Object.entries(allowed))if(values.includes(row[key]))clean[key]=row[key];if(Number.isInteger(row.clarifications)&&row.clarifications>=0&&row.clarifications<=3)clean.clarifications=row.clarifications;return clean;};
 A.track=function(row){if(!A.enabled)return false;const clean=A.sanitize(row);if(!clean)return false;A.buffer.push(clean);if(A.buffer.length>200)A.buffer.shift();return true;};
 A.snapshot=()=>A.buffer.map(x=>({...x}));
 A.clear=()=>{A.buffer.length=0;};
-A.policy={networkUpload:false,healthAnswers:false,freeText:false,scores:false,safetyContent:false,identifiers:false};
+A.policy=Object.freeze({networkUpload:false,healthAnswers:false,freeText:false,scores:false,safetyContent:false,identifiers:false});
 })(globalThis.MindAtlasAnalytics=globalThis.MindAtlasAnalytics||{});
