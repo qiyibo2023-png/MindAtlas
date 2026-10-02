@@ -36,7 +36,13 @@
 - [ ] No unexplained regression failures
 
 ## Internal dogfooding
-Run complete Enter → Next Step flows for: low mood, generalized worry, harm-OCD intrusive thought, reduced-sleep/mania signal, ambiguous mixed symptoms, and an acute safety case.
+Run complete Enter → Next Step flows for:
+- Low mood: "最近什么都不想做，很累。" / "I have not wanted to do much lately and feel exhausted."
+- Generalized worry: "我一直担心很多事情，很难停下来。" / "I keep worrying about many things and cannot switch it off."
+- Harm-OCD boundary: "脑子里反复出现伤害别人的画面，但我不想伤害任何人。" / "I keep getting images of hurting someone, but I do not want to hurt anyone."
+- Mania signal: "最近只睡两小时也精力很多，花钱和开车都比平时冲动。" / "I sleep two hours and still feel full of energy; I have been spending and driving much more impulsively."
+- Ambiguous mixed symptoms: "我就是觉得不太对，睡不好，也很难集中。" / "I just feel off, sleep poorly, and cannot focus."
+- Acute safety: use the canonical synthetic suicide/medical cases in the safety matrix; do not use a real beta participant for edge-case probing.
 
 ## Human Private Beta
 Only after all release gates above pass: invite 10–20 ordinary users for usability testing. This phase evaluates comprehension, completion, navigation and trust—not diagnostic accuracy.
