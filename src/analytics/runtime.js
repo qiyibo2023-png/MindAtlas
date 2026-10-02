@@ -1,0 +1,10 @@
+(function(A){'use strict';
+const EVENTS=new Set(['session_start','navigation','router_start','router_complete','assessment_start','assessment_complete','result_view','next_step_click','safety_interruption']);
+const META=new Set(['assessment','destination','route','clarifications','source','language','view']);
+A.buffer=[];A.enabled=true;
+A.sanitize=function(row){if(!row||!EVENTS.has(row.event))return null;const clean={event:row.event,at:row.at||new Date().toISOString()};for(const k of META)if(row[k]!==undefined&&['string','number','boolean'].includes(typeof row[k]))clean[k]=row[k];return clean;};
+A.track=function(row){if(!A.enabled)return false;const clean=A.sanitize(row);if(!clean)return false;A.buffer.push(clean);if(A.buffer.length>200)A.buffer.shift();return true;};
+A.snapshot=()=>A.buffer.map(x=>({...x}));
+A.clear=()=>{A.buffer.length=0;};
+A.policy={networkUpload:false,healthAnswers:false,freeText:false,scores:false,safetyContent:false,identifiers:false};
+})(globalThis.MindAtlasAnalytics=globalThis.MindAtlasAnalytics||{});
