@@ -59,7 +59,7 @@ G.restoreUI=function(previous){
 function focusNext(){(document.querySelector('[data-global-answer]')||document.getElementById('global-safety-heading'))?.focus();}
 function entryError(input){input.setAttribute('aria-invalid','true');const el=document.getElementById('global-entry-error');if(el)el.textContent=T(...I18n.pair("platform.m_754d7e33bfba"));}
 G.bind=function(){
- document.querySelectorAll('[data-global-answer]').forEach(el=>el.onchange=()=>{G.answer(el.dataset.globalAnswer,el.value==='yes'?true:el.value==='no'?false:'unknown');render();});
+ document.querySelectorAll('[data-global-answer]').forEach(el=>el.onchange=()=>{const y=window.scrollY,id=el.id;G.answer(el.dataset.globalAnswer,el.value==='yes'?true:el.value==='no'?false:'unknown');render();document.getElementById(id)?.focus({preventScroll:true});window.scrollTo(0,y);});
  const reg=document.getElementById('global-region');if(reg)reg.onchange=()=>{G.store.region=reg.value;render();};
  const input=document.getElementById('global-description');if(input)input.oninput=()=>{input.removeAttribute('aria-invalid');document.getElementById('global-entry-error').textContent='';const parsed=G.validateExtraction(G.extract(input.value));const r=G.evaluate(parsed.signals,{failed:!parsed.valid});if(r.requiresInterruption){G.submitText(input.value);render();document.getElementById('global-safety-heading')?.focus();}};
  const form=document.getElementById('global-entry-form');if(form)form.onsubmit=e=>{e.preventDefault();if(!input.value.trim()){entryError(input);input.focus();return;}track('router_start',{source:view});if(globalThis.SymptomRouter)navigate(SymptomRouter.submit(input.value));else{G.submitText(input.value);navigate('safety');}};
