@@ -7,6 +7,8 @@ if(path==='course.chronic'&&value!=='yes'){delete s.course.years;delete s.course
 if(path==='stress.present'&&value==='no')s.stress={present:'no'};
 if(/^symptoms\.[^.]+\.present$/.test(path)&&value!=='yes')s.symptoms[keys[1]]={present:value};
 s.revision=(s.revision||0)+1;s.updatedAt=new Date().toISOString();return s;};
+
+M.seedSymptomsFromPHQ=function(){const map=['interest','mood','sleep','energy','appetite','worth','focus','motor','death'],freq={1:'some',2:'most',3:'daily'};let s=M.store.state;for(let i=0;i<9;i++){const v=s.phq?.[i];if(!['0','1','2','3'].includes(String(v)))continue;const id=map[i],present=Number(v)>0?'yes':'no';s=M.setAnswer(s,'symptoms.'+id+'.present',present);if(present==='yes')s=M.setAnswer(s,'symptoms.'+id+'.frequency',freq[Number(v)]);}M.store.state=s;M.store.result=null;};
 M.store={state:M.emptyState(),step:0,maxStep:0,returnStep:null,error:[],result:null,region:'other',revisionReviewed:null};
 M.update=function(path,value){M.store.state=M.setAnswer(M.store.state,path,value);M.store.result=null;M.store.revisionReviewed=null;};
 M.clear=function(){M.store.state=M.emptyState();M.store.step=0;M.store.maxStep=0;M.store.returnStep=null;M.store.error=[];M.store.result=null;M.store.revisionReviewed=null;};
