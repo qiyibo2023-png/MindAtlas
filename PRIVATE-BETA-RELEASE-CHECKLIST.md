@@ -48,3 +48,5 @@ Run complete Enter → Next Step flows for:
 Only after all release gates above pass: invite 10–20 ordinary users for usability testing. This phase evaluates comprehension, completion, navigation and trust—not diagnostic accuracy.
 
 Verification scope and remaining browser gates: see PRIVATE-BETA-QA-REPORT.md. Checked presentation items are automated markup checks, not visual browser approval.
+
+Synchronization follow-up: implementation commit `4940008161f00c81491d5927078368b5f89141ec` is verified on GitHub. Browser launch retry still returns `spawn EPERM`; all four browser QA combinations and keyboard/visual checks remain unchecked. See the QA report for the exact manual checklist. Do not merge or invite participants on the strength of automated results alone.

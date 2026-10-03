@@ -49,3 +49,19 @@ Full Enter → Safety → Router → Assessment → Result → Next Step dogfood
 Telemetry is an in-memory engineering buffer with no network uploader/provider. Allowed metadata remains finite, and raw answers, free text, scores and clinical summaries are excluded. Domain usage is still potentially sensitive; no production collection is approved. Service, analytics, research and model-training purposes remain separate under existing governance. No real health data was used in tests. Generated output, work logs and local environment files are excluded from the commit.
 
 Do not merge or invite participants yet. PR remains draft pending browser QA, full synthetic walkthroughs and launch-region resource verification. The target is engineering/usability readiness for a small Private Beta, not clinical validation or diagnostic accuracy. No new product phase, disorder, account, chatbot, longitudinal or Differential/Adaptive feature is introduced.
+
+## Synchronization and browser retry
+
+Validated implementation commit `4940008161f00c81491d5927078368b5f89141ec` was pushed to `origin/private-beta-readiness` and verified using remote refs. The Git credential-helper shell failure was avoided using the existing authenticated GitHub CLI credential in process-local Git configuration only; no credential file or global configuration change was made.
+
+The browser retry again failed before page load: `browserType.launch: spawn EPERM`, using Playwright `chromium.launch({channel:'msedge',headless:true,chromiumSandbox:true})`. No supported interactive browser/node_repl tool is exposed in this session. The four browser combinations remain NOT TESTED, not application failures.
+
+Manual work still required for **each** Desktop Chinese, Desktop English, Mobile Chinese and Mobile English combination:
+- Home → natural-language Router → Safety clarification → assessment → result → next-step navigation.
+- Synthetic acute Safety interruption and accessible emergency actions.
+- Language switching mid-assessment and on results without lost answers/position.
+- Viewport overflow, wrapping, touch targets, progress, details and dialogs.
+- Tab/Shift+Tab, visible focus, activation and focus return; console errors.
+- Complete the six synthetic dogfooding journeys; earlier smoke checks cover entry only.
+
+No implementation or automated expectation changed during this synchronization follow-up. Full automated tests were not rerun because the implementation is unchanged. PR #14 must remain Draft; launch-region resources also remain unverified. No merge was performed.
