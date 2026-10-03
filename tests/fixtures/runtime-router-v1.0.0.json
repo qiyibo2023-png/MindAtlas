@@ -17,7 +17,7 @@
   },
   {
     "path": "anxiety/ui.js",
-    "sha256": "9e82413dc6d54f95035e9f3a95f547545a0334a32473a9e5fb215b8f51c55c09"
+    "sha256": "56b3bb458e70df246b479a5f0da48e024fe92283cab08223572545036d964268"
   },
   {
     "path": "app.js",
@@ -73,7 +73,7 @@
   },
   {
     "path": "mood/ui.js",
-    "sha256": "ae1cb61fba8bc34cabd7286fb0bf2106cfb5a80121d751bc1149dddc06b5a5b6"
+    "sha256": "2eb5458ec128f1f9bb8a55c42ad7285744ef68ecf91333343a6bcd2b0c852783"
   },
   {
     "path": "ocd/data.js",
@@ -97,7 +97,7 @@
   },
   {
     "path": "ocd/ui.js",
-    "sha256": "17fab0de449b8a772cf1ae7c74e1a51b425ce55ca19611da9b5fb2d4eb46b5f5"
+    "sha256": "4d0e90e4aa889206f1c93ae07eeda73b74a6535fb2ef41b4f5a7f294ba8a98d0"
   },
   {
     "path": "router/engine.js",
@@ -169,7 +169,7 @@
   },
   {
     "path": "safety/ui.js",
-    "sha256": "19ba9cabd1b0bb542123d2b98267138624f62fdf305757154b857e66376889ee"
+    "sha256": "b53326dee212d6aee2dc7daea86fd56bfa1ca886d53335df8a25737cfd86bf3b"
   },
   {
     "path": "shared/core.js",
