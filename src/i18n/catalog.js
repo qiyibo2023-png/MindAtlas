@@ -2058,8 +2058,8 @@ I18n.register("platform", [
   [
     "m_3e30eb819723",
     [
-      "本模块面向成人，仅评估七个抑郁／情绪诊断方向。使用 AI 辅助编写的透明规则，在本机计算；没有 AI 医生对话、远程模型或临床验证。通常需要 15–25 分钟，可按自己的节奏完成。",
-      "This adult module considers seven depression / mood directions. Transparent, AI-assisted authored rules run locally; there is no AI clinician chat, remote model or clinical validation. Allow about 15–25 minutes and take your time."
+      "本模块面向成人，用于筛查和梳理情绪与抑郁相关症状，不提供正式诊断。评估在本机完成；你可以按自己的节奏作答。",
+      "This adult module screens and organizes mood- and depression-related symptoms; it does not provide a formal diagnosis. The assessment runs locally, and you can complete it at your own pace."
     ]
   ],
   [
@@ -4487,8 +4487,8 @@ I18n.register("platform", [
   [
     "m_892e4a2d0812",
     [
-      "在过去两个星期里，你有多经常受到以下问题困扰？全部九题回答后才计算总分；第 9 项会单独触发安全询问。",
-      "Over the last 2 weeks, how often have you been bothered by any of the following problems? The total is calculated only after all nine items are answered; item 9 separately triggers safety follow-up."
+      "在过去两个星期里，你有多经常受到以下问题困扰？请按真实情况回答；部分回答可能会显示额外的安全支持问题。",
+      "Over the last 2 weeks, how often have you been bothered by the following problems? Answer as accurately as you can; some responses may show additional safety-support questions."
     ]
   ],
   [
@@ -6153,8 +6153,8 @@ I18n.register("platform", [
   [
     "m_bec9f867c294",
     [
-      "AI 辅助抑郁与情绪障碍评估",
-      "AI-Assisted Depression / Mood Disorder Assessment"
+      "情绪与抑郁症状评估",
+      "Mood and Depression Symptom Assessment"
     ]
   ],
   [
