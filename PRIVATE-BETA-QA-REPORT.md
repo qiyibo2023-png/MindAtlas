@@ -1,67 +1,88 @@
 # Private Beta QA report
 
-Date: 2026-10-02 (America/Toronto). Inspected starting commit: `ef00e93` on `private-beta-readiness`; final remediation commit is the commit containing this report.
+Date: 2026-10-07 (America/Toronto)
+Branch: `private-beta-readiness`
 
-## Automated outcome
+## Automated engineering validation
 
-- `npm test`: PASS, 34 suites, 1,291 PASS-labelled checks plus the analytics contract assertions.
-- `npm run build`: PASS, including static assembly and 2,552-key centralized translation validation.
-- Router, Differential and Adaptive benchmark commands: PASS.
-- Entry scenario suite, Privacy static validator and isolated source rebuild: PASS.
-- Added 14 bilingual seven-domain result-shell/state-preservation checks and a consumer-home check.
-- Added analytics field-value injection, timestamp injection, clarification bounds, bounded memory and unsanitized event-bus rejection checks.
+- `npm run build`: PASS on the user's Windows host after the browser-QA remediation changes.
+- i18n validation: PASS, 2,556 complete bilingual keys at the observed build.
+- Static assembly: PASS, 130 runtime files built; 117 local assets verified; JavaScript parsed.
+- `npm test`: PASS on the user's Windows host after the Private Beta changes. Earlier full run recorded 34 suites / 1,291 PASS-labelled checks; subsequent remediation retained a passing full suite.
+- Safety regression suite: PASS. No Safety thresholds were intentionally loosened.
+- Analytics privacy contract: strict allowlist; network upload remains disabled.
 
-## Failures and remediation
+## Manual browser QA actually performed
 
-A — Real regressions: new inline bilingual copy blocked the build and therefore all tests. Moved copy to the existing catalog; removed two obsolete unreferenced copy entries without relaxing the validator.
+### Desktop + Chinese — PASS for tested golden-path scope
+Observed in a real browser:
+- Consumer-first Home renders without obvious overflow.
+- Natural-language low-mood persona enters Safety clarification and then Router.
+- Safety clarification conservatively asks unresolved structured questions.
+- Router clarification is bounded and usable.
+- Mood assessment opens and PHQ-9 renders correctly.
+- Mood title was changed from AI-first positioning to “情绪与抑郁症状评估”.
+- PHQ-9 safety wording was made more neutral.
+- PHQ-9 → depressive-symptom carry-forward was verified after remediation: prior presence/frequency answers display as read-only context rather than requiring duplicate selection.
 
-A — Module coupling: new UI instrumentation required application-level `track` and `PrivateBeta` globals in independently usable assessment modules. Optional analytics/presentation integration now preserves standalone module behavior; existing clinical assertions remain intact.
+Issues found and remediated during QA:
+1. Safety clarification redraw caused disruptive page movement — viewport/focus preservation added.
+2. Router fallback returned the user to a seven-domain choice despite a leading candidate — presentation now offers a reasonable first assessment while preserving diagnostic uncertainty and alternative choice.
+3. Mood assessment over-emphasized “AI-assisted” positioning — changed to consumer-facing symptom-assessment language.
+4. PHQ item-9 copy sounded mechanically trigger-oriented — replaced with neutral safety-support wording.
+5. Post-PHQ symptom collection duplicated information — PHQ presence/frequency is now carried forward and shown read-only.
 
-D — Privacy regression: allowlisted analytics keys accepted arbitrary values, caller timestamps and unsanitized DOM event payloads. Added finite value enums, internal timestamps, bounded clarification counts, removed DOM event dispatch, and preserved disabled network upload. Clear-session clears the telemetry buffer. Rendering/language changes no longer generate repeated completion events for the same assessment revision.
+### Desktop + English — PASS for smoke scope
+Observed:
+- Mood assessment renders in English without obvious overflow.
+- Chinese → English switching during an in-progress assessment preserves current step and PHQ-derived state.
+- PHQ carry-forward labels and values render in English.
+- No material Chinese UI copy was observed except the native month-input locale presentation.
 
-D — Product omission: the shared result component existed but was not connected to six assessments. Connected the consumer summary/next-step shell, with existing full clinical detail retained in expandable content. Scoring/Safety rules were not changed.
+### Mobile + Chinese — PASS for responsive assessment scope
+Observed at approximately 400px responsive viewport:
+- Step 3 cards fit the viewport.
+- Chinese text wraps correctly.
+- PHQ carry-forward cards stack correctly.
+- Month input remains within the card.
+- No material horizontal content overflow was observed in the inspected assessment screen.
 
-B — Intentional UI compatibility: Knowledge Library is no longer the default screen and Home adds a fifth navigation entry. Its test now explicitly navigates to Library and still asserts all 18 cards, 10 supported CTAs and semantic buttons. Navigation-source assertion allows instrumentation while retaining stable title/referrer checks. Four presentation-only runtime hashes were refreshed after review; clinical engine hashes and assertions remain unchanged.
+### Mobile + English — PASS for responsive assessment/state scope
+Observed at approximately 400px responsive viewport:
+- Long English symptom headings wrap.
+- Carry-forward cards remain within viewport.
+- Chinese → English switch preserves assessment state.
+- No material horizontal content overflow was observed in the inspected assessment screen.
 
-No C-class test defects were identified. No failing assertion was deleted, Safety threshold loosened, or psychometric score changed.
+Known P2: native `input type=month` placeholder follows browser/OS locale and may display Chinese year/month markers in the English UI. This is not an assessment-state or catalog error.
 
-## Safety and synthetic scenarios
+## Canada launch-region Safety resources — VERIFIED
 
-Existing Safety, contextual extraction, UX, clinical domain and bilingual tests pass. The Safety matrix remains an engineering regression matrix, not clinical validation. Clinical engine/rule files have no remediation diff. Launch-region resources have not been freshly verified.
+Manual source verification was performed against current Canadian official/public poison-centre information:
+- Emergency: 911
+- Suicide Crisis Helpline: call/text 988, 24/7
+- Poison-X outside Quebec: 1-844-764-7669
+- Quebec poison centre: 1-800-463-5060
 
-`node scripts/private-beta-personas.cjs` runs the six specified personas in both languages (12 entry smoke runs). Low mood, worry, harm-OCD, reduced sleep/impulsivity and mixed input reach Safety clarification without being treated as confirmed acute intent. The explicit suicide-intent/plan cases interrupt in both languages. These are engine/markup entry checks, NOT completed questionnaire/browser journeys. Mania/ambiguous extraction still requires clarification; no claim of automatic diagnosis or complete natural-language detection is made.
+The configured values match the verified launch-region resources. Resource verification is not clinical validation.
 
-## Browser and usability gates
+## Scope limitations / gates not claimed
 
-| Combination | Status |
-|---|---|
-| Desktop Chinese | UNVERIFIED |
-| Desktop English | UNVERIFIED |
-| Mobile Chinese | UNVERIFIED |
-| Mobile English | UNVERIFIED |
+The manual browser session did **not** fully execute all seven assessments end-to-end in all four language/device combinations. Automated tests cover the broader assessment engines; manual QA used representative golden/smoke paths to identify visual and workflow defects.
 
-Attempted supported Playwright Edge launch with `chromiumSandbox:true`; failed before page load with `browserType.launch: spawn EPERM`. No available node_repl/browser-control tool exposes an alternative supported interactive runtime. No sandbox protections were disabled. Prior host validation of Longitudinal Tracking is not evidence for this branch.
+The following are not fully manually verified and remain release-review items:
+- a complete Result → Next Step browser journey after the latest remediation;
+- manual acute-Safety browser walkthrough in both languages;
+- exhaustive keyboard/Shift+Tab/focus-return/dialog testing;
+- console-error inspection across every representative page;
+- complete browser journeys for all six synthetic personas.
 
-Full Enter → Safety → Router → Assessment → Result → Next Step dogfooding, mobile overflow/touch targets, dialogs, keyboard/focus behavior and visual hierarchy require actual browser validation. Approximate completion-time copy remains an estimate, not measured usability data.
+Therefore this report supports substantial Private Beta browser readiness but does not claim clinical validation, diagnostic accuracy, or exhaustive accessibility certification.
 
-## Privacy and limitations
+## Privacy
 
-Telemetry is an in-memory engineering buffer with no network uploader/provider. Allowed metadata remains finite, and raw answers, free text, scores and clinical summaries are excluded. Domain usage is still potentially sensitive; no production collection is approved. Service, analytics, research and model-training purposes remain separate under existing governance. No real health data was used in tests. Generated output, work logs and local environment files are excluded from the commit.
+Analytics remains an in-memory engineering buffer with no network uploader/provider. Raw answers, free text, scores, safety content and identifiers are excluded by the analytics contract. Service, analytics, research and model-training purposes remain conceptually separate.
 
-Do not merge or invite participants yet. PR remains draft pending browser QA, full synthetic walkthroughs and launch-region resource verification. The target is engineering/usability readiness for a small Private Beta, not clinical validation or diagnostic accuracy. No new product phase, disorder, account, chatbot, longitudinal or Differential/Adaptive feature is introduced.
+## Current recommendation
 
-## Synchronization and browser retry
-
-Validated implementation commit `4940008161f00c81491d5927078368b5f89141ec` was pushed to `origin/private-beta-readiness` and verified using remote refs. The Git credential-helper shell failure was avoided using the existing authenticated GitHub CLI credential in process-local Git configuration only; no credential file or global configuration change was made.
-
-The browser retry again failed before page load: `browserType.launch: spawn EPERM`, using Playwright `chromium.launch({channel:'msedge',headless:true,chromiumSandbox:true})`. No supported interactive browser/node_repl tool is exposed in this session. The four browser combinations remain NOT TESTED, not application failures.
-
-Manual work still required for **each** Desktop Chinese, Desktop English, Mobile Chinese and Mobile English combination:
-- Home → natural-language Router → Safety clarification → assessment → result → next-step navigation.
-- Synthetic acute Safety interruption and accessible emergency actions.
-- Language switching mid-assessment and on results without lost answers/position.
-- Viewport overflow, wrapping, touch targets, progress, details and dialogs.
-- Tab/Shift+Tab, visible focus, activation and focus return; console errors.
-- Complete the six synthetic dogfooding journeys; earlier smoke checks cover entry only.
-
-No implementation or automated expectation changed during this synchronization follow-up. Full automated tests were not rerun because the implementation is unchanged. PR #14 must remain Draft; launch-region resources also remain unverified. No merge was performed.
+Automated build/tests and the representative desktop/mobile bilingual browser checks pass. Remaining unverified items above should be treated as final release-review gates. Do not describe MindAtlas as clinically validated or diagnostically accurate.
