@@ -42,7 +42,8 @@ M.phqItems=[
 [...I18n.pair("platform.m_22043e8db460")]
 ];
 M.phqOptions=[['0',...I18n.pair("platform.m_bdbac8ed9aac")],['1',...I18n.pair("platform.m_55609ef6aca1")],['2',...I18n.pair("platform.m_f2253fe0183b")],['3',...I18n.pair("platform.m_a3408827ad91")]];
-M.phqDomainMap=['interest','mood','sleep','energy','appetite','worth','focus','motor','death'];
+M.phqDomainMap=Object.freeze(['interest','mood','sleep','energy','appetite','worth','focus','motor','death']);
+M.phqForDomain=(state,domain)=>{const index=M.phqDomainMap.indexOf(domain),value=state.phq?.[index];return ['0','1','2','3'].includes(value)?value:undefined;};
 M.symptomDomains=[['mood',...I18n.pair("platform.m_e0b02f193403")],['interest',...I18n.pair("platform.m_d42a9a1fbc16")],['appetite',...I18n.pair("platform.m_3651d91b42b7")],['sleep',...I18n.pair("platform.m_08984357af4c")],['motor',...I18n.pair("platform.m_14c34b8afa45")],['energy',...I18n.pair("platform.m_56f36b85a066")],['worth',...I18n.pair("platform.m_e635544e9b25")],['focus',...I18n.pair("platform.m_0b5ccc34b8b3")],['death',...I18n.pair("platform.m_ba4513667821")]];
 M.functionalDomains=[['school',...I18n.pair("platform.m_4eca30c6e702")],['work',...I18n.pair("platform.m_a088bca1bc36")],['relationships',...I18n.pair("platform.m_f343b22e7d88")],['social',...I18n.pair("platform.m_7568a521e151")],['selfcare',...I18n.pair("platform.m_e86b509070d9")],['household',...I18n.pair("platform.m_5c754c849160")],['sleep',...I18n.pair("platform.m_886368d96142")],['concentration',...I18n.pair("platform.m_8b492eb89a5d")],['decisions',...I18n.pair("platform.m_beba2588f02a")],['daily',...I18n.pair("platform.m_cc14de2022ab")]];
 M.maniaFeatures=[['elevated',...I18n.pair("platform.m_e3c99d1af6cb")],['irritable',...I18n.pair("platform.m_b18346c72c86")],['energy',...I18n.pair("platform.m_277127e75fc0")],['activity',...I18n.pair("platform.m_f5caf3d3925c")],['sleep',...I18n.pair("platform.m_4ee147b5904b")],['speech',...I18n.pair("platform.m_81b1d661c721")],['racing',...I18n.pair("platform.m_58062e2eb317")],['distracted',...I18n.pair("platform.m_8c156dec8afb")],['grandiose',...I18n.pair("platform.m_80685cb2b910")],['spending',...I18n.pair("platform.m_313290161304")],['sexual',...I18n.pair("platform.m_57bd4edff328")],['driving',...I18n.pair("platform.m_7f22587bf4b0")],['otherRisk',...I18n.pair("platform.m_78343f492463")]];
@@ -69,5 +70,21 @@ M.resources=[
 ];
 M.get=(obj,path)=>path.split('.').reduce((v,k)=>v?.[k],obj);
 M.visible=(q,s)=>{if(q.id.startsWith('substance.')&&q.id!=='substance.screen'&&s.substance?.screen!=='yes')return false;return !q.when||(q.when.not!==undefined?M.get(s,q.when.id)!==undefined&&M.get(s,q.when.id)!==q.when.not:M.get(s,q.when.id)===q.when.value);};
+// Explicit broad screens reduce detail only; unknown remains unresolved.
+M.sections[6].questions.unshift(q('medical.screen',...I18n.pair('ux2.medicalScreen')));
+M.sections[7].questions.splice(1,0,q('substance.medication',...I18n.pair('ux2.medication')),q('substance.other',...I18n.pair('ux2.otherExposure')));
+const baseVisible=M.visible;
+M.visible=function(q,s){const id=q.id;
+ if(id.startsWith('medical.')&&id!=='medical.screen'&&s.medical?.screen!==undefined){if(['no',''].includes(s.medical.screen))return false;if(s.medical.screen==='unknown')return id==='medical.evaluation';}
+ if(id.startsWith('substance.')&&id!=='substance.screen'){
+  if(s.substance?.screen!=='yes')return false;
+  if(['substance.medication','substance.other'].includes(id))return true;
+  if(id.startsWith('substance.exposures.')){const med=['start','stop','dose','steroid','stimulant','sedative'].includes(id.split('.')[2]);const gate=s.substance[med?'medication':'other'];if(gate!==undefined)return gate==='yes';}
+ }
+ if(id.startsWith('stress.')&&id!=='stress.present'&&s.stress?.present!=='yes')return false;
+ if(id.startsWith('mania.')&&!['mania.period','mania.pastMania'].includes(id)&&s.mania?.period!=='yes')return false;
+ return baseVisible(q,s);
+};
+M.symptomQuestions=(state,domain)=>M.sections[2].questions.filter(q=>{if(!q.id.startsWith('symptoms.'+domain+'.'))return false;const value=M.phqForDomain(state,domain),field=q.id.split('.')[2];if(value===undefined)return M.visible(q,state);return Number(value)>0&&!['present','frequency'].includes(field)&&M.visible(q,state);});
 M.questions=M.sections.flatMap(s=>s.questions);
 })(globalThis.Mood=globalThis.Mood||{});

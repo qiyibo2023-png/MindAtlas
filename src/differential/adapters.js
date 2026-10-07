@@ -23,8 +23,8 @@ D.adapt=function(name,store,module){
   push('mood.activation',activation,[...maniaPaths,...features.map(f=>'mania.features.'+f)],'structured_assessment','history');
   push('mood.bipolarKnown',historyKnown?true:activation===true?false:'unknown',maniaPaths,'exclusion','history');
   push('mood.chronic',D.all([D.truth(s.course?.chronic),duration(s.course?.years,['2plus'],['under1','1to2']),duration(s.course?.remission,['under2'],['over2'])]),['course.chronic','course.years','course.remission'],'duration');
-  group('mood.medical',[...Mood.questions.filter(q=>q.id.startsWith('medical.conditions.')).map(q=>q.id),'medical.temporal'],'exclusion');
-  push('mood.substance',duration(s.substance?.temporal,['start','stop','dose','increase','reduce'],['none']),['substance.temporal'],'exclusion');yn('mood.stressor','stress.present','exclusion');
+  if(s.medical?.screen==='no'&&!Mood.questions.filter(q=>q.id.startsWith('medical.')&&q.id!=='medical.screen').some(q=>['yes','unknown'].includes(get(s,q.id))))push('mood.medical',false,['medical.screen'],'exclusion');else group('mood.medical',[...Mood.questions.filter(q=>q.id.startsWith('medical.conditions.')).map(q=>q.id),'medical.temporal'],'exclusion');
+  push('mood.substance',s.substance?.screen==='no'&&s.substance?.temporal===undefined?false:duration(s.substance?.temporal,['start','stop','dose','increase','reduce'],['none']),[...(s.substance?.screen!==undefined?['substance.screen']:[]),...(s.substance?.temporal!==undefined?['substance.temporal']:[])],'exclusion');yn('mood.stressor','stress.present','exclusion');
   push('screen.mood',r.phq?.complete?r.phq.total>=10:'unknown',Array.from({length:9},(_,i)=>'phq.'+i),'standardized_screener');
  }
  if(name==='anxiety'){

@@ -86,3 +86,41 @@ Analytics remains an in-memory engineering buffer with no network uploader/provi
 ## Current recommendation
 
 Automated build/tests and the representative desktop/mobile bilingual browser checks pass. Remaining unverified items above should be treated as final release-review gates. Do not describe MindAtlas as clinically validated or diagnostically accurate.
+
+## Assessment UX Optimization v2 — 2026-10-07
+
+This follow-up starts from remote `9f3202b79656cdb617f19189ee935b2ca2e06549`, preserving its partial remediation. Engineering checks below apply to this change; earlier host observations above do not validate these new workflows.
+
+### Defects, causes and changes
+- Safety clarification: negative answers no longer redraw the form; a cached batch keeps question order stable through language changes and retains selected answers. Continue explicitly reevaluates the batch. Acute answers still interrupt immediately. Empty completed batches cannot suppress later clarification.
+- Accidental Safety selection: a transient recovery controller identifies the original structured response and assessment step. A secondary review control edits that response through the original module update path. It neither clears other Safety evidence nor overrides the engine. Resume requires an assessed, non-interrupting result with no unresolved critical signals. Existing assessment answers and Router state are retained. Raw narrative editing is not added; correction is available only when the original structured response is identifiable.
+- Mood Step 3: the renderer and validator now share one visible-question selector and the frozen nine-item PHQ-to-domain mapping. PHQ edits refresh carried presence/frequency and remove stale domain follow-ups; optional onset remains optional. The actual Continue handler advances Step 3 to Step 4 in both languages. PHQ-9 scoring is unchanged.
+- Conditional Mood history: explicit broad medical and medication/substance questions control detailed history; mania, chronic-course and stress gates clear stale dependent answers. Yes, No, Unknown and not asked remain distinct. Unknown stays unresolved rather than becoming No. Past mania and direct Safety questions remain available. These prototype branching decisions require clinician review.
+- Downstream integration: Differential's existing input adapter now recognizes an explicit negative broad gate instead of treating skipped detail as missing. Explicit unknown detail is retained. No Differential rules/ranking changes were made.
+
+### Validation
+- `npm test`: PASS, 35 test files / 1,317 PASS-labelled checks, including 25 new UX checks. These counts are engineering assertions, not independent clinical cases.
+- New checks: nine PHQ mappings, positive/negative follow-ups, optional onset, five gate state/cleanup cases, exposure categories, original-response recovery in ZH/EN, independent acute evidence, unknown/failure blocking, stable clarification, actual Step 3 Continue in ZH/EN, batch reevaluation and subsequent concerns.
+- Existing Safety: PASS (56 core, 30 UX, routing integration and 10 extraction checks). Privacy: PASS (46 policy + 60 completion checks and analytics allowlist). Bilingual suite: 39 checks PASS.
+- Router benchmark: 226/226 primary, clarification and status; 113/113 bilingual pairs; zero errors.
+- Differential benchmark: 264/264 primary/status/Safety priority; zero errors.
+- Adaptive benchmark: 314/314 next-question/stop decisions; 183/183 bilingual pairs; zero errors.
+- `npm run build`: PASS; 2,566 complete bilingual keys, 131 generated runtime files, 118 referenced local assets.
+- Source-independent rebuild: PASS; source and build scripts reproduce runtime bytes without an existing dist.
+- Prior test assertions retained. One newly upstream-added cross-VM empty-array comparison uses an array spread so strict comparison tests its contents correctly. Runtime hash fixture refreshed only for intentionally edited Mood data/state/scoring/engine/UI and Safety UI; Safety core, extraction, resources, Router rules and other assessment hashes remain unchanged.
+
+### Browser QA for this update
+Playwright attempted Microsoft Edge launch and failed before a page opened: `browserType.launch: spawn EPERM`. No browser/node_repl automation tool is exposed in this execution environment. VM handler tests are not browser QA.
+
+| Current UX v2 browser scope | Chinese | English |
+| --- | --- | --- |
+| Desktop | NOT TESTED | NOT TESTED |
+| Mobile (390 x 844) | NOT TESTED | NOT TESTED |
+
+Manual release gates: Home → Router → Assessment → Result → Next Step; stable clarification and visible selected values; accidental trigger correction and restored step; genuine acute interruption; PHQ Step 3 → 4; gate editing; language switching; no unexpected state loss; keyboard/focus, touch targets, wrapping/overflow and console errors. Keep PR #14 Draft pending these checks. No clinical validation or diagnostic accuracy is claimed.
+
+### Files and boundaries
+Runtime: `src/safety/ui.js`, new `src/safety/ux-recovery.js`, `src/index.html`, `src/mood/{data,state,scoring,engine,ui}.js`, `src/differential/adapters.js`, `src/i18n/catalog.js`.
+Tests/build registration: new `tests/assessment-ux-v2.test.cjs`, `tests/mood.test.cjs`, `tests/fixtures/runtime-router-v1.0.0.json`, `scripts/test-all.cjs`.
+Documentation: this report and `PRIVATE-BETA-RELEASE-CHECKLIST.md`.
+No new storage, external analytics, disorders or account features. Generated dist, ignored work logs/debug scripts and synthetic test output are excluded from the commit. New recovery state contains response identifiers/step only, not duplicate raw narratives. Clinical review of branching and manual browser release gates remain outstanding.

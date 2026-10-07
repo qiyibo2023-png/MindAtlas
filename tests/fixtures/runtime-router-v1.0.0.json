@@ -45,11 +45,11 @@
   },
   {
     "path": "mood/data.js",
-    "sha256": "d92db2f25648d867d828a353f58bf7d5658dc335732186b3989050912b287f86"
+    "sha256": "e4f55f9af59261cef3e4be40a9c744993fa1d658104f302415486724de8e44f2"
   },
   {
     "path": "mood/engine.js",
-    "sha256": "53efcdad170928ad15198a1ecc7b5c03bc74300d07e66956bb1400882e172f3b"
+    "sha256": "7b820bf204145ddadfa1220eea57ca228ad73bcba1131fcb7f48d66a1e7f92d7"
   },
   {
     "path": "mood/mood.css",
@@ -61,11 +61,11 @@
   },
   {
     "path": "mood/scoring.js",
-    "sha256": "89d307d5838ca224111fa6abb6eba08b595e1259db986e64c148d86eafb2e11d"
+    "sha256": "fe80ed27aa5229bbc6275cc8ce284f449c2af192feaeb3c535c0b220563eaec1"
   },
   {
     "path": "mood/state.js",
-    "sha256": "7ef2eb4e01be382dab9ff074a8f03ea81875603359548c88026388edffbcd00f"
+    "sha256": "2967c97d14d8592d5543028f3af27a802d1f641700c3917c69610ba18b1264f6"
   },
   {
     "path": "mood/summary.js",
@@ -73,7 +73,7 @@
   },
   {
     "path": "mood/ui.js",
-    "sha256": "2eb5458ec128f1f9bb8a55c42ad7285744ef68ecf91333343a6bcd2b0c852783"
+    "sha256": "39fb693f20c4c7cc7f63836f676a92fa3d0d0987a24b71f6b381980fc4f79419"
   },
   {
     "path": "ocd/data.js",
@@ -169,7 +169,7 @@
   },
   {
     "path": "safety/ui.js",
-    "sha256": "b53326dee212d6aee2dc7daea86fd56bfa1ca886d53335df8a25737cfd86bf3b"
+    "sha256": "abbe91ea269ecf537f0b6c8c5069078471cf915b8ee016f3289538fd104db7f2"
   },
   {
     "path": "shared/core.js",

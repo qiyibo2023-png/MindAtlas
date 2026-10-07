@@ -41,3 +41,22 @@ Automated/synthetic persona coverage exists for low mood, generalized worry, har
 
 ## Human Private Beta
 Do not claim clinical validation or diagnostic accuracy. Before inviting 10–20 ordinary users, close the remaining unchecked release-review gates above or explicitly accept/document them as non-blocking with rationale.
+
+## Assessment UX Optimization v2 follow-up — 2026-10-07
+- [x] Latest remote partial remediation retained before editing
+- [x] Stable Safety clarification batch and selected values; Continue reevaluates
+- [x] Original structured-response correction preserves progress without acute bypass
+- [x] Mood PHQ mapping, visible validation and Step 3 → 4 handler tests in ZH/EN
+- [x] Conditional history distinguishes explicit No, Unknown and not asked
+- [x] Full regression: 35 files / 1,317 PASS-labelled checks; 25 new UX checks
+- [x] Existing Safety, privacy and bilingual regression suites pass
+- [x] Router, Differential and Adaptive benchmarks: zero errors
+- [x] Build, 2,566-key i18n validation and source-independent rebuild pass
+- [ ] Current UX v2 Desktop Chinese real-browser walkthrough
+- [ ] Current UX v2 Desktop English real-browser walkthrough
+- [ ] Current UX v2 Mobile Chinese real-browser walkthrough at 390 x 844
+- [ ] Current UX v2 Mobile English real-browser walkthrough at 390 x 844
+- [ ] Current UX v2 acute interruption, correction, keyboard/focus, touch targets, overflow and console review
+- [ ] Clinician review of conditional-history branching
+
+Current browser launch failed with `spawn EPERM`; these unchecked items are NOT TESTED, not PASS. Earlier host QA above has narrower historical scope. Keep PR #14 Draft; do not merge or claim release acceptance from engineering tests alone.
