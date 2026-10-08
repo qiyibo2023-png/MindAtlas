@@ -75,3 +75,18 @@ Current browser launch failed with `spawn EPERM`; these unchecked items are NOT 
 - [ ] Mobile Chinese/English results at 390×844, touch targets, wrapping and overflow review
 
 This audit is engineering evidence only. Original case item-level data was not supplied. Current browser launch is blocked by `spawn EPERM`; the new visual/accessibility checks remain NOT TESTED. PR #14 remains Draft; prior release blockers remain in force.
+
+## Final Safety consistency / clinical boundary remediation — 2026-10-07
+- [x] Reproduced local snapshot versus live merged status and genuine unknown completion
+- [x] One authoritative Global Safety presentation across Mood/results/summary
+- [x] Acute and technical failure block normal Mood results
+- [x] Incomplete results explain actual pending questions; no Unknown → No conversion
+- [x] Shared clarification and original-response recovery preserve step/answers and other risk
+- [x] Exploratory qualification labeled unvalidated; technical comparisons collapsed
+- [x] Scoring, qualification and Safety thresholds unchanged
+- [x] 15 new behavioral checks; full suite 37 files / 1,349 PASS-labelled checks
+- [x] Build, 2,598-key translation validation and source-independent rebuild pass
+- [ ] Bilingual desktop/mobile Results ↔ Safety browser walkthrough, keyboard/focus/overflow and console review
+- [ ] Independent clinical review of exploratory rules and consumer wording
+
+Browser launch remains blocked (`spawn EPERM`); new browser QA is NOT TESTED. Keep PR #14 Draft; passing engineering checks is not clinical validation or permission to merge.

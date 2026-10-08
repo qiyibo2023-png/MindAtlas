@@ -54,3 +54,29 @@ Sources checked on the audit date through indexed source text; direct page fetch
 The full suite includes existing Mood episode/duration/change/frequency tests. Summary/control harnesses now load the new presentation dependency; no assertions were removed or weakened. Only the intentionally edited Mood UI entry in the runtime hash fixture was refreshed. Clinical/scoring hashes remain untouched.
 
 See `PRIVATE-BETA-QA-REPORT.md` and `PRIVATE-BETA-RELEASE-CHECKLIST.md` for final validation and remaining release gates. Browser checks are not inferred from VM rendering tests.
+
+## Safety consistency and clinical boundary follow-up — 2026-10-07
+
+Baseline: `8bb3f3a2f02faa96adb812ded46aca71089efa03`. The clinical qualification and PHQ-9 predicates remain byte-identical to that baseline.
+
+### Reproduced presentation discrepancy
+
+Mood's `r.safety` is a module-context snapshot. `GlobalSafety.current()` merges current facts from every active assessment and shared safety answers. They can differ legitimately: a complete Mood questionnaire still leaves some global critical fields unknown; conversely another assessment may have answered those fields. A cached Mood result can also predate later clarification. Rendering the snapshot's generic incomplete warning inside Results while the entry guard used live global status created conflicting presentation. Completion was never proof of safety clearance. The original host session is unavailable; these causes were reproduced with synthetic states, not assumed from its screenshot text.
+
+### Authoritative presentation contract
+
+The global engine remains the only authority for current urgency, assessment status and interruption. Module snapshots remain available for assessment provenance but no longer drive the live Mood result Safety message. A new presentation/return-flow module reads the existing global result; it neither merges alternative evidence nor reclassifies risk.
+
+- Acute: global interruption replaces ordinary Mood UI and result navigation, including direct Mood rendering.
+- Unable to assess: processing failure replaces ordinary results with the existing fail-safe panel.
+- Elevated: retain prompt-support guidance; incomplete status, if also present, remains explicit with unanswered questions.
+- Incomplete: show a prominent result-level explanation and the actual critical/follow-up questions still unresolved. Completion does not silently turn unknowns into negatives.
+- Assessed, non-acute: explain that current available information does not trigger acute interruption, without guaranteeing safety. Attention findings remain visible when applicable.
+- Clarification: the existing global question UI reevaluates shared evidence. A temporary return target/step restores Mood progress only once status is assessed and non-interrupting. If a new acute answer occurs during clarification, the original-response correction path retains all other risks before permitting return. Pending critical questions are still offered when an elevated rule has no domain-specific follow-up.
+- Displayed/exported Mood summaries can receive the same live global snapshot. Stored assessment results are not retroactively mutated or relabeled as clinically cleared.
+
+### Clinical boundary
+
+The consumer heading no longer presents the exploratory leading disorder name as the result headline. Detailed rule comparisons remain accessible in a closed-by-default section labeled as neither diagnosis nor clinical triage. Both languages explicitly call the qualified count exploratory and not clinically validated. Consumer urgency/support guidance comes from Global Safety; otherwise the next step is general professional discussion based on needs, not standalone custom-rule triage. All qualification, scoring, Safety thresholds and routing rules are unchanged. Independent clinical review of the predicate differences described above is still required.
+
+New behavioral tests cover genuine unresolved completion, stale/fresh local-versus-global evidence, resolved status in both languages, independent other-module acute priority, failed processing, elevated unresolved status, actual clarification Continue, correction with independent risk, saved-step restoration, summary consistency and unchanged scoring/qualification. Browser launch remains blocked by `spawn EPERM`; these tests are not clinical or real-browser validation.
