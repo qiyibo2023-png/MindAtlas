@@ -1755,13 +1755,6 @@ I18n.register("platform", [
     ]
   ],
   [
-    "m_3492324455d8",
-    [
-      "MindAtlas 会先检查是否有紧急安全或身体健康问题，再继续选择适合的评估方向。",
-      "MindAtlas first checks for urgent safety or medical concerns, before you choose an appropriate assessment direction."
-    ]
-  ],
-  [
     "m_349b4e6debf6",
     [
       "担忧或行为改变持续约一个月",
@@ -2065,8 +2058,8 @@ I18n.register("platform", [
   [
     "m_3e30eb819723",
     [
-      "本模块面向成人，仅评估七个抑郁／情绪诊断方向。使用 AI 辅助编写的透明规则，在本机计算；没有 AI 医生对话、远程模型或临床验证。通常需要 15–25 分钟，可按自己的节奏完成。",
-      "This adult module considers seven depression / mood directions. Transparent, AI-assisted authored rules run locally; there is no AI clinician chat, remote model or clinical validation. Allow about 15–25 minutes and take your time."
+      "本模块面向成人，用于筛查和梳理情绪与抑郁相关症状，不提供正式诊断。评估在本机完成；你可以按自己的节奏作答。",
+      "This adult module screens and organizes mood- and depression-related symptoms; it does not provide a formal diagnosis. The assessment runs locally, and you can complete it at your own pace."
     ]
   ],
   [
@@ -4494,8 +4487,8 @@ I18n.register("platform", [
   [
     "m_892e4a2d0812",
     [
-      "在过去两个星期里，你有多经常受到以下问题困扰？全部九题回答后才计算总分；第 9 项会单独触发安全询问。",
-      "Over the last 2 weeks, how often have you been bothered by any of the following problems? The total is calculated only after all nine items are answered; item 9 separately triggers safety follow-up."
+      "在过去两个星期里，你有多经常受到以下问题困扰？请按真实情况回答；部分回答可能会显示额外的安全支持问题。",
+      "Over the last 2 weeks, how often have you been bothered by the following problems? Answer as accurately as you can; some responses may show additional safety-support questions."
     ]
   ],
   [
@@ -5794,13 +5787,6 @@ I18n.register("platform", [
     ]
   ],
   [
-    "m_b41b3d455a55",
-    [
-      "先说说你正在经历什么",
-      "Start with what you are experiencing"
-    ]
-  ],
-  [
     "m_b5223f440ba9",
     [
       "一点也不困难",
@@ -6167,8 +6153,8 @@ I18n.register("platform", [
   [
     "m_bec9f867c294",
     [
-      "AI 辅助抑郁与情绪障碍评估",
-      "AI-Assisted Depression / Mood Disorder Assessment"
+      "情绪与抑郁症状评估",
+      "Mood and Depression Symptom Assessment"
     ]
   ],
   [
@@ -16597,3 +16583,279 @@ I18n.register("profile",[
     ]
   ]
 ]);
+
+I18n.register("beta",[
+  [
+    "copy1",
+    [
+      "心知 · 心理健康导航",
+      "MindAtlas · Mental-health navigation"
+    ]
+  ],
+  [
+    "copy2",
+    [
+      "最近感觉不太对，但不知道从哪里开始？",
+      "Something feels off, but you are not sure where to start?"
+    ]
+  ],
+  [
+    "copy3",
+    [
+      "你不需要先知道自己该做哪一种测试。告诉我们你最近在经历什么，MindAtlas 会先检查安全风险，再帮助你找到合适的评估方向。",
+      "You do not need to know which assessment to take. Tell us what you have been experiencing; MindAtlas will check for urgent safety concerns first, then help you find an appropriate assessment direction."
+    ]
+  ],
+  [
+    "copy4",
+    [
+      "帮我找到方向",
+      "Help me find a direction"
+    ]
+  ],
+  [
+    "copy5",
+    [
+      "我知道自己想评估什么",
+      "I know what I want to assess"
+    ]
+  ],
+  [
+    "copy6",
+    [
+      "MindAtlas 提供筛查与导航，不提供临床诊断。",
+      "MindAtlas provides screening and navigation, not a clinical diagnosis."
+    ]
+  ],
+  [
+    "copy7",
+    [
+      "描述近况",
+      "Tell us what is happening"
+    ]
+  ],
+  [
+    "copy8",
+    [
+      "安全检查与分流",
+      "Safety check & routing"
+    ]
+  ],
+  [
+    "copy9",
+    [
+      "完成合适的评估",
+      "Complete an assessment"
+    ]
+  ],
+  [
+    "copy10",
+    [
+      "理解结果与下一步",
+      "Understand results & next steps"
+    ]
+  ],
+  [
+    "copy11",
+    [
+      "只是想先了解一下？",
+      "Just want to learn first?"
+    ]
+  ],
+  [
+    "copy12",
+    [
+      "浏览心理健康知识库，不需要填写任何健康信息。",
+      "Browse the mental-health knowledge library without entering health information."
+    ]
+  ],
+  [
+    "copy13",
+    [
+      "浏览知识库",
+      "Browse knowledge"
+    ]
+  ],
+  [
+    "copy14",
+    [
+      "首页",
+      "Start"
+    ]
+  ],
+  [
+    "copy15",
+    [
+      "这是一项筛查与导航评估",
+      "This is a screening and navigation assessment"
+    ]
+  ],
+  [
+    "copy16",
+    [
+      "不是临床诊断",
+      "Not a clinical diagnosis"
+    ]
+  ],
+  [
+    "copy17",
+    [
+      "预计",
+      "About"
+    ]
+  ],
+  [
+    "copy18",
+    [
+      "你的筛查结果",
+      "YOUR SCREENING RESULT"
+    ]
+  ],
+  [
+    "copy19",
+    [
+      "目前信息不足",
+      "Not enough information yet"
+    ]
+  ],
+  [
+    "copy20",
+    [
+      "大致程度",
+      "Approximate level"
+    ]
+  ],
+  [
+    "copy21",
+    [
+      "需要结合详细结果理解",
+      "See detailed result"
+    ]
+  ],
+  [
+    "copy22",
+    [
+      "这意味着什么",
+      "What this means"
+    ]
+  ],
+  [
+    "copy23",
+    [
+      "这些回答显示了当前值得进一步了解的模式，可以帮助你决定接下来观察什么或与专业人员讨论什么。",
+      "Your answers show a pattern worth exploring further and can help guide what to monitor or discuss with a professional."
+    ]
+  ],
+  [
+    "copy24",
+    [
+      "这不意味着什么",
+      "What this does not mean"
+    ]
+  ],
+  [
+    "copy25",
+    [
+      "本结果不能单独确认或排除任何精神健康状况，也不能替代合格专业人员的评估。",
+      "This result cannot by itself confirm or rule out a mental-health condition and does not replace assessment by a qualified professional."
+    ]
+  ],
+  [
+    "copy26",
+    [
+      "下一步",
+      "NEXT STEP"
+    ]
+  ],
+  [
+    "copy27",
+    [
+      "如果这些体验持续、加重或影响日常生活，可以考虑与合格的医疗或心理健康专业人员讨论。",
+      "If these experiences persist, worsen, or affect daily life, consider discussing them with a qualified health or mental-health professional."
+    ]
+  ],
+  [
+    "copy28",
+    [
+      "查看下一步选择",
+      "See next-step options"
+    ]
+  ],
+  [
+    "copy29",
+    [
+      "查看其他评估",
+      "Explore other assessments"
+    ]
+  ],
+  [
+    "copy30",
+    [
+      "查看详细评估",
+      "See detailed assessment"
+    ]
+  ],
+  [
+    "copy31",
+    [
+      "情绪",
+      "Mood"
+    ]
+  ],
+  [
+    "copy32",
+    [
+      "焦虑",
+      "Anxiety"
+    ]
+  ],
+  [
+    "copy33",
+    [
+      "强迫相关体验",
+      "OCD-related experiences"
+    ]
+  ],
+  [
+    "copy34",
+    [
+      "创伤相关体验",
+      "Trauma-related experiences"
+    ]
+  ],
+  [
+    "copy35",
+    [
+      "注意力与冲动/活动水平",
+      "Attention and activity/impulsivity"
+    ]
+  ],
+  [
+    "copy36",
+    [
+      "饮食与身体相关体验",
+      "Eating and body-related experiences"
+    ]
+  ],
+  [
+    "copy37",
+    [
+      "感知与现实体验",
+      "Perception and reality-related experiences"
+    ]
+  ]
+]);
+
+I18n.register("betaEntry",[["copy1",["建议从这里开始","A useful place to start"]],["copy2",["根据你刚才的描述，这项评估是一个合理的起点。它帮助你进一步了解当前状态，但不代表诊断。","Based on what you shared, this assessment is a reasonable first direction to explore. It is a starting point, not a diagnosis."]],["copy3",["一个合理的起点","A reasonable first step"]],["copy4",["根据你目前提供的信息，可以先从这项评估开始。这只是导航建议，不是诊断；如果其他方向更符合，你仍可以自行选择。","Based on what you shared, this is a reasonable assessment to start with. It is navigation, not a diagnosis, and you can choose another assessment if it fits better."]],["copy5",["选择其他评估","Choose a different assessment"]]]);
+
+I18n.register("betaMore",[["copy1",["信息不足","Not enough information"]],["copy2",["当前回答提示需要立即关注安全。请优先使用下方的紧急支持资源，不要仅依赖本筛查结果。","Your answers indicate an immediate safety concern. Please use the urgent support resources below rather than relying on this screening result alone."]],["copy4",["如果这些症状持续、加重或影响日常功能，可以把这份结果作为与家庭医生或心理健康专业人员沟通的起点。","If these symptoms persist, worsen, or affect daily functioning, you can use this result as a starting point for a conversation with a family doctor or mental-health professional."]],["copy5",["你的筛查结果","Your screening result"]],["copy6",["目前没有足够信息确定主要方向","There is not enough information to identify a main direction"]],["copy7",["大致程度","Approximate level"]],["copy8",["这意味着什么","What this means"]],["copy9",["你的回答显示了当前值得关注的症状模式；它可以帮助你决定接下来要观察什么或与专业人员讨论什么。","Your answers show a symptom pattern worth paying attention to and can help guide what to monitor or discuss with a professional."]],["copy10",["这不意味着什么","What this does not mean"]],["copy11",["这是一项筛查和导航结果，不是临床诊断，也不能单独确认或排除任何精神健康状况。","This is a screening and navigation result, not a clinical diagnosis. It cannot by itself confirm or rule out a mental-health condition."]],["copy12",["下一步","Next step"]],["copy13",["根据你现在的回答","Based on your answers"]],["copy14",["查看下一步选择","See next-step options"]],["copy15",["查看其他评估","Explore other assessments"]],["copy16",["从这里开始","START HERE"]],["copy17",["最近什么事情让你觉得自己有点不对劲？","What has been making you feel that something is off lately?"]],["copy18",["用你自己的话简单说说就可以。你不需要知道心理学术语，也不需要先选择一种疾病。我们会先检查是否有需要优先处理的安全问题，再帮助你找到合适的评估方向。","Describe it briefly in your own words. You do not need psychological terminology or a disorder label. We will first check for safety concerns that need priority attention, then help you find an appropriate assessment direction."]],["copy19",["例如：最近一直很累，什么都不太想做，而且睡不好……","For example: I have been exhausted lately, do not feel like doing much, and I am not sleeping well…"]],["copy20",["已根据你刚才的 PHQ-9 回答带入症状是否出现及频率；这里只补充病程、变化和影响，不需要重复回答相同内容。","Your PHQ-9 responses have been carried forward for symptom presence and frequency. This step only adds course, change and impact details."]],["copy21",["已从 PHQ-9 带入","Carried forward from PHQ-9"]]]);
+
+I18n.register("uxv2",[["substanceScreen",["近期是否使用过药物、酒精或其他可能影响情绪的物质，或调整过相关用药？","Have you recently used medications, alcohol or other substances that may affect mood, or changed related medication?"]]]);
+
+I18n.register("ux2",[["medicalScreen",["你是否有已知的身体健康问题，或担心身体状况可能影响情绪？","Do you have a known physical health condition, or concerns that physical health may affect your mood?"]],["medication",["是否涉及处方药、非处方药或药物调整？","Does this involve prescribed or non-prescription medication, or a medication change?"]],["otherExposure",["是否涉及酒精或其他非医疗用途的物质？","Does this involve alcohol or other substances used outside medical treatment?"]],["correct",["我选错了答案 — 查看并更正","I selected the wrong answer — Review my response"]],["reviewHelp",["只更正你选错的答案。其他安全信息仍会纳入判断；急救资源会在风险持续时保留。","Correct only the response selected by mistake. Other safety information remains part of the check; urgent resources stay available while risk remains."]],["resume",["重新检查安全并返回原进度","Recheck safety and return to my progress"]],["pending",["仍需确认安全信息，暂不能返回评估。","More safety information is needed before returning to the assessment."]],["response",["安全问题回答","Safety question response"]]]);
+
+I18n.register("moodExplain",[["heading",["如何理解这两个数字","Understanding these two numbers"]],["counts",["PHQ-9 中报告出现过的症状领域：{reported}/9。探索性规则计数（未经临床验证）：{qualified}/9。","Symptom areas reported on PHQ-9: {reported}/9. Exploratory rule count (not clinically validated): {qualified}/9."]],["distinction",["PHQ-9 总分反映过去两周九题的回答分值；它不是症状个数。较严格的计数还考虑频率、持续时间及是否较平时有变化，因此两个数字可能不同。","The PHQ-9 total adds your answers to nine questions about the past two weeks; it is not a symptom count. The stricter count also considers frequency, duration and change from your usual state, so the numbers can differ."]],["zero",["计数为 0 不代表你没有症状、困扰或无需帮助。你报告的经历仍然重要。","A count of 0 does not mean you have no symptoms or distress, or that you do not need support. What you reported still matters."]],["uncertainty",["部分信息尚未确认；未回答或不确定不会被当作“没有症状”。这些结果不能确认或排除诊断。","Some information is still unconfirmed. Unanswered or uncertain responses are not treated as absence of symptoms. These results cannot confirm or rule out a diagnosis."]],["mismatch",["部分后续答案与筛查传递的答案不一致。请查看并核对原始回答；不要仅凭这个计数作判断。","Some follow-up answers differ from the screening answers carried forward. Review your original responses; do not rely on this count alone."]],["details",["查看每项为何计入或未计入","See why each area was or was not counted"]],["rules",["当前原型规则要求：报告该症状、较平时有变化、持续至少两周；除死亡或自伤想法外，频率须为几乎每天。动作或言语变化还须报告他人可观察到。死亡或自伤想法另行触发安全核查，不取决于此计数。","Current prototype rules require the symptom to be reported, a change from usual, and at least two weeks’ duration. Frequency must be nearly every day except for thoughts of death or self-harm. Movement or speech changes also require reported observation by others. Death or self-harm thoughts receive a separate safety check regardless of this count."]],["limitation",["这是探索性的、未经临床验证的原型计数，不是标准 PHQ-9 症状算法，也不是临床诊断，不能单独用于临床分诊。频率及逐项持续时间等规则尚需临床审阅，可能漏计值得关注的症状。","This exploratory prototype count is not clinically validated. It is not the standard PHQ-9 symptom algorithm, a clinical diagnosis or a standalone clinical triage decision. Its frequency and per-item duration rules require clinical review and may leave out symptoms that deserve attention."]],["context",["整体判断还涉及症状是否同时发生、日常功能、困扰及其他可能解释。请根据需要与专业人员讨论，而不要只看分数。","The broader assessment also considers whether symptoms occur together, daily functioning, distress and other possible explanations. Discuss your needs with a professional rather than relying only on numbers."]],["notReported",["后续记录中未报告该症状。","The follow-up record does not report this symptom."]],["presenceUnknown",["尚未确认该症状是否存在。","Whether this symptom is present is unconfirmed."]],["changeNo",["未报告较平时有变化，因此未满足当前规则。","No change from usual was reported, so the current rule is not met."]],["changeUnknown",["是否较平时有变化尚未确认。","Change from your usual state is unconfirmed."]],["durationShort",["报告的持续时间少于两周。","The reported duration is less than two weeks."]],["durationUnknown",["持续时间尚未确认。","Duration is unconfirmed."]],["frequencyLow",["报告的频率为有些天或超过一半天数，未达到本原型的几乎每天要求。","The reported frequency is several days or more than half the days, below this prototype’s nearly-every-day requirement."]],["frequencyUnknown",["频率尚未确认。","Frequency is unconfirmed."]],["observationNo",["未报告他人能观察到动作或言语变化。","Observation of movement or speech changes by others was not reported."]],["observationUnknown",["他人是否能观察到动作或言语变化尚未确认。","Observation of movement or speech changes by others is unconfirmed."]],["unanswered",["未回答","Unanswered"]],["counted",["符合当前原型计数规则","Meets the current prototype counting rules"]],["notCounted",["未计入当前较严格计数","Not included in the current stricter count"]],["phqSource",["PHQ-9 原始研究","Original PHQ-9 study"]],["niceSource",["NICE：综合评估建议","NICE: comprehensive assessment guidance"]]]);
+
+I18n.register("safetyResult",[["incomplete",["问卷已完成，但安全信息仍未确认完整。下面列出待确认的问题；完成问卷不代表安全风险已排除。","The questionnaire is complete, but safety information is still incomplete. The questions below need clarification; completing the questionnaire does not rule out safety concerns."]],["pending",["仍需确认：","Still to clarify:"]],["review",["查看安全信息并补充回答","Review safety information and clarify"]],["nonacute",["现有回答未触发急性安全中断，关键安全信息已回答。这不是安全保证；如果情况改变，请及时寻求帮助。","Available answers do not trigger an acute safety interruption, and critical safety questions have been answered. This is not a guarantee of safety; seek help if circumstances change."]],["attention",["部分回答需要关注。请查看共享安全信息；此状态不是诊断或安全保证。","Some answers need attention. Review the shared safety information; this status is neither a diagnosis nor a guarantee of safety."]],["elevated",["当前共享安全信息提示应尽快寻求专业支持。请优先查看安全建议，不要仅依赖情绪评估结果。","Current shared safety information recommends prompt professional support. Review the safety guidance first rather than relying on the Mood result alone."]]]);
+
+I18n.register("safetyResult",[["exploratory",["探索性情绪模式：需要专业评估确认","Exploratory mood pattern: professional assessment needed"]],["technical",["查看探索性规则详情（不是诊断或临床分诊）","View exploratory rule details (not diagnosis or clinical triage)"]]]);

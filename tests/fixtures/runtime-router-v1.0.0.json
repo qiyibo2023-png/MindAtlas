@@ -17,7 +17,7 @@
   },
   {
     "path": "anxiety/ui.js",
-    "sha256": "9e82413dc6d54f95035e9f3a95f547545a0334a32473a9e5fb215b8f51c55c09"
+    "sha256": "56b3bb458e70df246b479a5f0da48e024fe92283cab08223572545036d964268"
   },
   {
     "path": "app.js",
@@ -45,11 +45,11 @@
   },
   {
     "path": "mood/data.js",
-    "sha256": "d92db2f25648d867d828a353f58bf7d5658dc335732186b3989050912b287f86"
+    "sha256": "e4f55f9af59261cef3e4be40a9c744993fa1d658104f302415486724de8e44f2"
   },
   {
     "path": "mood/engine.js",
-    "sha256": "53efcdad170928ad15198a1ecc7b5c03bc74300d07e66956bb1400882e172f3b"
+    "sha256": "7b820bf204145ddadfa1220eea57ca228ad73bcba1131fcb7f48d66a1e7f92d7"
   },
   {
     "path": "mood/mood.css",
@@ -61,19 +61,19 @@
   },
   {
     "path": "mood/scoring.js",
-    "sha256": "89d307d5838ca224111fa6abb6eba08b595e1259db986e64c148d86eafb2e11d"
+    "sha256": "fe80ed27aa5229bbc6275cc8ce284f449c2af192feaeb3c535c0b220563eaec1"
   },
   {
     "path": "mood/state.js",
-    "sha256": "7ef2eb4e01be382dab9ff074a8f03ea81875603359548c88026388edffbcd00f"
+    "sha256": "2967c97d14d8592d5543028f3af27a802d1f641700c3917c69610ba18b1264f6"
   },
   {
     "path": "mood/summary.js",
-    "sha256": "916036cf5dff6166b8797dc7133c5260104dc33c9b8a4158a8e4cf8b476dbdbf"
+    "sha256": "37e4c51dbb493fa53386176aed6f5714420b6f5af01e47c499c097e28c9c1a4c"
   },
   {
     "path": "mood/ui.js",
-    "sha256": "ae1cb61fba8bc34cabd7286fb0bf2106cfb5a80121d751bc1149dddc06b5a5b6"
+    "sha256": "adcea7f849549b2dd61ac2fbb20079fec9634857d5f45ab303bdca2b48c9c8d6"
   },
   {
     "path": "ocd/data.js",
@@ -97,7 +97,7 @@
   },
   {
     "path": "ocd/ui.js",
-    "sha256": "17fab0de449b8a772cf1ae7c74e1a51b425ce55ca19611da9b5fb2d4eb46b5f5"
+    "sha256": "4d0e90e4aa889206f1c93ae07eeda73b74a6535fb2ef41b4f5a7f294ba8a98d0"
   },
   {
     "path": "router/engine.js",
@@ -169,7 +169,7 @@
   },
   {
     "path": "safety/ui.js",
-    "sha256": "19ba9cabd1b0bb542123d2b98267138624f62fdf305757154b857e66376889ee"
+    "sha256": "abbe91ea269ecf537f0b6c8c5069078471cf915b8ee016f3289538fd104db7f2"
   },
   {
     "path": "shared/core.js",
