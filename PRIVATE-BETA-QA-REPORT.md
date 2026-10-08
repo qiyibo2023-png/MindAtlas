@@ -124,3 +124,17 @@ Runtime: `src/safety/ui.js`, new `src/safety/ux-recovery.js`, `src/index.html`, 
 Tests/build registration: new `tests/assessment-ux-v2.test.cjs`, `tests/mood.test.cjs`, `tests/fixtures/runtime-router-v1.0.0.json`, `scripts/test-all.cjs`.
 Documentation: this report and `PRIVATE-BETA-RELEASE-CHECKLIST.md`.
 No new storage, external analytics, disorders or account features. Generated dist, ignored work logs/debug scripts and synthetic test output are excluded from the commit. New recovery state contains response identifiers/step only, not duplicate raw narratives. Clinical review of branching and manual browser release gates remain outstanding.
+
+## Mood scoring integrity / result explainability — 2026-10-07
+
+Baseline: `1832dbfca342187d027513c9dbaf2b389024c8bb`. Full rule trace, references, synthetic vectors and limitations: [Mood audit](docs/mood-scoring-integrity-audit.md).
+
+- Finding: PHQ-9=5/27 with qualified=0/9 is expected for five several-day responses under the current custom frequency rule. All five areas carry forward correctly. Another score-5 vector qualifies one area. The reported total alone cannot establish a propagation defect; the original session's item-level answers were unavailable.
+- Clinical limitation: the prototype's daily-frequency and per-item gates are not the published PHQ symptom algorithm. Qualification may omit clinically relevant symptoms. No thresholds, qualification rules, PHQ-9 scoring or Safety rules changed. Independent clinician review remains required.
+- Consumer results now distinguish PHQ-reported areas from stricter prototype-qualified areas, explain that zero is not absence of distress, and identify uncertainty. Per-area exclusion reasons, rule limitations and source links are in closed-by-default bilingual details. A detected carry-forward mismatch asks for review and does not modify answers.
+- New `src/mood/explain.js`; integration in `src/mood/ui.js` / `src/index.html`; 25 new centralized i18n entries. New `tests/mood-integrity.test.cjs` registered in `scripts/test-all.cjs`; summary/control test harnesses load the new dependency. Only the edited UI runtime hash is refreshed. New audit documentation and the two release documents updated.
+- `npm run build`: PASS (132 runtime files, 119 referenced assets). Translation completeness: PASS, 2,591 keys. Source-independent rebuild: PASS.
+- `npm test`: PASS, 36 files / 1,334 PASS-labelled checks. New Mood integrity suite: 17 grouped checks, including nine-item/all-value mapping, totals 0–27, both score-5 examples, score-2 rule limitation, exclusion/unknown reasons, editing, Safety, bilingual rendering and actual language-switch handler state preservation.
+- Existing Mood, Safety, extraction, Privacy, summary, controls, Router, Differential and Adaptive regressions remain passing. No assertions weakened or skipped.
+- Real browser QA for this update: Desktop ZH **NOT TESTED**, Desktop EN **NOT TESTED**, Mobile ZH **NOT TESTED**, Mobile EN **NOT TESTED**. Edge launch retried and blocked before a page opened: `browserType.launch: spawn EPERM`. Automated markup/handler checks are not real-browser, visual or accessibility validation.
+- Remaining gates: manual result explanation/readability and details interaction at desktop/390×844 in both languages; keyboard/focus/overflow; existing end-to-end/Safety release gates; clinical review of the custom qualification predicate and item-9 duration requirement. Keep PR #14 Draft; no merge or clinical-validation claim.

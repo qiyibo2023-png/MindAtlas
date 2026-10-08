@@ -60,3 +60,18 @@ Do not claim clinical validation or diagnostic accuracy. Before inviting 10–20
 - [ ] Clinician review of conditional-history branching
 
 Current browser launch failed with `spawn EPERM`; these unchecked items are NOT TESTED, not PASS. Earlier host QA above has narrower historical scope. Keep PR #14 Draft; do not merge or claim release acceptance from engineering tests alone.
+
+## Mood scoring integrity / result explainability — 2026-10-07
+- [x] Audited PHQ carry-forward, qualification, frequency, duration and change requirements
+- [x] Reproduced PHQ-9=5/27 and qualified=0/9 without propagation loss in synthetic interactive state
+- [x] Documented original-case uncertainty and differences from published PHQ algorithm
+- [x] Preserved all scoring, qualification and Safety thresholds
+- [x] Bilingual consumer distinction and closed per-item explanation details
+- [x] New 17-check Mood integrity suite passes
+- [x] Full regression: 36 files / 1,334 PASS-labelled checks
+- [x] Build, 2,591-key i18n validation and source-independent rebuild pass
+- [ ] Independent clinician review of the custom qualification predicate, including frequency and item-9 duration
+- [ ] Desktop Chinese/English real-browser results and keyboard review
+- [ ] Mobile Chinese/English results at 390×844, touch targets, wrapping and overflow review
+
+This audit is engineering evidence only. Original case item-level data was not supplied. Current browser launch is blocked by `spawn EPERM`; the new visual/accessibility checks remain NOT TESTED. PR #14 remains Draft; prior release blockers remain in force.
